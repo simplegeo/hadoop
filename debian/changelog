@@ -1,3 +1,13 @@
+hadoop-0.20 (0.20.2+791-1sg3) UNRELEASED; urgency=low
+
+  [ Jeremy Grosser ]
+  * Add debian/source/format
+  * Add libssl-dev to build-depends
+
+  [ SimpleGeo Nerds ]
+
+ -- SimpleGeo Nerds <nerds@simplegeo.com>  Fri, 28 Jan 2011 19:33:14 +0000
+
 hadoop-0.20 (0.20.2+791-1sg0) foss-development; urgency=low
 
   Commit ae4dfe20e7390b2a8d555b52f32ca4567be8b31b:
