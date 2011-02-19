@@ -26,11 +26,11 @@ build-stamp:
 	dh_testdir
 ifdef native_dir
 	JAVA_HOME=/usr/lib/jvm/java-6-sun ant -propertyfile  \
-	cloudera/build.properties -Dfusedfs=1 -Dcompile.native=true \
+	build.properties -propertyfile cloudera/build.properties -Dfusedfs=1 -Dcompile.native=true \
 	-Dhadoop.conf.dir=/etc/hadoop-0.20/conf \
 	-Dlibhdfs=1 -Dcompile.c++=true task-controller bin-package compile-contrib
 else
-	JAVA_HOME=/usr/lib/jvm/java-6-sun ant -propertyfile cloudera/build.properties bin-package
+	JAVA_HOME=/usr/lib/jvm/java-6-sun ant -propertyfile build.properties -propertyfile cloudera/build.properties bin-package
 endif
 	touch $@
 

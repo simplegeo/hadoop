@@ -16,31 +16,32 @@ set -e
 
 case "$1" in
     install|upgrade)
-  addgroup --system hadoop >/dev/null 2>/dev/null || :
-	if getent passwd hadoop > /dev/null ; then
-		addgroup --system hdfs 2>/dev/null || :
-		usermod --comment "Hadoop HDFS" --login hdfs --gid hdfs --groups hadoop hadoop
+        addgroup --system hadoop >/dev/null 2>/dev/null || :
+	if getent passwd hadoop > /dev/null && \
+	   ! getent passwd hdfs > /dev/null; then
+            addgroup --system hdfs 2>/dev/null || :
+            usermod --comment "Hadoop HDFS" --login hdfs --gid hdfs --groups hadoop hadoop
 	fi
         if ! getent passwd hdfs >/dev/null; then
-                # Adding system user: hdfs.
-                adduser \
-                  --system \
-                  --group \
-                  --home /usr/lib/hadoop-0.20 \
-                  --gecos "Hadoop HDFS" \
-                  --shell /bin/bash \
-                  hdfs >/dev/null 2>/dev/null || :
-                usermod --append --groups hadoop hdfs || :
+            # Adding system user: hdfs.
+            adduser \
+                --system \
+                --group \
+                --home /usr/lib/hadoop-0.20 \
+                --gecos "Hadoop HDFS" \
+                --shell /bin/bash \
+                hdfs >/dev/null 2>/dev/null || :
+            usermod --append --groups hadoop hdfs || :
         fi
         if ! getent passwd mapred >/dev/null; then
-                adduser \
-                  --system \
-                  --group \
-                  --home /usr/lib/hadoop-0.20 \
-                  --gecos "Hadoop MapReduce" \
-                  --shell /bin/bash \
-                  mapred >/dev/null 2>/dev/null || :
-                usermod --append --groups hadoop mapred || :
+            adduser \
+                --system \
+                --group \
+                --home /usr/lib/hadoop-0.20 \
+                --gecos "Hadoop MapReduce" \
+                --shell /bin/bash \
+                mapred >/dev/null 2>/dev/null || :
+            usermod --append --groups hadoop mapred || :
         fi
     ;;
 
@@ -59,5 +60,3 @@ esac
 #DEBHELPER#
 
 exit 0
-
-

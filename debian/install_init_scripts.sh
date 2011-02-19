@@ -12,13 +12,7 @@ tasktracker_user=mapred
 for node in namenode secondarynamenode jobtracker tasktracker datanode ; do
     service_pkgdir=debian/$SRC_PKG-$node
     debdir=$service_pkgdir/DEBIAN
-    template=""
-    if [ $node = "namenode" ];
-    then
-      template="debian/service-nn-init.d.tpl"
-    else
-      template="debian/service-init.d.tpl"
-    fi
+    template="debian/service-init.d.tpl"
     user=$(eval "echo \$${node}_user")
     mkdir -p $service_pkgdir/etc/init.d/ $debdir
     sed -e "s|@HADOOP_DAEMON@|$node|" -e "s|@HADOOP_MAJOR_VERSION@|$MAJOR_VERSION|" \
