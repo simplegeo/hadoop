@@ -1,7 +1,7 @@
 From 8ad787821eaf906170fc913c5030b147b0bd6e80 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 14 May 2010 16:37:07 -0700
-Subject: [PATCH 654/791] HDFS-1150. Let DataNodes bind to privileged ports in order to verify their identity better to clients
+Subject: [PATCH 654/887] HDFS-1150. Let DataNodes bind to privileged ports in order to verify their identity better to clients
 
 Patch: https://issues.apache.org/jira/secure/attachment/12444541/HDFS-1150-Y20S-ready-8.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12444811/hdfs-1150-bugfix-1.patch

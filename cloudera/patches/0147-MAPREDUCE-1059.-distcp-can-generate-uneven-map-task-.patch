@@ -1,7 +1,7 @@
 From d713dc1063afc4967381b6583ec424d2850bac63 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:24:30 -0800
-Subject: [PATCH 147/791] MAPREDUCE-1059. distcp can generate uneven map task assignments
+Subject: [PATCH 147/887] MAPREDUCE-1059. distcp can generate uneven map task assignments
 
 Description: distcp writes out a SequenceFile containing the source files to transfer, and their sizes. Map tasks are created over spans of this file, representing files which each mapper should transfer. In practice, some transfer loads yield many empty map tasks and a few tasks perform the bulk of the work.
 Reason: Improvement for load balancing

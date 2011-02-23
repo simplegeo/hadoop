@@ -1,7 +1,7 @@
 From 7604c6f69076effbb0c9793e114946d679f5912d Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:45:02 -0800
-Subject: [PATCH 202/791] HADOOP-6505. sed in build.xml fails
+Subject: [PATCH 202/887] HADOOP-6505. sed in build.xml fails
 
 Description: I'm not sure whether this is a Solaris thing or an ant 1.7.1 thing, but it definitely doesn't do what it is supposed to.  Instead of getting SunOS-x86-32 (or whatever) I get -x86-32.
 

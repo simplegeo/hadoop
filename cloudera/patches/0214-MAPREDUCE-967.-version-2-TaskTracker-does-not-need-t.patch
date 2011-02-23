@@ -1,7 +1,7 @@
 From 96e17e1e593b818a888c8dfc177b8fb36e514e8f Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:50:18 -0800
-Subject: [PATCH 214/791] MAPREDUCE-967. (version 2) TaskTracker does not need to fully unjar job jars
+Subject: [PATCH 214/887] MAPREDUCE-967. (version 2) TaskTracker does not need to fully unjar job jars
 
 Description:
     This is a performance improvement for jobs that contain a large number of

@@ -1,7 +1,7 @@
 From 8a02b7518c90634ec256fa836757919f600fa0e9 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 7 May 2010 23:13:24 +0530
-Subject: [PATCH 644/791] HADOOP-6715. Fix AccessControlList.toString behavior when ACL is set to "*"
+Subject: [PATCH 644/887] HADOOP-6715. Fix AccessControlList.toString behavior when ACL is set to "*"
 
 Patch: https://issues.apache.org/jira/secure/attachment/12443982/6715.20S.6.patch
 Author: Ravi Gummadi

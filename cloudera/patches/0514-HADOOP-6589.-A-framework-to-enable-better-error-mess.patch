@@ -1,7 +1,7 @@
 From cf43306ef9d6a7b1a3d3287a898c05cbd51361b6 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sat, 27 Feb 2010 00:04:02 -0800
-Subject: [PATCH 514/791] HADOOP-6589. A framework to enable better error messages when rpc connections
+Subject: [PATCH 514/887] HADOOP-6589. A framework to enable better error messages when rpc connections
  fail to authenticate. (Kan Zhang via omalley)
 
 Author: Kan Zhang

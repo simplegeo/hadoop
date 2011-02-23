@@ -1,7 +1,7 @@
 From 444beac7f8610cd3ec9433c8fe5e006462a2d07c Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 15 Dec 2009 21:49:36 -0800
-Subject: [PATCH 406/791] HADOOP-6441. Prevent remote XSS attacks in Hostname and UTF-7.
+Subject: [PATCH 406/887] HADOOP-6441. Prevent remote XSS attacks in Hostname and UTF-7.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12428133/h-6441.20.patch
 Author: Owen O'Malley

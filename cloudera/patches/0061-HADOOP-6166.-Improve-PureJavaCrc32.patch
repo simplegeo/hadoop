@@ -1,7 +1,7 @@
 From 99e25a93542251debd248ed71cb380858ca8c9bd Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:49:40 -0800
-Subject: [PATCH 061/791] HADOOP-6166. Improve PureJavaCrc32
+Subject: [PATCH 061/887] HADOOP-6166. Improve PureJavaCrc32
 
 Description: Got some ideas to improve CRC32 calculation.
 Reason: Performance Improvement

@@ -1,7 +1,7 @@
 From 669b65f14d78ffd1cf0304cf459d1abbae3412ae Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:42:15 -0800
-Subject: [PATCH 195/791] CLOUDERA-BUILD. Fix javadoc warnings shown by test-patch, and update eclipse classpath to match current CDH.
+Subject: [PATCH 195/887] CLOUDERA-BUILD. Fix javadoc warnings shown by test-patch, and update eclipse classpath to match current CDH.
 
 Author: Todd Lipcon
 ---

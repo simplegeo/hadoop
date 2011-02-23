@@ -1,7 +1,7 @@
 From 72b0b791cd347e760807a44f5197599f57afde03 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:23:39 -0800
-Subject: [PATCH 143/791] CLOUDERA-BUILD. Make bin/hadoop-config.sh work with dev builds
+Subject: [PATCH 143/887] CLOUDERA-BUILD. Make bin/hadoop-config.sh work with dev builds
 
 Author: Eli Collins
 ---

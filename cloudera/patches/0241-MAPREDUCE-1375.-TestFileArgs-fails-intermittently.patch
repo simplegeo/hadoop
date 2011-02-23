@@ -1,7 +1,7 @@
 From a5fb4a8c8bf9d6a3a96c3a06eb3a46febaf21a0f Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 7 May 2010 15:36:14 -0700
-Subject: [PATCH 241/791] MAPREDUCE-1375. TestFileArgs fails intermittently
+Subject: [PATCH 241/887] MAPREDUCE-1375. TestFileArgs fails intermittently
 
 Description: Fixes an error in a test case without modifying code. This is an amendment to the prior fix which did not address the issue properly.
 Reason: Should fix flaky tests.

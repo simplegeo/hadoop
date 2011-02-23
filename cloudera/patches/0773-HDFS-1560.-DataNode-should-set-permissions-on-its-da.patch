@@ -1,7 +1,7 @@
-From 8b6194242b7b7a2e58b02b55841a18577bc504cf Mon Sep 17 00:00:00 2001
+From 185d654adfa40db3978a2f552feec95748589c89 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sat, 18 Dec 2010 18:28:04 -0800
-Subject: [PATCH 773/791] HDFS-1560. DataNode should set permissions on its data dirs rather than failing to start. Also, should default to 700
+Subject: [PATCH 773/887] HDFS-1560. DataNode should set permissions on its data dirs rather than failing to start. Also, should default to 700
 
 Reason: Easier setup, better security
 Author: Todd Lipcon

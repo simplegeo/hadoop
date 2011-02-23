@@ -1,7 +1,7 @@
 From d8fe4d58aa93d151e55cd3e427a4b90ce470e7c9 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 22 Apr 2010 10:23:26 +0530
-Subject: [PATCH 622/791] MAPREDUCE-1533. JobTracker performance improvements.
+Subject: [PATCH 622/887] MAPREDUCE-1533. JobTracker performance improvements.
 
 Author: Dick King
 Reason: Simple CPU usage optimizations in JT and Capacity Scheduler

@@ -1,7 +1,7 @@
 From eb3c35987b4434c85fb0203c866a7f8fd56674aa Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 14 Apr 2010 13:20:06 +0530
-Subject: [PATCH 604/791] MAPREDUCE-1985. Fix for java.lang.ArrayIndexOutOfBoundsException in analysejobhistory.jsp of jobs with 0 maps
+Subject: [PATCH 604/887] MAPREDUCE-1985. Fix for java.lang.ArrayIndexOutOfBoundsException in analysejobhistory.jsp of jobs with 0 maps
 
 Author: Vinod Kumar
 Ref: YDH

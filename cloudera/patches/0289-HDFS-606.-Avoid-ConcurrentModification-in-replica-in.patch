@@ -1,7 +1,7 @@
 From 1b8316d403ac542772c0745159a7397c798a5698 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 11 May 2010 16:47:47 -0700
-Subject: [PATCH 289/791] HDFS-606. Avoid ConcurrentModification in replica invalidation
+Subject: [PATCH 289/887] HDFS-606. Avoid ConcurrentModification in replica invalidation
 
 Description: Replica invalidation iterated over a collection that it
              also modified, causing a CME. This patch makes a copy

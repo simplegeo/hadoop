@@ -45,8 +45,12 @@ import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 import org.apache.hadoop.util.StringUtils;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 /** Provide command line access to a FileSystem. */
 public class FsShell extends Configured implements Tool {
+  static final Log LOG = LogFactory.getLog(FsShell.class);
 
   protected FileSystem fs;
   private Trash trash;
@@ -934,6 +938,7 @@ public class FsShell extends Configured implements Tool {
         //
         rename(argv[i], dest);
       } catch (RemoteException e) {
+        LOG.debug("Error", e);
         //
         // This is a error returned by hadoop server. Print
         // out the first line of the error mesage.
@@ -948,6 +953,7 @@ public class FsShell extends Configured implements Tool {
                              ex.getLocalizedMessage());
         }
       } catch (IOException e) {
+        LOG.debug("Error", e);
         //
         // IO exception encountered locally.
         //
@@ -1018,6 +1024,7 @@ public class FsShell extends Configured implements Tool {
         //
         copy(argv[i], dest, conf);
       } catch (RemoteException e) {
+        LOG.debug("Error", e);
         //
         // This is a error returned by hadoop server. Print
         // out the first line of the error mesage.
@@ -1033,6 +1040,7 @@ public class FsShell extends Configured implements Tool {
                              ex.getLocalizedMessage());
         }
       } catch (IOException e) {
+        LOG.debug("Error", e);
         //
         // IO exception encountered locally.
         //
@@ -1094,6 +1102,7 @@ public class FsShell extends Configured implements Tool {
           return;
         }
       } catch (IOException e) {
+        LOG.debug("Error", e);
         Exception cause = (Exception) e.getCause();
         String msg = "";
         if(cause != null) {
@@ -1263,6 +1272,7 @@ public class FsShell extends Configured implements Tool {
             errors += runCmdHandler(handler, file, srcFs, recursive);
           }
         } catch (IOException e) {
+          LOG.debug("Error", e);
           String msg = (e.getMessage() != null ? e.getLocalizedMessage() :
             (e.getCause().getMessage() != null ? 
                 e.getCause().getLocalizedMessage() : "null"));
@@ -1617,6 +1627,7 @@ public class FsShell extends Configured implements Tool {
           text(argv[i]);
         }
       } catch (RemoteException e) {
+        LOG.debug("Error", e);
         //
         // This is a error returned by hadoop server. Print
         // out the first line of the error message.
@@ -1632,6 +1643,7 @@ public class FsShell extends Configured implements Tool {
                              ex.getLocalizedMessage());
         }
       } catch (IOException e) {
+        LOG.debug("Error", e);
         //
         // IO exception encountered locally.
         //
@@ -1790,6 +1802,7 @@ public class FsShell extends Configured implements Tool {
                          "... command aborted.");
       return exitCode;
     } catch (IOException e) {
+      LOG.debug("Error", e);
       System.err.println("Bad connection to FS. command aborted. exception: " +
           e.getLocalizedMessage());
       return exitCode;
@@ -1894,10 +1907,12 @@ public class FsShell extends Configured implements Tool {
         printUsage("");
       }
     } catch (IllegalArgumentException arge) {
+      LOG.debug("Error", arge);
       exitCode = -1;
       System.err.println(cmd.substring(1) + ": " + arge.getLocalizedMessage());
       printUsage(cmd);
     } catch (RemoteException e) {
+      LOG.debug("Error", e);
       //
       // This is a error returned by hadoop server. Print
       // out the first line of the error mesage, ignore the stack trace.
@@ -1912,6 +1927,7 @@ public class FsShell extends Configured implements Tool {
                            ex.getLocalizedMessage());  
       }
     } catch (IOException e) {
+      LOG.debug("Error", e);
       //
       // IO exception encountered locally.
       // 
@@ -1919,6 +1935,7 @@ public class FsShell extends Configured implements Tool {
       System.err.println(cmd.substring(1) + ": " + 
                          e.getLocalizedMessage());  
     } catch (Exception re) {
+      LOG.debug("Error", re);
       exitCode = -1;
       System.err.println(cmd.substring(1) + ": " + re.getLocalizedMessage());  
     } finally {

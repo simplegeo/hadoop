@@ -1,7 +1,7 @@
 From 42eeb4540850278563e76841f0c6b369933d5b70 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:30:43 -0800
-Subject: [PATCH 167/791] HADOOP-5222. Add offset in client trace
+Subject: [PATCH 167/887] HADOOP-5222. Add offset in client trace
 
 Description: By adding offset in client trace, the client trace information can provide more accurately information about I/O.<br/>
 It is useful for performance analyzing.

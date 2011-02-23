@@ -252,6 +252,9 @@ document.write("Last Published: " + document.lastModified);
 <li>
 <a href="#Administration"> Administration</a>
 </li>
+<li>
+<a href="#Metrics">Metrics</a>
+</li>
 </ul>
 </div>
 
@@ -868,6 +871,28 @@ document.write("Last Published: " + document.lastModified);
      
 </ul>
 </div>
+    
+<a name="N10285"></a><a name="Metrics"></a>
+<h2 class="h3">Metrics</h2>
+<div class="section">
+<p>
+        The fair scheduler can export metrics using the Hadoop metrics interface.
+        This can be enabled by adding an entry to <span class="codefrag">hadoop-metrics.properties</span>
+        to enable the <span class="codefrag">fairscheduler</span> metrics context. For example, to
+        simply retain the metrics in memory so they may be viewed in the <span class="codefrag">/metrics</span>
+        servlet:
+      </p>
+<p>
+        
+<span class="codefrag">fairscheduler.class=org.apache.hadoop.metrics.spi.NoEmitMetricsContext</span>
+      
+</p>
+<p>
+        Metrics are generated for each pool and job, and contain the same information that
+        is visible on the <span class="codefrag">/scheduler</span> web page.
+      </p>
+</div>
+
     <!--
     <section>
     <title>Implementation</title>

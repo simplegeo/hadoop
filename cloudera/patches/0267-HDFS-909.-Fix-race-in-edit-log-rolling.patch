@@ -1,7 +1,7 @@
 From 092bcd174dbf609f5002078490c357462e0ce8b1 Mon Sep 17 00:00:00 2001
 From: Konstantin Shvachko <shv@apache.org>
 Date: Wed, 21 Apr 2010 03:05:45 +0000
-Subject: [PATCH 267/791] HDFS-909. Fix race in edit log rolling
+Subject: [PATCH 267/887] HDFS-909. Fix race in edit log rolling
 
 Description: Fixes a race condition when rolling edit logs that can corrupt
              the logs.

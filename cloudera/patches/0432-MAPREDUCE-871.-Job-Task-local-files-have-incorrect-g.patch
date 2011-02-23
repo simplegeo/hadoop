@@ -1,7 +1,7 @@
 From c0826b2e0c43581aa90afff465ddd7401e12b1ee Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 20 Jan 2010 16:12:33 +0530
-Subject: [PATCH 432/791] MAPREDUCE-871. Job/Task local files have incorrect group ownership set by LinuxTaskController binary
+Subject: [PATCH 432/887] MAPREDUCE-871. Job/Task local files have incorrect group ownership set by LinuxTaskController binary
 
 Patch: https://issues.apache.org/jira/secure/attachment/12430867/871.20S.patch
 Author: Vinod K V

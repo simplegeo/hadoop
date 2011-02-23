@@ -1,7 +1,7 @@
 From d170cf2c73554beec3dbc43d79cd3d15f7b4d99c Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 17 Mar 2010 11:37:43 +0530
-Subject: [PATCH 557/791] MAPREDUCE-927. Cleanup of task-logs should happen in TaskTracker instead of the Child
+Subject: [PATCH 557/887] MAPREDUCE-927. Cleanup of task-logs should happen in TaskTracker instead of the Child
 
 Patch: https://issues.apache.org/jira/secure/attachment/12439009/patch-927-5-dist.txt
 Author: Amareshwari Sriramadasu

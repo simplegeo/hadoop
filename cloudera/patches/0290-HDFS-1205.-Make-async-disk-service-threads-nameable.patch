@@ -1,7 +1,7 @@
 From ca9e1b3c59b05de9dc4fafa19f24dca80110bcc0 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 12 May 2010 19:28:56 -0700
-Subject: [PATCH 290/791] HDFS-1205. Make async disk service threads nameable
+Subject: [PATCH 290/887] HDFS-1205. Make async disk service threads nameable
 
 Description: HDFS-611 moved some datanode operations to a separate thread
              pool. This patch ensures that these worker threads have

@@ -259,6 +259,7 @@ public class TaskLogServlet extends HttpServlet {
     }
 
     OutputStream out = response.getOutputStream();
+    response.setContentType("text/html; charset=utf-8");
     if( !plainText ) {
       out.write(("<html>\n" +
                  "<title>Task Logs: '" + attemptId + "'</title>\n" +
@@ -293,6 +294,7 @@ public class TaskLogServlet extends HttpServlet {
       response.sendError(HttpServletResponse.SC_BAD_REQUEST,
           "You must supply a value for `filter' (STDOUT, STDERR, or SYSLOG) if you set plainText = true");
     } else {
+      response.setContentType("text/plain; charset=utf-8");
       printTaskLog(response, out, attemptId, start, end, plainText, filter, 
                    isCleanup);
     } 

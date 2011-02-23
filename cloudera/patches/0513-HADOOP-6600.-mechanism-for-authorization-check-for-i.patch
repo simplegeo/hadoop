@@ -1,7 +1,7 @@
 From ea1922be01c027410bdfdb3776b79cbb2328162d Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 26 Feb 2010 22:45:11 -0800
-Subject: [PATCH 513/791] HADOOP-6600. mechanism for authorization check for inter-server protocols
+Subject: [PATCH 513/887] HADOOP-6600. mechanism for authorization check for inter-server protocols
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437320/HADOOP-6600-4-BP20.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12437534/HADOOP-6600-BP20-fix.patch

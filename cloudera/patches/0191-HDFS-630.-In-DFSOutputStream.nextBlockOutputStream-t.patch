@@ -1,7 +1,7 @@
 From 44a6c559de056b35c6eb2e2d53798c88d8c779e6 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:39:09 -0800
-Subject: [PATCH 191/791] HDFS-630. In DFSOutputStream.nextBlockOutputStream(), the client can exclude specific datanodes when locating the next block.
+Subject: [PATCH 191/887] HDFS-630. In DFSOutputStream.nextBlockOutputStream(), the client can exclude specific datanodes when locating the next block.
 
 Description: created from hdfs-200.
 

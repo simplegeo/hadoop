@@ -1,4 +1,954 @@
-commit ae4dfe20e7390b2a8d555b52f32ca4567be8b31b
+commit 3aa7c91592ea1c53f3a913a581dbfcdfebe98bfe
+Author: Jenkins <dev-kitchen@cloudera.com>
+Date:   Sat Feb 19 00:27:52 2011 -0800
+
+    CLOUDERA-BUILD. Preparing for CDH3B4 release.
+
+commit dd51c56ab63cb12bc207647f314ab99e1e8da32b
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Thu Feb 17 16:37:05 2011 -0800
+
+    Amend HADOOP-7070. Fix spurious warning message when running on machine with no krb5.conf
+    
+    The issue is that UGI.initialize would call KerberosName.setConfiguration before setting
+    its own flag to indicate it was initialized. Then, if there was no krb5.conf,
+    the class initializer of KerberosName would call back into UGI.isSecurityEnabled,
+    causing initialize() to be run a second time.
+    
+    This bug doesn't exist upstream.
+    
+    Reason: spurious warnings
+    Author: Todd Lipcon
+    Ref: CDH-2688
+
+commit 1ff4b594c6f9926cf49842672740a229bf06491d
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 16 11:15:12 2011 -0800
+
+    Amend MAPREDUCE-2178. Add log message when task JVM fails to fork
+    
+    Author: Todd Lipcon
+    Ref: CDH-2671
+
+commit f57c22b8ec079abc5a051551bce9b1209fa3e6a3
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Tue Feb 15 23:32:32 2011 -0800
+
+    MAPREDUCE-2332. Improve error message when userlogs dir has bad ownership
+    
+    Patch differs from trunk patch on account of MR-2178
+    
+    Reason: common souce of user error
+    Author: Todd Lipcon
+    Ref: CDH-2670
+
+commit 211e7bb1ea1fecc5894d53815c70be8b68c46643
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Tue Feb 15 19:03:04 2011 -0800
+
+    MAPREDUCE-2331. Cover task graph servlet in fair scheduler system test
+    
+    Reason: improve jcarder coverage
+    Author: Todd Lipcon
+    Ref: CDH-2660
+
+commit 4e93ef108e3ea798f22ef901f090999fe44a8888
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Tue Feb 15 19:02:54 2011 -0800
+
+    MAPREDUCE-2180. Add coverage of Fair Scheduler servlet to system test
+    
+    Reason: improve jcarder coverage for possible deadlocks
+    Author: Todd Lipcon
+    Ref: CDH-2660
+
+commit 279a018f693a5721d7228e7c801327dda0aecb81
+Author: Bruno Mahé <bruno@gnoll.org>
+Date:   Tue Feb 15 15:25:19 2011 -0800
+
+    CLOUDERA-BUILD. Installation script needs to be adapted for the new naming scheme.
+    
+    Reason: Our mavenization effort changes our artifacts names
+    Author: Bruno Mahé
+    Ref: KITCHEN-833
+
+commit cbada181614e3a32c9bbc2bc5e274798aa94217e
+Author: Tom White <tom@cloudera.com>
+Date:   Mon Feb 14 14:57:21 2011 -0800
+
+    CLOUDERA-BUILD. TestLocalMRNotification times out in CDH3.
+
+commit 2ac40e32af497c4c0d69c5921bd1504356b11086
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Tue Feb 15 10:47:43 2011 -0800
+
+    Amend MAPREDUCE-1441. Reapply trimming of whitespace in mapred.local.dir configurations
+    
+    Reason: User bug report - regression from b2 to b3
+    Author: Todd Lipcon
+    Ref: CDH-2662
+
+commit 061eb38e4b442cf3f97fcb45a3059384fd74d036
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Tue Feb 15 10:17:37 2011 -0800
+
+    CLOUDERA-BUILD. Fix a bug where HADOOP_DAEMON_DETACHED leaked into the environment of children
+    
+    This fixes a problem reported on the cdh-user list where tasks that forked out to
+    call bin/hadoop ended up only catching the first 10 lines of output.
+    
+    Tested by writing a streaming script that catted a large text file off HDFS - verified
+    bug is fixed.
+    
+    Author: Todd Lipcon
+    Ref: CDH-2661
+
+commit 88e89c048d8f6f346667e64b782b7daf91d8a019
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Sun Feb 13 21:06:17 2011 -0800
+
+    Amend HADOOP-7093. Revert incompatible change in semantics of HttpServer
+    
+    The original backport pulled in part of HADOOP-6461, which changed the way the
+    "webapps" directory is located on the classpath. This broke HBase's ability
+    to locate its UIs. In order to avoid having to patch HBase in CDH, this
+    patch reverts that part of the change and works around the issue in the tests
+    a different way.
+    
+    Reason: Should work with upstream HBase
+    Author: Todd Lipcon
+    Ref: CDH-2635
+
+commit e0934a30d7f6a3adb2b9b2f534eefda9a4ece41d
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Mon Feb 14 23:31:13 2011 -0800
+
+    HADOOP-7140. IPC Reader threads should stop when server stops
+    
+    Reason: bug preventing TT from shutting down when build version is incompatible
+    Author: Todd Lipcon
+    Ref: CDH-2634
+
+commit 3ad9f29cdcc14fbf41c6642b746ee04afaa92ff5
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Sat Feb 12 19:24:07 2011 -0800
+
+    MAPREDUCE-2323. Add metrics to the fair scheduler
+    
+    Reason: Necessary for CMON, useful for monitoring
+    Author: Todd Lipcon
+    Ref: OPSAPS-2076
+
+commit 3f5313383362c86a2df8be55d2c524d82f9fac85
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Sun Feb 13 20:14:09 2011 -0800
+
+    Amend MAPREDUCE-2242. Reapply after MAPREDUCE-2178.
+    
+    Reason: fix environment escaping
+    Author: Todd Lipcon
+    Ref: CDH-2572
+
+commit 541407b9f144228f2b7934decc114c59b769e481
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Sat Feb 12 13:28:13 2011 -0800
+
+    Amend MAPREDUCE-2178. Revert incompatible API change to FileUtil.chmod
+    
+    Reverts a change which removed InterruptedException from FileUtil.chmod's signature.
+    Though the function never throws InterruptedException, this removal causes
+    compilation failures for any clients who try to catch this exception (incl Pig)
+    
+    Reason: fix Pig build failure
+    Author: Todd Lipcon
+    Ref: CDH-2633
+
+commit a4778bbf1c461b56828f9810ea44c5893f929150
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Fri Feb 11 17:58:47 2011 -0800
+
+    CLOUDERA-BUILD. Re-bootstrap native builds with maintainer mode
+    
+    Also includes bootstrap.sh where missing
+
+commit b329fa59501af3bef287aa0bdaa4c517cd41ad04
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Fri Feb 11 21:17:06 2011 -0800
+
+    CLOUDERA-BUILD. Add AM_MAINTAINER_MODE to all configure.ac
+
+commit 50329213ff9f712bc07922a212c0931d20a31de6
+Author: Konstantin Boudnik <cos@apache.org>
+Date:   Fri Feb 11 17:59:15 2011 -0800
+
+    HADOOP-6879. Provide SSH based (Jsch) remote execution API for system tests
+    
+    Reason: missing dependency breaks system tests build
+    Author: Konstantin Boudnik
+    Ref: CDH-2622
+
+commit 4b44138e14ad63a6b54a962e16c8f1fd922b3a80
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Fri Feb 11 00:38:48 2011 -0800
+
+    CLOUDERA-BUILD. task-controller configuration directory should be inferred from task-controller location
+    
+    Searches at ../../conf/ for task-controller.cfg
+    
+    Author: Todd Lipcon
+    Ref: CDH-2623
+
+commit a6f5e7109f538e2b9374c6518c80b0575e2dfa9f
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Fri Feb 11 15:06:42 2011 -0800
+
+    Amend HADOOP-5489. hdfsproxy-env.sh.template was updated but not hdfsproxy-env.sh
+    
+    Reason: avoid local modifications to src tree on build
+    Author: Todd Lipcon
+    Ref: CDH-2588
+
+commit cc3ba6c2c33ea827e6a54cda2759d03e7e2da4c1
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Jan 19 15:11:58 2011 -0800
+
+    HADOOP-7114. FsShell should dump errors at debug level
+    
+    Reason: easier to debug exceptions thrown in FsShell
+    Author: Todd Lipcon
+    Ref: CDH-2624
+
+commit 5a57891c772488d8b02bcf54f4247f8fffa81d1f
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Fri Feb 11 13:06:26 2011 -0800
+
+    Amend MAPREDUCE-2178. Remove AC_SYS_LARGEFILE from configure.ac
+    
+    This flag allows opening of files >2GB, but the task-controller doesn't need
+    to do this. The removal is important because some RHEL5 systems have an
+    fts.h which is incompatible with the resultant CFLAG when building 32-bit.
+    
+    Reason: RHEL5 32-bit build
+    Author: Todd Lipcon
+    Ref: CDH-2623
+
+commit df540fdaa94d96a2a1bc2685774ae44b145bfa98
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Fri Feb 11 10:56:52 2011 -0800
+
+    Amend MAPREDUCE-1493. Fix a typo in HTML markup on jobdetailshistory
+    
+    (typo made in original backport, not upstream)
+    
+    Reason: fix invalid HTML
+    Author: Todd Lipcon
+    Ref: CDH-2622
+
+commit e70a9985960b7ac9e2f6bf3826e93f6f8c44e46a
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 9 14:58:03 2011 -0800
+
+    HADOOP-5913. Add support for starting/stopping queues.
+    
+    Author: Rahul K Singh
+    Ref: CDH-2622
+
+commit 1da8cc2964b488a55091e7b8b8f3a494ba4c1772
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Fri Feb 11 12:11:24 2011 -0800
+
+    MAPREDUCE-2321. Check for NativeIO at TT startup
+    
+    Reason: Easier failure diagnosis for secure TT
+    Author: Todd Lipcon
+    Ref: CDH-2623
+
+commit 4b1697b297d13990e17c3b3eaaf508686a2e78a5
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Tue Feb 1 14:05:34 2011 -0800
+
+    MAPREDUCE-2289. Fix job staging directory to get automatically chmodded to correct permissions if incorrect
+    
+    Reason: fixes failures in TestFairSchedulerSystem
+    Author: Todd Lipcon
+    Ref: CDH-2626
+
+commit 5d44075f3ac224bf9a259b0731035734d9c152a2
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Thu Feb 3 09:23:55 2011 -0800
+
+    Ammend MAPREDUCE-2234. TaskTracker should fail on startup if log dir isn't writable
+    
+    Reapply after MAPREDUCE-2178 backport.
+    
+    Reason: Easier diagnosis of misconfigured TT permissions
+    Author: Todd Lipcon
+    Ref: CDH-2500
+
+commit a2b4149afd53d59fd9a279117c6917e4c83583a3
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Thu Feb 10 19:40:24 2011 -0800
+
+    HDFS-1318, MAPREDUCE-2330. Add MXBeans for JT, TT, DN, NN
+    
+    Author: Tanping Wang, Luke Lu
+    Ref: CDH-2622
+
+commit ee5c73991b43fd49a1a4eed599d2d52065054209
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Fri Feb 11 12:17:35 2011 -0800
+
+    Amend MAPREDUCE-2178. Check result of chdir
+    
+    Reason: necessary to pass -Werror on more recent gcc
+    Author: Todd Lipcon
+    Ref: CDH-2623
+
+commit 717544d462bc56188d165008bc1d841bc1c03904
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Fri Feb 11 12:16:08 2011 -0800
+
+    Amend MAPREDUCE-2178. Check argc *after* checks for perms, etc
+    
+    Reason: Fix error messages during taskcontroller setup
+    Author: Todd Lipcon
+    Ref: CDH-2623
+
+commit b8f3851b9604b8c1156c4a9df5c6a8b532676104
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Fri Feb 11 12:11:15 2011 -0800
+
+    Amend MAPREDUCE-2178. Fix racy check for config file perms
+    
+    Reason: Security fix
+    Author: Todd Lipcon
+    Ref: CDH-2623
+
+commit fa6aca09466301c65d8d8e5d92c43e50f46683ad
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Mon Feb 7 10:05:49 2011 -0800
+
+    Amend MAPREDUCE-2103. Reapply "task-controller permissions checks too stringent" after MAPREDUCE-2173
+    
+    Reason: match documentation
+    Author: Todd Lipcon
+    Ref: CDH-2623
+
+commit 7361ea92c13d6ca986e332acef70c2d8983c2f4c
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Thu Feb 10 21:15:48 2011 -0800
+
+    Amend MAPREDUCE-2265. Restore sbin location for task controller install
+    
+    Reason: reapply after YDH 0.20.100 merge
+    Author: Todd Lipcon
+    Ref: CDH-2623
+
+commit 0ed0d5e311f4f0c57ab6bafa39d324e19dd15b53
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Mon Feb 7 09:45:39 2011 -0800
+
+    Amend MAPREDUCE-967. Reapply behavior which was clobbered by MAPREDUCE-2178
+    
+    (TT should not unpack job jars unnecessarily)
+    
+    Author: Todd Lipcon
+    Ref: CDH-2623
+
+commit c2b050e2e466b4e43a8458fd05c72e289ed2d563
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Mon Feb 7 09:55:35 2011 -0800
+
+    CLOUDERA-BUILD. Integrate task-controller changes from MAPREDUCE-2178 into Cloudera build
+
+commit ac1fd5519d4cd7ddc5cf740d4b4459232523fb12
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 9 16:54:58 2011 -0800
+
+    MAPREDUCE-2178. Write task initialization to avoid race conditions leading to privilege escalation and resource leakage by performing more actions as the user.
+    
+    Author: Owen O'Malley, Devaraj Das, Chris Douglas
+    Ref: CDH-2622
+
+commit bb004aae8abc4f7e772adda6a75f433cf7cb198d
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Jan 19 18:02:52 2011 -0800
+
+    HDFS-1597. Fix assertion in TestEditLogRace
+    
+    Reason: Sporadic test failure
+    Author: Todd Lipcon
+    Ref: CDH-2559
+
+commit dbaa8cd7a1a81de7700dcec4517dbf2012906641
+Author: Todd Lipcon <todd@lipcon.org>
+Date:   Wed Jan 26 21:24:38 2011 -0800
+
+    HDFS-1601. Pipeline ACKs are sent as lots of tiny TCP packets
+    
+    Reason: HBase performance
+    Author: Todd Lipcon
+    Ref: CDH-2627
+
+commit 0d086cde04450cbb5a5f6d39a345aafcdadaa511
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 16:59:52 2011 -0800
+
+    HDFS-1114. Reduce NameNode memory usage by an alternate hash table
+    
+    Author: Tsz Wo (Nicholas) Sze
+    Reason: reduce memory usage in the NameNode
+    Ref: CDH-2622
+
+commit 921d337cfa66dcc22207f3fb42e385aff4e229d0
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 16:59:52 2011 -0800
+
+    HDFS-1119. Introduce a GSet interface to BlocksMap.
+
+commit 216d29555d3fb62aca7362a5611bbc5ec7846b6a
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 16:59:52 2011 -0800
+
+    HDFS-599. Allow NameNode to have a separate port for service requests from client requests.
+    
+    Reason: Allows port-based QoS to prioritize DN RPCs over client RPCs, also increases fairness
+    Author: Dmytro Molkov
+    Ref: CDH-2622
+
+commit 53c9961d5b350c96200a3b85c2302a2b569e6fa8
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 16:59:52 2011 -0800
+
+    HDFS-1298. Add support in HDFS for new statistics added in FileSystem to track the file system operations.
+    
+    Author: Suresh Srinivas
+    Ref: CDH-2622
+
+commit f1625663dc6008b89af3ff80e19d64f4717f1a9b
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 16:59:52 2011 -0800
+
+    HDFS-1315. Add fsck event to audit log and remove other audit log events corresponding to FSCK listStatus
+    
+    Author: Suresh Srinivas
+    Ref: CDH-2622
+
+commit 3d026b0a1706483a4860ad80fc17b103448ac1b0
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 16:59:52 2011 -0800
+
+    HDFS-1383. Better error messages in HFTP
+    
+    Author: Tsz Wo (Nicholas) Sze
+    Ref: CDH-2622
+
+commit f148732a5c983877fb62ecfe5815eb445a192573
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 16:59:52 2011 -0800
+
+    HDFS-1061. Memory footprint optimization for INodeFile object.
+    
+    Author: Bharath Mundlapudi
+    Ref: CDH-2622
+
+commit edda8a863002796aa282fa26d74f8843eac4b728
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 16:59:52 2011 -0800
+
+    HDFS-1307 Add start time, end time and total time taken for FSCK to FSCK report.
+    
+    Author: Suresh Srinivas
+    Ref: CDH-2622
+
+commit b2cfa8caaa27a75a4452d9e26d3f3a169e13730e
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 16:59:52 2011 -0800
+
+    HDFS-1085. HFTP read may fail silently on the client side if there is an exception on the server side.
+    
+    Author: Tsz Wo (Nicholas) Sze
+    Ref: CDH-2622
+
+commit 66beb0bfe053b9c0fa02f7ac82310081fa6da2cd
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 16:59:52 2011 -0800
+
+    HADOOP-6713. The RPC server Listener thread is a scalability bottleneck.
+    
+    Author: Dmytro Molkov
+    Ref: CDH-2622
+
+commit 807e918943e9f17d4ab7912bdb9cc90970c02ef6
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 16:59:52 2011 -0800
+
+    HADOOP-6859. Introduce additional statistics to FileSystem to track file system operations.
+    
+    Author: Suresh Srinivas
+    Ref: CDH-2622
+
+commit 8dd45e436896108d8806e5a555621ea6b346912f
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 16:59:52 2011 -0800
+
+    HADOOP-6899. RawLocalFileSystem#setWorkingDir() does not work for relative names
+    
+    Author: Sanjay Radia
+    Ref: CDH-2622
+
+commit 7a31be4853d46090c7bd7798bdb7cd41915b421c
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 18:05:06 2011 -0800
+
+    HADOOP-6669. Respect compression configuration when creating DefaultCodec
+    
+    Author: Koji Noguchi
+    Ref: CDH-2622
+
+commit b2586915b911182f60e949de3dd340ae8e8099ca
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Thu Feb 10 20:59:06 2011 -0800
+
+    CLOUDERA-BUILD. Re-bootstrap native
+
+commit 1fb15b9ee1b9edd5961b5972da4062117b4709e5
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Thu Feb 10 20:58:22 2011 -0800
+
+    CLOUDERA-BUILD. Native build for JNI group mapping code
+    
+    Original JNI patch is against Yahoo's distro which has divergent build files.
+
+commit bb55a89bf7a3decd9846989f31d93cb4ed8588b5
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 16:59:51 2011 -0800
+
+    HADOOP-6864. Provide a JNI-based implementation of ShellBasedUnixGroupsNetgroupMapping
+    
+    Author: Boris Shkolnik
+    Ref: CDH-2622
+
+commit 2780f0d352553b1a5c177fe20afdea223bd1e405
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 16:59:51 2011 -0800
+
+    HADOOP-6818. Provides a JNI implementation of group resolution.
+    
+    Author: Devaraj Das
+    Ref: CDH-2622
+
+commit 562d6a6d79943f4c132e9db773898db533b4dbfd
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 16:59:51 2011 -0800
+
+    MAPREDUCE-1545. Add 'first-task-launched' to job-summary
+    
+    Author: Luke Lu
+    Ref: CDH-2622
+
+commit 4595403c6e7b1e594ea5759784aaa65eb6d46786
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 16:59:51 2011 -0800
+
+    MAPREDUCE-2023 TestDFSIO read test may not read specified bytes.
+    
+    Author: Hong Tang
+    Ref: CDH-2622
+
+commit 4cbfcd923d102ce6bcccb5dcddc1ed124f42bb8f
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 9 17:20:29 2011 -0800
+
+    MAPREDUCE-2005. Improvements to TestDelegationTokenRenewal
+    
+    Reason: improve test printouts
+    Author: Boris Shkolnik
+    Ref: CDH-2622
+
+commit 6cceb85a5f8743aaef4a98957e31f6930a013cdd
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 16:59:51 2011 -0800
+
+    MAPREDUCE-1961. ConcurrentModificationException when shutting down Gridmix
+    
+    Author: Hong Tang
+    Ref: CDH-2622
+
+commit 16d9cf021a1989467b1372d3c2a050e6c4606230
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 16:59:51 2011 -0800
+
+    MAPREDUCE-339. JobTracker should give preference to failed tasks over virgin tasks so as to terminate the job ASAP if it is
+    
+    Author: Devaraj Das
+    Ref: CDH-2622
+
+commit 81bd8d5735c682d69d59712a7333a70d081a4216
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 16:59:51 2011 -0800
+
+    MAPREDUCE-1936. Make Gridmix3 more customizable.
+    
+    Author: Hong Tang
+    Ref: CDH-2622
+
+commit 1b9bc9af319325bd26e1530ce18527ca8f74dafd
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 16:59:51 2011 -0800
+
+    MAPREDUCE-1778 CompletedJobStatusStore initialization should fail if {mapred.job.tracker.persist.jobstatus.dir} is unwritable
+    
+    Author: Krishna Ramachandran
+    Ref: CDH-2622
+
+commit e0104169bfac10c2760fcf133b01fd2b710208cb
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 16:59:51 2011 -0800
+
+    MAPREDUCE-1868 Add read timeout on userlog pull
+    
+    Author: Krishna Ramachandran
+    Ref: CDH-2622
+
+commit a6b1ad67cf903e1e56963dcc64d7d7599321d386
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 16:59:51 2011 -0800
+
+    MAPREDUCE-1850. Include job submit host information (name and ip) in jobconf and jobdetails display
+    
+    Author: Krishna Ramachandran
+    Ref: CDH-2622
+
+commit 4098a214be838238a9879f7f978e34e89b736986
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 18:01:15 2011 -0800
+
+    HDFS-1626. Make block invalidate limit configurable
+    
+    Author: Tsz Wo (Nicholas) Sze
+    Ref: CDH-2622
+
+commit f1b4799fad93b4f02ee29ce5ef5fc217ff72e377
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 9 14:53:16 2011 -0800
+
+    MAPREDUCE-2328. Add configs for memory-related configurations to mapred-default.xml
+    
+    Author: Yahoo Eng
+    Ref: CDH-2622
+
+commit f879e570e2fe88776d15de04a8597898d06f3f77
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Thu Feb 10 14:27:45 2011 -0800
+
+    HDFS-1364. Makes long running HFTP-based applications do relogins if necessary.
+    
+    Author: Jitendra Pandey
+    Ref: CDH-2622
+
+commit ce9aa5ef9dfc5c4fb8e85f9e9e47e67a4b724296
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 9 17:10:49 2011 -0800
+
+    CLOUDERA-BUILD. Increase Xmx for compiling fault injection tests
+    
+    Ref: CDH-2622
+
+commit f19b644c987305988a36e7d6038b16a9768cb084
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 9 17:31:35 2011 -0800
+
+    Amend MAPREDUCE-2096. MapTask SpillRecord usage doesn't need username.
+    
+    Author: Yahoo Eng
+    Ref: CDH-2622
+
+commit c76f57dcd993063cf960fb42e65219edd5230432
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 9 17:31:34 2011 -0800
+
+    Amend MAPREDUCE-1100. Change log messages in ReduceTask from info to debug level
+    
+    Reason: reduces log size for large reduce tasks
+    Author: Yahoo Eng
+    Ref: CDH-2622
+
+commit 674795fc9a60d06dbea41bd9d5a133439822a62b
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Thu Feb 10 14:13:46 2011 -0800
+
+    Amend HADOOP-6706. Improve retry behavior for RPC clients
+    
+    Author: Kan Zhang
+    Ref: CDH-2622
+
+commit bfa0b28baad26de8315ec1f9282728913863c3e7
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Thu Feb 10 14:27:45 2011 -0800
+
+    Partial HADOOP-6965. Refactor getTGT and getRefreshTime out of anonymous class, add synchronized block around relogin
+    
+    Author: Jitendra Pandey
+    Ref: CDH-2622
+
+commit e8b759460ab487e98093292be7fa90afa65f47ec
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Thu Feb 10 14:27:45 2011 -0800
+
+    Partial HADOOP-6471. Use StringBuilder in StringUtils.join
+    
+    Author: Yahoo Eng
+    Ref: CDH-2622
+
+commit 3ef31bcc86610d496976b4de9ada82e73f47f162
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 20:03:53 2011 -0800
+
+    HADOOP-7115. Reduces the number of calls to getpwuid_r and getpwgid_r, by implementing a cache in NativeIO.
+    
+    Author: Devaraj Das
+    Ref: CDH-2622
+
+commit d2032071037eb33c562d97b16e0cd291f4e3f23b
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 16:59:51 2011 -0800
+
+    MAPREDUCE-1521. Protection against incorrectly configured reduces
+    
+    Author: Mahadev Konar
+    Ref: CDH-2622
+
+commit 6bc623041a1c0d511250bcfdcae85a7b084b0d5f
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 19:35:12 2011 -0800
+
+    HDFS-1153. Verify dfsnodelist input for correctness
+    
+    Author: Ravi Phulari
+    Ref: CDH-2622
+
+commit bf655f10661132486cb40ee098fdedbbb5937892
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 19:30:24 2011 -0800
+
+    Partial MAPREDUCE-2055. Cache counters in retired job info
+    
+    Does not apply entirety of upstream JIRA as described. Simply caches
+    Counters in the retired job info.
+    
+    Author: Krishna Ramachandran
+    Ref: CDH-2622
+
+commit 3ae2cde7b036603b8aa19e2ab31994dd3209eded
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 18:35:44 2011 -0800
+
+    MAPREDUCE-1960. Add ability to limit size of jobconf
+    
+    Author: Mahadev Konar
+    Ref: CDH-2622
+
+commit 7429b6597999c1a867926b61d5075bdf85a1be6d
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 18:04:02 2011 -0800
+
+    Amend HDFS-457. Include new test TestDataNodeVolumeFailure
+    
+    Ref: CDH-2622
+    Author: Boris Shkolnik
+
+commit af1598cf2f8ce26c43f74b0be684662287e34095
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 18:03:25 2011 -0800
+
+    HDFS-1101. TestDiskError should check all nodes in cluster for test case
+    
+    Reason: Test failure
+    Author: Chris Douglas
+    Ref: CDH-2622
+
+commit 2c5115af8426e44b9de804b80fcc9502d64efadd
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Thu Feb 10 15:16:56 2011 -0800
+
+    MAPREDUCE-1118. Enhance the JobTracker web-ui to ensure tabular columns are sortable, also added a /scheduler servlet to CapacityScheduler for enhanced UI for queue information.
+    
+    Author: Krishna Ramachandran
+    Ref: CDH-2622
+
+commit ba185a27aa4bb1bd965e6aa32a9b5bf3e8388f91
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 17:38:39 2011 -0800
+
+    MAPREDUCE-1872, MAPREDUCE-517. Capacity scheduler improvements plus minor framework changes to support
+    
+    - JobInProgress changes to support locality decisions
+    - JobQueueJobInProgressListener.JobSchedulingInfo now has equals() method for
+    
+    Author: Arun Murthy
+    Ref: CDH-2622
+
+commit 83a6619c2656f543e046521f515d97fd70d647bb
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Feb 2 17:37:15 2011 -0800
+
+    MAPREDUCE-1774. Additions to Herriot Testing to test Gridmix, Streaming, Task Controllers
+    
+    Includes:
+      MAPREDUCE-1758 Building blocks for the herriot test cases
+      MAPREDUCE-1827 [Herriot] Task Killing/Failing tests for a streaming job.
+      MAPREDUCE-2053 [Herriot] Test Gridmix file pool for different input file sizes based on pool minimum size
+      MAPREDUCE-2033 [Herriot] Gridmix generate data tests with various submission policies and different user resolvers.
+      ... and others from YDH
+    
+    Reason: QA / YDH merge
+    Ref: CDH-2622
+
+commit 5dcc0777f30ae030e20e5e1e3512a0ed6a90e7fc
+Author: Eli Collins <eli@cloudera.com>
+Date:   Sun Feb 6 13:22:31 2011 -0800
+
+    DISTRO-90. FUSE can pick up the wrong libjvm.so.
+    
+    Reason: Bug
+    Author: Eli Collins
+    Ref: DISTRO-90
+
+commit f8e6600fbdc454600990e4f3732462e9b56e0b1b
+Author: Eli Collins <eli@cloudera.com>
+Date:   Sun Feb 6 13:37:24 2011 -0800
+
+    MAPREDUCE-2256. FairScheduler fairshare preemption from multiple pools may
+    preempt all tasks from one pool causing that pool to go below fairshare.
+    
+    You have a cluster with 600 map slots and 3 pools. Fairshare for each pool is
+    200 to start with. Fairsharepreemption timeout is 5 mins.
+    
+    1) Pool1 schedules 300 map tasks first
+    2) Pool2 then schedules another 300 map tasks
+    3) Pool3 demands 300 map tasks but doesn't get any slot as all slots are taken.
+    4) After 5 mins pool3 should preempt 200 map-slots. Instead of peempting 100
+    slots each from pool1 and pool2, the bug would cause it to preempt all 200
+    slots from pool2 (last started) causing it to go below fairshare. This is
+    happening because the preemptTask method is not reducing the tasks left from a
+    pool while preempting the tasks.
+    
+    The above scenario could be an extreme case but some amount of excess
+    preemption would happen because of this bug.
+    
+    Reason: Bug
+    Author: Priyo Mustafi
+    Ref: CDH-2593
+
+commit cce41bfecdffd8f37b5a9ae571a827e8042b39c4
+Author: Eli Collins <eli@cloudera.com>
+Date:   Sun Feb 6 13:12:41 2011 -0800
+
+    CLOUDERA-BUILD. tar file has incorrect permissions for jsvc and task-controller.
+    
+    Reason: Bug
+    Author: Eli Collins
+    Ref: CDH-2553
+
+commit fa3b91e008607ff69bd2796f025680aacc97bd11
+Author: Eli Collins <eli@cloudera.com>
+Date:   Sat Feb 5 16:21:19 2011 -0800
+
+    DISTRO-44. Hadoop core POM missing jackson dependency.
+    
+    Reason: Bug
+    Author: Eli Collins
+    Ref: DISTRO-44
+
+commit f40f6bef0808d34b0632bd759b7916946b6a500c
+Author: Eli Collins <eli@cloudera.com>
+Date:   Sun Feb 6 14:01:28 2011 -0800
+
+    HADOOP-5489. hadoop-env.sh still refers to java1.5.
+    
+    Reason: Bug
+    Author: Steve Loughran
+    Ref: CDH-2588
+
+commit e3356ca6f8a2ee616f610da19fc141d7578a905d
+Author: Andrew Bayer <andrew.bayer@gmail.com>
+Date:   Thu Jan 27 15:55:01 2011 -0800
+
+    CLOUDERA-BUILD. Changes to support CDH Mavenization.
+
+commit 7e7c0e2d4fe19559a728d2c0860f406124c578e3
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Mon Jan 31 17:55:47 2011 -0800
+
+    Amend MAPREDUCE-1716. Fix test case to wait for up to 20 seconds to verify truncation
+    
+    Reason: truncation is done in a separate thread at JVM finish time, which may come
+      after the job is complete
+    Author: Todd Lipcon
+    Ref: CDH-2579
+
+commit f6ffedb4441ec43ef7d81fe483807115e98aca41
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Jan 26 13:31:56 2011 -0800
+
+    HADOOP-6882. Update the patch level of Jetty to 6.1.26
+    
+    Reason: Address XSS and many other upstream bugs
+    Author: Owen O'Malley
+    Ref: CDH-2564
+
+commit 545bcc1060833f76eab19fa0425f890cb3f9d2cb
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Fri Jan 28 13:39:43 2011 -0800
+
+    MAPREDUCE-2242. Fix environment escaping in LinuxTaskController
+    
+    Reason: Support env variables with "s
+    Author: Todd Lipcon
+    Ref: CDH-2572
+
+commit c5df4748c04337af74ca80a84a03e15ba2de2f0e
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Thu Jan 27 13:01:24 2011 -0800
+
+    HDFS-1353. Remove getBlockLocations optimization that blew out LocatedBlocks response size
+    
+    Reason: Address OOME found by QA
+    Author: Jakob Homan
+    Ref: CDH-2573
+
+commit 8bc90cb06955b191c5d4370ca75b3b14aabc9657
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Fri Jan 28 14:33:31 2011 -0800
+
+    HADOOP-5050. TestDFSShell.testFilePermissions should not assume umask setting.
+    
+    Reason: test failure on machines with different umask
+    Author: Jakob Homan
+    Ref: CDH-2574
+
+commit 0d4eb1a867620813affdfd3291cb618d6fce63ca
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Fri Jan 28 10:33:02 2011 -0800
+
+    HADOOP-7122. Shell commands leak Timers when timeout expires
+    
+    Reason: Thread leak seen on JT
+    Author: Todd Lipcon
+    Ref: CDH-2568
+
+commit 2ad8c54fecae73213da7c74da9f90ba953f9f9c5
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Jan 26 17:30:18 2011 -0800
+
+    MAPREDUCE-2253. Servlets should specify content type
+    
+    Reason: Fix display in browsers
+    Author: Todd Lipcon
+    Ref: DISTRO-72
+
+commit 51399a0f149292ee18138646488a8070c8b7f34c
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Tue Jan 25 15:03:29 2011 -0800
 
@@ -8,7 +958,7 @@ Date:   Tue Jan 25 15:03:29 2011 -0800
     Author: Todd Lipcon
     Ref: CDH-2558
 
-commit fb8b1c147aef9875260ee90d31226087bbdd3982
+commit be89980babbc50eb7e1ccce9b583fff0ae24cf80
 Author: Tom White <tom@cloudera.com>
 Date:   Wed Jan 26 10:06:06 2011 -0800
 
@@ -18,7 +968,7 @@ Date:   Wed Jan 26 10:06:06 2011 -0800
     Author: Jitendra Nath Pandey
     Ref: CDH-2562
 
-commit 25ff6d07f53b7694f28f5d74d2809c04981a385f
+commit c5645ced5c2b32c0657ba3ca60643165c28173ff
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Fri Jan 14 00:42:43 2011 -0800
 
@@ -28,7 +978,7 @@ Date:   Fri Jan 14 00:42:43 2011 -0800
     Author: Todd Lipcon
     Ref: CDH-2560
 
-commit f04b29ad6093f3af1c47b908bd5b0a66bc59cd91
+commit b02ac3f86f9d929316edd10855721b67459192ba
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Thu Jan 20 13:12:06 2011 -0800
 
@@ -38,7 +988,7 @@ Date:   Thu Jan 20 13:12:06 2011 -0800
     Author: Todd Lipcon
     Ref: CDH-2547
 
-commit c04ac6924e92a889a67ee3b095c55f462c8a6a09
+commit 6b63d73a1917a6c0529158c3bb78ec2ec16ad7ce
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Thu Jan 20 16:05:01 2011 -0800
 
@@ -48,7 +998,7 @@ Date:   Thu Jan 20 16:05:01 2011 -0800
     Author: Todd Lipcon
     Ref: CDH-2557
 
-commit 7e1d9f55f3f46a8062dc5ac5b47b07bebebd1700
+commit 8b4374bfa12b1a1ed8cc8e0ab209ad763becf791
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Wed Jan 19 14:22:55 2011 -0800
 
@@ -58,7 +1008,7 @@ Date:   Wed Jan 19 14:22:55 2011 -0800
     Author: Jakob Homan
     Ref: CDH-2091
 
-commit b7bc1b3891fa7a98c503ec7216521368e9fc0220
+commit 2bec46c2f46e42a35a69fdbd6f37f8979599e83d
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Wed Jan 19 14:48:57 2011 -0800
 
@@ -72,7 +1022,7 @@ Date:   Wed Jan 19 14:48:57 2011 -0800
     Author: Todd Lipcon
     Ref: CDH-2091
 
-commit 721d5d2f5472ee3f3795786d1f176453a7c5e8be
+commit 562be1407b9e3c2d8907daaa9500ac96364c9fa2
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Tue Jan 18 10:12:08 2011 -0800
 
@@ -81,7 +1031,7 @@ Date:   Tue Jan 18 10:12:08 2011 -0800
     Reason: leaving undeletable dirs in userlogs directory
     Author: Todd Lipcon
 
-commit 38659334f8af3030fc3b929a06ef242c7290c545
+commit 2df0683fe8b9a6f1c7dc9f9ec49697960b473add
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Tue Jan 18 09:46:30 2011 -0800
 
@@ -90,7 +1040,7 @@ Date:   Tue Jan 18 09:46:30 2011 -0800
     Reason: fork can be rather slow, chmod is common
     Author: Todd Lipcon
 
-commit b4a79845346ce5da410aa53f62983ffb51aae1b8
+commit efda213ca9682c9ee555b6c9582eb039cfefc122
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Tue Jan 18 09:43:52 2011 -0800
 
@@ -98,7 +1048,7 @@ Date:   Tue Jan 18 09:43:52 2011 -0800
     
     This reverts commit 13e93cafe8d4b1e8b741c1873118cdba0313a564.
 
-commit 7ac796d35f26b5c87d318e1e93247a7a8f31a1f5
+commit b715fdffb59ad674e16d31db09b75884ddd2e0fa
 Author: Tom White <tom@cloudera.com>
 Date:   Mon Jan 24 17:41:41 2011 -0800
 
@@ -108,7 +1058,7 @@ Date:   Mon Jan 24 17:41:41 2011 -0800
     Author: Ian Nowland
     Ref: DISTRO-76
 
-commit ba0a86b5c1d4176c1d7fb536f45c7fdec6df8495
+commit 516adbfc45e739130bdbb047e45f068a38e72988
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Wed Jan 19 00:27:37 2011 -0800
 
@@ -118,7 +1068,7 @@ Date:   Wed Jan 19 00:27:37 2011 -0800
     Author: Hairong Kuang
     Ref: CDH-2044
 
-commit bff25038052dc9b8a8c6d78c7195ecd1d5393033
+commit 1e3ffff9722ebd775b870a4c914f202930bb525e
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Wed Jan 19 00:18:37 2011 -0800
 
@@ -128,7 +1078,7 @@ Date:   Wed Jan 19 00:18:37 2011 -0800
     Author: Hairong Kuang
     Ref: CDH-2044
 
-commit 3ccc7f6bc617b1d81a59cb568bafead83712861d
+commit fadd26e431dc879d9611f22f2974d4eab30d7efa
 Author: Tom White <tom@cloudera.com>
 Date:   Fri Jan 7 16:06:03 2011 -0800
 
@@ -138,7 +1088,7 @@ Date:   Fri Jan 7 16:06:03 2011 -0800
     Author: Zheng Shao
     Ref: CDH-2395, DISTRO-36
 
-commit fa0fdd5d8e9a16a5e90ccb7cb863da3a1ee925f6
+commit eb118d65f792dd3947b886ea7f2c971556d496cf
 Author: Tom White <tom@cloudera.com>
 Date:   Tue Jan 18 13:35:06 2011 -0800
 
@@ -148,7 +1098,7 @@ Date:   Tue Jan 18 13:35:06 2011 -0800
     Author: Amareshwari Sriramadasu
     Ref: CDH-2538
 
-commit b451a85b0bdbbb12910bcad0892f1f2fcef5f588
+commit 2b0e1289ccbdb9c6837e4ab11fdf73fa8980571c
 Author: Tom White <tom@cloudera.com>
 Date:   Tue Jan 18 13:33:40 2011 -0800
 
@@ -158,7 +1108,7 @@ Date:   Tue Jan 18 13:33:40 2011 -0800
     Author: Amareshwari Sriramadasu
     Ref: CDH-2538
 
-commit 11a0bbbb55a41012216cc42665b92161d21777a9
+commit a144f415c0e14d1b4d42c72ccf5c97dc8f8423e8
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Tue Jan 18 14:17:56 2011 -0800
 
@@ -168,7 +1118,7 @@ Date:   Tue Jan 18 14:17:56 2011 -0800
     Author: Todd Lipcon
     Ref: CDH-2541
 
-commit e4a1efcccacef6057584160d61cd40d1bca543ba
+commit 5ebec5b74ea0b6fe9270cc40f770bf4cf4f7d4a7
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Thu Jan 13 17:33:24 2011 -0800
 
@@ -178,7 +1128,7 @@ Date:   Thu Jan 13 17:33:24 2011 -0800
     Author: Todd Lipcon
     Ref: DISTRO-72
 
-commit 8b6194242b7b7a2e58b02b55841a18577bc504cf
+commit 185d654adfa40db3978a2f552feec95748589c89
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Sat Dec 18 18:28:04 2010 -0800
 
@@ -188,7 +1138,7 @@ Date:   Sat Dec 18 18:28:04 2010 -0800
     Author: Todd Lipcon
     Ref: CDH-2530
 
-commit c373a45b44c4eb94709b1435e1eeb8525e926182
+commit 390cedb3ba0ec9bf7e4859f89c3e10dd40be2763
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Fri Jan 14 17:39:21 2011 -0800
 
@@ -198,7 +1148,7 @@ Date:   Fri Jan 14 17:39:21 2011 -0800
     Author: Todd Lipcon
     Ref: CDH-520
 
-commit ed7c3df6745184979f4c370588a89cf563d89389
+commit 61bf38c1c0b31ef18b93ed225c8367ab4d5d7f96
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Tue Jan 11 15:46:43 2011 -0800
 
@@ -210,7 +1160,7 @@ Date:   Tue Jan 11 15:46:43 2011 -0800
     Author: Todd Lipcon
     Ref: DISTRO-73
 
-commit b1d7a987c4c70330a8ca8f3407bfe0378f77eeb6
+commit 5c54c0cae529a17fe30d17642b868f2609c0731b
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Thu Jan 13 11:54:25 2011 -0800
 
@@ -220,7 +1170,7 @@ Date:   Thu Jan 13 11:54:25 2011 -0800
     Author: Eli Collins
     Ref: CDH-862
 
-commit e2cac245cdea31565452f21c429c02ee77259210
+commit b48ee52a2c451a673765c67141448fa9cdc7e37a
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Thu Jan 13 11:56:04 2011 -0800
 
@@ -230,7 +1180,7 @@ Date:   Thu Jan 13 11:56:04 2011 -0800
     Author: Todd Lipcon
     Ref: CDH-2525
 
-commit aa9fcf0ce97a4017dddea80b889b2fc7fa8d7a50
+commit 329ae61a7987d576c0d73a395f773fa820594ea4
 Author: Eli Collins <eli@cloudera.com>
 Date:   Fri Jan 7 10:47:45 2011 -0800
 
@@ -245,7 +1195,7 @@ Date:   Fri Jan 7 10:47:45 2011 -0800
     Author: Eli Collins
     Ref: DISTRO-9
 
-commit 503bf87e3ea45c245e7c4b12d6047228ac27cd56
+commit 0f0f7b996033179d70f3750b3d1d0ff4a1b1aef3
 Author: Eli Collins <eli@cloudera.com>
 Date:   Wed Jan 5 11:32:26 2011 -0800
 
@@ -255,7 +1205,7 @@ Date:   Wed Jan 5 11:32:26 2011 -0800
     Author: Eli Collins
     Ref: CDH-2405
 
-commit f2518b85afacd9fecd34bc7f65c71b7d40dd53a6
+commit bd69ffce6f04c6d4f3685f55403b5d57191057d9
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Tue Jan 11 15:53:13 2011 -0800
 
@@ -265,7 +1215,7 @@ Date:   Tue Jan 11 15:53:13 2011 -0800
     Author: Amareshwari Sriramadasu and Jay Booth.
     Ref: CDH-2513
 
-commit d737a5a3c6f803eada035a7c26d502398d8b45b1
+commit 6ff69b095f390fba1e8ba3c315a93889a94de481
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Tue Jan 11 15:56:18 2011 -0800
 
@@ -275,7 +1225,7 @@ Date:   Tue Jan 11 15:56:18 2011 -0800
     Author: Amareshwari Sriramadasu
     Ref: CDH-2513
 
-commit 3eb901ec19949472876c5e4ef8f45f52f79e1c48
+commit c1ec4018591d3e2bbb6fa8f664f9355a76e94ad5
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Tue Jan 11 15:48:01 2011 -0800
 
@@ -287,7 +1237,7 @@ Date:   Tue Jan 11 15:48:01 2011 -0800
     Author: Amareshwari Sriramadasu.
     Ref: CDH-2513
 
-commit 0d5b74d2863ecba887d28bef3a23d99b35f0b45a
+commit de6b20455e53435d6079b0ed9b0a005bc0c435ff
 Author: Konstantin Boudnik <cos@apache.org>
 Date:   Tue Jan 11 13:43:02 2011 -0800
 
@@ -298,7 +1248,7 @@ Date:   Tue Jan 11 13:43:02 2011 -0800
     Author: cos
     Ref: CDH-2485
 
-commit 3e3dd5754bb824bd008a2e73f795761984a18ef2
+commit 5b2e26fd1cfa592931dc9606d6cb81aaf9a5712d
 Author: Tom White <tom@cloudera.com>
 Date:   Mon Jan 10 16:31:24 2011 -0800
 
@@ -308,7 +1258,7 @@ Date:   Mon Jan 10 16:31:24 2011 -0800
     Author: Tom White
     Ref: CDH-789
 
-commit d64b0bd5370cf6dc69611a712b9f1ed8525884f5
+commit 51a15afdd3f2b33e9c6573bfa9d002034edaaaf7
 Author: Tom White <tom@cloudera.com>
 Date:   Mon Jan 10 13:49:10 2011 -0800
 
@@ -318,7 +1268,7 @@ Date:   Mon Jan 10 13:49:10 2011 -0800
     Author: Michael Tamm
     Ref: DISTRO-28
 
-commit f0fd694e41c90c29753451cc0726653e7b41c5c1
+commit bda05051c5ad4c56d210427bbe6445c3db66573e
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Fri Jan 7 14:20:01 2011 -0800
 
@@ -328,7 +1278,7 @@ Date:   Fri Jan 7 14:20:01 2011 -0800
     Author: Todd Lipcon
     Ref: CDH-2500
 
-commit 977c695e4a62ed503f9cbaa2bd2acef8a1558ac2
+commit b57d9d0a60f8d871511750465ad94dd18a103656
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Sat Dec 18 15:44:25 2010 -0800
 
@@ -338,7 +1288,7 @@ Date:   Sat Dec 18 15:44:25 2010 -0800
     Author: Todd Lipcon
     Ref: CDH-2499
 
-commit 42a6c38290b1e4fe060b4f51a16483aff1d2d062
+commit b5f1e39c0561d262829ae4cce546773a418db96e
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Fri Jan 7 14:07:54 2011 -0800
 
@@ -348,7 +1298,7 @@ Date:   Fri Jan 7 14:07:54 2011 -0800
     Author: Todd Lipcon
     Ref: DISTRO-66
 
-commit ad98e793f3861c4e4c0a343d7b763dd1ad8fb7fd
+commit a3421bf550672c6615541e1f73a5e0add9fcc158
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Fri Jan 7 13:59:13 2011 -0800
 
@@ -357,7 +1307,7 @@ Date:   Fri Jan 7 13:59:13 2011 -0800
     Author: Todd Lipcon
     Ref: CDH-2498
 
-commit f7dd5b420bd3849255a19eed89ae703166876e21
+commit d0fcd663498ab6af0ae550ea6ace527ac7f7eae3
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Fri Jan 7 13:56:43 2011 -0800
 
@@ -367,7 +1317,7 @@ Date:   Fri Jan 7 13:56:43 2011 -0800
     Author: Todd Lipcon
     Ref: CDH-2498
 
-commit 4966b584260af5a87fed86c14f0009ae3b0176aa
+commit 5d85605d7f324d9bb5751bf9e1733170dd97a911
 Author: Tom White <tom@cloudera.com>
 Date:   Thu Jan 6 12:21:40 2011 -0800
 
@@ -377,7 +1327,7 @@ Date:   Thu Jan 6 12:21:40 2011 -0800
     Author: Tom White
     Ref: CDH-2283
 
-commit 3f5a4bf2c41bdc7ba1b600cffb4017bb2924e0b7
+commit 73c38ae4211b732cae575d7f52f233e2cf6f909e
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Wed Jan 5 14:39:10 2011 -0800
 
@@ -387,7 +1337,7 @@ Date:   Wed Jan 5 14:39:10 2011 -0800
     Author: Todd Lipcon
     Ref: CDH-2494
 
-commit 542423099e454b6cc67e4bd6e46199b9e3744f66
+commit 4882770efb2a9eb52ae51d5b35e6ba3a2737c44e
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Sun Dec 19 17:38:57 2010 -0800
 
@@ -396,7 +1346,7 @@ Date:   Sun Dec 19 17:38:57 2010 -0800
     Author: Todd Lipcon
     Ref: CDH-2319
 
-commit 1064a3bcc6115fea0255c8461a7ce4b9712b36ef
+commit f9f9182ecf6d208fd28b23941b5e851e1efedec7
 Author: Eli Collins <eli@cloudera.com>
 Date:   Mon Jan 3 21:35:29 2011 -0800
 
@@ -406,7 +1356,7 @@ Date:   Mon Jan 3 21:35:29 2011 -0800
     Author: Michele Catasta
     Ref: CDH-2266
 
-commit e54070cf22a4ec6df58d5f4d260fbeb32a2f858d
+commit 4214d3e60326a9b41e84f85895aca325d634c304
 Author: Konstantin Boudnik <cos@apache.org>
 Date:   Mon Dec 20 12:16:32 2010 -0800
 
@@ -417,7 +1367,7 @@ Date:   Mon Dec 20 12:16:32 2010 -0800
     Author: cos
     Ref: CDH-2381
 
-commit 3fde307e8d2a7956635a285155e74e110bbc598c
+commit 4ad53f3de801a1a670d658d4d933d9576b99445c
 Author: Eli Collins <eli@cloudera.com>
 Date:   Fri Dec 17 00:00:55 2010 -0800
 
@@ -433,7 +1383,7 @@ Date:   Fri Dec 17 00:00:55 2010 -0800
     Author: Devaraj Das
     Ref: DISTRO-64
 
-commit 999ccf312a8f7a97d69e5a6bb53b722f3f80f45b
+commit b0ed02a3d621bbf994f8fb5dc1d86a451afe490d
 Author: Tom White <tom@cloudera.com>
 Date:   Mon Dec 13 15:00:20 2010 -0800
 
@@ -443,7 +1393,7 @@ Date:   Mon Dec 13 15:00:20 2010 -0800
     Author: Arun C Murthy
     Ref: CDH-1691
 
-commit eb8315057aaccebeeef2e80dde0061fbad9fb174
+commit ba2c7a5b99915ca1431e3024dd80ac359c8005a1
 Author: Tom White <tom@cloudera.com>
 Date:   Tue Dec 14 17:41:09 2010 -0800
 
@@ -453,7 +1403,7 @@ Date:   Tue Dec 14 17:41:09 2010 -0800
     Author: Torsten Curdt
     Ref: CDH-2010
 
-commit f31a9d5512df7fb82c2803f2a4d9ee0ac7f6566c
+commit 43fb37a6b9693003cc9ea1161bc080e5309b1973
 Author: Eli Collins <eli@cloudera.com>
 Date:   Thu Dec 9 08:54:22 2010 -0800
 
@@ -469,7 +1419,7 @@ Date:   Thu Dec 9 08:54:22 2010 -0800
     Author: Amareshwari Sriramadasu
     Ref: CDH-855
 
-commit 6f138d0a0ccfdaf5fd7786e50a10aa5b8c1da46c
+commit af9ef1fcde9aa7ed6d84481837dd5c3e6e4ecc14
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Tue Dec 7 18:29:42 2010 -0800
 
@@ -479,7 +1429,7 @@ Date:   Tue Dec 7 18:29:42 2010 -0800
     Author: Eli Collins
     Ref: CDH-862
 
-commit fa6579efee1631efdc5a12afe3bdcfafd051b043
+commit 50796a1b13f77ef5c2e098f6a651bf52c05cd2f7
 Author: Alejandro Abdelnur <tucu00@gmail.com>
 Date:   Tue Nov 30 14:03:00 2010 +0800
 
@@ -490,7 +1440,7 @@ Date:   Tue Nov 30 14:03:00 2010 +0800
     Author: Alejandro
     Ref: CDH-2234
 
-commit 36fe5d680d24189b6fc1237caa0abc78365e5f5d
+commit 39b1d616bd1d7cf88cb057d1fd70b0d9b17a9992
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Wed Nov 24 14:19:20 2010 -0800
 
@@ -499,7 +1449,7 @@ Date:   Wed Nov 24 14:19:20 2010 -0800
     Author: Owen O'Malley
     Ref: CDH-2009
 
-commit 1f23f25f7103be2d566eb2d33aef7b0071137f7b
+commit 552ebe400b6d94b02d8a3ffebb61b433f7e13aa1
 Author: Eli Collins <eli@cloudera.com>
 Date:   Fri Nov 12 23:18:51 2010 -0800
 
@@ -509,7 +1459,7 @@ Date:   Fri Nov 12 23:18:51 2010 -0800
     Author: Suresh Srinivas
     Ref: CDH-2277
 
-commit aa496862f2908a4dc7a98713e61d145413e52e47
+commit fa4ca629131059ade47618d0ed201c4ddc3abe72
 Author: Eli Collins <eli@cloudera.com>
 Date:   Fri Nov 12 19:46:24 2010 -0800
 
@@ -519,7 +1469,7 @@ Date:   Fri Nov 12 19:46:24 2010 -0800
     Author: Devaraj Das
     Ref: CDH-648
 
-commit c5b9cf1e0b2ebd4a7fcd2c8f57568e1cd4708ba7
+commit f8b9f2f2e062b33c752c53e5aa3f871f08fa359c
 Author: Eli Collins <eli@cloudera.com>
 Date:   Wed Nov 10 14:58:26 2010 -0800
 
@@ -529,13 +1479,13 @@ Date:   Wed Nov 10 14:58:26 2010 -0800
     Author: Ramkumar Vadali
     Ref: CDH-2271
 
-commit 01e397aa75f5ff77e5da19900e0795f57160d6cc
+commit 78b9e608a82c69e59950d4be585fc17e79c8eeca
 Author: Eli Collins <eli@cloudera.com>
 Date:   Wed Nov 3 16:32:40 2010 -0700
 
     CLOUDERA-BUILD. Remove the MySQL Connector/J library. See SQOOP-97.
 
-commit 7a3e67006cec29bca339350ab910731296db7561
+commit 835e4b2f8d5f5b8de9eaaf6b2585a62224574323
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Tue Oct 19 15:19:34 2010 -0700
 
@@ -545,7 +1495,7 @@ Date:   Tue Oct 19 15:19:34 2010 -0700
     Author: Todd Lipcon
     Ref: CDH-2226
 
-commit 9f1bf3801098f0290aec2bc464c7f24832fd0224
+commit 62a9a1327165a1a363639c2f21b79be61616f7b3
 Author: Todd Lipcon <todd@cloudera.com>
 Date:   Thu Oct 14 16:21:34 2010 -0400
 

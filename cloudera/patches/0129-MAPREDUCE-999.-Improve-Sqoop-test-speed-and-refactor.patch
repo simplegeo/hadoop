@@ -1,7 +1,7 @@
 From aa7ae9d9826866f94ecfe5629d087ef68e4b5c54 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:18:29 -0800
-Subject: [PATCH 129/791] MAPREDUCE-999. Improve Sqoop test speed and refactor tests
+Subject: [PATCH 129/887] MAPREDUCE-999. Improve Sqoop test speed and refactor tests
 
 Description: Sqoop's tests take a long time to run, but this can be improved (by a factor of 2 or more) by taking advantage of <tt>jobclient.completion.poll.interval</tt>.
 Reason: Testing performance improvement

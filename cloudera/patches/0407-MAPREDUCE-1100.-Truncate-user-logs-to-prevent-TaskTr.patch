@@ -1,7 +1,7 @@
 From b76311584ce48bdc06c6c1103e45cbc2e2cc9112 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 16 Dec 2009 23:46:27 +0530
-Subject: [PATCH 407/791] MAPREDUCE-1100. Truncate user logs to prevent TaskTrackers' disks from filling up.
+Subject: [PATCH 407/887] MAPREDUCE-1100. Truncate user logs to prevent TaskTrackers' disks from filling up.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12428200/MAPREDUCE-1100-20091216.2.txt
 Author: Vinod K V

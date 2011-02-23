@@ -1,7 +1,7 @@
 From 46f2b3ad578ea1d2ee2cca4e6467ba2daa57df0e Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 14 May 2010 19:34:09 -0700
-Subject: [PATCH 294/791] HDFS-445. pread should refetch block locations when necessary
+Subject: [PATCH 294/887] HDFS-445. pread should refetch block locations when necessary
 
 Description: The positional read API in DFSInputStream was previously
              missing any retry logic. This patch adds this logic.

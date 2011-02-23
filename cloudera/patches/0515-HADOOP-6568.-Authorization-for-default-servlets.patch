@@ -1,7 +1,7 @@
 From 06b43c680556c94120774e2c22279086654f50ee Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sat, 27 Feb 2010 15:03:15 +0530
-Subject: [PATCH 515/791] HADOOP-6568. Authorization for default servlets
+Subject: [PATCH 515/887] HADOOP-6568. Authorization for default servlets
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437323/HADOOP-6568-20100226.1-ydist.patch
 Author: Vinod K V

@@ -1,7 +1,7 @@
 From 1c42a6fc1ed560fd31c0622ecb272e48a56d70a1 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 5 Mar 2010 18:42:28 -0800
-Subject: [PATCH 540/791] HADOOP-6603. Provide workaround for issue with Kerberos not resolving cross-realm principal
+Subject: [PATCH 540/887] HADOOP-6603. Provide workaround for issue with Kerberos not resolving cross-realm principal
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437826/HADOOP-6603-Y20S-4.patch
 Author: Jitendra Nath Pandey

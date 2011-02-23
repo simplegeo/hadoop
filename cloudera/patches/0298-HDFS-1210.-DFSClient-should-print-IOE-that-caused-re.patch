@@ -1,7 +1,7 @@
 From 6e99c7e2a12eea782629337f5fb5734e8e5e5865 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@lipcon.org>
 Date: Wed, 2 Jun 2010 22:32:45 -0700
-Subject: [PATCH 298/791] HDFS-1210. DFSClient should print IOE that caused recovery failure
+Subject: [PATCH 298/887] HDFS-1210. DFSClient should print IOE that caused recovery failure
 
 Description: Adds an extra WARN message during DFS client error recovery
 Reason: Makes it easier to debug/diagnose recovery issues

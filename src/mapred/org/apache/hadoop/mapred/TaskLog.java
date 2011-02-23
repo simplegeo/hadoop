@@ -23,7 +23,6 @@ import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -174,7 +173,15 @@ public class TaskLog {
 
   static File getAttemptDir(TaskAttemptID taskid, boolean isCleanup) {
     String cleanupSuffix = isCleanup ? ".cleanup" : "";
-    return new File(getJobDir(taskid.getJobID()), taskid + cleanupSuffix);
+    return getAttemptDir(taskid.getJobID().toString(), 
+        taskid.toString() + cleanupSuffix);
+  }
+  
+  static File getAttemptDir(String jobid, String taskid) {
+    // taskid should be fully formed and it should have the optional 
+    // .cleanup suffix
+    // TODO(todd) should this have cleanup suffix?
+    return new File(getJobDir(jobid), taskid);
   }
 
   static final List<LogName> LOGS_TRACKED_BY_INDEX_FILES =
@@ -248,6 +255,9 @@ public class TaskLog {
           ((TaskLogAppender)a).flush();
         }
       }
+    }
+    if (currentTaskid == null) {
+      currentTaskid = taskid;
     }
     // set start and end
     for (LogName logName : LOGS_TRACKED_BY_INDEX_FILES) {
@@ -512,7 +522,8 @@ public class TaskLog {
     List<String> result = new ArrayList<String>(3);
     result.add(bashCommand);
     result.add("-c");
-    String mergedCmd = buildCommandLine(setup, cmd,
+    String mergedCmd = buildCommandLine(setup,
+        cmd,
         stdoutFilename,
         stderrFilename, tailLength,
         useSetsid);
@@ -530,15 +541,17 @@ public class TaskLog {
     
     String stdout = FileUtil.makeShellPath(stdoutFilename);
     String stderr = FileUtil.makeShellPath(stderrFilename);
-    StringBuffer mergedCmd = new StringBuffer();
+    StringBuilder mergedCmd = new StringBuilder();
     
     if (!Shell.WINDOWS) {
-      mergedCmd.append(" export JVM_PID=`echo $$` ; ");
+      mergedCmd.append("export JVM_PID=`echo $$`\n");
     }
 
-    if (setup != null && setup.size() > 0) {
-      mergedCmd.append(addCommand(setup, false));
-      mergedCmd.append(";");
+    if (setup != null) {
+      for (String s : setup) {
+        mergedCmd.append(s);
+        mergedCmd.append("\n");
+      }
     }
     if (tailLength > 0) {
       mergedCmd.append("(");
@@ -646,11 +659,21 @@ public class TaskLog {
   /**
    * Get the user log directory for the job jobid.
    * 
-   * @param jobid
+   * @param jobid string representation of the jobid
+   * @return user log directory for the job
+   */
+  public static File getJobDir(String jobid) {
+    return new File(getUserLogDir(), jobid);
+  }
+  
+  /**
+   * Get the user log directory for the job jobid.
+   * 
+   * @param jobid the jobid object
    * @return user log directory for the job
    */
   public static File getJobDir(JobID jobid) {
-    return new File(getUserLogDir(), jobid.toString());
+    return getJobDir(jobid.toString());
   }
 
 } // TaskLog

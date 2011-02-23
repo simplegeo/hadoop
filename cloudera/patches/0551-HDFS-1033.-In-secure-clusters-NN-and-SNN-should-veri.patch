@@ -1,7 +1,7 @@
 From 6d83d8407d13f0e4b8b26f74bfbbd592b4c906ee Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 11 Mar 2010 14:38:56 -0800
-Subject: [PATCH 551/791] HDFS-1033. In secure clusters, NN and SNN should verify that the remote principal during image and edits transfer
+Subject: [PATCH 551/887] HDFS-1033. In secure clusters, NN and SNN should verify that the remote principal during image and edits transfer
 
 Patch: https://issues.apache.org/jira/secure/attachment/12438477/HDFS-1033-Y20.patch
 Author: Jakob Homan

@@ -27,12 +27,16 @@ MISSING @SINCE TAG: org.apache.hadoop.security.Groups Class
 MISSING @SINCE TAG: org.apache.hadoop.http.HtmlQuoting Class
 MISSING @SINCE TAG: org.apache.hadoop.http.HttpServer.QuotingInputFilter Class
 NO DOC BLOCK: org.apache.hadoop.http.HttpServer.QuotingInputFilter.RequestQuoter Class
+MISSING @SINCE TAG: org.apache.hadoop.security.JniBasedUnixGroupsMapping Class
+MISSING @SINCE TAG: org.apache.hadoop.security.JniBasedUnixGroupsNetgroupMapping Class
 MISSING @SINCE TAG: org.apache.hadoop.mapreduce.JobACL Class
 MISSING @SINCE TAG: org.apache.hadoop.mapred.JobInProgress Class
 NO DOC BLOCK: org.apache.hadoop.mapred.JobInProgress.Counter Class
+MISSING @SINCE TAG: org.apache.hadoop.mapred.JobLocalizer Class
 MISSING @SINCE TAG: org.apache.hadoop.mapreduce.JobStatus Class
 MISSING @SINCE TAG: org.apache.hadoop.mapreduce.JobStatus.State Class
 MISSING @SINCE TAG: org.apache.hadoop.mapreduce.JobSubmissionFiles Class
+MISSING @SINCE TAG: org.apache.hadoop.mapred.JobTrackerMXBean Interface
 MISSING @SINCE TAG: org.apache.hadoop.mapred.JobTrackerPlugin Class
 NO DOC BLOCK: org.apache.hadoop.mapred.JvmTask Class
 MISSING @SINCE TAG: org.apache.hadoop.security.KerberosInfo Interface
@@ -49,10 +53,12 @@ MISSING @SINCE TAG: org.apache.hadoop.metrics.MetricsServlet Class
 MISSING @SINCE TAG: org.apache.hadoop.util.MRAsyncDiskService Class
 MISSING @SINCE TAG: org.apache.hadoop.mapreduce.lib.input.MultipleInputs Class
 MISSING @SINCE TAG: org.apache.hadoop.mapreduce.lib.output.MultipleOutputs Class
+MISSING @SINCE TAG: org.apache.hadoop.security.NetgroupCache Class
 MISSING @SINCE TAG: org.apache.hadoop.metrics.spi.NoEmitMetricsContext Class
 MISSING @SINCE TAG: org.apache.hadoop.mapred.Operation Class
 MISSING @SINCE TAG: org.apache.hadoop.util.PluginDispatcher Class
 MISSING @SINCE TAG: org.apache.hadoop.util.ProcessTree Class
+MISSING @SINCE TAG: org.apache.hadoop.util.ProcessTree.Signal Class
 NO DOC BLOCK: org.apache.hadoop.security.authorize.ProxyUsers Class
 MISSING @SINCE TAG: org.apache.hadoop.util.PureJavaCrc32 Class
 MISSING @SINCE TAG: org.apache.hadoop.security.RefreshUserMappingsProtocol Interface
@@ -72,6 +78,7 @@ MISSING @SINCE TAG: org.apache.hadoop.io.SecureIOUtils.AlreadyExistsException Cl
 MISSING @SINCE TAG: org.apache.hadoop.ipc.Server.Connection Class
 MISSING @SINCE TAG: org.apache.hadoop.util.ServicePlugin Interface
 MISSING @SINCE TAG: org.apache.hadoop.security.ShellBasedUnixGroupsMapping Class
+MISSING @SINCE TAG: org.apache.hadoop.security.ShellBasedUnixGroupsNetgroupMapping Class
 MISSING @SINCE TAG: org.apache.hadoop.util.SingleArgumentRunnable Interface
 MISSING @SINCE TAG: org.apache.hadoop.io.compress.SplitCompressionInputStream Class
 MISSING @SINCE TAG: org.apache.hadoop.io.compress.SplittableCompressionCodec Interface
@@ -85,14 +92,13 @@ NO DOC BLOCK: org.apache.hadoop.mapred.Task.NewCombinerRunner Class
 NO DOC BLOCK: org.apache.hadoop.mapred.Task.OldCombinerRunner Class
 NO DOC BLOCK: org.apache.hadoop.mapred.Task.TaskReporter Class
 MISSING @SINCE TAG: org.apache.hadoop.mapred.TaskController Class
-MISSING @SINCE TAG: org.apache.hadoop.mapred.TaskController.DistributedCacheFileContext Class
-MISSING @SINCE TAG: org.apache.hadoop.mapred.TaskController.InitializationContext Class
 MISSING @SINCE TAG: org.apache.hadoop.filecache.TaskDistributedCacheManager Class
 MISSING @SINCE TAG: org.apache.hadoop.mapred.TaskInProgress Class
 MISSING @SINCE TAG: org.apache.hadoop.mapred.TaskLogsTruncater Class
 MISSING @SINCE TAG: org.apache.hadoop.mapred.TaskStatus Class
 NO DOC BLOCK: org.apache.hadoop.mapred.TaskStatus.Phase Class
 NO DOC BLOCK: org.apache.hadoop.mapred.TaskStatus.State Class
+MISSING @SINCE TAG: org.apache.hadoop.mapred.TaskTrackerMXBean Interface
 MISSING @SINCE TAG: org.apache.hadoop.mapred.TaskTrackerStatus Class
 MISSING @SINCE TAG: org.apache.hadoop.mapred.TaskTrackerStatus.ResourceStatus Class
 MISSING @SINCE TAG: org.apache.hadoop.mapreduce.TaskType Class
@@ -114,7 +120,7 @@ NO DOC BLOCK: org.apache.hadoop.http.HttpServer Constructor (java.lang.String, j
 NO DOC BLOCK: org.apache.hadoop.mapred.InvalidJobConfException Constructor (java.lang.String, java.lang.Throwable)
 NO DOC BLOCK: org.apache.hadoop.mapred.InvalidJobConfException Constructor (java.lang.Throwable)
 MISSING @SINCE TAG: org.apache.hadoop.fs.Path Constructor (java.net.URI)
-NO DOC BLOCK: org.apache.hadoop.util.ProcfsBasedProcessTree Constructor (java.lang.String, boolean, long)
+NO DOC BLOCK: org.apache.hadoop.util.ProcfsBasedProcessTree Constructor (java.lang.String, boolean)
 MISSING @SINCE TAG: org.apache.hadoop.ipc.RPC.Server Constructor (java.lang.Object, org.apache.hadoop.conf.Configuration, java.lang.String, int, int, boolean, org.apache.hadoop.security.token.SecretManager)
 MISSING @SINCE TAG: org.apache.hadoop.ipc.Server Constructor (java.lang.String, int, java.lang.Class, int, org.apache.hadoop.conf.Configuration, java.lang.String, org.apache.hadoop.security.token.SecretManager)
 MISSING @SINCE TAG: org.apache.hadoop.util.Shell.ShellCommandExecutor Constructor (java.lang.String[], java.io.File, java.util.Map, long)
@@ -127,10 +133,11 @@ MISSING @SINCE TAG: org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter M
 MISSING @SINCE TAG: org.apache.hadoop.filecache.DistributedCache Method addArchiveToClassPath(org.apache.hadoop.fs.Path, org.apache.hadoop.conf.Configuration, org.apache.hadoop.fs.FileSystem)
 MISSING @SINCE TAG: org.apache.hadoop.filecache.DistributedCache Method addFileToClassPath(org.apache.hadoop.fs.Path, org.apache.hadoop.conf.Configuration, org.apache.hadoop.fs.FileSystem)
 MISSING @SINCE TAG: org.apache.hadoop.http.HttpServer Method addInternalServlet(java.lang.String, java.lang.String, java.lang.Class, boolean)
+MISSING @SINCE TAG: org.apache.hadoop.filecache.DistributedCache Method addLocalArchives(org.apache.hadoop.conf.Configuration, java.lang.String)
+MISSING @SINCE TAG: org.apache.hadoop.filecache.DistributedCache Method addLocalFiles(org.apache.hadoop.conf.Configuration, java.lang.String)
 MISSING @SINCE TAG: org.apache.hadoop.http.HttpServer Method addSslListener(java.net.InetSocketAddress, org.apache.hadoop.conf.Configuration, boolean, boolean)
 MISSING @SINCE TAG: org.apache.hadoop.security.UserGroupInformation Method addToken(org.apache.hadoop.security.token.Token)
 MISSING @SINCE TAG: org.apache.hadoop.security.UserGroupInformation Method addTokenIdentifier(org.apache.hadoop.security.token.TokenIdentifier)
-MISSING @SINCE TAG: org.apache.hadoop.util.ProcfsBasedProcessTree Method assertAndDestroyProcessGroup(java.lang.String, long, boolean)
 MISSING @SINCE TAG: org.apache.hadoop.security.SecurityUtil Method buildDTServiceName(java.net.URI, int)
 NO DOC BLOCK: org.apache.hadoop.ipc.Client Method call(org.apache.hadoop.io.Writable, java.net.InetSocketAddress, java.lang.Class, org.apache.hadoop.security.UserGroupInformation, int)
 NO DOC BLOCK: org.apache.hadoop.ipc.Client Method call(org.apache.hadoop.io.Writable, java.net.InetSocketAddress, java.lang.Class, org.apache.hadoop.security.UserGroupInformation, int, org.apache.hadoop.conf.Configuration)
@@ -139,12 +146,15 @@ MISSING @SINCE TAG: org.apache.hadoop.ipc.Client Method call(org.apache.hadoop.i
 MISSING @SINCE TAG: org.apache.hadoop.ipc.Client Method call(org.apache.hadoop.io.Writable[], java.net.InetSocketAddress[])
 MISSING @SINCE TAG: org.apache.hadoop.ipc.Client Method call(org.apache.hadoop.io.Writable[], java.net.InetSocketAddress[], java.lang.Class, org.apache.hadoop.security.UserGroupInformation)
 MISSING @SINCE TAG: org.apache.hadoop.ipc.Client Method call(org.apache.hadoop.io.Writable[], java.net.InetSocketAddress[], java.lang.Class, org.apache.hadoop.security.UserGroupInformation, org.apache.hadoop.conf.Configuration)
+MISSING @SINCE TAG: org.apache.hadoop.util.StringUtils Method camelize(java.lang.String)
 MISSING @SINCE TAG: org.apache.hadoop.mapred.JobClient Method cancelDelegationToken(org.apache.hadoop.security.token.Token)
 MISSING @SINCE TAG: org.apache.hadoop.mapred.JobTracker Method cancelDelegationToken(org.apache.hadoop.security.token.Token)
+MISSING @SINCE TAG: org.apache.hadoop.util.StringUtils Method capitalize(java.lang.String)
 MISSING @SINCE TAG: org.apache.hadoop.mapred.TaskLog Method captureOutAndError(java.util.List, java.util.List, java.io.File, java.io.File, long, boolean, java.lang.String)
 MISSING @SINCE TAG: org.apache.hadoop.mapred.TaskLog Method captureOutAndError(java.util.List, java.util.List, java.io.File, java.io.File, long, java.lang.String)
 MISSING @SINCE TAG: org.apache.hadoop.mapred.TaskLog Method captureOutAndError(java.util.List, java.util.List, java.io.File, java.io.File, long, boolean)
 MISSING @SINCE TAG: org.apache.hadoop.util.DiskChecker Method checkDir(org.apache.hadoop.fs.LocalFileSystem, org.apache.hadoop.fs.Path, org.apache.hadoop.fs.permission.FsPermission)
+MISSING @SINCE TAG: org.apache.hadoop.security.UserGroupInformation Method checkTGTAndReloginFromKeytab()
 MISSING @SINCE TAG: org.apache.hadoop.fs.FileUtil Method chmod(java.lang.String, java.lang.String, boolean)
 MISSING @SINCE TAG: org.apache.hadoop.fs.FileSystem Method closeAllForUGI(org.apache.hadoop.security.UserGroupInformation)
 NO DOC BLOCK: org.apache.hadoop.mapred.FileOutputCommitter Method commitJob(org.apache.hadoop.mapred.JobContext)
@@ -163,7 +173,6 @@ MISSING @SINCE TAG: org.apache.hadoop.io.file.tfile.TFile.Reader Method createSc
 MISSING @SINCE TAG: org.apache.hadoop.io.file.tfile.TFile.Reader Method createScannerByKey(org.apache.hadoop.io.file.tfile.RawComparable, org.apache.hadoop.io.file.tfile.RawComparable)
 MISSING @SINCE TAG: org.apache.hadoop.io.file.tfile.TFile.Reader Method createScannerByRecordNum(long, long)
 MISSING @SINCE TAG: org.apache.hadoop.security.UserGroupInformation Method createUserForTesting(java.lang.String, java.lang.String[])
-MISSING @SINCE TAG: org.apache.hadoop.util.ProcfsBasedProcessTree Method destroy(boolean)
 MISSING @SINCE TAG: org.apache.hadoop.security.UserGroupInformation Method doAs(java.security.PrivilegedExceptionAction)
 MISSING @SINCE TAG: org.apache.hadoop.security.UserGroupInformation Method doAs(java.security.PrivilegedAction)
 MISSING @SINCE TAG: org.apache.hadoop.conf.Configuration Method dumpConfiguration(org.apache.hadoop.conf.Configuration, java.io.Writer)
@@ -174,10 +183,13 @@ MISSING @SINCE TAG: org.apache.hadoop.security.SecurityUtil Method fetchServiceT
 MISSING @SINCE TAG: org.apache.hadoop.fs.FileUtil Method fullyDeleteContents(java.io.File)
 NO DOC BLOCK: org.apache.hadoop.fs.FileSystem Method get(java.net.URI, org.apache.hadoop.conf.Configuration, java.lang.String)
 MISSING @SINCE TAG: org.apache.hadoop.security.SecurityUtil Method getAdminAcls(org.apache.hadoop.conf.Configuration, java.lang.String)
+NO DOC BLOCK: org.apache.hadoop.mapred.JobTracker Method getAliveNodesInfoJson()
 MISSING @SINCE TAG: org.apache.hadoop.metrics.ContextFactory Method getAllContexts()
+MISSING @SINCE TAG: org.apache.hadoop.fs.LocalDirAllocator Method getAllLocalPathsToRead(java.lang.String, org.apache.hadoop.conf.Configuration)
 MISSING @SINCE TAG: org.apache.hadoop.metrics.MetricsContext Method getAllRecords()
 MISSING @SINCE TAG: org.apache.hadoop.metrics.spi.AbstractMetricsContext Method getAllRecords()
 MISSING @SINCE TAG: org.apache.hadoop.security.UserGroupInformation Method getAuthenticationMethod()
+NO DOC BLOCK: org.apache.hadoop.mapred.JobTracker Method getBlacklistedNodesInfoJson()
 MISSING @SINCE TAG: org.apache.hadoop.fs.FileSystem Method getCanonicalServiceName()
 NO DOC BLOCK: org.apache.hadoop.mapred.JobTracker Method getClock()
 NO DOC BLOCK: org.apache.hadoop.mapred.JobTracker Method getClusterMetrics()
@@ -186,6 +198,8 @@ NO DOC BLOCK: org.apache.hadoop.io.compress.zlib.ZlibFactory Method getCompressi
 NO DOC BLOCK: org.apache.hadoop.io.compress.zlib.ZlibFactory Method getCompressionStrategy(org.apache.hadoop.conf.Configuration)
 MISSING @SINCE TAG: org.apache.hadoop.io.compress.CodecPool Method getCompressor(org.apache.hadoop.io.compress.CompressionCodec, org.apache.hadoop.conf.Configuration)
 MISSING @SINCE TAG: org.apache.hadoop.mapred.JobTracker Method getConf()
+NO DOC BLOCK: org.apache.hadoop.mapred.JobTracker Method getConfigVersion()
+NO DOC BLOCK: org.apache.hadoop.mapred.TaskTracker Method getConfigVersion()
 MISSING @SINCE TAG: org.apache.hadoop.mapred.JobConf Method getCredentials()
 MISSING @SINCE TAG: org.apache.hadoop.mapreduce.JobContext Method getCredentials()
 MISSING @SINCE TAG: org.apache.hadoop.security.UserGroupInformation Method getCurrentUser()
@@ -197,19 +211,30 @@ NO DOC BLOCK: org.apache.hadoop.mapred.JobTracker Method getDelegationTokenSecre
 NO DOC BLOCK: org.apache.hadoop.metrics.ganglia.GangliaContext Method getDmax(java.lang.String)
 MISSING @SINCE TAG: org.apache.hadoop.conf.Configuration Method getEnum(java.lang.String, java.lang.Enum)
 NO DOC BLOCK: org.apache.hadoop.mapred.JobTracker Method getFailedJobs()
+MISSING @SINCE TAG: org.apache.hadoop.mapred.JobStatus Method getFailureInfo()
+MISSING @SINCE TAG: org.apache.hadoop.mapred.RunningJob Method getFailureInfo()
 MISSING @SINCE TAG: org.apache.hadoop.filecache.DistributedCache Method getFileStatus(org.apache.hadoop.conf.Configuration, java.net.URI)
 MISSING @SINCE TAG: org.apache.hadoop.util.Shell Method getGroupsCommand()
 MISSING @SINCE TAG: org.apache.hadoop.util.Shell Method getGroupsForUserCommand(java.lang.String)
 MISSING @SINCE TAG: org.apache.hadoop.mapred.JobHistory Method getHistoryFilePath(org.apache.hadoop.mapred.JobID)
+NO DOC BLOCK: org.apache.hadoop.mapred.JobTracker Method getHostname()
+NO DOC BLOCK: org.apache.hadoop.mapred.TaskTracker Method getHostname()
+NO DOC BLOCK: org.apache.hadoop.mapred.TaskTracker Method getHttpPort()
 MISSING @SINCE TAG: org.apache.hadoop.conf.Configuration Method getInstances(java.lang.String, java.lang.Class)
 MISSING @SINCE TAG: org.apache.hadoop.mapred.TaskLogAppender Method getIsCleanup()
 MISSING @SINCE TAG: org.apache.hadoop.mapred.JobConf Method getJarUnpackPattern()
 MISSING @SINCE TAG: org.apache.hadoop.mapred.JobHistory.JobInfo Method getJobACLs()
 MISSING @SINCE TAG: org.apache.hadoop.mapred.JobStatus Method getJobACLs()
 NO DOC BLOCK: org.apache.hadoop.mapred.TaskTracker Method getJobCacheSubdir(java.lang.String)
+MISSING @SINCE TAG: org.apache.hadoop.mapred.TaskLog Method getJobDir(java.lang.String)
 MISSING @SINCE TAG: org.apache.hadoop.mapred.TaskLog Method getJobDir(org.apache.hadoop.mapreduce.JobID)
+NO DOC BLOCK: org.apache.hadoop.mapred.TaskTracker Method getJobJarFile(java.lang.String, java.lang.String)
 MISSING @SINCE TAG: org.apache.hadoop.mapred.JobStatus Method getJobRunState(int)
+NO DOC BLOCK: org.apache.hadoop.mapred.TaskTracker Method getJobTrackerUrl()
+MISSING @SINCE TAG: org.apache.hadoop.fs.FileSystem.Statistics Method getLargeReadOps()
 NO DOC BLOCK: org.apache.hadoop.mapred.TaskTracker Method getLocalJobDir(java.lang.String, java.lang.String)
+MISSING @SINCE TAG: org.apache.hadoop.fs.LocalDirAllocator Method getLocalPathForWrite(java.lang.String, long, org.apache.hadoop.conf.Configuration, boolean)
+NO DOC BLOCK: org.apache.hadoop.mapred.TaskTracker Method getLocalTaskDir(java.lang.String, java.lang.String, java.lang.String)
 NO DOC BLOCK: org.apache.hadoop.mapred.TaskTracker Method getLocalTaskDir(java.lang.String, java.lang.String, java.lang.String, boolean)
 MISSING @SINCE TAG: org.apache.hadoop.security.UserGroupInformation Method getLoginUser()
 MISSING @SINCE TAG: org.apache.hadoop.metrics.spi.OutputRecord Method getMetricsCopy()
@@ -226,10 +251,14 @@ NO DOC BLOCK: org.apache.hadoop.mapred.TaskTracker Method getPublicDistributedCa
 MISSING @SINCE TAG: org.apache.hadoop.mapred.JobClient Method getQueueAclsForCurrentUser()
 NO DOC BLOCK: org.apache.hadoop.mapred.JobTracker Method getQueueAclsForCurrentUser()
 MISSING @SINCE TAG: org.apache.hadoop.mapred.JobTracker Method getQueueAdmins(java.lang.String)
+NO DOC BLOCK: org.apache.hadoop.mapred.JobTracker Method getQueueInfoJson()
+MISSING @SINCE TAG: org.apache.hadoop.mapred.JobQueueInfo Method getQueueState()
+MISSING @SINCE TAG: org.apache.hadoop.fs.FileSystem.Statistics Method getReadOps()
 MISSING @SINCE TAG: org.apache.hadoop.security.UserGroupInformation Method getRealUser()
 MISSING @SINCE TAG: org.apache.hadoop.io.file.tfile.TFile.Reader.Scanner Method getRecordNum()
 MISSING @SINCE TAG: org.apache.hadoop.io.file.tfile.TFile.Reader Method getRecordNumNear(long)
 MISSING @SINCE TAG: org.apache.hadoop.ipc.Server Method getRpcMetrics()
+NO DOC BLOCK: org.apache.hadoop.mapred.TaskTracker Method getRpcPort()
 MISSING @SINCE TAG: org.apache.hadoop.ipc.RPC Method getServer(java.lang.Object, java.lang.String, int, int, boolean, org.apache.hadoop.conf.Configuration, org.apache.hadoop.security.token.SecretManager)
 MISSING @SINCE TAG: org.apache.hadoop.security.SecurityUtil Method getServerPrincipal(java.lang.String, java.lang.String)
 MISSING @SINCE TAG: org.apache.hadoop.ipc.Server Method getServiceAuthorizationManager()
@@ -244,9 +273,12 @@ MISSING @SINCE TAG: org.apache.hadoop.fs.FilterFileSystem Method getStatus(org.a
 MISSING @SINCE TAG: org.apache.hadoop.fs.RawLocalFileSystem Method getStatus(org.apache.hadoop.fs.Path)
 NO DOC BLOCK: org.apache.hadoop.fs.permission.FsPermission Method getStickyBit()
 MISSING @SINCE TAG: org.apache.hadoop.security.UserGroupInformation Method getSubject()
+NO DOC BLOCK: org.apache.hadoop.mapred.JobTracker Method getSummaryJson()
 MISSING @SINCE TAG: org.apache.hadoop.metrics.spi.OutputRecord Method getTagsCopy()
 NO DOC BLOCK: org.apache.hadoop.mapred.TaskTracker Method getTaskController()
+NO DOC BLOCK: org.apache.hadoop.mapred.TaskTracker Method getTasksInfoJson()
 NO DOC BLOCK: org.apache.hadoop.mapred.JobTracker Method getTaskTrackerStatus(java.lang.String)
+NO DOC BLOCK: org.apache.hadoop.mapred.JobTracker Method getThreadCount()
 NO DOC BLOCK: org.apache.hadoop.metrics.ganglia.GangliaContext Method getTmax(java.lang.String)
 MISSING @SINCE TAG: org.apache.hadoop.security.UserGroupInformation Method getTokenIdentifiers()
 MISSING @SINCE TAG: org.apache.hadoop.security.UserGroupInformation Method getTokens()
@@ -261,15 +293,23 @@ MISSING @SINCE TAG: org.apache.hadoop.util.Shell Method getUlimitMemoryCommand(o
 NO DOC BLOCK: org.apache.hadoop.metrics.ganglia.GangliaContext Method getUnits(java.lang.String)
 NO DOC BLOCK: org.apache.hadoop.mapred.TaskTracker Method getUserDir(java.lang.String)
 NO DOC BLOCK: org.apache.hadoop.mapred.TaskLog Method getUserLogDir()
+MISSING @SINCE TAG: org.apache.hadoop.util.Shell Method getUsersForNetgroupCommand(java.lang.String)
 MISSING @SINCE TAG: org.apache.hadoop.conf.Configuration Method getValByRegex(java.lang.String)
+NO DOC BLOCK: org.apache.hadoop.mapred.JobTracker Method getVersion()
+NO DOC BLOCK: org.apache.hadoop.mapred.TaskTracker Method getVersion()
+MISSING @SINCE TAG: org.apache.hadoop.fs.FileSystem.Statistics Method getWriteOps()
 NO DOC BLOCK: org.apache.hadoop.mapred.JobHistory.JobInfo Method handle(java.util.Map)
 MISSING @SINCE TAG: org.apache.hadoop.http.HttpServer Method hasAdministratorAccess(javax.servlet.ServletContext, javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
 MISSING @SINCE TAG: org.apache.hadoop.io.WritableComparator Method hashBytes(byte[], int, int)
 MISSING @SINCE TAG: org.apache.hadoop.security.UserGroupInformation Method hashCode()
 MISSING @SINCE TAG: org.apache.hadoop.security.UserGroupInformation Method hasKerberosCredentials()
+MISSING @SINCE TAG: org.apache.hadoop.fs.FileSystem.Statistics Method incrementLargeReadOps(int)
+MISSING @SINCE TAG: org.apache.hadoop.fs.FileSystem.Statistics Method incrementReadOps(int)
+MISSING @SINCE TAG: org.apache.hadoop.fs.FileSystem.Statistics Method incrementWriteOps(int)
 MISSING @SINCE TAG: org.apache.hadoop.http.FilterInitializer Method initFilter(org.apache.hadoop.http.FilterContainer, org.apache.hadoop.conf.Configuration)
 MISSING @SINCE TAG: org.apache.hadoop.util.ProcfsBasedProcessTree Method isAnyProcessInTreeAlive()
 MISSING @SINCE TAG: org.apache.hadoop.security.UserGroupInformation Method isFromKeytab()
+NO DOC BLOCK: org.apache.hadoop.mapred.TaskTracker Method isHealthy()
 MISSING @SINCE TAG: org.apache.hadoop.security.UserGroupInformation Method isLoginKeytabBased()
 NO DOC BLOCK: org.apache.hadoop.security.SecurityUtil Method isOriginalTGT(java.lang.String)
 MISSING @SINCE TAG: org.apache.hadoop.security.UserGroupInformation Method isSecurityEnabled()
@@ -281,6 +321,7 @@ MISSING @SINCE TAG: org.apache.hadoop.security.SecurityUtil Method login(org.apa
 MISSING @SINCE TAG: org.apache.hadoop.security.UserGroupInformation Method loginUserFromKeytab(java.lang.String, java.lang.String)
 MISSING @SINCE TAG: org.apache.hadoop.security.UserGroupInformation Method loginUserFromKeytabAndReturnUGI(java.lang.String, java.lang.String)
 MISSING @SINCE TAG: org.apache.hadoop.security.UserGroupInformation Method main(java.lang.String[])
+MISSING @SINCE TAG: org.apache.hadoop.fs.Path Method makeQualified(java.net.URI, org.apache.hadoop.fs.Path)
 MISSING @SINCE TAG: org.apache.hadoop.util.DiskChecker Method mkdirsWithExistsAndPermissionCheck(org.apache.hadoop.fs.LocalFileSystem, org.apache.hadoop.fs.Path, org.apache.hadoop.fs.permission.FsPermission)
 MISSING @SINCE TAG: org.apache.hadoop.fs.FileSystem Method newInstance(java.net.URI, org.apache.hadoop.conf.Configuration)
 MISSING @SINCE TAG: org.apache.hadoop.fs.FileSystem Method newInstance(org.apache.hadoop.conf.Configuration)
@@ -291,7 +332,7 @@ MISSING @SINCE TAG: org.apache.hadoop.metrics.spi.AbstractMetricsContext Method 
 MISSING @SINCE TAG: org.apache.hadoop.io.IOUtils Method readFileChannelFully(java.nio.channels.FileChannel, byte[], int, int)
 NO DOC BLOCK: org.apache.hadoop.security.authorize.ServiceAuthorizationManager Method refresh(org.apache.hadoop.conf.Configuration, org.apache.hadoop.security.authorize.PolicyProvider)
 MISSING @SINCE TAG: org.apache.hadoop.mapred.JobTracker Method refreshNodes()
-NO DOC BLOCK: org.apache.hadoop.mapred.JobTracker Method refreshQueueAcls()
+NO DOC BLOCK: org.apache.hadoop.mapred.JobTracker Method refreshQueues()
 MISSING @SINCE TAG: org.apache.hadoop.ipc.Server Method refreshServiceAcl(org.apache.hadoop.conf.Configuration, org.apache.hadoop.security.authorize.PolicyProvider)
 NO DOC BLOCK: org.apache.hadoop.mapred.JobTracker Method refreshSuperUserGroupsConfiguration()
 MISSING @SINCE TAG: org.apache.hadoop.mapred.tools.MRAdmin Method refreshSuperUserGroupsConfiguration()
@@ -313,11 +354,13 @@ NO DOC BLOCK: org.apache.hadoop.io.compress.zlib.ZlibFactory Method setCompressi
 NO DOC BLOCK: org.apache.hadoop.io.compress.zlib.ZlibFactory Method setCompressionStrategy(org.apache.hadoop.conf.Configuration, org.apache.hadoop.io.compress.zlib.ZlibCompressor.CompressionStrategy)
 MISSING @SINCE TAG: org.apache.hadoop.security.UserGroupInformation Method setConfiguration(org.apache.hadoop.conf.Configuration)
 MISSING @SINCE TAG: org.apache.hadoop.conf.Configuration Method setEnum(java.lang.String, java.lang.Enum)
+MISSING @SINCE TAG: org.apache.hadoop.mapred.JobStatus Method setFailureInfo(java.lang.String)
 MISSING @SINCE TAG: org.apache.hadoop.mapred.TaskLogAppender Method setIsCleanup(boolean)
 MISSING @SINCE TAG: org.apache.hadoop.mapred.JobStatus Method setJobACLs(java.util.Map)
 MISSING @SINCE TAG: org.apache.hadoop.mapred.lib.db.DBOutputFormat Method setOutput(org.apache.hadoop.mapred.JobConf, java.lang.String, int)
 MISSING @SINCE TAG: org.apache.hadoop.mapreduce.lib.output.FileOutputFormat Method setOutputName(org.apache.hadoop.mapreduce.JobContext, java.lang.String)
 MISSING @SINCE TAG: org.apache.hadoop.conf.Configuration Method setPattern(java.lang.String, java.util.regex.Pattern)
+MISSING @SINCE TAG: org.apache.hadoop.mapred.JobQueueInfo Method setQueueState(java.lang.String)
 MISSING @SINCE TAG: org.apache.hadoop.mapreduce.Job Method setupProgress()
 MISSING @SINCE TAG: org.apache.hadoop.mapred.JobConf Method setUserClassesTakesPrecedence(boolean)
 MISSING @SINCE TAG: org.apache.hadoop.mapreduce.Job Method setUserClassesTakesPrecedence(boolean)
@@ -327,6 +370,7 @@ MISSING @SINCE TAG: org.apache.hadoop.io.SequenceFile.Writer Method syncFs()
 NO DOC BLOCK: org.apache.hadoop.mapred.TaskLog Method syncLogs(java.lang.String, org.apache.hadoop.mapred.TaskAttemptID, boolean)
 MISSING @SINCE TAG: org.apache.hadoop.security.UserGroupInformation Method toString()
 MISSING @SINCE TAG: org.apache.hadoop.util.RunJar Method unJar(java.io.File, java.io.File, java.util.regex.Pattern)
+NO DOC BLOCK: org.apache.hadoop.mapred.TaskTracker Method updatePrivateDistributedCacheSizes(org.apache.hadoop.mapreduce.JobID, long[])
 MISSING @SINCE TAG: org.apache.hadoop.io.compress.bzip2.CBZip2InputStream Method updateProcessedByteCount(int)
 MISSING @SINCE TAG: org.apache.hadoop.io.compress.bzip2.CBZip2InputStream Method updateReportedByteCount(int)
 MISSING @SINCE TAG: org.apache.hadoop.mapred.JobConf Method userClassesTakesPrecedence()
@@ -393,6 +437,7 @@ MISSING @SINCE TAG: org.apache.hadoop.mapred.JobConf Field MAPRED_TASK_JAVA_OPTS
 MISSING @SINCE TAG: org.apache.hadoop.mapred.JobConf Field MAPRED_TASK_ULIMIT
 NO DOC BLOCK: org.apache.hadoop.mapreduce.JobContext Field MAPREDUCE_TASK_CLASSPATH_PRECEDENCE
 MISSING @SINCE TAG: org.apache.hadoop.util.RunJar Field MATCH_ANY
+MISSING @SINCE TAG: org.apache.hadoop.mapred.JobTracker Field MAX_USER_JOBCONF_SIZE_KEY
 NO DOC BLOCK: org.apache.hadoop.io.compress.CompressionInputStream Field maxAvailableData
 NO DOC BLOCK: org.apache.hadoop.metrics.ganglia.GangliaContext Field metricsServers
 NO DOC BLOCK: org.apache.hadoop.mapred.JobHistory.Keys Field MODIFY_JOB
@@ -409,6 +454,7 @@ NO DOC BLOCK: org.apache.hadoop.mapred.FileOutputCommitter Field SUCCEEDED_FILE_
 NO DOC BLOCK: org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter Field SUCCEEDED_FILE_NAME
 MISSING @SINCE TAG: org.apache.hadoop.util.Shell Field timeOutInterval
 NO DOC BLOCK: org.apache.hadoop.mapred.TaskTracker Field TT_KEYTAB_FILE
+NO DOC BLOCK: org.apache.hadoop.mapred.TaskTracker Field TT_LOG_TMP_DIR
 NO DOC BLOCK: org.apache.hadoop.mapred.TaskTracker Field TT_USER_NAME
 MISSING @SINCE TAG: org.apache.hadoop.mapreduce.JobContext Field ugi
 MISSING @SINCE TAG: org.apache.hadoop.util.Shell Field ULIMIT_COMMAND

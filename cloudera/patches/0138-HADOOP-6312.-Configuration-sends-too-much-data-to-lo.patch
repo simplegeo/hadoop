@@ -1,7 +1,7 @@
 From 8c9b473e1af036a3e2cc9036a945a4567277db8a Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:21:14 -0800
-Subject: [PATCH 138/791] HADOOP-6312. Configuration sends too much data to log4j
+Subject: [PATCH 138/887] HADOOP-6312. Configuration sends too much data to log4j
 
 Description: Configuration objects send a DEBUG-level log message every time they're instantiated, which include a full stack trace. This is more appropriate for TRACE-level logging, as it renders other debug logs very hard to read.
 Reason: Logging improvement

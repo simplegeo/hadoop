@@ -24,8 +24,10 @@ import org.apache.hadoop.mapred.TaskTracker.TaskInProgress;
 /** Runs a map task. */
 class MapTaskRunner extends TaskRunner {
   
-  public MapTaskRunner(TaskInProgress task, TaskTracker tracker, JobConf conf) {
-    super(task, tracker, conf);
+  public MapTaskRunner(TaskInProgress task, TaskTracker tracker, JobConf conf,
+                       TaskTracker.RunningJob rjob) 
+  throws IOException {
+    super(task, tracker, conf, rjob);
   }
   
   /** Delete any temporary files from previous failed attempts. */
@@ -50,7 +52,7 @@ class MapTaskRunner extends TaskRunner {
                        super.getChildJavaOpts(jobConf, 
                            JobConf.DEFAULT_MAPRED_TASK_JAVA_OPTS));
   }
-  
+
   @Override
   public int getChildUlimit(JobConf jobConf) {
     return jobConf.getInt(JobConf.MAPRED_MAP_TASK_ULIMIT, 

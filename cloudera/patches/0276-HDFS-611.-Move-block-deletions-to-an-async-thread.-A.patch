@@ -1,7 +1,7 @@
 From 08cbce1e413e98d0aaeceeaca26a60c3d9a50b29 Mon Sep 17 00:00:00 2001
 From: todd <todd@monster01.sf.cloudera.com>
 Date: Sun, 21 Mar 2010 14:56:56 -0700
-Subject: [PATCH 276/791] HDFS-611. Move block deletions to an async thread. Applying this to make the HDFS-142 patch apply cleanly
+Subject: [PATCH 276/887] HDFS-611. Move block deletions to an async thread. Applying this to make the HDFS-142 patch apply cleanly
 
 Description: Moves the deletion of blocks in the datanode into a thread
              pool. Substantially improves datanode heartbeat consistency

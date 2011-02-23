@@ -1,7 +1,7 @@
 From eb3c54506da655c486c06560877a2e30dd3aec3f Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 23 Feb 2010 06:57:55 +0000
-Subject: [PATCH 485/791] HADOOP-6467. Performance improvement for liststatus on directories in hadoop archives.
+Subject: [PATCH 485/887] HADOOP-6467. Performance improvement for liststatus on directories in hadoop archives.
 
 Patch: http://issues.apache.org/jira/secure/attachment/12436653/HADOOP-6467-y.0.20-branch-v2.patch
 Author: Mahadev konar

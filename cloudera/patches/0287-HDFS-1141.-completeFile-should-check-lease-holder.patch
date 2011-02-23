@@ -1,7 +1,7 @@
 From 370c9a1e75cc5d5e93cec066006ada0485139fb8 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@lipcon.org>
 Date: Tue, 15 Jun 2010 18:48:58 -0700
-Subject: [PATCH 287/791] HDFS-1141. completeFile should check lease holder
+Subject: [PATCH 287/887] HDFS-1141. completeFile should check lease holder
 
 Description: Fixes a bug where a writer could finalize an in-progress
              file after it had already lost its lease. This could occur

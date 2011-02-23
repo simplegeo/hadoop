@@ -1,7 +1,7 @@
 From ca547d89042fff3a38c0c93b6e0ece78e74ae064 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:11:10 -0800
-Subject: [PATCH 113/791] HADOOP-4655. FileSystem.CACHE should be ref-counted
+Subject: [PATCH 113/887] HADOOP-4655. FileSystem.CACHE should be ref-counted
 
 Description: FileSystem.CACHE is not ref-counted, and could lead to resource leakage.
 Adds new method FileSystem.newInstance() that always returns a newly allocated

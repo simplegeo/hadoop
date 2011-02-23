@@ -1,7 +1,7 @@
 From 716d3598e5a4a18cdfcfcf0dc800e263ef7c7685 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:32:47 -0800
-Subject: [PATCH 023/791] HADOOP-5240. 'ant javadoc' does not check whether outputs are up to date and always rebuilds
+Subject: [PATCH 023/887] HADOOP-5240. 'ant javadoc' does not check whether outputs are up to date and always rebuilds
 
 Description: Running 'ant javadoc' twice in a row calls the javadoc program both times; it doesn't check to see whether this is redundant work.
 Reason: Build system improvement

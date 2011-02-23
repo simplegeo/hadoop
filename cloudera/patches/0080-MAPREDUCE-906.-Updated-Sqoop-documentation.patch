@@ -1,7 +1,7 @@
 From 89a96d8fff80ac809dbda9582044a7c6b3986d16 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:56:07 -0800
-Subject: [PATCH 080/791] MAPREDUCE-906. Updated Sqoop documentation
+Subject: [PATCH 080/887] MAPREDUCE-906. Updated Sqoop documentation
 
 Description: Provides the latest documentation for Sqoop, in both user-guide and manpage form. Built with asciidoc.
 Reason: Documentation

@@ -1,7 +1,7 @@
 From 829bb385ecbde947eeacff39ea2f3f3af703fdbe Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 12 Jan 2010 12:34:52 +0530
-Subject: [PATCH 421/791] HADOOP-5771. Create unit test for LinuxTaskController
+Subject: [PATCH 421/887] HADOOP-5771. Create unit test for LinuxTaskController
 
 Patch: https://issues.apache.org/jira/secure/attachment/12429998/5771.20S.patch
 Author: Sreekanth Ramakrishnan

@@ -1,7 +1,7 @@
 From 5e76abac366a112c5d221750332ba2c272f319d0 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 25 Aug 2010 12:14:02 -0700
-Subject: [PATCH 673/791] MAPREDUCE-2034. Fix TestSubmitJob to verify actual IOException text
+Subject: [PATCH 673/887] MAPREDUCE-2034. Fix TestSubmitJob to verify actual IOException text
 
 ---
  .../org/apache/hadoop/mapred/TestSubmitJob.java    |   20 ++++++++++----------

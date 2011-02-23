@@ -1,7 +1,7 @@
 From cc22e9f92db6470d244fb17f57601b93bab6db80 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:07:55 -0800
-Subject: [PATCH 105/791] MAPREDUCE-683. TestJobTrackerRestart fails with Map task completion events ordering mismatch
+Subject: [PATCH 105/887] MAPREDUCE-683. TestJobTrackerRestart fails with Map task completion events ordering mismatch
 
 Description: <tt>TestJobTrackerRestart</tt> fails consistently with Map task completion events ordering mismatch error.
 Reason: bugfix

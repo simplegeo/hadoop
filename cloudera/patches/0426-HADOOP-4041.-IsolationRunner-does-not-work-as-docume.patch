@@ -1,7 +1,7 @@
 From fc472723ed6f5ca78abd4bfca56584489c485ee1 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 15 Jan 2010 19:16:38 +0530
-Subject: [PATCH 426/791] HADOOP-4041. IsolationRunner does not work as documented
+Subject: [PATCH 426/887] HADOOP-4041. IsolationRunner does not work as documented
 
 Patch: https://issues.apache.org/jira/secure/attachment/12430398/HADOOP-4041-v4-y20.patch
 Author: Philip Zeyliger

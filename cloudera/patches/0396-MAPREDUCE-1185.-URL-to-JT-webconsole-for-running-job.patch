@@ -1,7 +1,7 @@
 From 96ee0a0a723e65ca3dbcbbdaece44e3a752256f0 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 8 Dec 2009 11:27:55 +0530
-Subject: [PATCH 396/791] MAPREDUCE-1185. URL to JT webconsole for running job and job history should be the same
+Subject: [PATCH 396/887] MAPREDUCE-1185. URL to JT webconsole for running job and job history should be the same
 
 Patch: https://issues.apache.org/jira/secure/attachment/12426630/patch-1185-3-ydist.txt
 Author: Amareshwari Sriramadasu

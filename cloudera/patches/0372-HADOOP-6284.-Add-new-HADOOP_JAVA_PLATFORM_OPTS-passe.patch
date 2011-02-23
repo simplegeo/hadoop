@@ -1,7 +1,7 @@
 From e5b918e037e5a01a4098b43a20e3437b34022328 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 15 Oct 2009 16:26:26 +0530
-Subject: [PATCH 372/791] HADOOP-6284. Add new HADOOP_JAVA_PLATFORM_OPTS passed to the java PlatformName command
+Subject: [PATCH 372/887] HADOOP-6284. Add new HADOOP_JAVA_PLATFORM_OPTS passed to the java PlatformName command
 
 Patch: http://issues.apache.org/jira/secure/attachment/12421342/HADOOP-6284-y0.20.1.patch
 Author: Koji Noguchi

@@ -112,7 +112,7 @@
   <property name="test.build.extraconf" value="${test.build.dir}/extraconf"/>
   <property name="test.build.javadoc" value="${test.build.dir}/docs/api"/>
   <property name="test.build.javadoc.dev" value="${test.build.dir}/docs/dev-api"/>
-  <property name="test.build.webapps" value="${build.dir}/test/webapps"/>
+  <property name="test.build.webapps" value="${build.dir}/test/test-webapps"/>
   <property name="test.include" value="Test*"/>
   <property name="test.classpath.id" value="test.classpath"/>
   <property name="test.output" value="no"/>
@@ -324,6 +324,15 @@
       </exec>
     </sequential>
   </macrodef>
+
+  <!-- Initializes ivy/libraries.properties and build.properties with CDH versions -->
+  <target  name="init-cdh" unless="cdh.maven">
+    <exec  executable="mvn" dir="${basedir}" failonerror="true">
+      <arg value="-f" />
+      <arg value="cloudera-pom.xml" />
+      <arg value="process-resources"/>
+    </exec>
+  </target>
 
   <!-- ====================================================== -->
   <!-- Stuff needed by all targets                            -->
@@ -550,6 +559,7 @@
     <mkdir dir="${build.native}/lib"/>
     <mkdir dir="${build.native}/src/org/apache/hadoop/io/compress/zlib"/>
     <mkdir dir="${build.native}/src/org/apache/hadoop/io/nativeio"/>
+    <mkdir dir="${build.native}/src/org/apache/hadoop/security"/>
 
   	<javah
   	  classpath="${build.classes}"
@@ -567,6 +577,15 @@
   	  verbose="yes"
   	  >
   	  <class name="org.apache.hadoop.io.nativeio.NativeIO" />
+  	</javah>
+  	<javah
+  	  classpath="${build.classes}"
+  	  destdir="${build.native}/src/org/apache/hadoop/security"
+      force="yes"
+  	  verbose="yes"
+  	  >
+          <class name="org.apache.hadoop.security.JniBasedUnixGroupsMapping" />
+          <class name="org.apache.hadoop.security.JniBasedUnixGroupsNetgroupMapping" />
   	</javah>
 
 	<exec dir="${build.native}" executable="sh" failonerror="true">
@@ -1352,6 +1371,7 @@
       <param.listofitems>
         <tarfileset dir="${build.dir}" mode="664">
           <exclude name="${final.name}/bin/*" />
+          <exclude name="${final.name}/sbin/**" />
           <exclude name="${final.name}/contrib/*/bin/*" />
           <exclude name="${final.name}/src/contrib/ec2/bin/*" />
           <exclude name="${final.name}/src/contrib/ec2/bin/image/*" />
@@ -1360,6 +1380,7 @@
         </tarfileset>
         <tarfileset dir="${build.dir}" mode="755">
           <include name="${final.name}/bin/*" />
+          <include name="${final.name}/sbin/**" />
           <include name="${final.name}/contrib/*/bin/*" />
           <include name="${final.name}/src/contrib/ec2/bin/*" />
           <include name="${final.name}/src/contrib/ec2/bin/image/*" />
@@ -1445,6 +1466,8 @@
       <fileset dir="${build.dir}/contrib/fairscheduler" includes="*.jar"/>
     </copy>
 
+    <copy file="cloudera-pom.xml" tofile="${dist.dir}/cloudera-pom.xml"/>
+
     <copy todir="${dist.dir}/cloudera">
       <fileset dir="cloudera" />
     </copy>
@@ -1471,12 +1494,14 @@
         <param.listofitems>
           <tarfileset dir="${system-test-build-dir}" mode="664">
             <exclude name="${final.name}/bin/*" />
+            <exclude name="${final.name}/sbin/**" />
             <exclude name="${final.name}/src/**" />
             <exclude name="${final.name}/docs/**" />
             <include name="${final.name}/**" />
           </tarfileset>
           <tarfileset dir="${build.dir}" mode="755">
             <include name="${final.name}/bin/*" />
+            <include name="${final.name}/sbin/**" />
           </tarfileset>
         </param.listofitems>
       </macro_tar>
@@ -1487,12 +1512,14 @@
       <param.listofitems>
         <tarfileset dir="${build.dir}" mode="664">
           <exclude name="${final.name}/bin/*" />
+          <exclude name="${final.name}/sbin/*" />
           <exclude name="${final.name}/src/**" />
           <exclude name="${final.name}/docs/**" />
           <include name="${final.name}/**" />
         </tarfileset>
         <tarfileset dir="${build.dir}" mode="755">
           <include name="${final.name}/bin/*" />
+          <include name="${final.name}/sbin/**" />
         </tarfileset>
       </param.listofitems>
     </macro_tar>
@@ -1516,11 +1543,6 @@
     <delete dir="${build.dir}"/>
     <delete dir="${docs.src}/build"/>
     <delete dir="${src.docs.cn}/build"/>
-    <delete file="${basedir}/ivy/hadoop-core-pom.xml"/>
-    <delete file="${basedir}/ivy/hadoop-test-pom.xml"/>
-    <delete file="${basedir}/ivy/hadoop-examples-pom.xml"/>
-    <delete file="${basedir}/ivy/hadoop-tools-pom.xml"/>
-    <delete file="${basedir}/ivy/hadoop-streaming-pom.xml"/>
   </target>
 
   <target name="clean-sign" description="Clean.  Delete .asc files">
@@ -1885,7 +1907,7 @@
     </condition>
   </target>
 
-  <target name="ivy-download" description="To download ivy" unless="offline">
+  <target name="ivy-download" depends="init-cdh" description="To download ivy" unless="offline">
     <get src="${ivy_repo_url}" dest="${ivy.jar}" usetimestamp="true"/>
   </target>
 
@@ -2017,29 +2039,9 @@
          classpathref="mvn-ant-task.classpath"/>
   </target>  
 
-  <target name="mvn-install" depends="mvn-taskdef,bin-package,set-version"
+  <target name="mvn-install" depends=""
      description="To install hadoop core and test jars to local filesystem's m2 cache">
-     <artifact:pom file="${hadoop-core.pom}" id="hadoop.core"/>
-     <artifact:pom file="${hadoop-test.pom}" id="hadoop.test"/>
-     <artifact:pom file="${hadoop-examples.pom}" id="hadoop.examples"/>
-     <artifact:pom file="${hadoop-tools.pom}" id="hadoop.tools"/>
-     <artifact:pom file="${hadoop-streaming.pom}" id="hadoop.streaming"/>
-
-     <artifact:install file="${hadoop-core.jar}">
-        <pom refid="hadoop.core"/>
-     </artifact:install>
-     <artifact:install file="${hadoop-test.jar}">
-        <pom refid="hadoop.test"/>
-     </artifact:install>
-     <artifact:install file="${hadoop-tools.jar}">
-        <pom refid="hadoop.tools"/>
-     </artifact:install>
-     <artifact:install file="${hadoop-examples.jar}">
-        <pom refid="hadoop.examples"/>
-     </artifact:install>
-     <artifact:install file="${hadoop-streaming.jar}">
-        <pom refid="hadoop.streaming"/>
-     </artifact:install>
+    <echo>To install Cloudera hadoop core and test jars into Maven cache, run "mvn -f cloudera-pom.xml install" from this directory.</echo>
   </target>
 
   <target name="mvn-deploy" depends="mvn-taskdef, bin-package, set-version, signanddeploy, simpledeploy"
@@ -2183,62 +2185,30 @@
   </target>
 
   <!-- taskcontroller targets -->
-  <target name="init-task-controller-build">
+  <target name="task-controller" depends="init">
+    <exec executable="autoreconf" 
+          dir="${c++.task-controller.src}"
+          searchpath="yes" failonerror="yes">
+      <arg value="-i"/>
+    </exec>
     <mkdir dir="${build.c++.task-controller}" />
-    <copy todir="${build.c++.task-controller}">
-      <fileset dir="${c++.task-controller.src}" includes="*.c"/>
-      <fileset dir="${c++.task-controller.src}" includes="*.h"/>
-    </copy>
     <chmod file="${c++.task-controller.src}/configure" perm="ugo+x"/> 
-    <condition property="task-controller.conf.dir.passed">
-      <not>
-        <equals arg1="${hadoop.conf.dir}" arg2="$${hadoop.conf.dir}"/>
-      </not>
-    </condition>
-  </target>
-  <target name="configure-task-controller" depends="init,
-          init-task-controller-build,
-          task-controller-configuration-with-confdir,
-          task-controller-configuration-with-no-confdir">
-  </target>
-  <target name="task-controller-configuration-with-confdir" 
-          if="task-controller.conf.dir.passed" >
-    <exec executable="${c++.task-controller.src}/configure" 
-          dir="${build.c++.task-controller}" failonerror="yes">
-      <arg value="--prefix=${task-controller.install.dir}" />
-      <arg value="--with-confdir=${hadoop.conf.dir}" />
+    <exec executable="${c++.task-controller.src}/configure"
+          dir="${build.c++.task-controller}">
+      <arg value="--bindir=${task-controller.install.dir}"/>
+    </exec>
+    <exec executable="make"
+          dir="${build.c++.task-controller}"
+          searchpath="yes" failonerror="yes">
+      <arg value="install"/>
     </exec>
   </target>
-  <target name="task-controller-configuration-with-no-confdir" 
-          unless="task-controller.conf.dir.passed">
-    <exec executable="${c++.task-controller.src}/configure" 
-          dir="${build.c++.task-controller}" failonerror="yes">
-      <arg value="--prefix=${task-controller.install.dir}" />
-    </exec>
-  </target>
-  <!--
-    * Create the installation directory.
-    * Do a make install.
-   -->
-  <target name="task-controller" depends="configure-task-controller">
-    <mkdir dir="${task-controller.install.dir}" />
-    <exec executable="${make.cmd}" dir="${build.c++.task-controller}" 
-        searchpath="yes" failonerror="yes">
-      <arg value="install" />
-    </exec>
-  </target>
-  <target name="test-task-controller" depends="task-controller">
-    <copy todir="${build.c++.task-controller}" verbose="true">
-      <fileset dir="${c++.task-controller.src}" includes="tests/"/>
-    </copy>
-    <exec executable="${make.cmd}" dir="${build.c++.task-controller}" 
-        searchpath="yes" failonerror="yes">
-      <arg value="clean" />
-      <arg value="test" />
-    </exec>
-    <exec executable="${build.c++.task-controller}/tests/test-task-controller"
-        dir="${build.c++.task-controller}/tests/"
-        failonerror="yes">
+
+  <target name="test-task-controller" depends="init,task-controller">
+    <exec executable="make"
+          dir="${build.c++.task-controller}"
+          searchpath="yes" failonerror="yes">
+      <arg value="check"/>
     </exec>
   </target>
 

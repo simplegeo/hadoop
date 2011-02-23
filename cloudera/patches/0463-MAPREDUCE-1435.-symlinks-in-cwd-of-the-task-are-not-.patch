@@ -1,7 +1,7 @@
 From df2da5d463d6a2b09f11c44d1eebbf85fa73ce81 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 8 Feb 2010 20:15:15 +0530
-Subject: [PATCH 463/791] MAPREDUCE-1435. symlinks in cwd of the task are not handled properly after MAPREDUCE-896
+Subject: [PATCH 463/887] MAPREDUCE-1435. symlinks in cwd of the task are not handled properly after MAPREDUCE-896
 
 Patch: https://issues.apache.org/jira/secure/attachment/12435154/MR-1435-y20s.patch
 Author: Ravi Gummadi

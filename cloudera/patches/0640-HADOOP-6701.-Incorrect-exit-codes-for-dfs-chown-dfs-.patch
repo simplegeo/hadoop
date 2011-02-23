@@ -1,7 +1,7 @@
 From cf50e5a91e7159f7f06518162a7400cc681c7f08 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 6 May 2010 11:27:20 -0700
-Subject: [PATCH 640/791] HADOOP-6701. Incorrect exit codes for "dfs -chown", "dfs -chgrp"
+Subject: [PATCH 640/887] HADOOP-6701. Incorrect exit codes for "dfs -chown", "dfs -chgrp"
 
 Patch: https://issues.apache.org/jira/secure/attachment/12442987/HADOOP-6701-v20.patch
 Author: Ravi Phulari

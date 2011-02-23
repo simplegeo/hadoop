@@ -164,6 +164,12 @@
       name="commons-daemon" 
       rev="${commons-daemon.version}"
       conf="server->default" /> 
+
+    <dependency org="com.jcraft"
+      name="jsch"
+      rev="${jsch.version}"
+      conf="common->master">
+    </dependency>
     
     <!--Configuration: commons-logging -->
 
@@ -265,6 +271,10 @@
       name="mockito-all"
       rev="${mockito-all.version}"
       conf="common->master"/>
+    <dependency org="org.mortbay.jetty"
+      name="jetty-servlet-tester"
+      rev="${jetty.version}"
+      conf="common->default" />
     <dependency org="org.codehaus.jackson"
       name="jackson-mapper-asl"
       rev="${jackson.version}"

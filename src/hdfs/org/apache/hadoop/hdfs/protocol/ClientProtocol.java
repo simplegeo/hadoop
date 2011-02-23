@@ -50,9 +50,9 @@ public interface ClientProtocol extends VersionedProtocol {
    * Compared to the previous version the following changes have been introduced:
    * (Only the latest change is reflected.
    * The log of historical changes can be retrieved from the svn).
-   * 62: Sticky bit
+   * 63: Remove getBlockLocations optimization
    */
-  public static final long versionID = 62L;
+  public static final long versionID = 63L;
   
   ///////////////////////////////////////
   // File contents

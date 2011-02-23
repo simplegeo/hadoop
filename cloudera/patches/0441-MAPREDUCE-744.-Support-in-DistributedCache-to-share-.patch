@@ -1,7 +1,7 @@
 From 2aff67e0291b9641d2e17a7288faa694efe16976 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 25 Jan 2010 20:36:44 +0530
-Subject: [PATCH 441/791] MAPREDUCE-744. Support in DistributedCache to share cache files with other users after HADOOP-4493
+Subject: [PATCH 441/887] MAPREDUCE-744. Support in DistributedCache to share cache files with other users after HADOOP-4493
 
 Patch: https://issues.apache.org/jira/secure/attachment/12431313/744-6-y20.patch
 Author: Devaraj Das

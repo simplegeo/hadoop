@@ -1,7 +1,7 @@
 From ea83036b3838fa97c673e73145d52867b8ace6ac Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:55:30 -0800
-Subject: [PATCH 226/791] HDFS-1013. Miscellaneous improvements to HTML markup for web UIs
+Subject: [PATCH 226/887] HDFS-1013. Miscellaneous improvements to HTML markup for web UIs
 
 Description: The Web UIs have various bits of bad markup (eg missing &lt;head&gt; sections, some pages missing CSS links, inconsistent td vs th for table headings). We should fix this up.
 <hr/>

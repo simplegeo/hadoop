@@ -428,6 +428,15 @@ public class JobClient extends Configured implements MRConstants, Tool  {
     public String[] getTaskDiagnostics(TaskAttemptID id) throws IOException {
       return jobSubmitClient.getTaskDiagnostics(id);
     }
+
+    @Override
+    public String getFailureInfo() throws IOException {
+      //assuming that this is just being called after 
+      //we realized the job failed. SO we try avoiding 
+      //a rpc by not calling updateStatus
+      ensureFreshStatus();
+      return status.getFailureInfo();
+    }
   }
 
   private JobSubmissionProtocol jobSubmitClient;
@@ -436,6 +445,10 @@ public class JobClient extends Configured implements MRConstants, Tool  {
   
   private FileSystem fs = null;
   private UserGroupInformation ugi;
+  private static final String TASKLOG_PULL_TIMEOUT_KEY = 
+    "mapreduce.client.tasklog.timeout";
+  private static final int DEFAULT_TASKLOG_TIMEOUT = 60000;
+  static int tasklogtimeout;
 
   /**
    * Create a job client.
@@ -463,6 +476,8 @@ public class JobClient extends Configured implements MRConstants, Tool  {
    */
   public void init(JobConf conf) throws IOException {
     String tracker = conf.get("mapred.job.tracker", "local");
+    tasklogtimeout = conf.getInt(
+      TASKLOG_PULL_TIMEOUT_KEY, DEFAULT_TASKLOG_TIMEOUT);
     this.ugi = UserGroupInformation.getCurrentUser();
     if ("local".equals(tracker)) {
       conf.setNumMapTasks(1);
@@ -650,7 +665,7 @@ public class JobClient extends Configured implements MRConstants, Tool  {
     //
 
     // Create a number of filenames in the JobTracker's fs namespace
-    FileSystem fs = getFs();
+    FileSystem fs = submitJobDir.getFileSystem(job);
     LOG.debug("default FileSystem: " + fs.getUri());
     if (fs.exists(submitJobDir)) {
       throw new IOException("Not submitting job. Job directory " + submitJobDir
@@ -839,6 +854,11 @@ public class JobClient extends Configured implements MRConstants, Tool  {
 
           Path submitJobFile = JobSubmissionFiles.getJobConfPath(submitJobDir);
           int reduces = jobCopy.getNumReduceTasks();
+          InetAddress ip = InetAddress.getLocalHost();
+          if (ip != null) {
+            job.setJobSubmitHostAddress(ip.getHostAddress());
+            job.setJobSubmitHostName(ip.getHostName());
+          }
           JobContext context = new JobContext(jobCopy, jobId);
 
           jobCopy = (JobConf)context.getConfiguration();
@@ -855,6 +875,7 @@ public class JobClient extends Configured implements MRConstants, Tool  {
           }
 
           // Create the splits for the job
+          FileSystem fs = submitJobDir.getFileSystem(jobCopy);
           LOG.debug("Creating splits at " + fs.makeQualified(submitJobDir));
           int maps = writeSplits(context, submitJobDir);
           jobCopy.setNumMapTasks(maps);
@@ -876,7 +897,6 @@ public class JobClient extends Configured implements MRConstants, Tool  {
           } finally {
             out.close();
           }
-
           //
           // Now, actually submit the job (using the submit name)
           //
@@ -1222,6 +1242,7 @@ public class JobClient extends Configured implements MRConstants, Tool  {
     RunningJob rj = jc.submitJob(job);
     try {
       if (!jc.monitorAndPrintJob(job, rj)) {
+        LOG.info("Job Failed: " + rj.getFailureInfo());
         throw new IOException("Job failed!");
       }
     } catch (InterruptedException ie) {
@@ -1384,6 +1405,8 @@ public class JobClient extends Configured implements MRConstants, Tool  {
                                   OutputStream out) {
     try {
       URLConnection connection = taskLogUrl.openConnection();
+      connection.setReadTimeout(tasklogtimeout);
+      connection.setConnectTimeout(tasklogtimeout);
       BufferedReader input = 
         new BufferedReader(new InputStreamReader(connection.getInputStream()));
       BufferedWriter output = 

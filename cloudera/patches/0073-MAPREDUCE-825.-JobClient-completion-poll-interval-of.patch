@@ -1,7 +1,7 @@
 From 21fdb7a7fd501fd63e1a540c2b55cf410d057301 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:54:27 -0800
-Subject: [PATCH 073/791] MAPREDUCE-825. JobClient completion poll interval of 5s causes slow tests in local mode
+Subject: [PATCH 073/887] MAPREDUCE-825. JobClient completion poll interval of 5s causes slow tests in local mode
 
 Description: The JobClient.NetworkedJob.waitForCompletion() method polls for job completion every 5 seconds. When running a set of short tests in pseudo-distributed mode, this is unnecessarily slow and causes lots of wasted time. When bandwidth is not scarce, setting the poll interval to 100 ms results in a 4x speedup in some tests.  This interval should be parametrized to allow users to control the interval for testing purposes.
 Reason: Test performance improvement

@@ -1,7 +1,7 @@
-From ba0a86b5c1d4176c1d7fb536f45c7fdec6df8495 Mon Sep 17 00:00:00 2001
+From 516adbfc45e739130bdbb047e45f068a38e72988 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 19 Jan 2011 00:27:37 -0800
-Subject: [PATCH 780/791] HDFS-1330. Make RPCs to DataNodes timeout.
+Subject: [PATCH 780/887] HDFS-1330. Make RPCs to DataNodes timeout.
 
 Reason: Customer request
 Author: Hairong Kuang

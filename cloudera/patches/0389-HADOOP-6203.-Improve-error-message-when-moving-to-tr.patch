@@ -1,7 +1,7 @@
 From f6b78b61fda941b83973de1dceebf0549c9eaca9 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 17 Nov 2009 23:22:41 +0000
-Subject: [PATCH 389/791] HADOOP-6203. Improve error message when moving to trash fails due to quota issue
+Subject: [PATCH 389/887] HADOOP-6203. Improve error message when moving to trash fails due to quota issue
 
 Patch: https://issues.apache.org/jira/secure/attachment/12425243/c6203_20091116_0.20.patch
 Author: Boris Shkolnik

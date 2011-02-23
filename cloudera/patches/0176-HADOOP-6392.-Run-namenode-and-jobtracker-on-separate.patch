@@ -1,7 +1,7 @@
 From a20069b2adfafa59e0001fe5e5685d36d9eb7fee Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:33:15 -0800
-Subject: [PATCH 176/791] HADOOP-6392. Run namenode and jobtracker on separate EC2 instances
+Subject: [PATCH 176/887] HADOOP-6392. Run namenode and jobtracker on separate EC2 instances
 
 Description: Replace concept of "master" with that of "namenode" and "jobtracker". Still need to be able to run both on one node, of course.
 Reason: Scalability improvement

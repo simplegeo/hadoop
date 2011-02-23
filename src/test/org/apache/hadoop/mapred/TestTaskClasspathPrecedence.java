@@ -43,8 +43,9 @@ public class TestTaskClasspathPrecedence {
   private JobConf ttConf;
 
   private static class MyTaskRunner extends TaskRunner {
-    public MyTaskRunner(TaskInProgress tip, TaskTracker tracker, JobConf conf) {
-      super(tip, tracker, conf);
+    public MyTaskRunner(TaskInProgress tip, TaskTracker tracker, JobConf conf,
+        TaskTracker.RunningJob job) throws IOException {
+      super(tip, tracker, conf, job);
     }
     private static String SYSTEM_PATH_SEPARATOR = System.getProperty("path.separator");
     private Vector<String> getVMArgs(TaskAttemptID taskid, File workDir,
@@ -59,9 +60,6 @@ public class TestTaskClasspathPrecedence {
       String classPath = StringUtils.join(SYSTEM_PATH_SEPARATOR, classPaths);
       vargs.add(classPath);
       return vargs;
-    }
-    public Level getLogLevel(JobConf jobConf) {
-      return null;
     }
   }
 
@@ -82,6 +80,7 @@ public class TestTaskClasspathPrecedence {
     Path dfsPath = new Path("build/test/lib/testjob.jar");
     fs.copyFromLocalFile(new Path("build/test/testjar/testjob.jar"), dfsPath);
     tt = new TaskTracker();
+    tt.setConf(new JobConf());
     tt.setMaxMapSlots(MAP_SLOTS);
     tt.setMaxReduceSlots(REDUCE_SLOTS);
     jvmManager = new JvmManager(tt);
@@ -92,11 +91,13 @@ public class TestTaskClasspathPrecedence {
   public void testWithClasspathPrecedence() throws Throwable {
     ttConf.set(JobContext.MAPREDUCE_TASK_CLASSPATH_PRECEDENCE, "true");
     JobConf taskConf = new JobConf(ttConf);
+
+    TaskTracker.RunningJob rjob = new TaskTracker.RunningJob(new JobID("jt", 1));
     TaskAttemptID attemptID = new TaskAttemptID("test", 0, true, 0, 0);
     Task task = new MapTask(null, attemptID, 0, null, MAP_SLOTS);
     task.setConf(taskConf);
     TaskInProgress tip = tt.new TaskInProgress(task, taskConf);
-    MyTaskRunner taskRunner = new MyTaskRunner(tip, tt, taskConf);
+    MyTaskRunner taskRunner = new MyTaskRunner(tip, tt, taskConf, rjob);
     final File workDir = new File(TEST_DIR, "work");
     workDir.mkdir();
     
@@ -112,11 +113,13 @@ public class TestTaskClasspathPrecedence {
   public void testWithoutClasspathPrecedence() throws Throwable {
     ttConf.set(JobContext.MAPREDUCE_TASK_CLASSPATH_PRECEDENCE, "false");
     JobConf taskConf = new JobConf(ttConf);
+
+    TaskTracker.RunningJob rjob = new TaskTracker.RunningJob(new JobID("jt", 1));
     TaskAttemptID attemptID = new TaskAttemptID("test", 0, true, 0, 0);
     Task task = new MapTask(null, attemptID, 0, null, MAP_SLOTS);
     task.setConf(taskConf);
     TaskInProgress tip = tt.new TaskInProgress(task, taskConf);
-    MyTaskRunner taskRunner = new MyTaskRunner(tip, tt, taskConf);
+    MyTaskRunner taskRunner = new MyTaskRunner(tip, tt, taskConf, rjob);
     final File workDir = new File(TEST_DIR, "work");
     workDir.mkdir();
     

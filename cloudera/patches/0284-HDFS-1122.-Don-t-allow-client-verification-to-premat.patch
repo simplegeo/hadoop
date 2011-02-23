@@ -1,7 +1,7 @@
 From 46e6199d8819538d96c3f4c5dbbfba163382b2a9 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 3 May 2010 15:02:32 -0700
-Subject: [PATCH 284/791] HDFS-1122. Don't allow client verification to prematurely add inprogress blocks to DataBlockScanner
+Subject: [PATCH 284/887] HDFS-1122. Don't allow client verification to prematurely add inprogress blocks to DataBlockScanner
 
 Description: When a client reads a block that is also open for writing,
              it should not add it to the datanode block scanner.

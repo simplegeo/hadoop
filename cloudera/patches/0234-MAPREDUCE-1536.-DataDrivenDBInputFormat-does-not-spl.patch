@@ -1,7 +1,7 @@
 From 27cfda1de80048bf2b46d74d78b61275ecc79be1 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Mon, 29 Mar 2010 16:43:49 -0700
-Subject: [PATCH 234/791] MAPREDUCE-1536. DataDrivenDBInputFormat does not split date columns correctly.
+Subject: [PATCH 234/887] MAPREDUCE-1536. DataDrivenDBInputFormat does not split date columns correctly.
 
 Description: The DateSplitter does not properly split a range of (min, max) dates.
 Reason: Bugfix to DateSplitter

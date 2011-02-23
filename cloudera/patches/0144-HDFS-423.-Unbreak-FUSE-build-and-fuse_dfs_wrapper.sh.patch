@@ -1,7 +1,7 @@
 From c7996c5e2fbb9260740fec369550551d6320762a Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:23:51 -0800
-Subject: [PATCH 144/791] HDFS-423. Unbreak FUSE build and fuse_dfs_wrapper.sh
+Subject: [PATCH 144/887] HDFS-423. Unbreak FUSE build and fuse_dfs_wrapper.sh
 
 Description: fuse-dfs depends on libhdfs, and fuse-dfs build.xml still points to the libhfds/libhdfs.so location but libhdfs now is build in a different location <br/>
 please take a look at this bug for the location details

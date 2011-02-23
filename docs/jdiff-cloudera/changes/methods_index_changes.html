@@ -52,8 +52,6 @@ Method Changes Index
 <a href="#G"><font size="-2">G</font></a> 
 <a href="#I"><font size="-2">I</font></a> 
 <a href="#L"><font size="-2">L</font></a> 
-<a href="#M"><font size="-2">M</font></a> 
-<a href="#P"><font size="-2">P</font></a> 
 <a href="#R"><font size="-2">R</font></a> 
 <a href="#S"><font size="-2">S</font></a> 
 <a href="#W"><font size="-2">W</font></a> 
@@ -75,8 +73,6 @@ Method Changes Index
 <a href="#G"><font size="-2">G</font></a> 
 <a href="#I"><font size="-2">I</font></a> 
 <a href="#L"><font size="-2">L</font></a> 
-<a href="#M"><font size="-2">M</font></a> 
-<a href="#P"><font size="-2">P</font></a> 
 <a href="#R"><font size="-2">R</font></a> 
 <a href="#S"><font size="-2">S</font></a> 
 <a href="#W"><font size="-2">W</font></a> 
@@ -101,8 +97,13 @@ Method Changes Index
 &nbsp;&nbsp;<nobr><A HREF="org.apache.hadoop.mapreduce.OutputCommitter.html#org.apache.hadoop.mapreduce.OutputCommitter.cleanupJob_changed(org.apache.hadoop.mapreduce.JobContext)" class="hiddenlink" target="rightframe">type&nbsp;
 (<code>JobContext</code>)&nbsp;in&nbsp;org.apache.hadoop.mapreduce.OutputCommitter
 </A></nobr><br>
-<nobr><A HREF="org.apache.hadoop.mapred.lib.db.DBInputFormat.DBRecordReader.html#org.apache.hadoop.mapred.lib.db.DBInputFormat.DBRecordReader.close_changed()" class="hiddenlink" target="rightframe">close
-()</A></nobr><br>
+<i>close</i><br>
+&nbsp;&nbsp;<nobr><A HREF="org.apache.hadoop.mapred.TaskTracker.html#org.apache.hadoop.mapred.TaskTracker.close_changed()" class="hiddenlink" target="rightframe">type&nbsp;
+()&nbsp;in&nbsp;org.apache.hadoop.mapred.TaskTracker
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="org.apache.hadoop.mapred.lib.db.DBInputFormat.DBRecordReader.html#org.apache.hadoop.mapred.lib.db.DBInputFormat.DBRecordReader.close_changed()" class="hiddenlink" target="rightframe">type&nbsp;
+()&nbsp;in&nbsp;org.apache.hadoop.mapred.lib.db.DBInputFormat.DBRecordReader
+</A></nobr><br>
 <nobr><A HREF="org.apache.hadoop.mapred.lib.db.DBOutputFormat.html#org.apache.hadoop.mapred.lib.db.DBOutputFormat.constructQuery_changed(java.lang.String, java.lang.String[])" class="hiddenlink" target="rightframe">constructQuery
 (<code>String, String[]</code>)</A></nobr><br>
 <nobr><A HREF="org.apache.hadoop.filecache.DistributedCache.html#org.apache.hadoop.filecache.DistributedCache.createAllSymlink_changed(org.apache.hadoop.conf.Configuration, java.io.File, java.io.File)" class="hiddenlink" target="rightframe">createAllSymlink
@@ -122,13 +123,13 @@ Method Changes Index
 <a href="#C"><font size="-2">C</font></a> 
 <a href="#I"><font size="-2">I</font></a> 
 <a href="#L"><font size="-2">L</font></a> 
-<a href="#M"><font size="-2">M</font></a> 
-<a href="#P"><font size="-2">P</font></a> 
 <a href="#R"><font size="-2">R</font></a> 
 <a href="#S"><font size="-2">S</font></a> 
 <a href="#W"><font size="-2">W</font></a> 
  <a href="#topheader"><font size="-2">TOP</font></a>
 <br>
+<nobr><A HREF="org.apache.hadoop.filecache.DistributedCache.html#org.apache.hadoop.filecache.DistributedCache.getArchiveTimestamps_changed(org.apache.hadoop.conf.Configuration)" class="hiddenlink" target="rightframe">getArchiveTimestamps
+(<code>Configuration</code>)</A></nobr><br>
 <nobr><A HREF="org.apache.hadoop.fs.DF.html#org.apache.hadoop.fs.DF.getAvailable_changed()" class="hiddenlink" target="rightframe">getAvailable
 ()</A></nobr><br>
 <nobr><A HREF="org.apache.hadoop.fs.DF.html#org.apache.hadoop.fs.DF.getCapacity_changed()" class="hiddenlink" target="rightframe">getCapacity
@@ -148,22 +149,14 @@ Method Changes Index
 ()</A></nobr><br>
 <nobr><A HREF="org.apache.hadoop.fs.HarFileSystem.html#org.apache.hadoop.fs.HarFileSystem.getFileChecksum_changed(org.apache.hadoop.fs.Path)" class="hiddenlink" target="rightframe">getFileChecksum
 (<code>Path</code>)</A></nobr><br>
+<nobr><A HREF="org.apache.hadoop.filecache.DistributedCache.html#org.apache.hadoop.filecache.DistributedCache.getFileTimestamps_changed(org.apache.hadoop.conf.Configuration)" class="hiddenlink" target="rightframe">getFileTimestamps
+(<code>Configuration</code>)</A></nobr><br>
 <nobr><A HREF="org.apache.hadoop.security.UserGroupInformation.html#org.apache.hadoop.security.UserGroupInformation.getGroupNames_changed()" class="hiddenlink" target="rightframe">getGroupNames
 ()</A></nobr><br>
 <nobr><A HREF="org.apache.hadoop.mapred.JobTracker.html#org.apache.hadoop.mapred.JobTracker.getJobCounters_changed(org.apache.hadoop.mapred.JobID)" class="hiddenlink" target="rightframe">getJobCounters
 (<code>JobID</code>)</A></nobr><br>
 <nobr><A HREF="org.apache.hadoop.mapred.lib.db.DBInputFormat.DBInputSplit.html#org.apache.hadoop.mapred.lib.db.DBInputFormat.DBInputSplit.getLength_changed()" class="hiddenlink" target="rightframe">getLength
 ()</A></nobr><br>
-<i>getLocalCache</i><br>
-&nbsp;&nbsp;<nobr><A HREF="org.apache.hadoop.filecache.DistributedCache.html#org.apache.hadoop.filecache.DistributedCache.getLocalCache_changed(java.net.URI, org.apache.hadoop.conf.Configuration, org.apache.hadoop.fs.Path, boolean, long, org.apache.hadoop.fs.Path)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>URI, Configuration, Path, boolean, long, Path</code>)&nbsp;in&nbsp;org.apache.hadoop.filecache.DistributedCache
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="org.apache.hadoop.filecache.DistributedCache.html#org.apache.hadoop.filecache.DistributedCache.getLocalCache_changed(java.net.URI, org.apache.hadoop.conf.Configuration, org.apache.hadoop.fs.Path, org.apache.hadoop.fs.FileStatus, boolean, long, org.apache.hadoop.fs.Path)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>URI, Configuration, Path, FileStatus, boolean, long, Path</code>)&nbsp;in&nbsp;org.apache.hadoop.filecache.DistributedCache
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="org.apache.hadoop.filecache.DistributedCache.html#org.apache.hadoop.filecache.DistributedCache.getLocalCache_changed(java.net.URI, org.apache.hadoop.conf.Configuration, org.apache.hadoop.fs.Path, org.apache.hadoop.fs.FileStatus, boolean, long, org.apache.hadoop.fs.Path, boolean)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>URI, Configuration, Path, FileStatus, boolean, long, Path, boolean</code>)&nbsp;in&nbsp;org.apache.hadoop.filecache.DistributedCache
-</A></nobr><br>
 <nobr><A HREF="org.apache.hadoop.mapred.lib.db.DBInputFormat.DBInputSplit.html#org.apache.hadoop.mapred.lib.db.DBInputFormat.DBInputSplit.getLocations_changed()" class="hiddenlink" target="rightframe">getLocations
 ()</A></nobr><br>
 <nobr><A HREF="org.apache.hadoop.mapred.JobTracker.html#org.apache.hadoop.mapred.JobTracker.getMapTaskReports_changed(org.apache.hadoop.mapred.JobID)" class="hiddenlink" target="rightframe">getMapTaskReports
@@ -196,8 +189,6 @@ Method Changes Index
 <a href="#C"><font size="-2">C</font></a> 
 <a href="#G"><font size="-2">G</font></a> 
 <a href="#L"><font size="-2">L</font></a> 
-<a href="#M"><font size="-2">M</font></a> 
-<a href="#P"><font size="-2">P</font></a> 
 <a href="#R"><font size="-2">R</font></a> 
 <a href="#S"><font size="-2">S</font></a> 
 <a href="#W"><font size="-2">W</font></a> 
@@ -211,8 +202,6 @@ Method Changes Index
 <a href="#C"><font size="-2">C</font></a> 
 <a href="#G"><font size="-2">G</font></a> 
 <a href="#I"><font size="-2">I</font></a> 
-<a href="#M"><font size="-2">M</font></a> 
-<a href="#P"><font size="-2">P</font></a> 
 <a href="#R"><font size="-2">R</font></a> 
 <a href="#S"><font size="-2">S</font></a> 
 <a href="#W"><font size="-2">W</font></a> 
@@ -220,36 +209,6 @@ Method Changes Index
 <br>
 <nobr><A HREF="org.apache.hadoop.mapred.JobHistory.JobInfo.html#org.apache.hadoop.mapred.JobHistory.JobInfo.logFinished_changed(org.apache.hadoop.mapred.JobID, long, int, int, int, int, org.apache.hadoop.mapred.Counters, org.apache.hadoop.mapred.Counters, org.apache.hadoop.mapred.Counters)" class="hiddenlink" target="rightframe">logFinished
 (<code>JobID, long, int, int, int, int, Counters, Counters, Counters</code>)</A></nobr><br>
-<A NAME="M"></A>
-<br><font size="+2">M</font>&nbsp;
-<a href="#A"><font size="-2">A</font></a> 
-<a href="#C"><font size="-2">C</font></a> 
-<a href="#G"><font size="-2">G</font></a> 
-<a href="#I"><font size="-2">I</font></a> 
-<a href="#L"><font size="-2">L</font></a> 
-<a href="#P"><font size="-2">P</font></a> 
-<a href="#R"><font size="-2">R</font></a> 
-<a href="#S"><font size="-2">S</font></a> 
-<a href="#W"><font size="-2">W</font></a> 
- <a href="#topheader"><font size="-2">TOP</font></a>
-<br>
-<nobr><A HREF="org.apache.hadoop.filecache.DistributedCache.html#org.apache.hadoop.filecache.DistributedCache.makeRelative_changed(java.net.URI, org.apache.hadoop.conf.Configuration)" class="hiddenlink" target="rightframe">makeRelative
-(<code>URI, Configuration</code>)</A></nobr><br>
-<A NAME="P"></A>
-<br><font size="+2">P</font>&nbsp;
-<a href="#A"><font size="-2">A</font></a> 
-<a href="#C"><font size="-2">C</font></a> 
-<a href="#G"><font size="-2">G</font></a> 
-<a href="#I"><font size="-2">I</font></a> 
-<a href="#L"><font size="-2">L</font></a> 
-<a href="#M"><font size="-2">M</font></a> 
-<a href="#R"><font size="-2">R</font></a> 
-<a href="#S"><font size="-2">S</font></a> 
-<a href="#W"><font size="-2">W</font></a> 
- <a href="#topheader"><font size="-2">TOP</font></a>
-<br>
-<nobr><A HREF="org.apache.hadoop.filecache.DistributedCache.html#org.apache.hadoop.filecache.DistributedCache.purgeCache_changed(org.apache.hadoop.conf.Configuration)" class="hiddenlink" target="rightframe">purgeCache
-(<code>Configuration</code>)</A></nobr><br>
 <A NAME="R"></A>
 <br><font size="+2">R</font>&nbsp;
 <a href="#A"><font size="-2">A</font></a> 
@@ -257,16 +216,12 @@ Method Changes Index
 <a href="#G"><font size="-2">G</font></a> 
 <a href="#I"><font size="-2">I</font></a> 
 <a href="#L"><font size="-2">L</font></a> 
-<a href="#M"><font size="-2">M</font></a> 
-<a href="#P"><font size="-2">P</font></a> 
 <a href="#S"><font size="-2">S</font></a> 
 <a href="#W"><font size="-2">W</font></a> 
  <a href="#topheader"><font size="-2">TOP</font></a>
 <br>
 <nobr><A HREF="org.apache.hadoop.mapred.lib.db.DBInputFormat.DBInputSplit.html#org.apache.hadoop.mapred.lib.db.DBInputFormat.DBInputSplit.readFields_changed(java.io.DataInput)" class="hiddenlink" target="rightframe">readFields
 (<code>DataInput</code>)</A></nobr><br>
-<nobr><A HREF="org.apache.hadoop.filecache.DistributedCache.html#org.apache.hadoop.filecache.DistributedCache.releaseCache_changed(java.net.URI, org.apache.hadoop.conf.Configuration)" class="hiddenlink" target="rightframe">releaseCache
-(<code>URI, Configuration</code>)</A></nobr><br>
 <A NAME="S"></A>
 <br><font size="+2">S</font>&nbsp;
 <a href="#A"><font size="-2">A</font></a> 
@@ -274,14 +229,12 @@ Method Changes Index
 <a href="#G"><font size="-2">G</font></a> 
 <a href="#I"><font size="-2">I</font></a> 
 <a href="#L"><font size="-2">L</font></a> 
-<a href="#M"><font size="-2">M</font></a> 
-<a href="#P"><font size="-2">P</font></a> 
 <a href="#R"><font size="-2">R</font></a> 
 <a href="#W"><font size="-2">W</font></a> 
  <a href="#topheader"><font size="-2">TOP</font></a>
 <br>
-<nobr><A HREF="org.apache.hadoop.util.ProcfsBasedProcessTree.html#org.apache.hadoop.util.ProcfsBasedProcessTree.setSigKillInterval_changed(long)" class="hiddenlink" target="rightframe">setSigKillInterval
-(<code>long</code>)</A></nobr><br>
+<nobr><A HREF="org.apache.hadoop.mapred.TaskTracker.html#org.apache.hadoop.mapred.TaskTracker.shutdown_changed()" class="hiddenlink" target="rightframe">shutdown
+()</A></nobr><br>
 <nobr><A HREF="org.apache.hadoop.ipc.Server.html#org.apache.hadoop.ipc.Server.start_changed()" class="hiddenlink" target="rightframe">start
 ()</A></nobr><br>
 <nobr><A HREF="org.apache.hadoop.mapred.JobTracker.html#org.apache.hadoop.mapred.JobTracker.submitJob_changed(org.apache.hadoop.mapred.JobID, java.lang.String, org.apache.hadoop.security.Credentials)" class="hiddenlink" target="rightframe">submitJob
@@ -293,8 +246,6 @@ Method Changes Index
 <a href="#G"><font size="-2">G</font></a> 
 <a href="#I"><font size="-2">I</font></a> 
 <a href="#L"><font size="-2">L</font></a> 
-<a href="#M"><font size="-2">M</font></a> 
-<a href="#P"><font size="-2">P</font></a> 
 <a href="#R"><font size="-2">R</font></a> 
 <a href="#S"><font size="-2">S</font></a> 
  <a href="#topheader"><font size="-2">TOP</font></a>

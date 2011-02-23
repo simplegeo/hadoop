@@ -1,7 +1,7 @@
 From ce8f674e1c1dc6ff24b33210f726ef4b006552b2 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 8 Oct 2009 17:00:59 -0700
-Subject: [PATCH 368/791] HDFS-587. Test programs support only default queue.
+Subject: [PATCH 368/887] HDFS-587. Test programs support only default queue.
 
 Patch: http://issues.apache.org/jira/secure/attachment/12422760/jira.HDFS-587.branch-0.20-internal.1.patch
 Author: Erik Steffl

@@ -1,7 +1,7 @@
 From bb65cb649c2924b5a20f06deb9ecd66fc219eeeb Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:49:12 -0800
-Subject: [PATCH 059/791] HDFS-496. Use PureJavaCrc32 in HDFS
+Subject: [PATCH 059/887] HDFS-496. Use PureJavaCrc32 in HDFS
 
 Description: Common now has a pure java CRC32 implementation which is more efficient than java.util.zip.CRC32. This issue is to make use of it.
 Reason: Performance improvement

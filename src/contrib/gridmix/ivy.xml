@@ -70,14 +70,14 @@
       name="jetty-util"
       rev="${jetty-util.version}"
       conf="common->master"/>
-    <dependency org="org.mortbay.jetty"
+    <!-- <dependency org="org.mortbay.jetty"
       name="jsp-api-2.1"
       rev="${jetty.version}"
       conf="common->master"/>
     <dependency org="org.mortbay.jetty"
       name="jsp-2.1"
       rev="${jetty.version}"
-      conf="common->master"/>
+      conf="common->master"/> -->
     <dependency org="org.mortbay.jetty"
       name="servlet-api-2.5"
       rev="${servlet-api-2.5.version}"

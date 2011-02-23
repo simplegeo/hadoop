@@ -1,7 +1,7 @@
 From c08f94a6927f9c8b0dfaeb674835afdd3fdd1d08 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Mon, 29 Mar 2010 17:15:53 -0700
-Subject: [PATCH 235/791] MAPREDUCE-1569. Mock Contexts & Configurations
+Subject: [PATCH 235/887] MAPREDUCE-1569. Mock Contexts & Configurations
 
 Description: Currently the library creates a new Configuration object in the MockMapContext and
 MocKReduceContext constructors, rather than allowing the developer to configure and pass their own

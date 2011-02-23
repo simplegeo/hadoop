@@ -1,7 +1,7 @@
 From cc035175e1cf1ddef878cba6aa93725f832d0327 Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Sat, 15 May 2010 12:55:06 -0700
-Subject: [PATCH 246/791] MAPREDUCE-1785. Add streaming config option for not emitting the key.
+Subject: [PATCH 246/887] MAPREDUCE-1785. Add streaming config option for not emitting the key.
 
 Description: PipeMapper currently does not emit the key when using TextInputFormat. If you switch to input formats (eg LzoTextInputFormat) the key will be emitted. We should add an option so users can explicitly make streaming not emit the key so they can change input formats without breaking or having to modify their existing programs.
 

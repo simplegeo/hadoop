@@ -1,7 +1,7 @@
 From b07aec5129e618bfeda8ba753fb5138e612b1a8b Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:29:33 -0800
-Subject: [PATCH 020/791] HADOOP-4829. Allow FileSystem shutdown hook to be disabled
+Subject: [PATCH 020/887] HADOOP-4829. Allow FileSystem shutdown hook to be disabled
 
 Description: FileSystem sets a JVM shutdown hook so that it can clean up the FileSystem cache. This is great behavior when you are writing a client application, but when you're writing a server application, like the Collector or an HBase RegionServer, you need to control the shutdown of the application and HDFS much more closely. If you set your own shutdown hook, there's no guarantee that your hook will run before the HDFS one, preventing you from taking some shutdown actions.
 Reason: Integration improvement.

@@ -1,7 +1,7 @@
 From e9f3ec90e57b383faf49e6a6eb8cc91e5182d31e Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:31:08 -0800
-Subject: [PATCH 168/791] HADOOP-5625. Add I/O duration time in client trace
+Subject: [PATCH 168/887] HADOOP-5625. Add I/O duration time in client trace
 
 Description: Add I/O duration information into client trace log for analyzing performance.
 

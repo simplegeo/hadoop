@@ -1,7 +1,7 @@
 From 5792ec1c6229c000b34fd2cb1f3447ae71ad9949 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 22 Feb 2010 15:21:20 -0800
-Subject: [PATCH 483/791] HADOOP-6583. Capture metrics for authentication/authorization at the RPC layer
+Subject: [PATCH 483/887] HADOOP-6583. Capture metrics for authentication/authorization at the RPC layer
 
 Patch: https://issues.apache.org/jira/secure/attachment/12436643/6583-bp20.patch
 Author: Devaraj Das

@@ -1,7 +1,7 @@
 From ce7c3dc280b3d3ba0b176f0b7a9dc09d5ca163f5 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 1 Feb 2010 21:26:52 -0800
-Subject: [PATCH 450/791] HADOOP-6337. Update FilterInitializer class to be more visible and take a conf for further development
+Subject: [PATCH 450/887] HADOOP-6337. Update FilterInitializer class to be more visible and take a conf for further development
 
 Patch: https://issues.apache.org/jira/secure/attachment/12434503/HADOOP-6337-Y.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12434547/HADOOP-6337-Y.patch

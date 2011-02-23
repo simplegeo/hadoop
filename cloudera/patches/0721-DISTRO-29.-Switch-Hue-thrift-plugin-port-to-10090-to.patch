@@ -1,7 +1,7 @@
 From eebf85c655d085b5cc49860d5ac59078a99e2349 Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Mon, 4 Oct 2010 12:59:03 -0700
-Subject: [PATCH 721/791] DISTRO-29. Switch Hue thrift plugin port to 10090 to avoid conflicting with HBase.
+Subject: [PATCH 721/887] DISTRO-29. Switch Hue thrift plugin port to 10090 to avoid conflicting with HBase.
 
 Reason: Improvement
 Author: Eli Collins

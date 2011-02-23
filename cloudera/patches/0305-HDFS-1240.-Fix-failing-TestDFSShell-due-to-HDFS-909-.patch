@@ -1,7 +1,7 @@
 From b9259a145f516a01ba37a33b3803c88824fd55e5 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 17 Jun 2010 09:55:31 -0700
-Subject: [PATCH 305/791] HDFS-1240. Fix failing TestDFSShell due to HDFS-909 backport on branch-20
+Subject: [PATCH 305/887] HDFS-1240. Fix failing TestDFSShell due to HDFS-909 backport on branch-20
 
 Reason: Fix red build
 Author: Todd Lipcon

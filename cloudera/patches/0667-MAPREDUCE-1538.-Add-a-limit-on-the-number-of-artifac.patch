@@ -1,7 +1,7 @@
 From eb44564b61a0467aa2891fd3a434eda20ac30d7b Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 2 Jul 2010 16:34:35 -0700
-Subject: [PATCH 667/791] MAPREDUCE-1538. Add a limit on the number of artifacts in the DistributedCache to ensure we cleanup aggressively.
+Subject: [PATCH 667/887] MAPREDUCE-1538. Add a limit on the number of artifacts in the DistributedCache to ensure we cleanup aggressively.
 
 Author: Scott Chen
 Reason: Without patch, subdirectory count in cache grows without bound.

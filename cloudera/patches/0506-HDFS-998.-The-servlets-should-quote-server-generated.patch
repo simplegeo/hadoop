@@ -1,7 +1,7 @@
 From 12f51ccde0651d7ed7e2458dfd498f0b8856d70a Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 26 Feb 2010 13:14:06 -0800
-Subject: [PATCH 506/791] HDFS-998. The servlets should quote server generated strings sent in the response
+Subject: [PATCH 506/887] HDFS-998. The servlets should quote server generated strings sent in the response
 
 Patch: http://issues.apache.org/jira/secure/attachment/12436835/H998-0y20.patch
 Author: Chris Douglas

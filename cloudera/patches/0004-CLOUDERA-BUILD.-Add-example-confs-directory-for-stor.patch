@@ -1,7 +1,7 @@
 From 77ac6923ad6e63874a429e7dd13c4a084b6a9556 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:20:52 -0800
-Subject: [PATCH 004/791] CLOUDERA-BUILD. Add example-confs directory for storing configuration of conf.pseudo
+Subject: [PATCH 004/887] CLOUDERA-BUILD. Add example-confs directory for storing configuration of conf.pseudo
 
 ---
  build.xml                                 |    4 ++++

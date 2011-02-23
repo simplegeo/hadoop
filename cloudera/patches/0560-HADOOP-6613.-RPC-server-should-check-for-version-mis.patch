@@ -1,7 +1,7 @@
 From ec983446e7a1600a95fcf60bd92205f5b9318d99 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 17 Mar 2010 00:21:35 -0700
-Subject: [PATCH 560/791] HADOOP-6613. RPC server should check for version mismatch before authentication method
+Subject: [PATCH 560/887] HADOOP-6613. RPC server should check for version mismatch before authentication method
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437831/HADOOP-6613-Y20S-1.patch
 Author: Kan Zhang

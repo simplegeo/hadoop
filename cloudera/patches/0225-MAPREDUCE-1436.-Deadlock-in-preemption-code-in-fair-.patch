@@ -1,7 +1,7 @@
 From 90ba5543e4c3176343e23943131a34d666c23d89 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:54:58 -0800
-Subject: [PATCH 225/791] MAPREDUCE-1436. Deadlock in preemption code in fair scheduler
+Subject: [PATCH 225/887] MAPREDUCE-1436. Deadlock in preemption code in fair scheduler
 
 Description: In testing the fair scheduler with preemption, I found a deadlock between updatePreemptionVariables and some code in the JobTracker. This was found while testing a backport of the fair scheduler to Hadoop 0.20, but it looks like it could also happen in trunk and 0.21. Details are in a comment below.
 <hr/>

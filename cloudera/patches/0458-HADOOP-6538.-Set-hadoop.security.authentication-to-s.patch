@@ -1,7 +1,7 @@
 From d1f946ae7bfd5e619e8167ebad228be72668b0a9 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 5 Feb 2010 15:29:26 -0800
-Subject: [PATCH 458/791] HADOOP-6538. Set hadoop.security.authentication to "simple" by default
+Subject: [PATCH 458/887] HADOOP-6538. Set hadoop.security.authentication to "simple" by default
 
 Patch: https://issues.apache.org/jira/secure/attachment/12435031/6538-bp20.patch
 Author: Devaraj Das

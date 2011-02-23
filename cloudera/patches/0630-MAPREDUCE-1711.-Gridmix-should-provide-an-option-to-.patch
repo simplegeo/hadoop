@@ -1,7 +1,7 @@
 From 60b22e764e8d44570f900632b30b37df22855d0d Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 27 Apr 2010 23:46:55 -0700
-Subject: [PATCH 630/791] MAPREDUCE-1711. Gridmix should provide an option to submit jobs to the same queues as specified in the trace.
+Subject: [PATCH 630/887] MAPREDUCE-1711. Gridmix should provide an option to submit jobs to the same queues as specified in the trace.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12443040/MR-1711-yhadoop-20-1xx-7.patch.
 Author: rahul k singh

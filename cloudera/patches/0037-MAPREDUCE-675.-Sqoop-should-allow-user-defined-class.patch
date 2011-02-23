@@ -1,7 +1,7 @@
 From ed4ba254d7708f363f5f1b4708e9e35061ad936c Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:40:37 -0800
-Subject: [PATCH 037/791] MAPREDUCE-675. Sqoop should allow user-defined class and package names
+Subject: [PATCH 037/887] MAPREDUCE-675. Sqoop should allow user-defined class and package names
 
 Description: Currently Sqoop generates a class for each table to be imported; the class names are equal to the table names and they are not part of any package.
 

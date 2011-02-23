@@ -1,7 +1,7 @@
 From b839ebbb2f517eb57930dbe8ed40afc5307dbe3a Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Thu, 2 Sep 2010 16:07:47 -0700
-Subject: [PATCH 681/791] MAPREDUCE-1280. Eclipse Plugin does not work with Eclipse Ganymede (3.4).
+Subject: [PATCH 681/887] MAPREDUCE-1280. Eclipse Plugin does not work with Eclipse Ganymede (3.4).
 
 Reason: Bug
 Author: Alex Kozlov

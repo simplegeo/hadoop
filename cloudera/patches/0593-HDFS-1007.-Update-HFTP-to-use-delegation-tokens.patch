@@ -1,7 +1,7 @@
 From d229a5fc83e4722162912a60eae40121f2e504e6 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 6 Apr 2010 17:01:51 -0700
-Subject: [PATCH 593/791] HDFS-1007. Update HFTP to use delegation tokens
+Subject: [PATCH 593/887] HDFS-1007. Update HFTP to use delegation tokens
 
 Patch: https://issues.apache.org/jira/secure/attachment/12440931/HDFS-1007-BP20-fix-3.patch
 Author: Devaraj Das

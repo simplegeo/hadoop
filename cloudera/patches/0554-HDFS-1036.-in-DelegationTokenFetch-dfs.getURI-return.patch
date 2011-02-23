@@ -1,7 +1,7 @@
 From f4ad3c7d410bfb5d86053fcbc91b4275fe0fd74c Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 11 Mar 2010 17:28:05 -0800
-Subject: [PATCH 554/791] HDFS-1036. in DelegationTokenFetch dfs.getURI returns no port
+Subject: [PATCH 554/887] HDFS-1036. in DelegationTokenFetch dfs.getURI returns no port
 
 Patch: https://issues.apache.org/jira/secure/attachment/12438549/HDFS-1036-BP20.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12438585/HDFS-1036-BP20-1.patch

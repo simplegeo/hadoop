@@ -18,7 +18,7 @@ org.apache.hadoop.mapred.TaskTracker
     <TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
     <TABLE summary="Navigation bar" BORDER="0" CELLPADDING="0" CELLSPACING="3">
     <TR ALIGN="center" VALIGN="top">
-      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../../api/org/apache/hadoop/mapred/TaskTracker.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>hadoop 0.20.2+791</tt></B></FONT></A>&nbsp;</TD>
+      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../../api/org/apache/hadoop/mapred/TaskTracker.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>hadoop 0.20.2-CDH3B4</tt></B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="changes-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="pkg_org.apache.hadoop.mapred.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
@@ -48,6 +48,7 @@ org.apache.hadoop.mapred.TaskTracker
 <H2>
 Class org.apache.hadoop.mapred.<A HREF="../../api/org/apache/hadoop/mapred/TaskTracker.html" target="_top"><tt>TaskTracker</tt></A>
 </H2>
+<p><font size="+1">Added interface <code>org.apache.hadoop.mapred.TaskTrackerMXBean</code>.<br></font>
 <a NAME="constructors"></a>
 <p>
 <a NAME="Changed"></a>
@@ -83,6 +84,27 @@ Change in exceptions thrown from <code>java.io.IOException</code> to (<code>java
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.mapred.TaskTracker.getConfigVersion_added()"></A>
+  <nobr><code>String</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/TaskTracker.html#getConfigVersion()" target="_top"><tt>getConfigVersion</tt></A>()</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.mapred.TaskTracker.getHostname_added()"></A>
+  <nobr><code>String</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/TaskTracker.html#getHostname()" target="_top"><tt>getHostname</tt></A>()</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.mapred.TaskTracker.getHttpPort_added()"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/TaskTracker.html#getHttpPort()" target="_top"><tt>getHttpPort</tt></A>()</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="org.apache.hadoop.mapred.TaskTracker.getJobCacheSubdir_added(java.lang.String)"></A>
   <nobr><code>String</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/TaskTracker.html#getJobCacheSubdir(java.lang.String)" target="_top"><tt>getJobCacheSubdir</tt></A>(<code>String</code>)</nobr>
   </TD>
@@ -90,8 +112,29 @@ Change in exceptions thrown from <code>java.io.IOException</code> to (<code>java
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.mapred.TaskTracker.getJobJarFile_added(java.lang.String, java.lang.String)"></A>
+  <nobr><code>String</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/TaskTracker.html#getJobJarFile(java.lang.String, java.lang.String)" target="_top"><tt>getJobJarFile</tt></A>(<code>String,</nobr> String<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.mapred.TaskTracker.getJobTrackerUrl_added()"></A>
+  <nobr><code>String</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/TaskTracker.html#getJobTrackerUrl()" target="_top"><tt>getJobTrackerUrl</tt></A>()</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="org.apache.hadoop.mapred.TaskTracker.getLocalJobDir_added(java.lang.String, java.lang.String)"></A>
   <nobr><code>String</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/TaskTracker.html#getLocalJobDir(java.lang.String, java.lang.String)" target="_top"><tt>getLocalJobDir</tt></A>(<code>String,</nobr> String<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.mapred.TaskTracker.getLocalTaskDir_added(java.lang.String, java.lang.String, java.lang.String)"></A>
+  <nobr><code>String</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/TaskTracker.html#getLocalTaskDir(java.lang.String, java.lang.String, java.lang.String)" target="_top"><tt>getLocalTaskDir</tt></A>(<code>String,</nobr> String<nobr>,</nobr> String<nobr><nobr></code>)</nobr>
   </TD>
   <TD>&nbsp;</TD>
 </TR>
@@ -118,6 +161,13 @@ Change in exceptions thrown from <code>java.io.IOException</code> to (<code>java
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.mapred.TaskTracker.getRpcPort_added()"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/TaskTracker.html#getRpcPort()" target="_top"><tt>getRpcPort</tt></A>()</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="org.apache.hadoop.mapred.TaskTracker.getTaskController_added()"></A>
   <nobr><code>TaskController</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/TaskTracker.html#getTaskController()" target="_top"><tt>getTaskController</tt></A>()</nobr>
   </TD>
@@ -125,8 +175,36 @@ Change in exceptions thrown from <code>java.io.IOException</code> to (<code>java
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.mapred.TaskTracker.getTasksInfoJson_added()"></A>
+  <nobr><code>String</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/TaskTracker.html#getTasksInfoJson()" target="_top"><tt>getTasksInfoJson</tt></A>()</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="org.apache.hadoop.mapred.TaskTracker.getUserDir_added(java.lang.String)"></A>
   <nobr><code>String</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/TaskTracker.html#getUserDir(java.lang.String)" target="_top"><tt>getUserDir</tt></A>(<code>String</code>)</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.mapred.TaskTracker.getVersion_added()"></A>
+  <nobr><code>String</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/TaskTracker.html#getVersion()" target="_top"><tt>getVersion</tt></A>()</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.mapred.TaskTracker.isHealthy_added()"></A>
+  <nobr><code>boolean</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/TaskTracker.html#isHealthy()" target="_top"><tt>isHealthy</tt></A>()</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.mapred.TaskTracker.updatePrivateDistributedCacheSizes_added(org.apache.hadoop.mapreduce.JobID, long[])"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/TaskTracker.html#updatePrivateDistributedCacheSizes(org.apache.hadoop.mapreduce.JobID, long[])" target="_top"><tt>updatePrivateDistributedCacheSizes</tt></A>(<code>JobID,</nobr> long[]<nobr><nobr></code>)</nobr>
   </TD>
   <TD>&nbsp;</TD>
 </TR>
@@ -147,6 +225,16 @@ Change in exceptions thrown from <code>java.io.IOException</code> to (<code>java
 Change in exceptions thrown from no exceptions to <code>java.io.IOException</code>.<br>
   </TD>
   <TD VALIGN="TOP">Child checking whether it can commit</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.mapred.TaskTracker.close_changed()"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/TaskTracker.html#close()" target="_top"><tt>close</tt></A>()  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in exceptions thrown from <code>java.io.IOException</code> to (<code>java.io.IOException, java.lang.InterruptedException</code>).<br>
+  </TD>
+  <TD VALIGN="TOP">Close down the TaskTracker and all its components.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
@@ -178,6 +266,16 @@ Change in signature from (<code>Configuration, Class<?, extends, TaskTrackerInst
   </TD>
   <TD>&nbsp;</TD>
 </TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.mapred.TaskTracker.shutdown_changed()"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/TaskTracker.html#shutdown()" target="_top"><tt>shutdown</tt></A>()  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in exceptions thrown from <code>java.io.IOException</code> to (<code>java.io.IOException, java.lang.InterruptedException</code>).<br>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
 </TABLE>
 &nbsp;
 <a NAME="fields"></a>
@@ -203,6 +301,13 @@ Change in signature from (<code>Configuration, Class<?, extends, TaskTrackerInst
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.mapred.TaskTracker.TT_LOG_TMP_DIR"></A>
+  <nobr><code>String</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/TaskTracker.html#TT_LOG_TMP_DIR" target="_top"><tt>TT_LOG_TMP_DIR</tt></A></nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="org.apache.hadoop.mapred.TaskTracker.TT_USER_NAME"></A>
   <nobr><code>String</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/TaskTracker.html#TT_USER_NAME" target="_top"><tt>TT_USER_NAME</tt></A></nobr>
   </TD>
@@ -217,7 +322,7 @@ Change in signature from (<code>Configuration, Class<?, extends, TaskTrackerInst
     <TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
     <TABLE summary="Navigation bar" BORDER="0" CELLPADDING="0" CELLSPACING="3">
     <TR ALIGN="center" VALIGN="top">
-      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../../api/org/apache/hadoop/mapred/TaskTracker.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>hadoop 0.20.2+791</tt></B></FONT></A>&nbsp;</TD>
+      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../../api/org/apache/hadoop/mapred/TaskTracker.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>hadoop 0.20.2-CDH3B4</tt></B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="changes-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="pkg_org.apache.hadoop.mapred.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>

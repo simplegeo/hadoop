@@ -1,7 +1,7 @@
 From 1198ef1375387ba107d46f0ab5e9a7c6a7645931 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:28:15 -0800
-Subject: [PATCH 155/791] MAPREDUCE-706. Support for FIFO pools in the fair scheduler
+Subject: [PATCH 155/887] MAPREDUCE-706. Support for FIFO pools in the fair scheduler
 
 Description: The fair scheduler should support making the internal scheduling algorithm for some pools be FIFO instead of fair sharing in order to work better for batch workloads. FIFO pools will behave exactly like the current default scheduler, sorting jobs by priority and then submission time. Pools will have their scheduling algorithm set through the pools config file, and it will be changeable at runtime.
 

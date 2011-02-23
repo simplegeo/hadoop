@@ -1,7 +1,7 @@
 From 8b1175a8139fc28041c67f095212d7224ac44b2e Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 26 Feb 2010 16:50:29 -0800
-Subject: [PATCH 507/791] HADOOP-6599. Split RPC metrics into summary and detailed metrics
+Subject: [PATCH 507/887] HADOOP-6599. Split RPC metrics into summary and detailed metrics
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437251/hadoop-6599.rel20.patch
 Author: Suresh Srinivas

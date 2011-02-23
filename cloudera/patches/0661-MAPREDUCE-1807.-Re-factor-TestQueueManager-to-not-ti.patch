@@ -1,7 +1,7 @@
 From 8de996f7fac526c605e1931744e7937f90471e88 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 20 May 2010 23:04:35 -0700
-Subject: [PATCH 661/791] MAPREDUCE-1807. Re-factor TestQueueManager to not timeout
+Subject: [PATCH 661/887] MAPREDUCE-1807. Re-factor TestQueueManager to not timeout
 
 Author: Dick King
 Reason: Fix failing unit test

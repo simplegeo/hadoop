@@ -1,7 +1,7 @@
-From f0fd694e41c90c29753451cc0726653e7b41c5c1 Mon Sep 17 00:00:00 2001
+From bda05051c5ad4c56d210427bbe6445c3db66573e Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 7 Jan 2011 14:20:01 -0800
-Subject: [PATCH 760/791] MAPREDUCE-2234. If Localizer can't create task log directory, it should fail on the spot.
+Subject: [PATCH 760/887] MAPREDUCE-2234. If Localizer can't create task log directory, it should fail on the spot.
 
 Reason: Make common source of support tickets easier to diagnose
 Author: Todd Lipcon

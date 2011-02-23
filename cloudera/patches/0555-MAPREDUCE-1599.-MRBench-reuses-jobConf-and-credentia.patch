@@ -1,7 +1,7 @@
 From d31d5e1b2eef3d92c60781087aba2857900d2273 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 16 Mar 2010 12:01:28 -0700
-Subject: [PATCH 555/791] MAPREDUCE-1599. MRBench reuses jobConf and credentials therein.
+Subject: [PATCH 555/887] MAPREDUCE-1599. MRBench reuses jobConf and credentials therein.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12438844/MR-1599-y20.1.patch
 Author: Jitendra Nath Pandey

@@ -1028,8 +1028,6 @@ public class FSEditLog {
         } catch (InterruptedException ie) { 
         }
       }
-      numEditStreams = editStreams.size();
-      assert numEditStreams > 0 : "no editlog streams";
       printStatistics(false);
 
       //
@@ -1041,6 +1039,9 @@ public class FSEditLog {
           metrics.transactionsBatchedInSync.inc();
         return;
       }
+
+      numEditStreams = editStreams.size();
+      assert numEditStreams > 0 : "no editlog streams";
    
       // now, this thread will do the sync
       syncStart = txid;
@@ -1400,6 +1401,14 @@ public class FSEditLog {
     if(it.hasNext())
       return getEditFile(it.next()).lastModified();
     return 0;
+  }
+  
+  /**
+   * Return the txid of the last synced transaction.
+   * For test use only
+   */ 
+  synchronized long getSyncTxId() {
+    return synctxid;
   }
 
   // sets the initial capacity of the flush buffer.

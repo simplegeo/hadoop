@@ -1,7 +1,7 @@
 From 698fe169f31e54111d30e4420cd1c1c5eaeecdec Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:21:03 -0800
-Subject: [PATCH 137/791] HDFS-686. NullPointerException is thrown while merging edit log and image
+Subject: [PATCH 137/887] HDFS-686. NullPointerException is thrown while merging edit log and image
 
 Description: Our secondary name node is not able to start on NullPointerException:<br/>
 ERROR org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: java.lang.NullPointerException<br/>

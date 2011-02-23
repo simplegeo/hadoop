@@ -138,7 +138,7 @@ public class TestHttpServer {
   }
   
   @Before public void setup() throws Exception {
-    server = new HttpServer("test", "0.0.0.0", 0, true);
+    server = new TestWebappHttpServer("test", "0.0.0.0", 0, true);
     server.addServlet("echo", "/echo", EchoServlet.class);
     server.addServlet("echomap", "/echomap", EchoMapServlet.class);
     server.addServlet("htmlcontent", "/htmlcontent", HtmlContentServlet.class);
@@ -236,6 +236,37 @@ public class TestHttpServer {
   }
 
   /**
+   * Subclass of HttpServer that loads the "test-webapps" directory
+   * from the classpath instead of the "webapps" directory.
+   * In trunk, HADOOP-6461 improves the HttpServer code to properly
+   * find the right webapp dir, but that patch breaks downstream
+   * implementors like HBase on 0.20.
+   */
+  static class TestWebappHttpServer extends HttpServer {
+    public TestWebappHttpServer(String name, String bindAddress, int port,
+                      boolean findPort, Configuration conf) throws IOException {
+      super(name, bindAddress, port, findPort, conf);
+    }
+    public TestWebappHttpServer(String name, String bindAddress, int port,
+                      boolean findPort) throws IOException {
+      super(name, bindAddress, port, findPort);
+    }
+    public TestWebappHttpServer(String name, String bindAddress, int port,
+      boolean findPort, Configuration conf, AccessControlList adminsAcl)
+      throws IOException {
+      super(name, bindAddress, port, findPort, conf, adminsAcl);
+    }
+
+    @Override
+    protected String getWebAppsPath() throws IOException {
+      URL url = getClass().getClassLoader().getResource("test-webapps");
+      if (url == null) 
+        throw new IOException("test-webapps not found in CLASSPATH"); 
+      return url.toString();
+    }
+  }
+
+  /**
    * FilterInitializer that initialized the DummyFilter.
    *
    */
@@ -305,7 +336,7 @@ public class TestHttpServer {
     MyGroupsProvider.mapping.put("userA", Arrays.asList("groupA"));
     MyGroupsProvider.mapping.put("userB", Arrays.asList("groupB"));
 
-    HttpServer myServer = new HttpServer("test", "0.0.0.0", 0, true, conf);
+    HttpServer myServer = new TestWebappHttpServer("test", "0.0.0.0", 0, true, conf);
     myServer.setAttribute(HttpServer.CONF_CONTEXT_ATTRIBUTE, conf);
     myServer.start();
     int port = myServer.getPort();
@@ -343,7 +374,7 @@ public class TestHttpServer {
     MyGroupsProvider.mapping.put("userD", Arrays.asList("groupD"));
     MyGroupsProvider.mapping.put("userE", Arrays.asList("groupE"));
 
-    HttpServer myServer = new HttpServer("test", "0.0.0.0", 0, true, conf,
+    HttpServer myServer = new TestWebappHttpServer("test", "0.0.0.0", 0, true, conf,
         new AccessControlList("userA,userB groupC,groupD"));
     myServer.setAttribute(HttpServer.CONF_CONTEXT_ATTRIBUTE, conf);
     myServer.start();

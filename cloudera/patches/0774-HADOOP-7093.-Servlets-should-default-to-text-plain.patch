@@ -1,7 +1,7 @@
-From e4a1efcccacef6057584160d61cd40d1bca543ba Mon Sep 17 00:00:00 2001
+From 5ebec5b74ea0b6fe9270cc40f770bf4cf4f7d4a7 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 13 Jan 2011 17:33:24 -0800
-Subject: [PATCH 774/791] HADOOP-7093. Servlets should default to text/plain.
+Subject: [PATCH 774/887] HADOOP-7093. Servlets should default to text/plain.
 
 Reason: fix /stacks and /metrics to be usable again
 Author: Todd Lipcon

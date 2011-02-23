@@ -1,7 +1,7 @@
 From 527b0ee624e8a02b357f2a2a1a31fa798f832d35 Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Fri, 27 Aug 2010 16:26:17 -0700
-Subject: [PATCH 678/791] HADOOP-6925. BZip2Codec incorrectly implements read().
+Subject: [PATCH 678/887] HADOOP-6925. BZip2Codec incorrectly implements read().
 
 Description: HADOOP-4012 added an implementation of read() in BZip2InputStream
 that doesn't work correctly when reading bytes > 0x80. This causes

@@ -1,7 +1,7 @@
 From ae699cda01c093097ae723224553773247577aa2 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:52:32 -0800
-Subject: [PATCH 220/791] HDFS-961. dfs_readdir incorrectly parses paths
+Subject: [PATCH 220/887] HDFS-961. dfs_readdir incorrectly parses paths
 
 Description: fuse-dfs dfs_readdir assumes that DistributedFileSystem#listStatus returns Paths with the same scheme/authority as the dfs.name.dir used to connect. If NameNode.DEFAULT_PORT port is used listStatus returns Paths that have authorities without the port (see <a href="http://issues.apache.org/jira/browse/HDFS-960" title="DistributedFileSystem#makeQualified port inconsistency">HDFS-960</a>), which breaks the following code.
 

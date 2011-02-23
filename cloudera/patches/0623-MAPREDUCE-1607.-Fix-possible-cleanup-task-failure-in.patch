@@ -1,7 +1,7 @@
 From d8b98cd21187c2d012f022f5fbd3511281f4adbf Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 22 Apr 2010 16:47:53 +0530
-Subject: [PATCH 623/791] MAPREDUCE-1607. Fix possible cleanup task failure in LinuxTaskController
+Subject: [PATCH 623/887] MAPREDUCE-1607. Fix possible cleanup task failure in LinuxTaskController
 
 Patch: https://issues.apache.org/jira/secure/attachment/12442538/patch-1607-ydist.txt
 Author: Amareshwari Sriramadasu

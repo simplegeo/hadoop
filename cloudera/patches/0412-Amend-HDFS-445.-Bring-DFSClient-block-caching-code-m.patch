@@ -1,7 +1,7 @@
 From 07ba75bcabd5beeecd41c0c9f54b850304ad9225 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 23 Dec 2009 16:39:18 -0800
-Subject: [PATCH 412/791] Amend HDFS-445. Bring DFSClient block caching code more up to date with trunk
+Subject: [PATCH 412/887] Amend HDFS-445. Bring DFSClient block caching code more up to date with trunk
 
 Patch: https://issues.apache.org/jira/secure/attachment/12428885/HDFS-445-0_20.2.patch
 Author: Kan Zhang

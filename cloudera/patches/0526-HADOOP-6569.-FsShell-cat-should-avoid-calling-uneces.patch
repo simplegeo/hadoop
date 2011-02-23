@@ -1,7 +1,7 @@
 From ba0fc48b0d49ba1c03ef50ddb289580e61e0d689 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 2 Mar 2010 23:04:42 +0000
-Subject: [PATCH 526/791] HADOOP-6569. FsShell#cat should avoid calling unecessary getFileStatus before opening a file to read
+Subject: [PATCH 526/887] HADOOP-6569. FsShell#cat should avoid calling unecessary getFileStatus before opening a file to read
 
 Patch: http://issues.apache.org/jira/secure/attachment/12437633/optimizeCat-yahoo2.patch
 Author: Hairong Kuang

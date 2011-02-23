@@ -1,7 +1,7 @@
 From 870c7526a3e6a632eb23cf14f9011f279181a759 Mon Sep 17 00:00:00 2001
 From: Dhruba Borthakur <dhruba@apache.org>
 Date: Thu, 10 Jun 2010 22:25:39 +0000
-Subject: [PATCH 272/791] HDFS-142. Blocks that are being written by a client are stored in the blocksBeingWritten directory.
+Subject: [PATCH 272/887] HDFS-142. Blocks that are being written by a client are stored in the blocksBeingWritten directory.
 
 git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-0.20-append@953482 13f79535-47bb-0310-9956-ffa450edef68
 

@@ -81,6 +81,7 @@ if [ -z "$SKIP_JDIFF" ]; then
 ant \
   -Djdiff.stable=0.20.1 \
   -Djdiff.build.dir=build/docs/jdiff-cloudera \
+  -propertyfile build.properties \
   -propertyfile cloudera/build.properties api-report
 fi
 
@@ -98,3 +99,10 @@ JAVA_HOME=$JAVA64_HOME \
   -Dhadoop.conf.dir=/etc/hadoop-0.20/conf \
   -propertyfile cloudera/build.properties \
   compile-core-native compile-c++ compile-c++-examples task-controller tar
+
+if [ -z "$SKIP_MVN_EXPLICIT" ]; then
+# Change to cloudera/maven directory, and install
+# (and if called from CDH nightly build, deploy) artifacts into Maven repository
+cd $BIN_DIR/maven-packaging
+mvn -Dnot.cdh.release.build=false install $DO_MAVEN_DEPLOY
+fi

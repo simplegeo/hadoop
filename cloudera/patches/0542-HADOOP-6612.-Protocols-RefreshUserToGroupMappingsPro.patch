@@ -1,7 +1,7 @@
 From eb5a68ab5a10bd85527cd4495a17687a826af698 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sun, 7 Mar 2010 23:14:19 -0800
-Subject: [PATCH 542/791] HADOOP-6612. Protocols RefreshUserToGroupMappingsProtocol and RefreshAuthorizationPolicyProtocol will fail with security enabled
+Subject: [PATCH 542/887] HADOOP-6612. Protocols RefreshUserToGroupMappingsProtocol and RefreshAuthorizationPolicyProtocol will fail with security enabled
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437809/HADOOP-6612-BP20.patch
 Author: Boris Shkolnik

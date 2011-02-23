@@ -1,7 +1,7 @@
 From cd035a28f73f373b695b3704243d013508036346 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 11 Feb 2010 19:51:52 +0000
-Subject: [PATCH 471/791] MAPREDUCE-1425. archive throws OutOfMemoryError
+Subject: [PATCH 471/887] MAPREDUCE-1425. archive throws OutOfMemoryError
 
 Patch: http://issues.apache.org/jira/secure/attachment/12435030/MAPREDUCE-1425_y_0.20.patch
 Author: Mahadev konar

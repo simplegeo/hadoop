@@ -12,13 +12,13 @@
     </servlet>
 
     <servlet>
-        <servlet-name>org.apache.hadoop.hdfs.server.datanode.tail_jsp</servlet-name>
-        <servlet-class>org.apache.hadoop.hdfs.server.datanode.tail_jsp</servlet-class>
+        <servlet-name>org.apache.hadoop.hdfs.server.datanode.browseBlock_jsp</servlet-name>
+        <servlet-class>org.apache.hadoop.hdfs.server.datanode.browseBlock_jsp</servlet-class>
     </servlet>
 
     <servlet>
-        <servlet-name>org.apache.hadoop.hdfs.server.datanode.browseBlock_jsp</servlet-name>
-        <servlet-class>org.apache.hadoop.hdfs.server.datanode.browseBlock_jsp</servlet-class>
+        <servlet-name>org.apache.hadoop.hdfs.server.datanode.tail_jsp</servlet-name>
+        <servlet-class>org.apache.hadoop.hdfs.server.datanode.tail_jsp</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -27,13 +27,13 @@
     </servlet-mapping>
 
     <servlet-mapping>
-        <servlet-name>org.apache.hadoop.hdfs.server.datanode.tail_jsp</servlet-name>
-        <url-pattern>/tail.jsp</url-pattern>
+        <servlet-name>org.apache.hadoop.hdfs.server.datanode.browseBlock_jsp</servlet-name>
+        <url-pattern>/browseBlock.jsp</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>
-        <servlet-name>org.apache.hadoop.hdfs.server.datanode.browseBlock_jsp</servlet-name>
-        <url-pattern>/browseBlock.jsp</url-pattern>
+        <servlet-name>org.apache.hadoop.hdfs.server.datanode.tail_jsp</servlet-name>
+        <url-pattern>/tail.jsp</url-pattern>
     </servlet-mapping>
 
 </web-app>

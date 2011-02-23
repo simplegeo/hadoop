@@ -1,7 +1,7 @@
 From dccf120c3796312b1a67481daaa0366b13d471fe Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 4 Oct 2010 16:32:24 -0700
-Subject: [PATCH 725/791] CLOUDERA-BUILD. Amend Task Controller for sbin-located task-controller
+Subject: [PATCH 725/887] CLOUDERA-BUILD. Amend Task Controller for sbin-located task-controller
 
 Reason: earlier commit moved task-controller to an sbin directory, this updates
 	the java side

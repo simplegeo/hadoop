@@ -1,7 +1,7 @@
 From 877787c7557f3c2bb824f526d5b036c734bfc5e1 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 26 Feb 2010 21:43:27 -0800
-Subject: [PATCH 512/791] HADOOP-6580,HDFS-993,MR-1516. UGI should contain authentication method.
+Subject: [PATCH 512/887] HADOOP-6580,HDFS-993,MR-1516. UGI should contain authentication method.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437317/HADOOP-6580-0_20.5.patch
 Author: Jitendra Nath Pandey

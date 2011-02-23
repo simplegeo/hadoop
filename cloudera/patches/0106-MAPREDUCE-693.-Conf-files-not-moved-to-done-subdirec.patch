@@ -1,7 +1,7 @@
 From a8bf06eac5312ede0982118801e4495285a442fe Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:08:12 -0800
-Subject: [PATCH 106/791] MAPREDUCE-693. Conf files not moved to "done" subdirectory after JT restart
+Subject: [PATCH 106/887] MAPREDUCE-693. Conf files not moved to "done" subdirectory after JT restart
 
 Description: After <a href="http://issues.apache.org/jira/browse/MAPREDUCE-516" title="Fix the 'cluster drain' problem in the Capacity Scheduler wrt High RAM Jobs"><del>MAPREDUCE-516</del></a>, when a job is submitted and the JT is restarted (before job files have been written) and the job is killed after recovery, the conf files fail to be moved to the "done" subdirectory.<br/>
 The exact scenario to reproduce this issue is:

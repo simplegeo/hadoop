@@ -1,7 +1,7 @@
 From dc1797ec8380b07117bbc6d662e2f1f56b25e6bd Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 15 Jun 2010 17:56:43 -0700
-Subject: [PATCH 303/791] HDFS-1207. stallReplicationWork should be marked volatile in FSNamesystem
+Subject: [PATCH 303/887] HDFS-1207. stallReplicationWork should be marked volatile in FSNamesystem
 
 Description: Small bug fix for code used by tests only
 Reason: Fix sporadic failure of TestFileAppend4

@@ -1,7 +1,7 @@
 From f33ae6567528673de4c4b0de8f40cf2c9ff5741c Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 18 Feb 2010 12:15:13 +0530
-Subject: [PATCH 475/791] MAPREDUCE-686. Move TestSpeculativeExecution.Fake* into a separate class so that it can be used by other tests also
+Subject: [PATCH 475/887] MAPREDUCE-686. Move TestSpeculativeExecution.Fake* into a separate class so that it can be used by other tests also
 
 Patch: https://issues.apache.org/jira/secure/attachment/12436181/MAPREDUCE-686-y20.patch
 Author: Jothi Padmanabhan

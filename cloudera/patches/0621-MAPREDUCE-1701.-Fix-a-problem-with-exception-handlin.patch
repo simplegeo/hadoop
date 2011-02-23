@@ -1,7 +1,7 @@
 From 1b1896055e04da90194893c90ac7e2a3787e5077 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 20 Apr 2010 10:55:56 -0700
-Subject: [PATCH 621/791] MAPREDUCE-1701. Fix a problem with exception handling in delegation token renewals.
+Subject: [PATCH 621/887] MAPREDUCE-1701. Fix a problem with exception handling in delegation token renewals.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12442239/MAPREDUCE-1701-BP20-1.patch
 Author: Boris Shkolnik

@@ -1,7 +1,7 @@
 From 67d1c732cea0eebf59de512301ae8f2a1cb2f349 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:16:30 -0800
-Subject: [PATCH 122/791] CLOUDERA-BUILD. Reformatted Sqoop manpage asciidoc for CDH build process
+Subject: [PATCH 122/887] CLOUDERA-BUILD. Reformatted Sqoop manpage asciidoc for CDH build process
 
 Author: Aaron Kimball
 ---

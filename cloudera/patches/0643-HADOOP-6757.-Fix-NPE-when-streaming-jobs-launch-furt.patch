@@ -1,7 +1,7 @@
 From 057e7fc4942d0aa9a36f5b0ae2dd73d516fcf8ba Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 7 May 2010 13:15:22 +0530
-Subject: [PATCH 643/791] HADOOP-6757. Fix NPE when streaming jobs launch further Hadoop clients
+Subject: [PATCH 643/887] HADOOP-6757. Fix NPE when streaming jobs launch further Hadoop clients
 
 Patch: https://issues.apache.org/jira/secure/attachment/12443934/BZ-3620565-v1.0.patch
 Author: Amar Kamat

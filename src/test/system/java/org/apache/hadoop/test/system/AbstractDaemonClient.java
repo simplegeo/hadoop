@@ -27,6 +27,8 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileStatus;
+import org.apache.hadoop.fs.FileSystem;
+import org.apache.hadoop.fs.permission.FsPermission;
 import org.apache.hadoop.test.system.process.RemoteProcess;
 /**
  * Abstract class which encapsulates the DaemonClient which is used in the 
@@ -47,7 +49,7 @@ public abstract class AbstractDaemonClient<PROXY extends DaemonProtocol> {
    * @param conf client to be used by proxy to connect to Daemon.
    * @param process the Daemon process to manage the particular daemon.
    * 
-   * @throws IOException
+   * @throws IOException on RPC error
    */
   public AbstractDaemonClient(Configuration conf, RemoteProcess process) 
       throws IOException {
@@ -71,7 +73,7 @@ public abstract class AbstractDaemonClient<PROXY extends DaemonProtocol> {
   /**
    * Create an RPC proxy to the daemon <br/>
    * 
-   * @throws IOException
+   * @throws IOException on RPC error
    */
   public abstract void connect() throws IOException;
 
@@ -110,7 +112,7 @@ public abstract class AbstractDaemonClient<PROXY extends DaemonProtocol> {
    * Gets if the Daemon is ready to accept RPC connections. <br/>
    * 
    * @return true if daemon is ready.
-   * @throws IOException
+   * @throws IOException on RPC error
    */
   public boolean isReady() throws IOException {
     return getProxy().isReady();
@@ -118,7 +120,7 @@ public abstract class AbstractDaemonClient<PROXY extends DaemonProtocol> {
 
   /**
    * Kills the Daemon process <br/>
-   * @throws IOException
+   * @throws IOException on RPC error
    */
   public void kill() throws IOException {
     process.kill();
@@ -126,8 +128,7 @@ public abstract class AbstractDaemonClient<PROXY extends DaemonProtocol> {
 
   /**
    * Checks if the Daemon process is alive or not <br/>
-   * 
-   * @throws IOException
+   * @throws IOException on RPC error
    */
   public void ping() throws IOException {
     getProxy().ping();
@@ -135,7 +136,7 @@ public abstract class AbstractDaemonClient<PROXY extends DaemonProtocol> {
 
   /**
    * Start up the Daemon process. <br/>
-   * @throws IOException
+   * @throws IOException on RPC error
    */
   public void start() throws IOException {
     process.start();
@@ -146,7 +147,7 @@ public abstract class AbstractDaemonClient<PROXY extends DaemonProtocol> {
    * 
    * @return returns system level view of the Daemon process.
    * 
-   * @throws IOException
+   * @throws IOException on RPC error. 
    */
   public ProcessInfo getProcessInfo() throws IOException {
     return getProxy().getProcessInfo();
@@ -167,6 +168,56 @@ public abstract class AbstractDaemonClient<PROXY extends DaemonProtocol> {
   }
 
   /**
+   * Create a file with full permissions in a file system.
+   * @param path - source path where the file has to create.
+   * @param fileName - file name
+   * @param local - identifying the path whether its local or not.
+   * @throws IOException - if an I/O error occurs.
+   */
+  public void createFile(String path, String fileName, 
+      boolean local) throws IOException {
+    getProxy().createFile(path, fileName, null, local);
+  }
+
+  /**
+   * Create a file with given permissions in a file system.
+   * @param path - source path where the file has to create.
+   * @param fileName - file name.
+   * @param permission - file permissions.
+   * @param local - identifying the path whether its local or not.
+   * @throws IOException - if an I/O error occurs.
+   */
+  public void createFile(String path, String fileName, 
+     FsPermission permission,  boolean local) throws IOException {
+    getProxy().createFile(path, fileName, permission, local);
+  }
+
+  /**
+   * Create a folder with default permissions in a file system.
+   * @param path - source path where the file has to be creating.
+   * @param folderName - folder name.
+   * @param local - identifying the path whether its local or not.
+   * @throws IOException - if an I/O error occurs. 
+   */
+  public void createFolder(String path, String folderName, 
+     boolean local) throws IOException {
+    getProxy().createFolder(path, folderName, null, local);
+  }
+
+  /**
+   * Create a folder with given permissions in a file system.
+   * @param path - source path where the file has to be creating.
+   * @param folderName - folder name.
+   * @param permission - folder permissions.
+   * @param local - identifying the path whether its local or not.
+   * @throws IOException - if an I/O error occurs.
+   */
+  public void createFolder(String path, String folderName, 
+     FsPermission permission,  boolean local) throws IOException {
+    getProxy().createFolder(path, folderName, permission, local);
+  }
+
+  /**
    * List the statuses of the files/directories in the given path if the path is
    * a directory.
    * 
@@ -175,7 +226,7 @@ public abstract class AbstractDaemonClient<PROXY extends DaemonProtocol> {
    * @param local
    *          whether the path is local or not
    * @return the statuses of the files/directories in the given patch
-   * @throws IOException
+   * @throws IOException on RPC error. 
    */
   public FileStatus[] listStatus(String path, boolean local) 
     throws IOException {
@@ -193,7 +244,7 @@ public abstract class AbstractDaemonClient<PROXY extends DaemonProtocol> {
    * @param recursive 
    *          whether to recursively get the status
    * @return the statuses of the files/directories in the given patch
-   * @throws IOException
+   * @throws IOException is thrown on RPC error. 
    */
   public FileStatus[] listStatus(String f, boolean local, boolean recursive) 
     throws IOException {
@@ -239,7 +290,7 @@ public abstract class AbstractDaemonClient<PROXY extends DaemonProtocol> {
    * Pattern used for searching is ERROR. <br/>
    * @param excludeExpList list of exception to exclude 
    * @return number of occurrence of error message.
-   * @throws IOException
+   * @throws IOException is thrown on RPC error. 
    */
   public int getNumberOfErrorStatementsInLog(String[] excludeExpList) 
       throws IOException {
@@ -254,7 +305,7 @@ public abstract class AbstractDaemonClient<PROXY extends DaemonProtocol> {
    * Pattern used for searching is WARN. <br/>
    * @param excludeExpList list of exception to exclude 
    * @return number of occurrence of warning message.
-   * @throws IOException
+   * @throws IOException thrown on RPC error. 
    */
   public int getNumberOfWarnStatementsInLog(String[] excludeExpList) 
       throws IOException {
@@ -269,7 +320,7 @@ public abstract class AbstractDaemonClient<PROXY extends DaemonProtocol> {
    * @param e exception class.
    * @param excludeExpList list of exceptions to exclude. 
    * @return number of exceptions in log
-   * @throws IOException
+   * @throws IOException is thrown on RPC error. 
    */
   public int getNumberOfExceptionsInLog(Exception e,
       String[] excludeExpList) throws IOException {
@@ -283,7 +334,7 @@ public abstract class AbstractDaemonClient<PROXY extends DaemonProtocol> {
    * <br/>
    * @param excludeExpList list of exceptions to exclude.
    * @return number of times exception in log file.
-   * @throws IOException
+   * @throws IOException is thrown on RPC error. 
    */
   public int getNumberOfConcurrentModificationExceptionsInLog(
       String[] excludeExpList) throws IOException {
@@ -299,7 +350,7 @@ public abstract class AbstractDaemonClient<PROXY extends DaemonProtocol> {
    * Populate the initial exception counts to be used to assert once a testcase
    * is done there was no exception in the daemon when testcase was run.
    * @param excludeExpList list of exceptions to exclude
-   * @throws IOException
+   * @throws IOException is thrown on RPC error. 
    */
   protected void populateExceptionCount(String [] excludeExpList) 
       throws IOException {
@@ -320,7 +371,7 @@ public abstract class AbstractDaemonClient<PROXY extends DaemonProtocol> {
    * Pre-req for the method is that populateExceptionCount() has 
    * to be called before calling this method.</b></i>
    * @param excludeExpList list of exceptions to exclude
-   * @throws IOException
+   * @throws IOException is thrown on RPC error. 
    */
   protected void assertNoExceptionsOccurred(String [] excludeExpList) 
       throws IOException {

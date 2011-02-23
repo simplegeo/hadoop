@@ -1,7 +1,7 @@
 From 8761586736722c1c6f2eb3c7ad7d1842383431b6 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 4 Jan 2010 17:54:04 -0800
-Subject: [PATCH 417/791] HADOOP-4268. Permission checking in fsck
+Subject: [PATCH 417/887] HADOOP-4268. Permission checking in fsck
 
 Patch: https://issues.apache.org/jira/secure/attachment/12428975/HADOOP-4268-0_20.2.patch
 Author: Tsz Wo (Nicholas), SZE

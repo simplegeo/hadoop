@@ -1,7 +1,7 @@
 From 137999a0b48a81bed10a5f30868dbfe6d176956b Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:58:09 -0800
-Subject: [PATCH 089/791] HADOOP-5257. Export namenode/datanode functionality through a pluggable RPC layer
+Subject: [PATCH 089/887] HADOOP-5257. Export namenode/datanode functionality through a pluggable RPC layer
 
 Description: Adding support for pluggable components would allow exporting DFS functionallity using arbitrary protocols, like Thirft or Protocol Buffers. I'm opening this issue on Dhruba's suggestion in HADOOP-4707.
 

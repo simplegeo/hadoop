@@ -69,6 +69,7 @@ class FsShellPermissions {
           srcFs.setPermission(file.getPath(), 
                                 new FsPermission((short)newperms));
         } catch (IOException e) {
+          FsShell.LOG.debug("Error", e);
           System.err.println(getName() + ": changing permissions of '" + 
                              file.getPath() + "':" + e.getMessage().split("\n")[0]);
         }

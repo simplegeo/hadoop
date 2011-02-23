@@ -1,7 +1,7 @@
 From 1c6dd471832946929928801dd9c9e4b79259ad9d Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:45:38 -0800
-Subject: [PATCH 204/791] HADOOP-6460. Namenode runs of out of memory due to memory leak in ipc Server
+Subject: [PATCH 204/887] HADOOP-6460. Namenode runs of out of memory due to memory leak in ipc Server
 
 Description: Namenode heap usage grows disproportional to the number objects supports (files, directories and blocks). Based on heap dump analysis, this is due to large growth in ByteArrayOutputStream allocated in o.a.h.ipc.Server.Handler.run().
 Reason: Bugfix (Scalability)

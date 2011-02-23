@@ -1,7 +1,7 @@
 From 5fe725b1a48326bf606dadfc636586904aa861c4 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 6 Sep 2010 11:41:10 -0700
-Subject: [PATCH 699/791] HDFS-1378. Track and report file offsets in cases of edit log replay failure.
+Subject: [PATCH 699/887] HDFS-1378. Track and report file offsets in cases of edit log replay failure.
 
 Author: Todd Lipcon
 ---

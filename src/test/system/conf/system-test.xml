@@ -54,7 +54,7 @@ neutral at the forward-port stage -->
 </property>
 <property>
    <name>test.system.hdrc.deployed.scripts.dir</name>
-   <value>./src/test/system/scripts</value>
+   <value>$(YINST_ROOT)/share/hadoop-current/src/test/system/scripts</value>
    <description>
      This directory hosts the scripts in the deployed location where
      the system test client runs.
@@ -66,6 +66,37 @@ neutral at the forward-port stage -->
   <description>
   The directory where the new config files will be copied to in all
   the clusters is pointed out this directory. 
+  </description>
+</property>
+<property>
+  <name>test.system.hdrc.hadoop.local.confdir</name>
+  <value>$(TO_DO_GLOBAL_TMP_DIR)/localconf</value>
+  <description>
+  It's a local conf directory where the new config file is store temporarily
+  before pushing into new config folder location in the cluster.
+  </description>
+</property>
+<property>
+  <name>test.system.hdrc.suspend.cmd</name>
+  <value>kill -SIGSTOP</value>
+  <description>
+    Command for suspending the given process.
+  </description>
+</property>
+<property>
+  <name>test.system.hdrc.resume.cmd</name>
+  <value>kill -SIGCONT</value>
+  <description>
+  Command for resuming the given suspended process.
+  </description>
+</property>
+<property>
+  <name>test.system.hdrc.healthscript.path</name>
+  <value>/tmp</value>
+  <description>
+  This location is used by health script test cases to configure the
+  health script in remote cluster where the error inducing health script
+  will be copied.
   </description>
 </property>
 
@@ -83,6 +114,13 @@ neutral at the forward-port stage -->
   <value>org.apache.hadoop.hdfs.test.system.HDFSCluster$MultiUserHDFSProcessManager</value>
   <description>
     Enabling multi user based cluster process manger.
+  </description>
+</property>
+<property>
+  <name>test.system.hdrc.multi-user.list.path</name>
+  <value>$(YINST_ROOT)/conf/hadoop/proxyusers</value>
+  <description>
+  Multi user list for creating the proxy users.
   </description>
 </property>
 <property>

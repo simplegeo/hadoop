@@ -1,7 +1,7 @@
 From 12bcbba89226fdce99733f366e8eaacd09d95ab7 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 16 Apr 2010 15:36:16 +0530
-Subject: [PATCH 608/791] MAPREDUCE-1617. Fix unit test failures due to IPv6-related issues
+Subject: [PATCH 608/887] MAPREDUCE-1617. Fix unit test failures due to IPv6-related issues
 
 Patch: https://issues.apache.org/jira/secure/attachment/12441951/mr-1617-v1.3.patch.
 Author: Luke Lu

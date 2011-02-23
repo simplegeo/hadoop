@@ -97,10 +97,12 @@ public class TestDistributedCacheUnModifiedFile {
     //Stopping all TTs
     for (TTClient tt : tts) {
       tt.kill();
+      tt.waitForTTStop();
     }
     //Starting all TTs
     for (TTClient tt : tts) {
       tt.start();
+      tt.waitForTTStart();
     }
    
     //Waiting for 5 seconds to make sure tasktrackers are ready
@@ -121,10 +123,12 @@ public class TestDistributedCacheUnModifiedFile {
     //Stopping all TTs
     for (TTClient tt : tts) {
       tt.kill();
+      tt.waitForTTStop();
     }
     //Starting all TTs
     for (TTClient tt : tts) {
       tt.start();
+      tt.waitForTTStart();
     }
   }
 
@@ -154,7 +158,7 @@ public class TestDistributedCacheUnModifiedFile {
       SleepJob job = new SleepJob();
       job.setConf(conf);
       conf = job.setupJobConf(5, 1, 1000, 1000, 100, 100);
-
+      conf.setBoolean("mapreduce.job.complete.cancel.delegation.tokens", false);
       DistributedCache.createSymlink(conf);
       URI uri = URI.create(uriPath);
       DistributedCache.addCacheFile(uri, conf);

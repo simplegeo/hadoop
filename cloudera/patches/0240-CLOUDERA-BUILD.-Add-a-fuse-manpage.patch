@@ -1,7 +1,7 @@
 From 148d291aa14a4481dc206d2fc9a8527eb6761488 Mon Sep 17 00:00:00 2001
 From: newalex <newalex@ubuntu64-build01.(none)>
 Date: Fri, 16 Apr 2010 15:48:14 -0700
-Subject: [PATCH 240/791] CLOUDERA-BUILD. Add a fuse manpage
+Subject: [PATCH 240/887] CLOUDERA-BUILD. Add a fuse manpage
 
 Description: Adding a fuse_dfs manpage and adding a manpage to the build.
 Reason: New Feature

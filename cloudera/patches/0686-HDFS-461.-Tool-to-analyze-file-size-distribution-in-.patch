@@ -1,7 +1,7 @@
 From 83da6170d68e29c1ae7881c2606af59a2145a8aa Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 3 Sep 2010 17:09:05 -0700
-Subject: [PATCH 686/791] HDFS-461. Tool to analyze file size distribution in HDFS.
+Subject: [PATCH 686/887] HDFS-461. Tool to analyze file size distribution in HDFS.
 
 Author: Konstantin Shvachko
 Ref: CDH-2106

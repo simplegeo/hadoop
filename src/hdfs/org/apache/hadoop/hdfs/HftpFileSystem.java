@@ -31,7 +31,6 @@ import java.security.PrivilegedExceptionAction;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.TimeZone;
 import java.util.concurrent.DelayQueue;
 import java.util.concurrent.Delayed;
@@ -51,6 +50,7 @@ import org.apache.hadoop.fs.permission.FsPermission;
 import org.apache.hadoop.hdfs.security.token.delegation.DelegationTokenIdentifier;
 import org.apache.hadoop.hdfs.server.namenode.JspHelper;
 import org.apache.hadoop.hdfs.server.namenode.NameNode;
+import org.apache.hadoop.hdfs.server.namenode.StreamFile;
 import org.apache.hadoop.hdfs.tools.DelegationTokenFetcher;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.ipc.RemoteException;
@@ -173,8 +173,10 @@ public class HftpFileSystem extends FileSystem {
   }
   
   @Override
-  public Token<?> getDelegationToken(final String renewer) throws IOException {
+  public synchronized Token<?> getDelegationToken(final String renewer) throws IOException {
     try {
+      //Renew TGT if needed
+      ugi.checkTGTAndReloginFromKeytab();
       return ugi.doAs(new PrivilegedExceptionAction<Token<?>>() {
         public Token<?> run() throws IOException {
           Credentials c;
@@ -260,18 +262,47 @@ public class HftpFileSystem extends FileSystem {
 
   @Override
   public FSDataInputStream open(Path f, int buffersize) throws IOException {
-    HttpURLConnection connection = null;
-    connection = openConnection("/data" + f.toUri().getPath(),
-        "ugi=" + getUgiParameter());
-    connection.setRequestMethod("GET");
-    connection.connect();
-    final InputStream in = connection.getInputStream();
+    final HttpURLConnection connection = openConnection(
+        "/data" + f.toUri().getPath(), "ugi=" + getUgiParameter());
+    final InputStream in;
+    try {
+      connection.setRequestMethod("GET");
+      connection.connect();
+      in = connection.getInputStream();
+    } catch(IOException ioe) {
+      final int code = connection.getResponseCode();
+      final String s = connection.getResponseMessage();
+      throw s == null? ioe:
+          new IOException(s + " (error code=" + code + ")", ioe);
+    }
+
+    final String cl = connection.getHeaderField(StreamFile.CONTENT_LENGTH);
+    final long filelength = cl == null? -1: Long.parseLong(cl);
+    if (LOG.isDebugEnabled()) {
+      LOG.debug("filelength = " + filelength);
+    }
+
     return new FSDataInputStream(new FSInputStream() {
+        long currentPos = 0;
+
+        private void update(final boolean isEOF, final int n
+            ) throws IOException {
+          if (!isEOF) {
+            currentPos += n;
+          } else if (currentPos < filelength) {
+            throw new IOException("Got EOF but byteread = " + currentPos
+                + " < filelength = " + filelength);
+          }
+        }
         public int read() throws IOException {
-          return in.read();
+          final int b = in.read();
+          update(b == -1, 1);
+          return b;
         }
         public int read(byte[] b, int off, int len) throws IOException {
-          return in.read(b, off, len);
+          final int n = in.read(b, off, len);
+          update(n == -1, n);
+          return n;
         }
 
         public void close() throws IOException {
@@ -630,6 +661,7 @@ public class HftpFileSystem extends FileSystem {
       final HftpFileSystem fs = weakFs.get();
       if (fs != null) {
         synchronized (fs) {
+          fs.ugi.checkTGTAndReloginFromKeytab();
           fs.ugi.doAs(new PrivilegedExceptionAction<Void>() {
 
             @Override

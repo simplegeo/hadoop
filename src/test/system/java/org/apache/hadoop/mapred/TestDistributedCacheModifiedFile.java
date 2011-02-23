@@ -88,6 +88,10 @@ public class TestDistributedCacheModifiedFile {
   @BeforeClass
   public static void setUp() throws Exception {
     cluster = MRCluster.createCluster(new Configuration());
+    String [] expExcludeList = {"java.net.ConnectException",
+        "java.io.IOException","org.apache.hadoop.metrics2.MetricsException"};
+    cluster.setExcludeExpList(expExcludeList);
+
     cluster.setUp();
     client = cluster.getJTClient().getClient();
     dfs = client.getFs();
@@ -98,10 +102,12 @@ public class TestDistributedCacheModifiedFile {
     //Stopping all TTs
     for (TTClient tt : tts) {
       tt.kill();
+      tt.waitForTTStop();
     }
     //Starting all TTs
     for (TTClient tt : tts) {
       tt.start();
+      tt.waitForTTStart();
     }
     //Waiting for 5 seconds to make sure tasktrackers are ready 
     Thread.sleep(5000);
@@ -109,18 +115,20 @@ public class TestDistributedCacheModifiedFile {
 
   @AfterClass
   public static void tearDown() throws Exception {
-    cluster.tearDown();
     dfs.delete(URIPATH, true);
     
     Collection<TTClient> tts = cluster.getTTClients();
     //Stopping all TTs
     for (TTClient tt : tts) {
       tt.kill();
+      tt.waitForTTStop();
     }
     //Starting all TTs
     for (TTClient tt : tts) {
       tt.start();
+      tt.waitForTTStart();
     }
+    cluster.tearDown();
   }
 
   @Test
@@ -151,6 +159,7 @@ public class TestDistributedCacheModifiedFile {
       SleepJob job = new SleepJob();
       job.setConf(conf);
       conf = job.setupJobConf(5, 1, 1000, 1000, 100, 100);
+      conf.setBoolean("mapreduce.job.complete.cancel.delegation.tokens", false);
 
       //Before starting, Modify the file
       String input = "This will be the content of\n" + "distributed cache\n";
@@ -283,9 +292,6 @@ public class TestDistributedCacheModifiedFile {
           if (distributedFileCount != 2 && taskTrackerFound) {
             Assert.fail("The distributed cache file has to be two. " +
             		"But found was " + distributedFileCount);
-          } else if (distributedFileCount > 1 && !taskTrackerFound) {
-            Assert.fail("The distributed cache file cannot more than one." +
-            		" But found was " + distributedFileCount);
           } else if (distributedFileCount < 1)
             Assert.fail("The distributed cache file is less than one. " +
             		"But found was " + distributedFileCount);
@@ -296,14 +302,7 @@ public class TestDistributedCacheModifiedFile {
         }
       }
       //Allow the job to continue through MR control job.
-      for (TaskInfo taskInfoRemaining : taskInfos) {
-        FinishTaskControlAction action = new FinishTaskControlAction(TaskID
-           .downgrade(taskInfoRemaining.getTaskID()));
-        Collection<TTClient> tts = cluster.getTTClients();
-        for (TTClient cli : tts) {
-          cli.getProxy().sendAction(action);
-        }
-      }
+      cluster.signalAllTasks(rJob.getID());
 
       //Killing the job because all the verification needed
       //for this testcase is completed.

@@ -1,7 +1,7 @@
 From 98f1914cc0c6f91f8c0e3aa8cea8e7609b49c901 Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Wed, 15 Sep 2010 20:00:17 -0700
-Subject: [PATCH 690/791] HDFS-1000. Updates libhdfs to the new API for UGI.
+Subject: [PATCH 690/887] HDFS-1000. Updates libhdfs to the new API for UGI.
 
 Reason: Bug
 Author: Devaraj Das

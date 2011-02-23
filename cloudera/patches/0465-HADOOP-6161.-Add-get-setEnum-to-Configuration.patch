@@ -1,7 +1,7 @@
 From 7d2d3c129e0c1358e490d09744ce1b448e430beb Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 9 Feb 2010 11:10:54 +0530
-Subject: [PATCH 465/791] HADOOP-6161. Add get/setEnum to Configuration
+Subject: [PATCH 465/887] HADOOP-6161. Add get/setEnum to Configuration
 
 Patch: http://issues.apache.org/jira/secure/attachment/12434928/hadoop-6161-yahoo-20-v1.patch
 Author: Chris Douglas

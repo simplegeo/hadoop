@@ -241,6 +241,12 @@ public class UserGroupInformation {
         new HadoopConfiguration(existingConfig));
     }
 
+    // We're done initializing at this point. Important not to classload
+    // KerberosName before this point, or else its static initializer
+    // may call back into this same method!
+    isInitialized = true;
+    UserGroupInformation.conf = conf;
+
     // give the configuration on how to translate Kerberos names
     try {
       KerberosName.setConfiguration(conf);
@@ -248,8 +254,6 @@ public class UserGroupInformation {
       throw new RuntimeException("Problem with Kerberos auth_to_local name " +
                                  "configuration", ioe);
     }
-    isInitialized = true;
-    UserGroupInformation.conf = conf;
   }
 
   /**
@@ -508,6 +512,32 @@ public class UserGroupInformation {
   public boolean isFromKeytab() {
     return isKeytab;
   }
+  
+  /**
+   * Get the Kerberos TGT
+   * @return the user's TGT or null if none was found
+   */
+  private synchronized KerberosTicket getTGT() {
+    Set<KerberosTicket> tickets = 
+      subject.getPrivateCredentials(KerberosTicket.class);
+    for(KerberosTicket ticket: tickets) {
+      KerberosPrincipal server = ticket.getServer();
+      if (server.getName().equals("krbtgt/" + server.getRealm() + 
+                                  "@" + server.getRealm())) {
+        if (LOG.isDebugEnabled()) {
+          LOG.debug("Found tgt " + ticket);
+        }
+        return ticket;
+      }
+    }
+    return null;
+  }
+  
+  private long getRefreshTime(KerberosTicket tgt) {
+    long start = tgt.getStartTime().getTime();
+    long end = tgt.getEndTime().getTime();
+    return start + (long) ((end - start) * TICKET_RENEW_WINDOW);
+  }
 
   /**Spawn a thread to do periodic renewals of kerberos credentials*/
   private void spawnAutoRenewalThreadForUserCreds() {
@@ -516,32 +546,6 @@ public class UserGroupInformation {
       if (user.getAuthenticationMethod() == AuthenticationMethod.KERBEROS &&
           !isKeytab) {
         Thread t = new Thread(new Runnable() {
-          
-          /**
-           * Get the Kerberos TGT
-           * @return the user's TGT or null if none was found
-           */
-          private KerberosTicket getTGT() {
-            Set<KerberosTicket> tickets = 
-              subject.getPrivateCredentials(KerberosTicket.class);
-            for(KerberosTicket ticket: tickets) {
-              KerberosPrincipal server = ticket.getServer();
-              if (server.getName().equals("krbtgt/" + server.getRealm() + 
-                                          "@" + server.getRealm())) {
-                if (LOG.isDebugEnabled()) {
-                  LOG.debug("Found tgt " + ticket);
-                }
-                return ticket;
-              }
-            }
-            return null;
-          }
-
-          private long getRefreshTime(KerberosTicket tgt) {
-            long start = tgt.getStartTime().getTime();
-            long end = tgt.getEndTime().getTime();
-            return start + (long) ((end - start) * TICKET_RENEW_WINDOW);
-          }
 
           public void run() {
             String cmd = conf.get("hadoop.kerberos.kinit.command",
@@ -712,6 +716,25 @@ public class UserGroupInformation {
       if(oldKeytabPrincipal != null) keytabPrincipal = oldKeytabPrincipal;
     }
   }
+
+  /**
+   * Re-login a user from keytab if TGT is expired or is close to expiry.
+   * 
+   * @throws IOException
+   */
+  public synchronized void checkTGTAndReloginFromKeytab() throws IOException {
+    //TODO: The method reloginFromKeytab should be refactored to use this
+    //      implementation.
+    if (!isSecurityEnabled()
+        || user.getAuthenticationMethod() != AuthenticationMethod.KERBEROS
+        || !isKeytab)
+      return;
+    KerberosTicket tgt = getTGT();
+    if (tgt != null && System.currentTimeMillis() < getRefreshTime(tgt)) {
+      return;
+    }
+    reloginFromKeytab();
+  }
   
   /**
    * Re-Login a user in from a keytab file. Loads a user identity from a keytab
@@ -738,20 +761,22 @@ public class UserGroupInformation {
     long start = 0;
     try {
       LOG.info("Initiating logout for " + getUserName());
-      //clear up the kerberos state. But the tokens are not cleared! As per 
-      //the Java kerberos login module code, only the kerberos credentials
-      //are cleared
-      login.logout();
-      //login and also update the subject field of this instance to 
-      //have the new credentials (pass it to the LoginContext constructor)
-      login = 
-        new LoginContext(HadoopConfiguration.KEYTAB_KERBEROS_CONFIG_NAME, 
-            getSubject());
-      LOG.info("Initiating re-login for " + keytabPrincipal);
-      start = System.currentTimeMillis();
-      login.login();
-      metrics.loginSuccess.inc(System.currentTimeMillis() - start);
-      setLogin(login);
+      synchronized (UserGroupInformation.class) {
+        //clear up the kerberos state. But the tokens are not cleared! As per 
+        //the Java kerberos login module code, only the kerberos credentials
+        //are cleared
+        login.logout();
+        //login and also update the subject field of this instance to 
+        //have the new credentials (pass it to the LoginContext constructor)
+        login = 
+          new LoginContext(HadoopConfiguration.KEYTAB_KERBEROS_CONFIG_NAME, 
+                           getSubject());
+        LOG.info("Initiating re-login for " + keytabPrincipal);
+        start = System.currentTimeMillis();
+        login.login();
+        metrics.loginSuccess.inc(System.currentTimeMillis() - start);
+        setLogin(login);
+      }
     } catch (LoginException le) {
       if (start > 0) {
         metrics.loginFailure.inc(System.currentTimeMillis() - start);

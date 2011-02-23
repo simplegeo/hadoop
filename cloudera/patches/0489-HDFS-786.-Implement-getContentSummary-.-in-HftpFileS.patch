@@ -1,7 +1,7 @@
 From 7bc77f6677512242d19b75c643f21a457087d29a Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 23 Feb 2010 16:18:31 -0800
-Subject: [PATCH 489/791] HDFS-786. Implement getContentSummary(..) in HftpFileSystem
+Subject: [PATCH 489/887] HDFS-786. Implement getContentSummary(..) in HftpFileSystem
 
 Patch: https://issues.apache.org/jira/secure/attachment/12436792/h786_20100223_0.20.patch
 Author: Tsz Wo (Nicholas), SZE

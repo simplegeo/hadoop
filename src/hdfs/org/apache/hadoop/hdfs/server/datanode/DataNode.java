@@ -35,6 +35,7 @@ import java.security.SecureRandom;
 import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -43,6 +44,8 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
+
+import javax.management.ObjectName;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -53,6 +56,7 @@ import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.LocalFileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.fs.permission.FsPermission;
+import org.apache.hadoop.metrics.util.MBeanUtil;
 import org.apache.hadoop.hdfs.DFSConfigKeys;
 import org.apache.hadoop.hdfs.HDFSPolicyProvider;
 import org.apache.hadoop.hdfs.protocol.Block;
@@ -72,6 +76,7 @@ import org.apache.hadoop.hdfs.server.common.HdfsConstants;
 import org.apache.hadoop.hdfs.server.common.IncorrectVersionException;
 import org.apache.hadoop.hdfs.server.common.Storage;
 import org.apache.hadoop.hdfs.server.common.HdfsConstants.StartupOption;
+import org.apache.hadoop.hdfs.server.datanode.FSDataset.VolumeInfo;
 import org.apache.hadoop.hdfs.server.datanode.SecureDataNodeStarter.SecureResources;
 import org.apache.hadoop.hdfs.server.datanode.metrics.DataNodeMetrics;
 import org.apache.hadoop.hdfs.server.namenode.FSNamesystem;
@@ -111,6 +116,8 @@ import org.apache.hadoop.util.SingleArgumentRunnable;
 import org.apache.hadoop.util.StringUtils;
 import org.apache.hadoop.util.DiskChecker.DiskErrorException;
 import org.apache.hadoop.util.DiskChecker.DiskOutOfSpaceException;
+import org.apache.hadoop.util.VersionInfo;
+import org.mortbay.util.ajax.JSON;
 
 /**********************************************************
  * DataNode is a class (and program) that stores a set of
@@ -144,7 +151,8 @@ import org.apache.hadoop.util.DiskChecker.DiskOutOfSpaceException;
  *
  **********************************************************/
 public class DataNode extends Configured 
-    implements InterDatanodeProtocol, ClientDatanodeProtocol, FSConstants, Runnable {
+    implements InterDatanodeProtocol, ClientDatanodeProtocol, FSConstants, 
+    Runnable, DataNodeMXBean {
   public static final Log LOG = LogFactory.getLog(DataNode.class);
   
   static{
@@ -286,6 +294,9 @@ public class DataNode extends Configured
    * 
    * @param dataDirs - only for a non-simulated storage data node
    * @throws IOException
+   * @throws MalformedObjectNameException 
+   * @throws MBeanRegistrationException 
+   * @throws InstanceAlreadyExistsException 
    */
   void startDataNode(Configuration conf, 
                      AbstractList<File> dataDirs, SecureResources resources
@@ -305,7 +316,7 @@ public class DataNode extends Configured
                                      conf.get("dfs.datanode.dns.interface","default"),
                                      conf.get("dfs.datanode.dns.nameserver","default"));
     }
-    InetSocketAddress nameNodeAddr = NameNode.getAddress(conf);
+    InetSocketAddress nameNodeAddr = NameNode.getServiceAddress(conf, true);
     
     this.socketTimeout =  conf.getInt("dfs.socket.timeout",
                                       HdfsConstants.READ_TIMEOUT);
@@ -363,6 +374,9 @@ public class DataNode extends Configured
     // Allow configuration to delay block reports to find bugs
     artificialBlockReceivedDelay = conf.getInt(
       "dfs.datanode.artificialBlockReceivedDelay", 0);
+
+    // register datanode MXBean
+    this.registerMXBean(conf); // register the MXBean for DataNode
 
     // find free port or use privileged port provide
     ServerSocket ss;
@@ -467,6 +481,23 @@ public class DataNode extends Configured
     pluginDispatcher = PluginDispatcher.createFromConfiguration(
         conf, DFSConfigKeys.DFS_DATANODE_PLUGINS_KEY, DatanodePlugin.class);
     pluginDispatcher.dispatchStart(this);
+  }
+
+  private ObjectName mxBean = null;
+  /**
+   * Register the DataNode MXBean using the name
+   *        "hadoop:service=DataNode,name=DataNodeInfo"
+   */
+  void registerMXBean(Configuration conf) {
+    // We wrap to bypass standard mbean naming convention.
+    // This wraping can be removed in java 6 as it is more flexible in 
+    // package naming for mbeans and their impl.
+    mxBean = MBeanUtil.registerMBean("DataNode", "DataNodeInfo", this);
+  }
+  
+  public void unRegisterMXBean() {
+    if (mxBean != null)
+      MBeanUtil.unregisterMBean(mxBean);
   }
 
   /**
@@ -681,6 +712,8 @@ public class DataNode extends Configured
    * Otherwise, deadlock might occur.
    */
   public void shutdown() {
+    this.unRegisterMXBean();
+
     if (pluginDispatcher != null) {
       pluginDispatcher.dispatchStop();
     }
@@ -1914,5 +1947,52 @@ public class DataNode extends Configured
                                 "dfs.datanode.port",
                                 "dfs.datanode.address");
     return NetUtils.createSocketAddr(address);
+  }
+
+  
+  @Override // DataNodeMXBean
+  public String getHostName() {
+    return this.machineName;
+  }
+  
+  @Override // DataNodeMXBean
+  public String getVersion() {
+    return VersionInfo.getVersion();
+  }
+  
+  @Override // DataNodeMXBean
+  public String getRpcPort(){
+    InetSocketAddress ipcAddr = NetUtils.createSocketAddr(
+        this.getConf().get("dfs.datanode.ipc.address"));
+    return Integer.toString(ipcAddr.getPort());
+  }
+
+  @Override // DataNodeMXBean
+  public String getHttpPort(){
+    return this.getConf().get("dfs.datanode.info.port");
+  }
+
+  @Override // DataNodeMXBean
+  public String getNamenodeAddress(){
+    return nameNodeAddr.getHostName();
+  }
+
+  /**
+   * Returned information is a JSON representation of a map with 
+   * volume name as the key and value is a map of volume attribute 
+   * keys to its values
+   */
+  @Override // DataNodeMXBean
+  public String getVolumeInfo() {
+    final Map<String, Object> info = new HashMap<String, Object>();
+    Collection<VolumeInfo> volumes = ((FSDataset)this.data).getVolumeInfo();
+    for (VolumeInfo v : volumes) {
+      final Map<String, Object> innerInfo = new HashMap<String, Object>();
+      innerInfo.put("usedSpace", v.usedSpace);
+      innerInfo.put("freeSpace", v.freeSpace);
+      innerInfo.put("reservedSpace", v.reservedSpace);
+      info.put(v.directory, innerInfo);
+    }
+    return JSON.toString(info);
   }
 }

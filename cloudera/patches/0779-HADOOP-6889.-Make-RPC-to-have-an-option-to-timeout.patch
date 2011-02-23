@@ -1,7 +1,7 @@
-From bff25038052dc9b8a8c6d78c7195ecd1d5393033 Mon Sep 17 00:00:00 2001
+From 1e3ffff9722ebd775b870a4c914f202930bb525e Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 19 Jan 2011 00:18:37 -0800
-Subject: [PATCH 779/791] HADOOP-6889. Make RPC to have an option to timeout.
+Subject: [PATCH 779/887] HADOOP-6889. Make RPC to have an option to timeout.
 
 Reason: Customer request
 Author: Hairong Kuang

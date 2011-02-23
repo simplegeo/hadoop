@@ -1,7 +1,7 @@
 From 7243001d5511922f293f0641cb8dbc0af4850dae Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 18 Jun 2010 16:13:45 -0700
-Subject: [PATCH 316/791] HDFS-1254. Enable append feature by default
+Subject: [PATCH 316/887] HDFS-1254. Enable append feature by default
 
 Description: Changes dfs.support.append to "true" in hdfs-default.xml
 Reason: Append/sync have been tested in CDH3b2 and are safe to use.

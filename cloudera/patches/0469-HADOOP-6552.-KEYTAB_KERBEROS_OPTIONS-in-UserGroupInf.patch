@@ -1,7 +1,7 @@
 From a60877ba994c36b0d81f7d1c47a81b1111906bd2 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 9 Feb 2010 21:08:18 -0800
-Subject: [PATCH 469/791] HADOOP-6552. KEYTAB_KERBEROS_OPTIONS in UserGroupInformation should have options for automatic renewal of keytab based tickets
+Subject: [PATCH 469/887] HADOOP-6552. KEYTAB_KERBEROS_OPTIONS in UserGroupInformation should have options for automatic renewal of keytab based tickets
 
 Patch: https://issues.apache.org/jira/secure/attachment/12435369/6552.patch
 Author: Devaraj Das

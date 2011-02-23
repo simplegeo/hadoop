@@ -1,7 +1,7 @@
 From ef9e572a545e56b790000f16bf6d416b63083520 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 22 Jan 2010 16:23:34 +0530
-Subject: [PATCH 435/791] HADOOP-5457. Failing contrib tests should not stop the rest of the contrib tests
+Subject: [PATCH 435/887] HADOOP-5457. Failing contrib tests should not stop the rest of the contrib tests
 
 Patch: https://issues.apache.org/jira/secure/attachment/12431103/Hadoop-5457-y20.patch
 Author: Giridharan Kesavan

@@ -1,7 +1,7 @@
 From 2647aae4985ca29e222567d8bfc77e2569fde81c Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 4 May 2010 19:14:10 +0000
-Subject: [PATCH 635/791] HDFS-1104. Change fsck to not update block access times
+Subject: [PATCH 635/887] HDFS-1104. Change fsck to not update block access times
 
 Patch: https://issues.apache.org/jira/secure/attachment/12443523/fsckATime_Yahoo0.20.patch
 Author: Hairong Kuang

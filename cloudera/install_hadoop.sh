@@ -123,7 +123,7 @@ mkdir -p $LIB_DIR
 # packages can depend on
 (cd $LIB_DIR &&
 for j in hadoop-*.jar; do
-  if [[ $j =~ hadoop-([a-zA-Z]+)-([0-9+\.-]+).jar ]]; then
+  if [[ $j =~ hadoop-([a-zA-Z]+)-(.*).jar ]]; then
     name=${BASH_REMATCH[1]}
     ver=${BASH_REMATCH[2]}
     ln -s hadoop-$name-$ver.jar hadoop-$ver-$name.jar
@@ -223,20 +223,22 @@ if [ ! -z "$NATIVE_BUILD_STRING" ]; then
 export HADOOP_HOME=$INSTALLED_LIB_DIR
 
 if [ -f /etc/default/hadoop-0.20-fuse ] 
-	then . /etc/default/hadoop-0.20-fuse
+  then . /etc/default/hadoop-0.20-fuse
 fi
 
 if [ -f \$HADOOP_HOME/bin/hadoop-config.sh ] 
-	then . \$HADOOP_HOME/bin/hadoop-config.sh  
+  then . \$HADOOP_HOME/bin/hadoop-config.sh
 fi
 
-if [ "\$LD_LIBRARY_PATH" = "" ]
-	then JVM_LIB=\`find \${JAVA_HOME}/jre/lib -name libjvm.so |tail -n 1\`
-        export LD_LIBRARY_PATH=\`dirname \$JVM_LIB\`:/usr/lib/
-
+if [ "\${LD_LIBRARY_PATH}" = "" ]; then
+  export LD_LIBRARY_PATH=/usr/lib
+  for f in \`find \${JAVA_HOME}/jre/lib -name client -prune -o -name libjvm.so -exec dirname {} \;\`; do
+    export LD_LIBRARY_PATH=\$f:\${LD_LIBRARY_PATH}
+  done
 fi
+
 for i in \${HADOOP_HOME}/*.jar \${HADOOP_HOME}/lib/*.jar
-        do CLASSPATH+=\$i:
+  do CLASSPATH+=\$i:
 done
 
 export PATH=\$PATH:\${HADOOP_HOME}/bin/

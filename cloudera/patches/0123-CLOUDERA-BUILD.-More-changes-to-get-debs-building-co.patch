@@ -1,7 +1,7 @@
 From 6957626991875302f33bb73630f4f376412f9711 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:16:43 -0800
-Subject: [PATCH 123/791] CLOUDERA-BUILD. More changes to get debs building correctly
+Subject: [PATCH 123/887] CLOUDERA-BUILD. More changes to get debs building correctly
 
 Author: Chad Metcalf
 ---

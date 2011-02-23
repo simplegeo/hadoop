@@ -1,7 +1,7 @@
 From 46d2b6d6b27887375c44d691d776f70e89e4b81b Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:31:58 -0800
-Subject: [PATCH 172/791] HDFS-859. fuse-dfs utime behavior causes issues with tar
+Subject: [PATCH 172/887] HDFS-859. fuse-dfs utime behavior causes issues with tar
 
 Description: When trying to untar files onto fuse-dfs, tar will try to set the utime on all the files and directories.  However, setting the utime on a directory in libhdfs causes an error.
 

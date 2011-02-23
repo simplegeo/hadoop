@@ -1,7 +1,7 @@
 From d3131417c36e68cb59ad0833d271d10bd869b27c Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 22 Jan 2010 17:45:33 -0800
-Subject: [PATCH 437/791] MAPREDUCE-1338. Add ability to store and load security keys
+Subject: [PATCH 437/887] MAPREDUCE-1338. Add ability to store and load security keys
 
 Patch: https://issues.apache.org/jira/secure/attachment/12431172/MAPREDUCE-1338-BP20-3.patch
 Author: Boris Shkolnik

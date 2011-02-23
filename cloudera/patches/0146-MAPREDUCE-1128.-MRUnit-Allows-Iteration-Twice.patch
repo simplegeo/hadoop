@@ -1,7 +1,7 @@
 From 855b0bf3718f2c397ef79967475468e4153f120a Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:24:20 -0800
-Subject: [PATCH 146/791] MAPREDUCE-1128. MRUnit Allows Iteration Twice
+Subject: [PATCH 146/887] MAPREDUCE-1128. MRUnit Allows Iteration Twice
 
 Description: MRUnit allows one to iterate over a collection of values twice (ie.
 

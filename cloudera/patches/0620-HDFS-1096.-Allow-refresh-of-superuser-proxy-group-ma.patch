@@ -1,7 +1,7 @@
 From ea5f8c7922fc5a66e26deb4da55c6088b006e1f0 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 19 Apr 2010 16:38:48 -0700
-Subject: [PATCH 620/791] HDFS-1096. Allow refresh of superuser proxy group mappings
+Subject: [PATCH 620/887] HDFS-1096. Allow refresh of superuser proxy group mappings
 
 Patch: https://issues.apache.org/jira/secure/attachment/12442244/HDFS-1096-BP20-7.patch
 Author: Boris Shkolnik

@@ -1,7 +1,7 @@
 From e34d5e43768d0f91c0eb847071de7f9b8ec5b323 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 22 Feb 2010 14:24:21 +0530
-Subject: [PATCH 631/791] MAPREDUCE-670 and HDFS-1022. Add a fast "commit test" target
+Subject: [PATCH 631/887] MAPREDUCE-670 and HDFS-1022. Add a fast "commit test" target
 
 Patch: https://issues.apache.org/jira/secure/attachment/12436553/mapreduce-670-y20.patch
 Author: Jothi Padmanabhan

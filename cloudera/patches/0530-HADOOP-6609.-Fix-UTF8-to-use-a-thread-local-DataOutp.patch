@@ -1,7 +1,7 @@
 From 4fd9491b5aeaea1f598f4314203aa5047576f137 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 3 Mar 2010 16:48:17 -0800
-Subject: [PATCH 530/791] HADOOP-6609. Fix UTF8 to use a thread local DataOutputBuffer instead of
+Subject: [PATCH 530/887] HADOOP-6609. Fix UTF8 to use a thread local DataOutputBuffer instead of
  a static that was causing a deadlock in RPC. (omalley)
 
 Author: Owen O'Malley

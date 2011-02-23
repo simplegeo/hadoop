@@ -80,6 +80,7 @@
 <link rel="stylesheet" type="text/css" href="/static/hadoop.css">
 <link rel="icon" type="image/vnd.microsoft.icon" href="/static/images/favicon.ico" />
 <script type="text/javascript" src="/static/jobtracker.js"></script>
+<script type='text/javascript' src='/static/sorttable.js'></script>
 </head>
 <body>
 
@@ -112,10 +113,11 @@
 %>
 <hr>
 <h2 id="scheduling_info">Scheduling Information</h2>
-<table border="2" cellpadding="5" cellspacing="2">
+<table border="2" cellpadding="5" cellspacing="2" class="sortable">
 <thead style="font-weight: bold">
 <tr>
 <td> Queue Name </td>
+<td> State </td>
 <td> Scheduling Information</td>
 </tr>
 </thead>
@@ -123,6 +125,7 @@
 <%
 for(JobQueueInfo queue: queues) {
   String queueName = queue.getQueueName();
+  String state = queue.getQueueState();
   String schedulingInformation = queue.getSchedulingInfo();
   if(schedulingInformation == null || schedulingInformation.trim().equals("")) {
     schedulingInformation = "NA";
@@ -130,6 +133,7 @@ for(JobQueueInfo queue: queues) {
 %>
 <tr>
 <td><a href="jobqueue_details.jsp?queueName=<%=queueName%>"><%=queueName%></a></td>
+<td><%=state%></td>
 <td><%=HtmlQuoting.quoteHtmlChars(schedulingInformation).replaceAll("\n","<br/>") %>
 </td>
 </tr>

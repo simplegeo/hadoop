@@ -1,7 +1,7 @@
 From 596d28594c9bd32116c6510e6607308bc1a762e8 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 11 Mar 2010 16:58:55 -0800
-Subject: [PATCH 552/791] HADOOP-6627. "Bad Connection to FS" message in FSShell should print message from the exception
+Subject: [PATCH 552/887] HADOOP-6627. "Bad Connection to FS" message in FSShell should print message from the exception
 
 Patch: https://issues.apache.org/jira/secure/attachment/12438455/HADOOP-6627-BP20.patch
 Author: Boris Shkolnik

@@ -1,7 +1,7 @@
 From a77ecd569495efc6bee0059eeafeebbfe6c797c4 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 15 Oct 2009 11:37:22 +0530
-Subject: [PATCH 369/791] MAPREDUCE-277. Job history counters should be available on the UI.
+Subject: [PATCH 369/887] MAPREDUCE-277. Job history counters should be available on the UI.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12421419/patch-277-0.20.txt
 Author: Jothi Padmanabhan

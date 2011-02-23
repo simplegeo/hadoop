@@ -18,7 +18,7 @@ org.apache.hadoop.mapred.JobStatus
     <TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
     <TABLE summary="Navigation bar" BORDER="0" CELLPADDING="0" CELLSPACING="3">
     <TR ALIGN="center" VALIGN="top">
-      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../../api/org/apache/hadoop/mapred/JobStatus.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>hadoop 0.20.2+791</tt></B></FONT></A>&nbsp;</TD>
+      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../../api/org/apache/hadoop/mapred/JobStatus.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>hadoop 0.20.2-CDH3B4</tt></B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="changes-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="pkg_org.apache.hadoop.mapred.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
@@ -31,7 +31,7 @@ org.apache.hadoop.mapred.JobStatus
 </TR>
 <TR>
   <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="org.apache.hadoop.mapred.JobHistory.Keys.html"><B>PREV CLASS</B></A>
+&nbsp;<A HREF="org.apache.hadoop.mapred.JobQueueInfo.html"><B>PREV CLASS</B></A>
 &nbsp;<A HREF="org.apache.hadoop.mapred.JobTracker.html"><B>NEXT CLASS</B></A>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <A HREF="../changes.html" TARGET="_top"><B>FRAMES</B></A>  &nbsp;
@@ -58,6 +58,13 @@ Class org.apache.hadoop.mapred.<A HREF="../../api/org/apache/hadoop/mapred/JobSt
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.mapred.JobStatus.getFailureInfo_added()"></A>
+  <nobr><code>String</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/JobStatus.html#getFailureInfo()" target="_top"><tt>getFailureInfo</tt></A>()</nobr>
+  </TD>
+  <TD VALIGN="TOP">gets any available info on the reason of failure of the job.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="org.apache.hadoop.mapred.JobStatus.getJobACLs_added()"></A>
   <nobr><code>Map</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/JobStatus.html#getJobACLs()" target="_top"><tt>getJobACLs</tt></A>()</nobr>
   </TD>
@@ -69,6 +76,13 @@ Class org.apache.hadoop.mapred.<A HREF="../../api/org/apache/hadoop/mapred/JobSt
   <nobr><code>String</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/JobStatus.html#getJobRunState(int)" target="_top"><tt>getJobRunState</tt></A>(<code>int</code>)</nobr>
   </TD>
   <TD VALIGN="TOP">Helper method to get human-readable state of the job.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.mapred.JobStatus.setFailureInfo_added(java.lang.String)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/JobStatus.html#setFailureInfo(java.lang.String)" target="_top"><tt>setFailureInfo</tt></A>(<code>String</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">set the reason for failuire of this job </TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
@@ -87,7 +101,7 @@ Class org.apache.hadoop.mapred.<A HREF="../../api/org/apache/hadoop/mapred/JobSt
     <TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
     <TABLE summary="Navigation bar" BORDER="0" CELLPADDING="0" CELLSPACING="3">
     <TR ALIGN="center" VALIGN="top">
-      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../../api/org/apache/hadoop/mapred/JobStatus.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>hadoop 0.20.2+791</tt></B></FONT></A>&nbsp;</TD>
+      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../../api/org/apache/hadoop/mapred/JobStatus.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>hadoop 0.20.2-CDH3B4</tt></B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="changes-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="pkg_org.apache.hadoop.mapred.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
@@ -100,7 +114,7 @@ Class org.apache.hadoop.mapred.<A HREF="../../api/org/apache/hadoop/mapred/JobSt
 </TR>
 <TR>
   <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="org.apache.hadoop.mapred.JobHistory.Keys.html"><B>PREV CLASS</B></A>
+&nbsp;<A HREF="org.apache.hadoop.mapred.JobQueueInfo.html"><B>PREV CLASS</B></A>
 &nbsp;<A HREF="org.apache.hadoop.mapred.JobTracker.html"><B>NEXT CLASS</B></A>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <A HREF="../changes.html" TARGET="_top"><B>FRAMES</B></A>  &nbsp;

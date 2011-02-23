@@ -1,7 +1,7 @@
 From 34c6a146be045127f5e43828fd3c578ebb3c113c Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 22 Jan 2010 16:03:23 -0800
-Subject: [PATCH 447/791] MAPREDUCE-1376. Support for varied user submission in Gridmix
+Subject: [PATCH 447/887] MAPREDUCE-1376. Support for varied user submission in Gridmix
 
 Patch: https://issues.apache.org/jira/secure/attachment/12431174/M1376-4.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12440324/1376-5-yhadoop20-100.patch

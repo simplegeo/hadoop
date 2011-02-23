@@ -1,7 +1,7 @@
-From f7dd5b420bd3849255a19eed89ae703166876e21 Mon Sep 17 00:00:00 2001
+From d0fcd663498ab6af0ae550ea6ace527ac7f7eae3 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 7 Jan 2011 13:56:43 -0800
-Subject: [PATCH 756/791] HADOOP-7082. Configuration.writeXML should not hold lock while outputting.
+Subject: [PATCH 756/887] HADOOP-7082. Configuration.writeXML should not hold lock while outputting.
 
 Reason: Avoid deadlock submitting jobs
 Author: Todd Lipcon

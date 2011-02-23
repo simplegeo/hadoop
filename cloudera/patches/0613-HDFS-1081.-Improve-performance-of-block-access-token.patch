@@ -1,7 +1,7 @@
 From eb456ec5bc5a3afca9a854e9f4708892c8a6e2f5 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 16 Apr 2010 17:35:14 -0700
-Subject: [PATCH 613/791] HDFS-1081. Improve performance of block access token implementation
+Subject: [PATCH 613/887] HDFS-1081. Improve performance of block access token implementation
 
 Patch: https://issues.apache.org/jira/secure/attachment/12442023/HADOOP-1081-Y20-2.patch
 Reason: Reduce number of calls to expensive HMAC functions to reduce NN CPU usage

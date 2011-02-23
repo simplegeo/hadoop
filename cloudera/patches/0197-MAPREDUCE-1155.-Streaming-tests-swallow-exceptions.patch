@@ -1,7 +1,7 @@
 From be70b10f11445f4a71807405718bfeebd38ad924 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:42:51 -0800
-Subject: [PATCH 197/791] MAPREDUCE-1155. Streaming tests swallow exceptions
+Subject: [PATCH 197/887] MAPREDUCE-1155. Streaming tests swallow exceptions
 
 Description: Many of the streaming tests (including TestMultipleArchiveFiles) catch exceptions and print their stack trace rather than failing the job. This means that tests do not fail even when the job fails.
 Reason: Test coverage improvement

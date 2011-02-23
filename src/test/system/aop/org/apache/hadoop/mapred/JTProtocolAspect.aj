@@ -19,7 +19,6 @@
 package org.apache.hadoop.mapred;
 
 import java.io.IOException;
-
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.mapreduce.JobID;
 import org.apache.hadoop.mapreduce.TaskID;
@@ -27,6 +26,7 @@ import org.apache.hadoop.mapreduce.test.system.JTProtocol;
 import org.apache.hadoop.mapreduce.test.system.JobInfo;
 import org.apache.hadoop.mapreduce.test.system.TTInfo;
 import org.apache.hadoop.mapreduce.test.system.TaskInfo;
+import org.apache.hadoop.mapred.StatisticsCollectionHandler;
 
 /**
  * Aspect which injects the basic protocol functionality which is to be
@@ -79,4 +79,49 @@ public aspect JTProtocolAspect {
   public String JTProtocol.getJobHistoryLocationForRetiredJob(JobID jobID) throws IOException {
     return "";
   }
+  
+  public boolean JTProtocol.isBlackListed(String trackerID) throws IOException {
+    return false;
+  }
+  
+  public String JTProtocol.getJobSummaryFromLog(JobID jobId, 
+      String filePattern) throws IOException {
+    return null;
+  }
+
+  public String JTProtocol.getJobSummaryInfo(JobID jobId) throws IOException {
+    return null;
+  }
+  
+  public int JTProtocol.getTaskTrackerLevelStatistics(TaskTrackerStatus
+      ttStatus, String timePeriod, String totalTasksOrSucceededTasks)
+      throws IOException {
+    return 0;
+  }
+
+  public int JTProtocol.getInfoFromAllClients(String timePeriod,
+      String totalTasksOrSucceededTasks) throws IOException {
+    return 0;
+  }
+
+  public StatisticsCollectionHandler JTProtocol.
+      getInfoFromAllClientsForAllTaskType() throws Exception {
+    return null;
+  }
+
+  public int JTProtocol.getTaskTrackerHeartbeatInterval()
+      throws Exception {
+    return -1;
+  }
+  
+  public void JTProtocol.accessHistoryData(JobID jobId) throws Exception{
+    
+  }
+
+  public boolean JTProtocol.isNodeDecommissioned(String ttClientHostName) 
+       throws IOException {
+   return false;
+  }
+
+
 }

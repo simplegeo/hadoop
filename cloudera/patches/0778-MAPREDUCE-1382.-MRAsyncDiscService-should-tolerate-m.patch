@@ -1,7 +1,7 @@
-From 3ccc7f6bc617b1d81a59cb568bafead83712861d Mon Sep 17 00:00:00 2001
+From fadd26e431dc879d9611f22f2974d4eab30d7efa Mon Sep 17 00:00:00 2001
 From: Tom White <tom@cloudera.com>
 Date: Fri, 7 Jan 2011 16:06:03 -0800
-Subject: [PATCH 778/791] MAPREDUCE-1382. MRAsyncDiscService should tolerate missing local.dir
+Subject: [PATCH 778/887] MAPREDUCE-1382. MRAsyncDiscService should tolerate missing local.dir
 
 Reason: Makes it possible for jobtracker and tasktracker to share config file and have different volumes.
 Author: Zheng Shao

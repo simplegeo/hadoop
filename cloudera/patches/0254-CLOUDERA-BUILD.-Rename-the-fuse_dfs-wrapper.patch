@@ -1,7 +1,7 @@
 From 95d64157f05d467dad3e1190a5cba2a3f89b0925 Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Thu, 20 May 2010 17:15:13 -0700
-Subject: [PATCH 254/791] CLOUDERA-BUILD. Rename the fuse_dfs wrapper.
+Subject: [PATCH 254/887] CLOUDERA-BUILD. Rename the fuse_dfs wrapper.
 
 Description: Rename the fuse_dfs wrapper to hadoop-fuse-dfs.
 

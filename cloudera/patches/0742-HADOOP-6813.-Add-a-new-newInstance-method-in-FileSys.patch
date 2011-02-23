@@ -1,7 +1,7 @@
-From aa496862f2908a4dc7a98713e61d145413e52e47 Mon Sep 17 00:00:00 2001
+From fa4ca629131059ade47618d0ed201c4ddc3abe72 Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Fri, 12 Nov 2010 19:46:24 -0800
-Subject: [PATCH 742/791] HADOOP-6813. Add a new newInstance method in FileSystem that takes a "user" as argument.
+Subject: [PATCH 742/887] HADOOP-6813. Add a new newInstance method in FileSystem that takes a "user" as argument.
 
 Reason: Improvement
 Author: Devaraj Das

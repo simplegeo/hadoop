@@ -1,7 +1,7 @@
 From 239df04415dba8d12c7d3fbf33c580d473202e94 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:55:28 -0800
-Subject: [PATCH 078/791] MAPREDUCE-885. More efficient SQL queries for DBInputFormat
+Subject: [PATCH 078/887] MAPREDUCE-885. More efficient SQL queries for DBInputFormat
 
 Description: DBInputFormat generates InputSplits by counting the available rows in a table, and selecting subsections of the table via the "LIMIT" and "OFFSET" SQL keywords. These are only meaningful in an ordered context, so the query also includes an "ORDER BY" clause on an index column. The resulting queries are often inefficient and require full table scans. Actually using multiple mappers with these queries can lead to O(n^2) behavior in the database, where n is the number of splits. Attempting to use parallelism with these queries is counter-productive.
 

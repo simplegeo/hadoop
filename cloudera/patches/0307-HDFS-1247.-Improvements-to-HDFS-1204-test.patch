@@ -1,7 +1,7 @@
 From 1d4e15f0f8b749981d62bfca9849e0d0493afdad Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@lipcon.org>
 Date: Thu, 17 Jun 2010 20:02:51 -0700
-Subject: [PATCH 307/791] HDFS-1247. Improvements to HDFS-1204 test
+Subject: [PATCH 307/887] HDFS-1247. Improvements to HDFS-1204 test
 
 Reason: Fixes compile warnings
 Author: Todd Lipcon

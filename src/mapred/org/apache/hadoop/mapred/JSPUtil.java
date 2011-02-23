@@ -310,6 +310,7 @@ class JSPUtil {
       sb.append("<th><b>Reduce Total</b></th>");
       sb.append("<th><b>Reduces Completed</b></th>");
       sb.append("<th><b>Job Scheduling Information</b></th>");
+      sb.append("<td><b>Diagnostic Info </b></td>");
       sb.append("</tr>\n");
       sb.append("</thead><tbody>");
       for (Iterator<JobInProgress> it = jobs.iterator(); it.hasNext(); ++rowId) {
@@ -326,7 +327,8 @@ class JSPUtil {
         String jobpri = job.getPriority().toString();
         String schedulingInfo =
           HtmlQuoting.quoteHtmlChars(job.getStatus().getSchedulingInfo());
-
+        String diagnosticInfo = 
+          HtmlQuoting.quoteHtmlChars(job.getStatus().getFailureInfo());
         if (isModifiable) {
           sb.append("<tr><td><input TYPE=\"checkbox\" " +
           		"onclick=\"checkButtonVerbage()\" " +
@@ -351,6 +353,7 @@ class JSPUtil {
             + ServletUtil.percentageGraph(status.reduceProgress() * 100, 80)
             + "</td><td>" + desiredReduces + "</td><td> " + completedReduces 
             + "</td><td>" + schedulingInfo
+            + "</td><td>" + diagnosticInfo
             + "</td></tr>\n");
       }
       sb.append("</tbody>");
@@ -371,7 +374,7 @@ class JSPUtil {
     throws IOException {
 
     StringBuffer sb = new StringBuffer();
-    sb.append("<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\">\n");
+    sb.append("<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\" class=\"sortable\">\n");
 
     Iterator<RetireJobInfo> iterator = 
       tracker.retireJobs.getAll().descendingIterator();
@@ -391,6 +394,7 @@ class JSPUtil {
       sb.append("<td><b>Map % Complete</b></td>");
       sb.append("<td><b>Reduce % Complete</b></td>");
       sb.append("<td><b>Job Scheduling Information</b></td>");
+      sb.append("<td><b>Diagnostic Info </b></td>");
       sb.append("</tr>\n");
       for (int i = 0; i < 100 && iterator.hasNext(); i++) {
         RetireJobInfo info = iterator.next();
@@ -434,7 +438,9 @@ class JSPUtil {
             
             "<td>" +
             HtmlQuoting.quoteHtmlChars(info.status.getSchedulingInfo()) +
-            "</td>" + "</tr>\n");
+            "</td>" + 
+            "<td>" + HtmlQuoting.quoteHtmlChars(info.status.getFailureInfo()) + 
+            "</td></tr>\n");
         rowId++;
       }
     }

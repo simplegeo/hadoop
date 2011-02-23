@@ -1,7 +1,7 @@
 From b7cba5f7ab2cb9f2240b45dd90c34f4974c5757a Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Bruno=20Mah=C3=A9?= <bruno@cloudera.com>
 Date: Mon, 12 Jul 2010 20:17:48 -0700
-Subject: [PATCH 321/791] CDH-1085. Native libraries should be installed in /usr/lib64/ on 64bit redhat
+Subject: [PATCH 321/887] CDH-1085. Native libraries should be installed in /usr/lib64/ on 64bit redhat
 
 Description: On 64bit redhat, native libraries should be installed in /usr/lib64/ instead of
 /usr/lib/. This patch makes possible to override the destination of native libraries and will default to

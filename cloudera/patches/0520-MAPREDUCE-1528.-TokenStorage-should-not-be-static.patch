@@ -1,7 +1,7 @@
 From 039917c679539092585e96f590fae59052a3cae6 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sat, 27 Feb 2010 03:26:42 -0800
-Subject: [PATCH 520/791] MAPREDUCE-1528. TokenStorage should not be static
+Subject: [PATCH 520/887] MAPREDUCE-1528. TokenStorage should not be static
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437339/MAPREDUCE-1528_yhadoop20.patch
 Author: Jitendra Nath Pandey

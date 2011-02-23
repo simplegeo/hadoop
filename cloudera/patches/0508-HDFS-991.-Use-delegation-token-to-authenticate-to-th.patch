@@ -1,7 +1,7 @@
 From ac2d2869ecccd91fdacab7544eca00767f8d64a1 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 26 Feb 2010 11:28:36 -0800
-Subject: [PATCH 508/791] HDFS-991. Use delegation token to authenticate to the hdfs servlets.
+Subject: [PATCH 508/887] HDFS-991. Use delegation token to authenticate to the hdfs servlets.
 
 Author: Owen O'Malley
 Ref: CDH-648

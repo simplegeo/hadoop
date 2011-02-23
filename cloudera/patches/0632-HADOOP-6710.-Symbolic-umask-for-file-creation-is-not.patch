@@ -1,7 +1,7 @@
 From 4bce823b6ae54b527cfa25e7802e9a1c83f5b5d2 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 29 Apr 2010 14:19:05 -0700
-Subject: [PATCH 632/791] HADOOP-6710. Symbolic umask for file creation is not consistent with posix
+Subject: [PATCH 632/887] HADOOP-6710. Symbolic umask for file creation is not consistent with posix
 
 Patch: https://issues.apache.org/jira/secure/attachment/12443134/hadoop-6710.rel20.patch
 Author: Suresh Srinivas

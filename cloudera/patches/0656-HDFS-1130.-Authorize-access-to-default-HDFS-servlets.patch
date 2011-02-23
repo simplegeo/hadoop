@@ -1,7 +1,7 @@
 From a8b230d68070e829a2717805c8d3f7c995bf0ae0 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 14 May 2010 22:05:38 -0700
-Subject: [PATCH 656/791] HDFS-1130. Authorize access to default HDFS servlets with a DFS administrator ACL
+Subject: [PATCH 656/887] HDFS-1130. Authorize access to default HDFS servlets with a DFS administrator ACL
 
 Patch: https://issues.apache.org/jira/secure/attachment/12444565/hdfs-1130.3.patch
 Author: Devaraj Das

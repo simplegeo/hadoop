@@ -1,7 +1,7 @@
 From cad421ec1c51382f81714ccafb96a6bb8bcc8aec Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:46:11 -0800
-Subject: [PATCH 051/791] HADOOP-5469. Exposing Hadoop metrics via HTTP
+Subject: [PATCH 051/887] HADOOP-5469. Exposing Hadoop metrics via HTTP
 
 Description: Implement a "/metrics" URL on the HTTP server of Hadoop daemons, to expose metrics data to users via their web browsers, in plain-text and JSON.
 Reason: MISSING: Reason for inclusion

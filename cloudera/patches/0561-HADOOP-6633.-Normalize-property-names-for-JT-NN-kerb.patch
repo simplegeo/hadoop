@@ -1,7 +1,7 @@
 From aa56ca096e5bba16a873600c57d29586896432ce Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 17 Mar 2010 09:12:13 -0700
-Subject: [PATCH 561/791] HADOOP-6633. Normalize property names for JT/NN kerberos principal names in configuration
+Subject: [PATCH 561/887] HADOOP-6633. Normalize property names for JT/NN kerberos principal names in configuration
 
 Patch: https://issues.apache.org/jira/secure/attachment/12438949/HADOOP-6633-BP20-2.patch
 Author: Boris Shkolnik

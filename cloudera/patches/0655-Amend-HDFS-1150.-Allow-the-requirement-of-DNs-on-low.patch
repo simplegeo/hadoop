@@ -1,7 +1,7 @@
 From f87ec798d3f48c701cdb24372ad15e7d269e580f Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 27 Jul 2010 16:59:02 -0700
-Subject: [PATCH 655/791] Amend HDFS-1150. Allow the requirement of DNs on low ports to be relaxed by a config
+Subject: [PATCH 655/887] Amend HDFS-1150. Allow the requirement of DNs on low ports to be relaxed by a config
 
 Reason: simplifies testing, and allows running with other security methods
 Author: Todd Lipcon

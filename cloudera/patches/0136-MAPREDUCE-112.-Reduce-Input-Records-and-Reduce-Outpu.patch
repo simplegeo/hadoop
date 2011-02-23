@@ -1,7 +1,7 @@
 From b2cc8e02f37a1604bb076acefff0ebf016c249d5 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:20:40 -0800
-Subject: [PATCH 136/791] MAPREDUCE-112. Reduce Input Records and Reduce Output Records counters are not being set when using the new Mapreduce reducer API
+Subject: [PATCH 136/887] MAPREDUCE-112. Reduce Input Records and Reduce Output Records counters are not being set when using the new Mapreduce reducer API
 
 Description: After running the examples/wordcount (which uses the new API), the reduce input and output record counters always show 0. This is because these counters are not getting updated in the new API
 This adds counters for reduce input, output records to the new API.

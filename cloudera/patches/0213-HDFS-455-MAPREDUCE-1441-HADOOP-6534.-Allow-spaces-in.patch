@@ -1,7 +1,7 @@
 From cf08a128b87bbfae90babd61795599b3645d37a3 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:48:40 -0800
-Subject: [PATCH 213/791] HDFS-455, MAPREDUCE-1441, HADOOP-6534. Allow spaces in between comma-separated elements in directory list configurations.
+Subject: [PATCH 213/887] HDFS-455, MAPREDUCE-1441, HADOOP-6534. Allow spaces in between comma-separated elements in directory list configurations.
 
 Description: Make NN and DN handle in a intuitive way comma-separated configuration strings
 

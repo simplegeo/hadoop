@@ -1,7 +1,7 @@
 From aea5743326793c6f5aa6dc7f7fc5baf5752528d9 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 30 Jul 2009 17:40:38 -0700
-Subject: [PATCH 340/791] MAPREDUCE-211. Provide a node health check script and run it periodically to check the node health status
+Subject: [PATCH 340/887] MAPREDUCE-211. Provide a node health check script and run it periodically to check the node health status
 
 Reason: Adds ability to preemptively blacklist task-trackers when node health is bad
 Author: Sreekanth Ramakrishnan

@@ -1,7 +1,7 @@
 From 9d3d402301267201d771becef005864e48ea5b82 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 28 Jun 2010 12:05:46 -0700
-Subject: [PATCH 665/791] MAPREDUCE-1900. MapReduce daemons should close FileSystems that are not needed anymore
+Subject: [PATCH 665/887] MAPREDUCE-1900. MapReduce daemons should close FileSystems that are not needed anymore
 
 Patch: https://issues.apache.org/jira/secure/attachment/12448230/mapred-fs-close.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12448509/fs-close-delta.patch

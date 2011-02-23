@@ -1,7 +1,7 @@
 From dc0e28f08c2df37a6b99614a5c764fc4037032a0 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 3 Sep 2010 17:03:28 -0700
-Subject: [PATCH 685/791] HADOOP-5752. Add a new hdfs image processor, Delimited, to oiv.
+Subject: [PATCH 685/887] HADOOP-5752. Add a new hdfs image processor, Delimited, to oiv.
 
 Author: Jakob Homan
 Reason: Hue Headlamp app

@@ -1,7 +1,7 @@
 From 51b650554e3bc8054e8ca966f5f552c522f7483d Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:49:52 -0800
-Subject: [PATCH 062/791] HADOOP-5170. Set max map/reduce tasks on a per-job basis, either per-node or cluster-wide
+Subject: [PATCH 062/887] HADOOP-5170. Set max map/reduce tasks on a per-job basis, either per-node or cluster-wide
 
 Description: There are a number of use cases for being able to do this.  The focus of this jira should be on finding what would be the simplest to implement that would satisfy the most use cases.
 

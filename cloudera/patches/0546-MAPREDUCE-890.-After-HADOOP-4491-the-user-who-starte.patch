@@ -1,7 +1,7 @@
 From 543dcb4cdef6028146e5f8104123c8ac84e11e6b Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 10 Mar 2010 11:20:33 +0530
-Subject: [PATCH 546/791] MAPREDUCE-890. After HADOOP-4491, the user who started mapred system is not able to run job.
+Subject: [PATCH 546/887] MAPREDUCE-890. After HADOOP-4491, the user who started mapred system is not able to run job.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12438369/MR890.20S.patch
 Author: Ravi Gummadi

@@ -1,7 +1,3 @@
-#                                               -*- Autoconf -*-
-# Process this file with autoconf to produce a configure script.
-
-#
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
 # distributed with this work for additional information
@@ -18,46 +14,45 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.59)
-AC_INIT([task-controller],[0.1])
-AC_CONFIG_HEADER([config.h])
+AC_INIT(linux-task-controller, 1.0.0, mapreduce-dev@hadoop.apache.org)
+AC_GNU_SOURCE
 
-#changing default prefix value to empty string, so that binary does not
-#gets installed within system
-AC_PREFIX_DEFAULT(.)
+AM_INIT_AUTOMAKE([subdir-objects foreign no-dist])
 
-#add new argument called -with-confdir
-AH_TEMPLATE([HADOOP_CONF_DIR], [Hadoop conf dir])
-AC_ARG_WITH(confdir,[--with-confdir path to hadoop conf dir],
-  AC_DEFINE_UNQUOTED([HADOOP_CONF_DIR], "$with_confdir"))
-AC_CONFIG_SRCDIR([task-controller.h])
+# Dont generate rules to re-automake if timestamps are off
+# since we check in the generated files and revision control
+# doesn't track timestamps
+AM_MAINTAINER_MODE
+
+AC_CONFIG_SRCDIR([impl/task-controller.c])
+AC_CONFIG_FILES([Makefile])
+
+AC_PREFIX_DEFAULT(`pwd`/../install)
+
+CHECK_INSTALL_CFLAG
+HADOOP_UTILS_SETUP
 
 # Checks for programs.
 AC_PROG_CC
+AM_PROG_CC_C_O
 
 # Checks for libraries.
 
 # Checks for header files.
-AC_GNU_SOURCE
-AC_HEADER_STDC
-AC_CHECK_HEADERS([stdlib.h string.h unistd.h fcntl.h])
+AC_LANG(C)
+AC_CHECK_HEADERS([unistd.h])
 
 # Checks for typedefs, structures, and compiler characteristics.
+AC_HEADER_STDBOOL
 AC_C_CONST
-AC_TYPE_PID_T
-AC_TYPE_MODE_T
+AC_TYPE_OFF_T
 AC_TYPE_SIZE_T
+AC_FUNC_STRERROR_R
 
 # Checks for library functions.
-AC_FUNC_MALLOC
-AC_FUNC_REALLOC
-AC_FUNC_CHOWN
-AC_CHECK_FUNCS([strerror memset mkdir rmdir strdup])
-
-AC_CONFIG_FILES([Makefile])
-
-AC_HEADER_STDBOOL
-AC_PROG_MAKE_SET
-
+AC_CHECK_FUNCS([mkdir uname])
 AC_OUTPUT

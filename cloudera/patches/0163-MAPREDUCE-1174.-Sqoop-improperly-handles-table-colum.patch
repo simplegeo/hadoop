@@ -1,7 +1,7 @@
 From 23c116b6ab5615bdb846e22b61a41e92ca287bdf Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:29:47 -0800
-Subject: [PATCH 163/791] MAPREDUCE-1174. Sqoop improperly handles table/column names which are reserved sql words
+Subject: [PATCH 163/887] MAPREDUCE-1174. Sqoop improperly handles table/column names which are reserved sql words
 
 Description: In some databases it is legal to name tables and columns with terms that overlap SQL reserved keywords (e.g., <tt>CREATE</tt>, <tt>table</tt>, etc.). In such cases, the database allows you to escape the table and column names. We should always escape table and column names when possible.
 Reason: Bugfix

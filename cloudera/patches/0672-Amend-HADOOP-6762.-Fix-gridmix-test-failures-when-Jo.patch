@@ -1,7 +1,7 @@
 From ab1f3a96c00e2eb53569c1ba682d73ed10bfb4b5 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 25 Aug 2010 11:33:35 -0700
-Subject: [PATCH 672/791] Amend HADOOP-6762. Fix gridmix test failures when JobMonitor RPC is interrupted
+Subject: [PATCH 672/887] Amend HADOOP-6762. Fix gridmix test failures when JobMonitor RPC is interrupted
 
 Reason: HADOOP-6762 added a new exception cause when outbound RPCs are Interrupted.
         This patch fixes gridmix to be aware of InterruptedExceptions.

@@ -1,7 +1,7 @@
 From c9d77f6e1fdbb24b45675e363e3bd5111533893a Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:24:10 -0800
-Subject: [PATCH 145/791] HDFS-464. Memory leaks in libhdfs
+Subject: [PATCH 145/887] HDFS-464. Memory leaks in libhdfs
 
 Description: hdfsExists does not call destroyLocalReference for jPath anytime,<br/>
 hdfsDelete does not call it when it fails, and<br/>

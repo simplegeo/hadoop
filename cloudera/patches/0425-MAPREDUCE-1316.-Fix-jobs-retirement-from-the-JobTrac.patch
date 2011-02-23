@@ -1,7 +1,7 @@
 From c759d3e421565c13c79d6091d1917ce57cbb6636 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 13 Jan 2010 22:27:07 -0800
-Subject: [PATCH 425/791] MAPREDUCE-1316. Fix jobs' retirement from the JobTracker to prevent memory leaks via stale references.
+Subject: [PATCH 425/887] MAPREDUCE-1316. Fix jobs' retirement from the JobTracker to prevent memory leaks via stale references.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12430197/mapreduce-1316-v1.15-branch20-yahoo.patch
 Author: Amar Kamat
