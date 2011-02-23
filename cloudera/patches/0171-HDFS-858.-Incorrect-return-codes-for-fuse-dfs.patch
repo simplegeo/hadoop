@@ -1,7 +1,7 @@
 From 9a38b9c423aca358307aa6455977432f34aef990 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:31:45 -0800
-Subject: [PATCH 171/887] HDFS-858. Incorrect return codes for fuse-dfs
+Subject: [PATCH 171/890] HDFS-858. Incorrect return codes for fuse-dfs
 
 Description: fuse-dfs doesn't pass proper error codes from libhdfs; places I'd like to correct are hdfsFileOpen (which can result in permission denied or quota violations) and hdfsWrite (which can result in quota violations).
 

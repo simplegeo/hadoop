@@ -1,7 +1,7 @@
 From c1ec4018591d3e2bbb6fa8f664f9355a76e94ad5 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 11 Jan 2011 15:48:01 -0800
-Subject: [PATCH 764/887] MAPREDUCE-369. Change org.apache.hadoop.mapred.lib.MultipleInputs to use new mapreduce API.
+Subject: [PATCH 764/890] MAPREDUCE-369. Change org.apache.hadoop.mapred.lib.MultipleInputs to use new mapreduce API.
 
 Amended to not deprecate the old API.
 

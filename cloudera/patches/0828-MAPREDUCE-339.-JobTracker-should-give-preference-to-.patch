@@ -1,7 +1,7 @@
 From 16d9cf021a1989467b1372d3c2a050e6c4606230 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 16:59:51 -0800
-Subject: [PATCH 828/887] MAPREDUCE-339. JobTracker should give preference to failed tasks over virgin tasks so as to terminate the job ASAP if it is
+Subject: [PATCH 828/890] MAPREDUCE-339. JobTracker should give preference to failed tasks over virgin tasks so as to terminate the job ASAP if it is
 
 Author: Devaraj Das
 Ref: CDH-2622

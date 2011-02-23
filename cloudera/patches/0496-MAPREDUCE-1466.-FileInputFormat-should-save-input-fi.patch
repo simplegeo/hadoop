@@ -1,7 +1,7 @@
 From ac14a11d60fcbd9cc660fc8b48a894cd6774b102 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 25 Feb 2010 00:16:28 +0530
-Subject: [PATCH 496/887] MAPREDUCE-1466. FileInputFormat should save #input-files in JobConf
+Subject: [PATCH 496/890] MAPREDUCE-1466. FileInputFormat should save #input-files in JobConf
 
 Patch: https://issues.apache.org/jira/secure/attachment/12436886/MAPREDUCE-1466_yhadoop20-3.patch
 Author: Luke Lu

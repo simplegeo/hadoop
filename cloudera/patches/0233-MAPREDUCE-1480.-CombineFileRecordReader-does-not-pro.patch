@@ -1,7 +1,7 @@
 From 7fc6e48e296c30f0afa8ae8da668bddbc9f422bf Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Mon, 29 Mar 2010 16:11:22 -0700
-Subject: [PATCH 233/887] MAPREDUCE-1480. CombineFileRecordReader does not properly initialize child RecordReader
+Subject: [PATCH 233/890] MAPREDUCE-1480. CombineFileRecordReader does not properly initialize child RecordReader
 
 Description: CombineFileRecordReader instantiates child RecordReader instances but never calls their initialize() method to give them the proper TaskAttemptContext.
 Reason: Bug in CombineFileInputFormat prevents proper use.

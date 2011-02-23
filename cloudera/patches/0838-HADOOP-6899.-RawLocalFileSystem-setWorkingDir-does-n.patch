@@ -1,7 +1,7 @@
 From 8dd45e436896108d8806e5a555621ea6b346912f Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 16:59:52 -0800
-Subject: [PATCH 838/887] HADOOP-6899. RawLocalFileSystem#setWorkingDir() does not work for relative names
+Subject: [PATCH 838/890] HADOOP-6899. RawLocalFileSystem#setWorkingDir() does not work for relative names
 
 Author: Sanjay Radia
 Ref: CDH-2622

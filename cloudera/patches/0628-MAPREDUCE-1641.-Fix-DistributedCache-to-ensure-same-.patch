@@ -1,7 +1,7 @@
 From 41079a8480984ef8ac84dfe8c97930f0631afc07 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sun, 25 Apr 2010 12:06:08 -0700
-Subject: [PATCH 628/887] MAPREDUCE-1641. Fix DistributedCache to ensure same files cannot be put in both the archives and files sections.
+Subject: [PATCH 628/890] MAPREDUCE-1641. Fix DistributedCache to ensure same files cannot be put in both the archives and files sections.
 
 Author: Dick King
 Ref: YDH

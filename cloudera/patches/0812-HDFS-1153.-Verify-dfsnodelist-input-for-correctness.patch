@@ -1,7 +1,7 @@
 From 6bc623041a1c0d511250bcfdcae85a7b084b0d5f Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 19:35:12 -0800
-Subject: [PATCH 812/887] HDFS-1153. Verify dfsnodelist input for correctness
+Subject: [PATCH 812/890] HDFS-1153. Verify dfsnodelist input for correctness
 
 Author: Ravi Phulari
 Ref: CDH-2622

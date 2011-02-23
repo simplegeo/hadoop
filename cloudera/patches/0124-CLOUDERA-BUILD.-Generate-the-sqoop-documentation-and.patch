@@ -1,7 +1,7 @@
 From 19c038a6af07e3999e83a2178d2328535e00dedb Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:16:55 -0800
-Subject: [PATCH 124/887] CLOUDERA-BUILD. Generate the sqoop documentation and ensure that it's in the release tarball
+Subject: [PATCH 124/890] CLOUDERA-BUILD. Generate the sqoop documentation and ensure that it's in the release tarball
 
 Author: Matt Massie
 ---

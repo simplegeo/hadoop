@@ -1,7 +1,7 @@
 From 85565602b4cebbd91829a0d434e86edd8990fcbc Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Mon, 20 Sep 2010 22:14:32 -0700
-Subject: [PATCH 703/887] DISTRO-32. Make the default example configuration support Hue.
+Subject: [PATCH 703/890] DISTRO-32. Make the default example configuration support Hue.
 
 Reason: Improvement
 Author: Eli Collins

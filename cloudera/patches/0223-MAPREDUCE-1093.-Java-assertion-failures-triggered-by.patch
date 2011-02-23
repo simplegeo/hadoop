@@ -1,7 +1,7 @@
 From 74b80b9c9490bba1a1120f3a9376d2f21f3763b6 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:53:38 -0800
-Subject: [PATCH 223/887] MAPREDUCE-1093. Java assertion failures triggered by tests
+Subject: [PATCH 223/890] MAPREDUCE-1093. Java assertion failures triggered by tests
 
 Description:
     Removes failing asserts from the CDH build until they are fixed in trunk.

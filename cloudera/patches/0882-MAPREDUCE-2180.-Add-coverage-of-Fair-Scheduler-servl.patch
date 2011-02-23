@@ -1,7 +1,7 @@
 From 4e93ef108e3ea798f22ef901f090999fe44a8888 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 15 Feb 2011 19:02:54 -0800
-Subject: [PATCH 882/887] MAPREDUCE-2180. Add coverage of Fair Scheduler servlet to system test
+Subject: [PATCH 882/890] MAPREDUCE-2180. Add coverage of Fair Scheduler servlet to system test
 
 Reason: improve jcarder coverage for possible deadlocks
 Author: Todd Lipcon

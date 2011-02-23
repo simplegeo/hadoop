@@ -1,7 +1,7 @@
 From b0ed02a3d621bbf994f8fb5dc1d86a451afe490d Mon Sep 17 00:00:00 2001
 From: Tom White <tom@cloudera.com>
 Date: Mon, 13 Dec 2010 15:00:20 -0800
-Subject: [PATCH 749/887] MAPREDUCE-1699. JobHistory shouldn't be disabled for any reason
+Subject: [PATCH 749/890] MAPREDUCE-1699. JobHistory shouldn't be disabled for any reason
 
 Reason: Bug
 Author: Arun C Murthy

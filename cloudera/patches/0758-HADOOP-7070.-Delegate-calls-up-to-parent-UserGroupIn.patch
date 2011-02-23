@@ -1,7 +1,7 @@
 From b5f1e39c0561d262829ae4cce546773a418db96e Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 7 Jan 2011 14:07:54 -0800
-Subject: [PATCH 758/887] HADOOP-7070. Delegate calls up to parent UserGroupInformation
+Subject: [PATCH 758/890] HADOOP-7070. Delegate calls up to parent UserGroupInformation
 
 Reason: Fix login behavior underneath glassfish or other JAAS-using containers
 Author: Todd Lipcon

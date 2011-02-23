@@ -1,7 +1,7 @@
 From 43fb37a6b9693003cc9ea1161bc080e5309b1973 Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Thu, 9 Dec 2010 08:54:22 -0800
-Subject: [PATCH 747/887] MAPREDUCE-1621. Streaming's TextOutputReader.getLastOutput throws NPE if it has
+Subject: [PATCH 747/890] MAPREDUCE-1621. Streaming's TextOutputReader.getLastOutput throws NPE if it has
  never read any output.
 
 If TextOutputReader.readKeyValue() has never successfully read a line,

@@ -1,7 +1,7 @@
 From cce41bfecdffd8f37b5a9ae571a827e8042b39c4 Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Sun, 6 Feb 2011 13:12:41 -0800
-Subject: [PATCH 802/887] CLOUDERA-BUILD. tar file has incorrect permissions for jsvc and task-controller.
+Subject: [PATCH 802/890] CLOUDERA-BUILD. tar file has incorrect permissions for jsvc and task-controller.
 
 Reason: Bug
 Author: Eli Collins

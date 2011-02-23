@@ -1,7 +1,7 @@
 From 03a613af4dafb3212cf52833898f00c2b1f6195d Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 5 Nov 2009 17:31:56 -0800
-Subject: [PATCH 386/887] HDFS-625. ListPathsServlet throws NullPointerException
+Subject: [PATCH 386/890] HDFS-625. ListPathsServlet throws NullPointerException
 
 Patch: https://issues.apache.org/jira/secure/attachment/12424176/hdfs-625.0-20.patch
 Author: Suresh Srinivas

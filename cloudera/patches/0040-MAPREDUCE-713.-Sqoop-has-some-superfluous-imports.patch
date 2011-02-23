@@ -1,7 +1,7 @@
 From a67a0f77729fb9005b0c47872d6ba677f6434b41 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:41:34 -0800
-Subject: [PATCH 040/887] MAPREDUCE-713. Sqoop has some superfluous imports
+Subject: [PATCH 040/890] MAPREDUCE-713. Sqoop has some superfluous imports
 
 Description: Some classes have vestigial imports that should be removed
 Reason: Code cleanup

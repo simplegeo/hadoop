@@ -1,7 +1,7 @@
 From fe36ce2d38b60a1fe1541555e172cc05473debec Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 3 Sep 2009 10:54:21 -0700
-Subject: [PATCH 359/887] Amend HADOOP-5363. Removed pickOneAddress function.
+Subject: [PATCH 359/890] Amend HADOOP-5363. Removed pickOneAddress function.
 
 Author: zhiyong zhang
 Ref: YDH

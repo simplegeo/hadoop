@@ -1,7 +1,7 @@
 From 83a6619c2656f543e046521f515d97fd70d647bb Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 17:37:15 -0800
-Subject: [PATCH 805/887] MAPREDUCE-1774. Additions to Herriot Testing to test Gridmix, Streaming, Task Controllers
+Subject: [PATCH 805/890] MAPREDUCE-1774. Additions to Herriot Testing to test Gridmix, Streaming, Task Controllers
 
 Includes:
   MAPREDUCE-1758 Building blocks for the herriot test cases

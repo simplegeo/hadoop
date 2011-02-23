@@ -1,7 +1,7 @@
 From 0f77b062de438f4d138da08d4028a7afe7a233bd Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 18 Mar 2010 15:23:21 -0700
-Subject: [PATCH 570/887] HADOOP-6638. Try to relogin in a case of  failed RPC connection (expired tgt) only in case the subject is loginUser or proxyUgi.realUser.
+Subject: [PATCH 570/890] HADOOP-6638. Try to relogin in a case of  failed RPC connection (expired tgt) only in case the subject is loginUser or proxyUgi.realUser.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12439080/HADOOP-6638-BP20.patch
 Author: Boris Shkolnik

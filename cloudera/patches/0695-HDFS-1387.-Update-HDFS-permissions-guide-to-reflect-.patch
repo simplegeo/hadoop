@@ -1,7 +1,7 @@
 From 4da1b0da8e176f6d7cf5bdc13786f37e254b6eda Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 10 Sep 2010 15:45:34 -0700
-Subject: [PATCH 695/887] HDFS-1387. Update HDFS permissions guide to reflect security
+Subject: [PATCH 695/890] HDFS-1387. Update HDFS permissions guide to reflect security
 
 Reason: documentation
 Ref: CDH-648

@@ -1,7 +1,7 @@
 From 2b04facf5a226b592874137356929aca62320648 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 15 Dec 2009 20:19:19 -0800
-Subject: [PATCH 404/887] MAPREDUCE-1124. TestGridmixSubmission fails sometimes
+Subject: [PATCH 404/890] MAPREDUCE-1124. TestGridmixSubmission fails sometimes
 
 Patch: https://issues.apache.org/jira/secure/attachment/12427971/M1124-y20-1.patch
 Author: Chris Douglas

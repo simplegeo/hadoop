@@ -1,7 +1,7 @@
 From f148732a5c983877fb62ecfe5815eb445a192573 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 16:59:52 -0800
-Subject: [PATCH 843/887] HDFS-1061. Memory footprint optimization for INodeFile object.
+Subject: [PATCH 843/890] HDFS-1061. Memory footprint optimization for INodeFile object.
 
 Author: Bharath Mundlapudi
 Ref: CDH-2622

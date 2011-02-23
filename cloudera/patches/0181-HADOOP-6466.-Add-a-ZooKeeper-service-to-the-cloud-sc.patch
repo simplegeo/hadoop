@@ -1,7 +1,7 @@
 From ac7eacd44af059d7a859b8d6773a82cd84ba4c9b Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:34:35 -0800
-Subject: [PATCH 181/887] HADOOP-6466. Add a ZooKeeper service to the cloud scripts
+Subject: [PATCH 181/890] HADOOP-6466. Add a ZooKeeper service to the cloud scripts
 
 Description: It would be good to add other Hadoop services to the cloud scripts.
 Reason: New feature

@@ -1,7 +1,7 @@
 From 2d09f15358560a61169e64c488f5e6fa7aff1d7f Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 23 Apr 2010 15:46:55 +0530
-Subject: [PATCH 626/887] MAPREDUCE-1397. Fix a possible NPE when a killTask command races with a JVM exit
+Subject: [PATCH 626/890] MAPREDUCE-1397. Fix a possible NPE when a killTask command races with a JVM exit
 
 Patch: https://issues.apache.org/jira/secure/attachment/12442657/patch-1397-ydist.txt
 Author: Amareshwari Sriramadasu

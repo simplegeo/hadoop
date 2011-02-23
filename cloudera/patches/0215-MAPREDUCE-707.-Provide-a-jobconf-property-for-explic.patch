@@ -1,7 +1,7 @@
 From 8e47288583fcdbdf649ddf3486bf201788e79202 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:50:51 -0800
-Subject: [PATCH 215/887] MAPREDUCE-707. Provide a jobconf property for explicitly assigning a job to a pool
+Subject: [PATCH 215/890] MAPREDUCE-707. Provide a jobconf property for explicitly assigning a job to a pool
 
 Description: A common use case of the fair scheduler is to have one pool per user, but then to define some special pools for various production jobs, import jobs, etc. Therefore, it would be nice if jobs went by default to the pool of the user who submitted them, but there was a setting to explicitly place a job in another pool. Today, this can be achieved through a sort of trick in the JobConf:
 

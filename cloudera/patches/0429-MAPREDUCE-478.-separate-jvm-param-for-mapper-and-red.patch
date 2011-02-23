@@ -1,7 +1,7 @@
 From be2df477d6dc267f4a4b7c6602c8108ece1cb783 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 19 Jan 2010 13:30:55 +0530
-Subject: [PATCH 429/887] MAPREDUCE-478. separate jvm param for mapper and reducer
+Subject: [PATCH 429/890] MAPREDUCE-478. separate jvm param for mapper and reducer
 
 Patch: https://issues.apache.org/jira/secure/attachment/12430705/478.20S-1.patch
 Author: Arun C Murthy

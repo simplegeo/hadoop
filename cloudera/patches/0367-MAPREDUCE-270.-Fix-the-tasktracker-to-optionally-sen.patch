@@ -1,7 +1,7 @@
 From 5ef23c2c9af26024567584fb6308645c58db8088 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 28 Sep 2009 14:28:46 -0700
-Subject: [PATCH 367/887] MAPREDUCE-270. Fix the tasktracker to optionally send an out-of-band heartbeat on task-completion for better job-latency.
+Subject: [PATCH 367/890] MAPREDUCE-270. Fix the tasktracker to optionally send an out-of-band heartbeat on task-completion for better job-latency.
 
 Configuration changes: add mapreduce.tasktracker.outofband.heartbeat
 Patch: https://issues.apache.org/jira/secure/attachment/12420718/MAPREDUCE-270_yhadoop20.patch

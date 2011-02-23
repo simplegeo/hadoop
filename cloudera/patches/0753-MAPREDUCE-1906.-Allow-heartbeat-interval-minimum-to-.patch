@@ -1,7 +1,7 @@
 From 4882770efb2a9eb52ae51d5b35e6ba3a2737c44e Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sun, 19 Dec 2010 17:38:57 -0800
-Subject: [PATCH 753/887] MAPREDUCE-1906. Allow heartbeat interval minimum to be configured
+Subject: [PATCH 753/890] MAPREDUCE-1906. Allow heartbeat interval minimum to be configured
 
 Author: Todd Lipcon
 Ref: CDH-2319

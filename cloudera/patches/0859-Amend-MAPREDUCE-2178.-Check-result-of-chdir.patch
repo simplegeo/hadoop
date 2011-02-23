@@ -1,7 +1,7 @@
 From ee5c73991b43fd49a1a4eed599d2d52065054209 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 11 Feb 2011 12:17:35 -0800
-Subject: [PATCH 859/887] Amend MAPREDUCE-2178. Check result of chdir
+Subject: [PATCH 859/890] Amend MAPREDUCE-2178. Check result of chdir
 
 Reason: necessary to pass -Werror on more recent gcc
 Author: Todd Lipcon

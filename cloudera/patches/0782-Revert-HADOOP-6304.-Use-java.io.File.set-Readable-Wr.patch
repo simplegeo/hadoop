@@ -1,7 +1,7 @@
 From efda213ca9682c9ee555b6c9582eb039cfefc122 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 18 Jan 2011 09:43:52 -0800
-Subject: [PATCH 782/887] Revert "HADOOP-6304. Use java.io.File.set{Readable|Writable|Executable} where possible in RawLocalFileSystem"
+Subject: [PATCH 782/890] Revert "HADOOP-6304. Use java.io.File.set{Readable|Writable|Executable} where possible in RawLocalFileSystem"
 
 This reverts commit 13e93cafe8d4b1e8b741c1873118cdba0313a564.
 ---

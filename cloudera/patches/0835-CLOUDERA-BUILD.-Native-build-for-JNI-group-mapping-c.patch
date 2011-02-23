@@ -1,7 +1,7 @@
 From 1fb15b9ee1b9edd5961b5972da4062117b4709e5 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 10 Feb 2011 20:58:22 -0800
-Subject: [PATCH 835/887] CLOUDERA-BUILD. Native build for JNI group mapping code
+Subject: [PATCH 835/890] CLOUDERA-BUILD. Native build for JNI group mapping code
 
 Original JNI patch is against Yahoo's distro which has divergent build files.
 ---

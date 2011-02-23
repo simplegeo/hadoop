@@ -1,7 +1,7 @@
 From 7362cada95bd07ff3b034f5c7fb15b42365c2d06 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 3 Sep 2010 16:55:59 -0700
-Subject: [PATCH 684/887] HADOOP-5467. Add offline image viewer tool for HDFS filesystem images
+Subject: [PATCH 684/890] HADOOP-5467. Add offline image viewer tool for HDFS filesystem images
 
 Author: Jakob Homan
 Reason: Necessary for Hue Headlamp application

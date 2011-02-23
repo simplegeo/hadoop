@@ -1,7 +1,7 @@
 From d012efa36429328941a04742bd6febd35d3875ef Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 5 Feb 2010 23:06:29 +0000
-Subject: [PATCH 457/887] HDFS-938. Replace calls to UGI.getUserName() with UGI.getShortUserName()
+Subject: [PATCH 457/890] HDFS-938. Replace calls to UGI.getUserName() with UGI.getShortUserName()
 
 Patch: https://issues.apache.org/jira/secure/attachment/12435015/HDFS-938-BP20-2.patch
 Author: Jakob Homan

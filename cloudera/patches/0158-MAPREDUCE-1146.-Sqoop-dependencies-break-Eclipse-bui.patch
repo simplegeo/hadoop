@@ -1,7 +1,7 @@
 From b73cab8083c1594c0328a565eef05951a17f998a Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:28:46 -0800
-Subject: [PATCH 158/887] MAPREDUCE-1146. Sqoop dependencies break Eclipse build on Linux
+Subject: [PATCH 158/890] MAPREDUCE-1146. Sqoop dependencies break Eclipse build on Linux
 
 Description: Under  Linux there's the error in the Eclipse "Problems" view:
 <div class="preformatted panel" style="border-width: 1px;"><div class="preformattedContent panelContent">

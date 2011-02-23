@@ -1,7 +1,7 @@
 From 499aa76b500136a0e8996898f468b088ca5d7ed3 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:40:50 -0800
-Subject: [PATCH 038/887] MAPREDUCE-674. Sqoop should allow a "where" clause to avoid having to export entire tables
+Subject: [PATCH 038/890] MAPREDUCE-674. Sqoop should allow a "where" clause to avoid having to export entire tables
 
 Description: Sqoop currently only exports at the granularity of a table.  This doesn't work well on systems with large tables, where the overhead of performing a full dump each time is significant.  Allowing the user to specify a where clause is a relatively simple task which will give Sqoop a lot more flexibility.
 Reason: New feature

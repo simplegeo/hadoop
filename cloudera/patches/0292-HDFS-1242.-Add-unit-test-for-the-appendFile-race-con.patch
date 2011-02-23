@@ -1,7 +1,7 @@
 From 10e5944da20d851a847cb2ef422383507d070085 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 13 May 2010 16:33:15 -0700
-Subject: [PATCH 292/887] HDFS-1242. Add unit test for the appendFile race condition / synchronization bug fixed in HDFS-142
+Subject: [PATCH 292/890] HDFS-1242. Add unit test for the appendFile race condition / synchronization bug fixed in HDFS-142
 
 Reason: Test coverage for previously applied patch.
 Author: Todd Lipcon

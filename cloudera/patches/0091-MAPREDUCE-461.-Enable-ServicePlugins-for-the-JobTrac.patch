@@ -1,7 +1,7 @@
 From f8e0599a434e1ce94158384f575e912e9f988229 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:59:40 -0800
-Subject: [PATCH 091/887] MAPREDUCE-461. Enable ServicePlugins for the JobTracker
+Subject: [PATCH 091/890] MAPREDUCE-461. Enable ServicePlugins for the JobTracker
 
 Description: Allow ServicePlugins (see <a href="http://issues.apache.org/jira/browse/HADOOP-5257" title="Export namenode/datanode functionality through a pluggable RPC layer"><del>HADOOP-5257</del></a>) for the JobTracker.
 (Relies on HADOOP-5640)

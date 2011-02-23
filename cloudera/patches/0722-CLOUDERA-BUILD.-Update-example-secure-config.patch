@@ -1,7 +1,7 @@
 From 7689035d99d720f374c543697016ef23fec7f4f8 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 4 Oct 2010 11:49:36 -0700
-Subject: [PATCH 722/887] CLOUDERA-BUILD. Update example secure config
+Subject: [PATCH 722/890] CLOUDERA-BUILD. Update example secure config
 
 ---
  example-confs/conf.secure/mapred-site.xml    |    4 ++--

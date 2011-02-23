@@ -1,7 +1,7 @@
 From 74e10e4a137b2aa60ab39186115350b5e82464fc Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:11:50 -0800
-Subject: [PATCH 114/887] HDFS-127. DFSClient block read failures cause open DFSInputStream to become unusable
+Subject: [PATCH 114/890] HDFS-127. DFSClient block read failures cause open DFSInputStream to become unusable
 
 Description: We are using some Lucene indexes directly from HDFS and for quite long time we were using Hadoop version 0.15.3.
 

@@ -1,7 +1,7 @@
 From 7361ea92c13d6ca986e332acef70c2d8983c2f4c Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 10 Feb 2011 21:15:48 -0800
-Subject: [PATCH 855/887] Amend MAPREDUCE-2265. Restore sbin location for task controller install
+Subject: [PATCH 855/890] Amend MAPREDUCE-2265. Restore sbin location for task controller install
 
 Reason: reapply after YDH 0.20.100 merge
 Author: Todd Lipcon

@@ -1,7 +1,7 @@
 From f996b8a019bffefff183d7d688ccf95b8cb73de5 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:54:15 -0800
-Subject: [PATCH 072/887] MAPREDUCE-750. Extensible ConnManager factory API
+Subject: [PATCH 072/890] MAPREDUCE-750. Extensible ConnManager factory API
 
 Description: Sqoop uses the ConnFactory class to instantiate a ConnManager implementation based on the connect string and other arguments supplied by the user. This allows per-database logic to be encapsulated in different ConnManager instances, and dynamically chosen based on which database the user is actually importing from. But adding new ConnManager implementations requires modifying the source of a common ConnFactory class. An indirection layer should be used to delegate instantiation to a number of factory implementations which can be specified in the static configuration or at runtime.
 Reason: API flexibility improvement

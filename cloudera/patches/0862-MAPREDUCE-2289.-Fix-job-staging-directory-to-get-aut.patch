@@ -1,7 +1,7 @@
 From 4b1697b297d13990e17c3b3eaaf508686a2e78a5 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 1 Feb 2011 14:05:34 -0800
-Subject: [PATCH 862/887] MAPREDUCE-2289. Fix job staging directory to get automatically chmodded to correct permissions if incorrect
+Subject: [PATCH 862/890] MAPREDUCE-2289. Fix job staging directory to get automatically chmodded to correct permissions if incorrect
 
 Reason: fixes failures in TestFairSchedulerSystem
 Author: Todd Lipcon

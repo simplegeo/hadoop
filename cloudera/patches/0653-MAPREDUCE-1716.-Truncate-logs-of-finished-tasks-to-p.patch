@@ -1,7 +1,7 @@
 From 20f55449358f96fd20f74f3f92c24dce763158e1 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 14 May 2010 12:58:38 +0530
-Subject: [PATCH 653/887] MAPREDUCE-1716. Truncate logs of finished tasks to prevent node thrash due to excessive logging
+Subject: [PATCH 653/890] MAPREDUCE-1716. Truncate logs of finished tasks to prevent node thrash due to excessive logging
 
 Patch: https://issues.apache.org/jira/secure/attachment/12444476/patch-log-truncation-bugs-20100514.txt
 Author: Vinod K V

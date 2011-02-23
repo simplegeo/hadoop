@@ -1,7 +1,7 @@
 From 0ec1d6ed85a30327c657c2418932728d0e4e98df Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@lipcon.org>
 Date: Wed, 12 May 2010 21:33:45 -0700
-Subject: [PATCH 243/887] HADOOP-6254. Slow reads cause s3n to fail with SocketTimeoutException
+Subject: [PATCH 243/890] HADOOP-6254. Slow reads cause s3n to fail with SocketTimeoutException
 
 Reason: Bug fix for users of s3n:// file system
 Author: Andrew Hitchcock

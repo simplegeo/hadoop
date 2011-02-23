@@ -1,7 +1,7 @@
 From 6129c87f5dd1fdb7375c80285534b8b91fbcd392 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:43:25 -0800
-Subject: [PATCH 199/887] HDFS-412. Hadoop JMX usage makes Nagios monitoring impossible
+Subject: [PATCH 199/890] HDFS-412. Hadoop JMX usage makes Nagios monitoring impossible
 
 Description: When Hadoop reports Datanode information to JMX, the bean uses the name "DataNode-" + storageid.  The storage ID incorporates a random number and is unpredictable.
 

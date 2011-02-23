@@ -1,7 +1,7 @@
 From 457cf14f7168bacd185c03c9afc8527210e06410 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 16 Apr 2010 14:35:38 -0700
-Subject: [PATCH 612/887] MAPREDUCE-1656. JobStory should provide queue info.
+Subject: [PATCH 612/890] MAPREDUCE-1656. JobStory should provide queue info.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12441905/mr-1656-yhadoop-20.1xx.patch.
 Author: Hong Tang

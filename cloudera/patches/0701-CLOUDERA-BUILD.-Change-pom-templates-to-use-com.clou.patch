@@ -1,7 +1,7 @@
 From 55958019974d56fb1b66e209b49c22efe4a4aa95 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 16 Sep 2010 16:52:39 -0700
-Subject: [PATCH 701/887] CLOUDERA-BUILD. Change pom templates to use com.cloudera.hadoop groupId
+Subject: [PATCH 701/890] CLOUDERA-BUILD. Change pom templates to use com.cloudera.hadoop groupId
 
 ---
  ivy/hadoop-core-pom-template.xml      |    2 +-

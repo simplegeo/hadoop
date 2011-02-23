@@ -1,7 +1,7 @@
 From 132ef7c852847e9d2c1e7879f2fca26652bb77ef Mon Sep 17 00:00:00 2001
 From: Dhruba Borthakur <dhruba@apache.org>
 Date: Fri, 4 Jun 2010 07:20:10 +0000
-Subject: [PATCH 268/887] HDFS-200. Support append and sync for hadoop 0.20 branch.
+Subject: [PATCH 268/890] HDFS-200. Support append and sync for hadoop 0.20 branch.
 
 Description: Provides basic support for append and sync on 0.20
 Reason: Append and sync required for durable HBase and many other

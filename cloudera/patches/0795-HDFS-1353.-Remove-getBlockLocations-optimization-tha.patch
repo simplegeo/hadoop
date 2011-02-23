@@ -1,7 +1,7 @@
 From c5df4748c04337af74ca80a84a03e15ba2de2f0e Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 27 Jan 2011 13:01:24 -0800
-Subject: [PATCH 795/887] HDFS-1353. Remove getBlockLocations optimization that blew out LocatedBlocks response size
+Subject: [PATCH 795/890] HDFS-1353. Remove getBlockLocations optimization that blew out LocatedBlocks response size
 
 Reason: Address OOME found by QA
 Author: Jakob Homan

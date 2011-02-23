@@ -1,7 +1,7 @@
 From 5abf4f644d7fc869858f896708b49f211ddf17d4 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 18 Mar 2010 15:42:18 -0700
-Subject: [PATCH 571/887] HDFS-1044. Cannot submit mapreduce job from secure client to unsecure sever
+Subject: [PATCH 571/890] HDFS-1044. Cannot submit mapreduce job from secure client to unsecure sever
 
 Patch: https://issues.apache.org/jira/secure/attachment/12439220/HDFS-1044-BP20-6.patch
 Author: Boris Shkolnik

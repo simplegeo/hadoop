@@ -1,7 +1,7 @@
 From edda8a863002796aa282fa26d74f8843eac4b728 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 16:59:52 -0800
-Subject: [PATCH 842/887] HDFS-1307 Add start time, end time and total time taken for FSCK to FSCK report.
+Subject: [PATCH 842/890] HDFS-1307 Add start time, end time and total time taken for FSCK to FSCK report.
 
 Author: Suresh Srinivas
 Ref: CDH-2622

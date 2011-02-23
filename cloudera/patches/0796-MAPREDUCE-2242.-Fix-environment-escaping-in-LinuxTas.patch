@@ -1,7 +1,7 @@
 From 545bcc1060833f76eab19fa0425f890cb3f9d2cb Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 28 Jan 2011 13:39:43 -0800
-Subject: [PATCH 796/887] MAPREDUCE-2242. Fix environment escaping in LinuxTaskController
+Subject: [PATCH 796/890] MAPREDUCE-2242. Fix environment escaping in LinuxTaskController
 
 Reason: Support env variables with "s
 Author: Todd Lipcon

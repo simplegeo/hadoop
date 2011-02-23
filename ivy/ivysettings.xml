@@ -39,10 +39,15 @@
     value="[organisation]/[module]/[revision]/[module]-[revision]"/>
   <property name="maven2.pattern.ext"
     value="${maven2.pattern}.[ext]"/>
+
   <!-- pull in the local repository -->
   <include url="${ivy.default.conf.dir}/ivyconf-local.xml"/>
   <settings defaultResolver="default"/>
   <resolvers>
+    <!-- CDH build repo, the pattern attribute handles SNAPSHOT artifacts -->
+    <ibiblio name="reactor-repo" root="${reactor.repo}"
+             m2compatible="true"
+             checkmodified="true"/>
     <ibiblio name="maven2"
       root="${repo.maven.org}"
       pattern="${maven2.pattern.ext}"

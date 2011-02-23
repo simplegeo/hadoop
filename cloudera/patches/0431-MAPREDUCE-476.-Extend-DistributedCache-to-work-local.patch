@@ -1,7 +1,7 @@
 From 3ca7d8529bcb3cea9640dffaa296c508a07f89a4 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 20 Jan 2010 15:28:40 +0530
-Subject: [PATCH 431/887] MAPREDUCE-476. Extend DistributedCache to work locally (LocalJobRunner)
+Subject: [PATCH 431/890] MAPREDUCE-476. Extend DistributedCache to work locally (LocalJobRunner)
 
 Patch: https://issues.apache.org/jira/secure/attachment/12430866/476.20S-2.patch
 Author: Philip Zeyliger

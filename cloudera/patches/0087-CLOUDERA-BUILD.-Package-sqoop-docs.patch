@@ -1,7 +1,7 @@
 From 7575b83ba0cab30394bad0943ff906ab0609dc40 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:57:49 -0800
-Subject: [PATCH 087/887] CLOUDERA-BUILD. Package sqoop docs.
+Subject: [PATCH 087/890] CLOUDERA-BUILD. Package sqoop docs.
 
 ---
  cloudera/install_hadoop.sh  |   12 +++++++++---

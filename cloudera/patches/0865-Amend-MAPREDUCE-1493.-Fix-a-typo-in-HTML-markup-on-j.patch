@@ -1,7 +1,7 @@
 From df540fdaa94d96a2a1bc2685774ae44b145bfa98 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 11 Feb 2011 10:56:52 -0800
-Subject: [PATCH 865/887] Amend MAPREDUCE-1493. Fix a typo in HTML markup on jobdetailshistory
+Subject: [PATCH 865/890] Amend MAPREDUCE-1493. Fix a typo in HTML markup on jobdetailshistory
 
 (typo made in original backport, not upstream)
 

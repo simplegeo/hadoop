@@ -1,7 +1,7 @@
 From c5c9b8bf0bf83637589a809b3c376cf74a2fb464 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:45:54 -0800
-Subject: [PATCH 205/887] MAPREDUCE-1313. NPE in FieldFormatter if escape character is set and field is null
+Subject: [PATCH 205/890] MAPREDUCE-1313. NPE in FieldFormatter if escape character is set and field is null
 
 Description: Performing an import with the <tt>&#45;&#45;escaped-by</tt> character set on a table with a null field will cause a NullPointerException in FieldFormatter
 Reason: bugfix

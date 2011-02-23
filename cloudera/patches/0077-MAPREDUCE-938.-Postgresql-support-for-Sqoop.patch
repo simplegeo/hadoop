@@ -1,7 +1,7 @@
 From 23a0d1882c797160cc7b6fae99fc5e686aa30191 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:55:16 -0800
-Subject: [PATCH 077/887] MAPREDUCE-938. Postgresql support for Sqoop
+Subject: [PATCH 077/890] MAPREDUCE-938. Postgresql support for Sqoop
 
 Description: Sqoop should be able to import from postgresql databases.
 Reason: Compatability improvement

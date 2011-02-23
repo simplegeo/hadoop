@@ -1,7 +1,7 @@
 From 0d1bfe678e356b154d237e34d4e4379a84614158 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 26 Feb 2010 13:12:41 -0800
-Subject: [PATCH 505/887] MAPREDUCE-1454. The servlets should quote server generated strings sent in the response
+Subject: [PATCH 505/890] MAPREDUCE-1454. The servlets should quote server generated strings sent in the response
 
 Patch: http://issues.apache.org/jira/secure/attachment/12436834/M1454-0y20.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12437591/M1454-1y20.patch

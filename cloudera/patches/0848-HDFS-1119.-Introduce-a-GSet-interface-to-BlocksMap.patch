@@ -1,7 +1,7 @@
 From 921d337cfa66dcc22207f3fb42e385aff4e229d0 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 16:59:52 -0800
-Subject: [PATCH 848/887] HDFS-1119. Introduce a GSet interface to BlocksMap.
+Subject: [PATCH 848/890] HDFS-1119. Introduce a GSet interface to BlocksMap.
 
 ---
  .../hadoop/hdfs/server/namenode/BlocksMap.java     |   50 ++++++-------

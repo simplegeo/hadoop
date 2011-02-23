@@ -1,7 +1,7 @@
 From a3e29eff0b9337a1007ec1b90ccb832dca5c1d20 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:17:33 -0800
-Subject: [PATCH 126/887] CLOUDERA-BUILD. Fix hadoop wrapper to properly pass through multiword quoted arguments
+Subject: [PATCH 126/890] CLOUDERA-BUILD. Fix hadoop wrapper to properly pass through multiword quoted arguments
 
 Author: Todd Lipcon
 ---

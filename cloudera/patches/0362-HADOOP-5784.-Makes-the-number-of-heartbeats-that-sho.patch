@@ -1,7 +1,7 @@
 From 1e8994a568a45a994ef7c2af354ac1ddc2c1586b Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 24 Sep 2009 16:07:40 -0700
-Subject: [PATCH 362/887] HADOOP-5784. Makes the number of heartbeats that should arrive a second at the JobTracker configurable.
+Subject: [PATCH 362/890] HADOOP-5784. Makes the number of heartbeats that should arrive a second at the JobTracker configurable.
 
 Patch: http://issues.apache.org/jira/secure/attachment/12420257/HADOOP-5784_yhadoop20.patch
 Author: Amareshwari Sriramadasu

@@ -1,7 +1,7 @@
 From f1b4799fad93b4f02ee29ce5ef5fc217ff72e377 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 9 Feb 2011 14:53:16 -0800
-Subject: [PATCH 822/887] MAPREDUCE-2328. Add configs for memory-related configurations to mapred-default.xml
+Subject: [PATCH 822/890] MAPREDUCE-2328. Add configs for memory-related configurations to mapred-default.xml
 
 Author: Yahoo Eng
 Ref: CDH-2622

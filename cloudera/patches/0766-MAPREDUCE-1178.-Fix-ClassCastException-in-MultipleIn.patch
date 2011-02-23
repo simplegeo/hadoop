@@ -1,7 +1,7 @@
 From bd69ffce6f04c6d4f3685f55403b5d57191057d9 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 11 Jan 2011 15:53:13 -0800
-Subject: [PATCH 766/887] MAPREDUCE-1178. Fix ClassCastException in MultipleInputs by adding a DelegatingRecordReader.
+Subject: [PATCH 766/890] MAPREDUCE-1178. Fix ClassCastException in MultipleInputs by adding a DelegatingRecordReader.
 
 Reason: bug fix
 Author: Amareshwari Sriramadasu and Jay Booth.

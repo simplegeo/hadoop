@@ -1,7 +1,7 @@
 From 9acfd39492f85c92bc45d47d6dcfb309e3826c64 Mon Sep 17 00:00:00 2001
 From: newalex <newalex@centos64-build01.sf.cloudera.com>
 Date: Thu, 8 Apr 2010 10:35:19 -0700
-Subject: [PATCH 239/887] CLOUDERA-BUILD. Build script changes to build DEB packages
+Subject: [PATCH 239/890] CLOUDERA-BUILD. Build script changes to build DEB packages
 
 Description: The required changes to the cloudera hadoop building scripts for pulling the fuse files out and cleaning up its mess v.v. DEBs.
 Reason: Building packages

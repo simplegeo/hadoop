@@ -1,7 +1,7 @@
 From 3e62477434542dc3de89fd43fd9b19abaf76f0de Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:20:00 -0800
-Subject: [PATCH 135/887] MAPREDUCE-768. Configuration information should generate dump in a standard format.
+Subject: [PATCH 135/890] MAPREDUCE-768. Configuration information should generate dump in a standard format.
 
 Description:  We need to generate the configuration dump in a standard format .
 This adds the 'hadoop jobtracker -dumpConfiguration' command.

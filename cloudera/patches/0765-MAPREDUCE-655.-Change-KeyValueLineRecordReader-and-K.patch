@@ -1,7 +1,7 @@
 From 6ff69b095f390fba1e8ba3c315a93889a94de481 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 11 Jan 2011 15:56:18 -0800
-Subject: [PATCH 765/887] MAPREDUCE-655. Change KeyValueLineRecordReader and KeyValueTextInputFormat to use new mapreduce api.
+Subject: [PATCH 765/890] MAPREDUCE-655. Change KeyValueLineRecordReader and KeyValueTextInputFormat to use new mapreduce api.
 
 Reason: Required for MultipleInputs
 Author: Amareshwari Sriramadasu

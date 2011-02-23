@@ -1,7 +1,7 @@
 From 279a018f693a5721d7228e7c801327dda0aecb81 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Bruno=20Mah=C3=A9?= <bruno@gnoll.org>
 Date: Tue, 15 Feb 2011 15:25:19 -0800
-Subject: [PATCH 881/887] CLOUDERA-BUILD. Installation script needs to be adapted for the new naming scheme.
+Subject: [PATCH 881/890] CLOUDERA-BUILD. Installation script needs to be adapted for the new naming scheme.
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit

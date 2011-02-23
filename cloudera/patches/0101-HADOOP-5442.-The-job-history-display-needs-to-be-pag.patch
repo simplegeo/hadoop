@@ -1,7 +1,7 @@
 From 3b8f77cd452c1098c6af5907b787bf9167df806b Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:05:48 -0800
-Subject: [PATCH 101/887] HADOOP-5442. The job history display needs to be paged
+Subject: [PATCH 101/890] HADOOP-5442. The job history display needs to be paged
 
 Description: Currently the list of job history will try to render the entire list of jobs that have run. That doesn't scale up as more and more jobs run on a job tracker.
 Reason: Scalability improvement

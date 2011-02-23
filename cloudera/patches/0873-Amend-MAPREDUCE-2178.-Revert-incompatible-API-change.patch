@@ -1,7 +1,7 @@
 From 541407b9f144228f2b7934decc114c59b769e481 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sat, 12 Feb 2011 13:28:13 -0800
-Subject: [PATCH 873/887] Amend MAPREDUCE-2178. Revert incompatible API change to FileUtil.chmod
+Subject: [PATCH 873/890] Amend MAPREDUCE-2178. Revert incompatible API change to FileUtil.chmod
 
 Reverts a change which removed InterruptedException from FileUtil.chmod's signature.
 Though the function never throws InterruptedException, this removal causes

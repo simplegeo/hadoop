@@ -1,7 +1,7 @@
 From 78b9e608a82c69e59950d4be585fc17e79c8eeca Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Wed, 3 Nov 2010 16:32:40 -0700
-Subject: [PATCH 740/887] CLOUDERA-BUILD. Remove the MySQL Connector/J library. See SQOOP-97.
+Subject: [PATCH 740/890] CLOUDERA-BUILD. Remove the MySQL Connector/J library. See SQOOP-97.
 
 ---
  lib/mysql-connector-java-5.0.8-bin.jar |  Bin 540852 -> 0 bytes

@@ -1,7 +1,7 @@
 From c912024353450a0fa2c53a95500b4ed653f76129 Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Tue, 24 Aug 2010 22:53:23 -0700
-Subject: [PATCH 324/887] MAPREDUCE-118. Job.getJobID() will always return null.
+Subject: [PATCH 324/890] MAPREDUCE-118. Job.getJobID() will always return null.
 
 Reason: Bug
 Author: Amareshwari Sriramadasu

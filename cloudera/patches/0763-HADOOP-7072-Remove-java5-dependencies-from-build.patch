@@ -1,7 +1,7 @@
 From de6b20455e53435d6079b0ed9b0a005bc0c435ff Mon Sep 17 00:00:00 2001
 From: Konstantin Boudnik <cos@apache.org>
 Date: Tue, 11 Jan 2011 13:43:02 -0800
-Subject: [PATCH 763/887] HADOOP-7072 Remove java5 dependencies from build
+Subject: [PATCH 763/890] HADOOP-7072 Remove java5 dependencies from build
 
 Description:
 Reason: test is affected.

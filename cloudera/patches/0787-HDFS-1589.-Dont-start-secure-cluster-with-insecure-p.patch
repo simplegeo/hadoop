@@ -1,7 +1,7 @@
 From 6b63d73a1917a6c0529158c3bb78ec2ec16ad7ce Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 20 Jan 2011 16:05:01 -0800
-Subject: [PATCH 787/887] HDFS-1589. Dont start secure cluster with insecure ports
+Subject: [PATCH 787/890] HDFS-1589. Dont start secure cluster with insecure ports
 
 Reason: security
 Author: Todd Lipcon

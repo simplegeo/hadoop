@@ -1,7 +1,7 @@
 From 5bebf947cd534ee350844c3626d11dac315372ed Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 13 Apr 2010 10:39:44 -0700
-Subject: [PATCH 603/887] MAPREDUCE-1680. Add a metric to track number of heartbeats processed by the JobTracker
+Subject: [PATCH 603/890] MAPREDUCE-1680. Add a metric to track number of heartbeats processed by the JobTracker
 
 Patch: https://issues.apache.org/jira/secure/attachment/12441621/mapreduce-1680--2010-04-08.patch.
 Author: Dick King

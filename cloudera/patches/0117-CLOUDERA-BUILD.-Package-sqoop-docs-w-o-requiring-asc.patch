@@ -1,7 +1,7 @@
 From e7e9812fa7a6a256652f2f6bbb269334f883c53b Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:14:43 -0800
-Subject: [PATCH 117/887] CLOUDERA-BUILD. Package sqoop docs w/o requiring asciidoc
+Subject: [PATCH 117/890] CLOUDERA-BUILD. Package sqoop docs w/o requiring asciidoc
 
 Author: Chad Metcalf
 Ref: UNKNOWN

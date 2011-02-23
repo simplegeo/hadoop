@@ -1,7 +1,7 @@
 From 2219e76392d0bf29d8c40bf2b60d23d7b188ac3d Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 24 Sep 2009 16:08:33 -0700
-Subject: [PATCH 363/887] HADOOP-5976. Add a new command, classpath, to the hadoop script. Contributed by Owen O'Malley
+Subject: [PATCH 363/890] HADOOP-5976. Add a new command, classpath, to the hadoop script. Contributed by Owen O'Malley
 
 Patch: http://issues.apache.org/jira/secure/attachment/12420325/script.patch
 Author: Owen O'Malley and Gary Murry

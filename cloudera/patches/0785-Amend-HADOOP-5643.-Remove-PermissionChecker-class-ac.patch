@@ -1,7 +1,7 @@
 From 2bec46c2f46e42a35a69fdbd6f37f8979599e83d Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 19 Jan 2011 14:48:57 -0800
-Subject: [PATCH 785/887] Amend HADOOP-5643. Remove PermissionChecker class accidentally left around
+Subject: [PATCH 785/890] Amend HADOOP-5643. Remove PermissionChecker class accidentally left around
 
 This class was supposed to be removed by HADOOP-5643 but accidentally was
 left in the tree. Unreferenced except in one place - now updated to refer

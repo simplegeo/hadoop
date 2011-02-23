@@ -1,7 +1,7 @@
 From 0a4dab2eac0ba8b6da5190bc53a9ce8e4344a336 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:41:01 -0800
-Subject: [PATCH 039/887] MAPREDUCE-685. Sqoop will fail with OutOfMemory on large tables using mysql
+Subject: [PATCH 039/890] MAPREDUCE-685. Sqoop will fail with OutOfMemory on large tables using mysql
 
 Description: The default MySQL JDBC client behavior is to buffer the entire ResultSet in the client before allowing the user to use the ResultSet object. On large SELECTs, this can cause OutOfMemory exceptions, even when the client intends to close the ResultSet after reading only a few rows. The MySQL ConnManager should configure its connection to use row-at-a-time delivery of results to the client.
 Reason: bugfix / scalability improvement

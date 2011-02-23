@@ -1,7 +1,7 @@
 From 9d9e86678faa54e23c3ac41c1b8fdb6b379e9b5d Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 20 Nov 2009 17:01:21 -0800
-Subject: [PATCH 391/887] HADOOP-6234. Permission configuration files should use octal and symbolic
+Subject: [PATCH 391/890] HADOOP-6234. Permission configuration files should use octal and symbolic
 
 Patch: https://issues.apache.org/jira/secure/attachment/12425635/COMMON-6234.rel20.1.patch
 Author: Jakob Homan

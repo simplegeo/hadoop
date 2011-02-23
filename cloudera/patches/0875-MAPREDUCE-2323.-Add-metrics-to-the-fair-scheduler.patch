@@ -1,7 +1,7 @@
 From 3ad9f29cdcc14fbf41c6642b746ee04afaa92ff5 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sat, 12 Feb 2011 19:24:07 -0800
-Subject: [PATCH 875/887] MAPREDUCE-2323. Add metrics to the fair scheduler
+Subject: [PATCH 875/890] MAPREDUCE-2323. Add metrics to the fair scheduler
 
 Reason: Necessary for CMON, useful for monitoring
 Author: Todd Lipcon

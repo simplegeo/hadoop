@@ -1,7 +1,7 @@
 From 578be5dcfdece1f48aae8809648ae00f646bb040 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 4 Dec 2009 15:30:39 -0800
-Subject: [PATCH 395/887] HDFS-781. Metrics PendingDeletionBlocks is not decremented
+Subject: [PATCH 395/890] HDFS-781. Metrics PendingDeletionBlocks is not decremented
 
 Patch: https://issues.apache.org/jira/secure/attachment/12426993/hdfs-781.rel20.1.patch.
 Author: Suresh Srinivas

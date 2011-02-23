@@ -1,7 +1,7 @@
 From 6fa12363baff6e2e11650c0f395b52e9f47d6266 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 1 Feb 2010 10:28:11 -0800
-Subject: [PATCH 449/887] HADOOP-6520. UGI should load tokens from the environment
+Subject: [PATCH 449/890] HADOOP-6520. UGI should load tokens from the environment
 
 Patch: https://issues.apache.org/jira/secure/attachment/12434423/HADOOP-6520-0_20.2.patch
 Author: Devaraj Das

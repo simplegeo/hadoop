@@ -1,7 +1,7 @@
 From 13e93cafe8d4b1e8b741c1873118cdba0313a564 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sun, 18 Oct 2009 23:19:27 -0700
-Subject: [PATCH 373/887] HADOOP-6304. Use java.io.File.set{Readable|Writable|Executable} where possible in RawLocalFileSystem
+Subject: [PATCH 373/890] HADOOP-6304. Use java.io.File.set{Readable|Writable|Executable} where possible in RawLocalFileSystem
 
 Patch: https://issues.apache.org/jira/secure/attachment/12422525/HADOOP-6304_yhadoop20.patch
 Author: Arun C Murthy

@@ -1,7 +1,7 @@
 From f07b2df591b91c7de50e8dbb526cf11b27a32a6f Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 18 Jun 2010 17:58:53 -0700
-Subject: [PATCH 312/887] MAPREDUCE-679. XML-based metrics as JSP servlet for JobTracker
+Subject: [PATCH 312/890] MAPREDUCE-679. XML-based metrics as JSP servlet for JobTracker
 
 Description: A simple XML translation of the existing JobTracker status page
 which provides the same metrics (including the tables of

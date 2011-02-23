@@ -1,7 +1,7 @@
 From 40c1a9177db24c0fd589ad8312a31a715f4cf8ad Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sat, 27 Feb 2010 03:19:02 -0800
-Subject: [PATCH 519/887] HADOOP-6584. Provide Kerberized SSL encryption for webservices
+Subject: [PATCH 519/890] HADOOP-6584. Provide Kerberized SSL encryption for webservices
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437337/HADOOP-6584-Y20-4.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12437337/HADOOP-6584-Y20-4.patch

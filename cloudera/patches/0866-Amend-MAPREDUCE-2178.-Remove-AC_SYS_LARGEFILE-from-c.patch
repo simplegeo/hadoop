@@ -1,7 +1,7 @@
 From 5a57891c772488d8b02bcf54f4247f8fffa81d1f Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 11 Feb 2011 13:06:26 -0800
-Subject: [PATCH 866/887] Amend MAPREDUCE-2178. Remove AC_SYS_LARGEFILE from configure.ac
+Subject: [PATCH 866/890] Amend MAPREDUCE-2178. Remove AC_SYS_LARGEFILE from configure.ac
 
 This flag allows opening of files >2GB, but the task-controller doesn't need
 to do this. The removal is important because some RHEL5 systems have an

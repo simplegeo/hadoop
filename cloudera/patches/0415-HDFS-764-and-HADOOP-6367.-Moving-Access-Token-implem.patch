@@ -1,7 +1,7 @@
 From dca4c3a73ff34fb37ff2b92c7d6ba2331cd1405d Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 25 Dec 2009 13:56:07 -0800
-Subject: [PATCH 415/887] HDFS-764 and HADOOP-6367. Moving Access Token implementation from Common to HDFS
+Subject: [PATCH 415/890] HDFS-764 and HADOOP-6367. Moving Access Token implementation from Common to HDFS
 
 Patch: https://issues.apache.org/jira/secure/attachment/12428959/HADOOP-6367_HDFS-764-0_20.1.patch
 Author: Kan Zhang

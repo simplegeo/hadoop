@@ -1,7 +1,7 @@
 From 49e808c8751615fe154061d456f171f8bb582504 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 7 Oct 2010 18:10:47 -0700
-Subject: [PATCH 733/887] CLOUDERA-BUILD. Add symlinks to built HADOOP_HOME like hadoop-core.jar -> hadoop-core-0.20.2+NNN.jar
+Subject: [PATCH 733/890] CLOUDERA-BUILD. Add symlinks to built HADOOP_HOME like hadoop-core.jar -> hadoop-core-0.20.2+NNN.jar
 
 This helps other projects create symlinks into the installed hadoop-home without
 having to declare a dependency on a particular patchlevel of the jar.

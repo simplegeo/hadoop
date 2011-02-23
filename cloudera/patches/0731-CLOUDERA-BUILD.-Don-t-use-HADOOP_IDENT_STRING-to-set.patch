@@ -1,7 +1,7 @@
 From b919f0a99b2ac3b48a32b0906d19c2b306f7a554 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 6 Oct 2010 15:38:19 -0700
-Subject: [PATCH 731/887] CLOUDERA-BUILD. Don't use HADOOP_IDENT_STRING to set user
+Subject: [PATCH 731/890] CLOUDERA-BUILD. Don't use HADOOP_IDENT_STRING to set user
 
 This was a misuse of this variable - it should only determine the name of the log/pid files
 ---

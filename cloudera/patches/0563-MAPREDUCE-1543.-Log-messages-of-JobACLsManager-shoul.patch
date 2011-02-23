@@ -1,7 +1,7 @@
 From 353f15176ed481f268f37e33d4fc9f1745f44afe Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 18 Mar 2010 00:06:22 +0530
-Subject: [PATCH 563/887] MAPREDUCE-1543. Log messages of JobACLsManager should use security logging of HADOOP-6586
+Subject: [PATCH 563/890] MAPREDUCE-1543. Log messages of JobACLsManager should use security logging of HADOOP-6586
 
 Patch: https://issues.apache.org/jira/secure/attachment/12439057/mapreduce-1543-y20s-3.patch
 Author: Luke Lu

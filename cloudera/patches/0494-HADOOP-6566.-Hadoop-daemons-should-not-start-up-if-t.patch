@@ -1,7 +1,7 @@
 From 645b54a053bf565ef2a0f36be8c5a02f80a2775a Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 23 Feb 2010 23:35:49 -0800
-Subject: [PATCH 494/887] HADOOP-6566. Hadoop daemons should not start up if the ownership/permissions on the directories used at runtime are misconfigured
+Subject: [PATCH 494/890] HADOOP-6566. Hadoop daemons should not start up if the ownership/permissions on the directories used at runtime are misconfigured
 
 Patch: https://issues.apache.org/jira/secure/attachment/12436814/HADOOP-6566_yhadoop20.patch
 Author: Arun C Murthy

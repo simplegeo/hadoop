@@ -1,7 +1,7 @@
 From 562be1407b9e3c2d8907daaa9500ac96364c9fa2 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 18 Jan 2011 10:12:08 -0800
-Subject: [PATCH 784/887] MAPREDUCE-2238. Avoid racy permissions handling
+Subject: [PATCH 784/890] MAPREDUCE-2238. Avoid racy permissions handling
 
 Reason: leaving undeletable dirs in userlogs directory
 Author: Todd Lipcon

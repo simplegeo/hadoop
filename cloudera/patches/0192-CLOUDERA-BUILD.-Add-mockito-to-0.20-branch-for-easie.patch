@@ -1,7 +1,7 @@
 From b332fe77255047409da701dfb97df1bddb5b10cb Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:40:05 -0800
-Subject: [PATCH 192/887] CLOUDERA-BUILD. Add mockito to 0.20 branch for easier unit testing of HDFS stability patches.
+Subject: [PATCH 192/890] CLOUDERA-BUILD. Add mockito to 0.20 branch for easier unit testing of HDFS stability patches.
 
 Reason: Test coverage improvement
 Author: Todd Lipcon

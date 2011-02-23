@@ -1,7 +1,7 @@
 From 1da8cc2964b488a55091e7b8b8f3a494ba4c1772 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 11 Feb 2011 12:11:24 -0800
-Subject: [PATCH 863/887] MAPREDUCE-2321. Check for NativeIO at TT startup
+Subject: [PATCH 863/890] MAPREDUCE-2321. Check for NativeIO at TT startup
 
 Reason: Easier failure diagnosis for secure TT
 Author: Todd Lipcon

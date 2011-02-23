@@ -1,7 +1,7 @@
 From 8bf3439ff69762a33967dca4abb15c0cd2bb8417 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:47:45 -0800
-Subject: [PATCH 210/887] MAPREDUCE-1395. Sqoop does not check return value of Job.waitForCompletion()
+Subject: [PATCH 210/890] MAPREDUCE-1395. Sqoop does not check return value of Job.waitForCompletion()
 
 Description: Old code depended on JobClient.runJob() throwing IOException on failure. Job.waitForCompletion can fail in that manner, or it can fail by returning false. Sqoop needs to check for this condition.
 Reason: bugfix

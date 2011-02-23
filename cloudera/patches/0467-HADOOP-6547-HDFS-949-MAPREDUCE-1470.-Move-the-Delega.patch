@@ -1,7 +1,7 @@
 From 29b6749dfdd9038d9f54ef9f0669c5b1fc553463 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 9 Feb 2010 01:34:27 -0800
-Subject: [PATCH 467/887] HADOOP-6547, HDFS-949, MAPREDUCE-1470. Move the Delegation Token feature to common since both HDFS and MapReduce needs it
+Subject: [PATCH 467/890] HADOOP-6547, HDFS-949, MAPREDUCE-1470. Move the Delegation Token feature to common since both HDFS and MapReduce needs it
 
 Patch: https://issues.apache.org/jira/secure/attachment/12435271/6547-949-1470-0_20.1.patch
 Author: Devaraj Das

@@ -1,7 +1,7 @@
 From 5b6834d2f255fec50d44ec50bec38b0004055c7d Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 18 Mar 2010 02:45:31 -0700
-Subject: [PATCH 568/887] HADOOP-6526. Need mapping from long principal names to local OS user names
+Subject: [PATCH 568/890] HADOOP-6526. Need mapping from long principal names to local OS user names
 
 Patch: https://issues.apache.org/jira/secure/attachment/12439139/HADOOP-6526-y20.4.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12442917/3595485.patch

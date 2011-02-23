@@ -1,7 +1,7 @@
 From 18ec4a074b50ad5a7d8b3148da40d58ed0baf768 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 15 Dec 2009 20:37:18 -0800
-Subject: [PATCH 405/887] MAPREDUCE-1063. Document Gridmix benchmark
+Subject: [PATCH 405/890] MAPREDUCE-1063. Document Gridmix benchmark
 
 Patch: https://issues.apache.org/jira/secure/attachment/12427976/M1063-y20-0.patch
 Author: Chris Douglas

@@ -1,7 +1,7 @@
 From 993bc455b265d185f74c23ec7ccb272203190298 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 2 Feb 2010 10:31:13 -0800
-Subject: [PATCH 452/887] MAPREDUCE-1432. Add the hooks in JobTracker and TaskTracker to load tokens from the token cache into the user's UGI
+Subject: [PATCH 452/890] MAPREDUCE-1432. Add the hooks in JobTracker and TaskTracker to load tokens from the token cache into the user's UGI
 
 Patch: https://issues.apache.org/jira/secure/attachment/12434550/MAPREDUCE-1432-BP20-2.patch
 Author: Devaraj Das

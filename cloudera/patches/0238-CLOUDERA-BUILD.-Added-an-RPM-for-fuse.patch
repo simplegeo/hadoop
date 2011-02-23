@@ -1,7 +1,7 @@
 From d144085817496eecc57c510022d66d0540b4511d Mon Sep 17 00:00:00 2001
 From: newalex <newalex@centos64-build01.sf.cloudera.com>
 Date: Tue, 6 Apr 2010 14:05:29 -0700
-Subject: [PATCH 238/887] CLOUDERA-BUILD. Added an RPM for fuse
+Subject: [PATCH 238/890] CLOUDERA-BUILD. Added an RPM for fuse
 
 Description: The required changes to the cloudera hadoop building scripts for pulling the fuse files out and cleaning up its mess.
 Reason: Building packages

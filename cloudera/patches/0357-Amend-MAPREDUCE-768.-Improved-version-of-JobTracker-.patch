@@ -1,7 +1,7 @@
 From b131d77cefee39b7296530b018d59ca4d1516b01 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 25 Aug 2009 09:33:35 -0700
-Subject: [PATCH 357/887] Amend MAPREDUCE-768. Improved version of JobTracker configuration dump that also dumps job queues
+Subject: [PATCH 357/890] Amend MAPREDUCE-768. Improved version of JobTracker configuration dump that also dumps job queues
 
 Author: V.V.Chaitanya Krishna
 Ref: YDH

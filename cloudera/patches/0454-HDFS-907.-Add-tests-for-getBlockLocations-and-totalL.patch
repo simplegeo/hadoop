@@ -1,7 +1,7 @@
 From 18b89be19183117cbe0a567ecb16e8012bc83c48 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 4 Feb 2010 18:47:54 -0800
-Subject: [PATCH 454/887] HDFS-907. Add tests for getBlockLocations and totalLoad metrics.
+Subject: [PATCH 454/890] HDFS-907. Add tests for getBlockLocations and totalLoad metrics.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12434919/HDFS907s.patch
 Author: Ravi Phulari

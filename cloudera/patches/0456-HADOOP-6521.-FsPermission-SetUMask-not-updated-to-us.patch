@@ -1,7 +1,7 @@
 From 4f96064bf4bb838ce0c6d4e99152a02ad9737032 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 5 Feb 2010 15:03:57 -0800
-Subject: [PATCH 456/887] HADOOP-6521. FsPermission:SetUMask not updated to use new-style umask setting.
+Subject: [PATCH 456/890] HADOOP-6521. FsPermission:SetUMask not updated to use new-style umask setting.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12434469/hadoop-6521.rel20.1.patch
 Author: Suresh Srinivas

@@ -1,7 +1,7 @@
 From 7f9f42b27b109eff6fafc6ee24526fcadaf68d69 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:52:23 -0800
-Subject: [PATCH 219/887] MAPREDUCE-1467. Add a --verbose flag to Sqoop
+Subject: [PATCH 219/890] MAPREDUCE-1467. Add a --verbose flag to Sqoop
 
 Description: Need a <tt>--verbose</tt> flag that sets the log4j level to DEBUG.
 Reason: Logging improvement

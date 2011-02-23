@@ -1,7 +1,7 @@
 From 1864359f4ef32974ed41a1278e640e1ee246ef9b Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Tue, 25 May 2010 13:05:38 -0700
-Subject: [PATCH 255/887] HADOOP-6723. Unchecked exceptions thrown in IPC connection should not orphan clients.
+Subject: [PATCH 255/890] HADOOP-6723. Unchecked exceptions thrown in IPC connection should not orphan clients.
 
 Description: If the server sends back some malformed data, for
 example, receiveResponse() can end up with an incorrect call ID. Then,

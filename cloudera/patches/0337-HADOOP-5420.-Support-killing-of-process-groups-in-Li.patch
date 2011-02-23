@@ -1,7 +1,7 @@
 From d37609510f33ad26bbe6bf3c3d235b34b804f93a Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 30 Jul 2009 17:40:28 -0700
-Subject: [PATCH 337/887] HADOOP-5420. Support killing of process groups in LinuxTaskController binary
+Subject: [PATCH 337/890] HADOOP-5420. Support killing of process groups in LinuxTaskController binary
 
 Reason: Security - prevent orphaning forked child processes
 Author: Sreekanth Ramakrishnan

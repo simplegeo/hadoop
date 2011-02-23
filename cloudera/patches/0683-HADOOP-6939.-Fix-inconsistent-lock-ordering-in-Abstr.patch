@@ -1,7 +1,7 @@
 From b94821f874983e64c78fc93d95539a4f262dca78 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 3 Sep 2010 15:56:19 -0700
-Subject: [PATCH 683/887] HADOOP-6939. Fix inconsistent lock ordering in AbstractDelegationTokenSecretManager
+Subject: [PATCH 683/890] HADOOP-6939. Fix inconsistent lock ordering in AbstractDelegationTokenSecretManager
 
 Reason: Fix potential deadlock
 Author: Todd Lipcon

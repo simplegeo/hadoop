@@ -1,7 +1,7 @@
 From 7e009a29c0806537cd50972df90ec87b617eb78f Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:34:54 -0800
-Subject: [PATCH 183/887] MAPREDUCE-1212. Mapreduce contrib project ivy dependencies are not included in binary target
+Subject: [PATCH 183/890] MAPREDUCE-1212. Mapreduce contrib project ivy dependencies are not included in binary target
 
 Description: As in <a href="http://issues.apache.org/jira/browse/HADOOP-6370" title="Contrib project ivy dependencies are not included in binary target">HADOOP-6370</a>, only Hadoop's own library dependencies are promoted to ${build.dir}/lib; any libraries required by contribs are not redistributed.
 Reason: Build system (packaging) improvement

@@ -1,7 +1,7 @@
 From 56acf64d1453e7de0c87d58bb4565dc1748de5a8 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sat, 10 Apr 2010 17:19:45 +0530
-Subject: [PATCH 599/887] MAPREDUCE-1526. Gridmix: Cache the job related information while submitting the job to avoid many RPC calls to JobTracker.
+Subject: [PATCH 599/890] MAPREDUCE-1526. Gridmix: Cache the job related information while submitting the job to avoid many RPC calls to JobTracker.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12440983/1594-yhadoop-20-1xx-1-5.patc://issues.apache.org/jira/secure/attachment/12441333/1526-yhadoop-20-101-4.patch
 Author: rahul k singh

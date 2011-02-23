@@ -1,7 +1,7 @@
 From eb118d65f792dd3947b886ea7f2c971556d496cf Mon Sep 17 00:00:00 2001
 From: Tom White <tom@cloudera.com>
 Date: Tue, 18 Jan 2011 13:35:06 -0800
-Subject: [PATCH 777/887] MAPREDUCE-787. -files, -archives should honor user given symlink path
+Subject: [PATCH 777/890] MAPREDUCE-787. -files, -archives should honor user given symlink path
 
 Reason: bug fix
 Author: Amareshwari Sriramadasu

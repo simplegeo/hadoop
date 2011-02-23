@@ -1,7 +1,7 @@
 From a6f5e7109f538e2b9374c6518c80b0575e2dfa9f Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 11 Feb 2011 15:06:42 -0800
-Subject: [PATCH 868/887] Amend HADOOP-5489. hdfsproxy-env.sh.template was updated but not hdfsproxy-env.sh
+Subject: [PATCH 868/890] Amend HADOOP-5489. hdfsproxy-env.sh.template was updated but not hdfsproxy-env.sh
 
 Reason: avoid local modifications to src tree on build
 Author: Todd Lipcon

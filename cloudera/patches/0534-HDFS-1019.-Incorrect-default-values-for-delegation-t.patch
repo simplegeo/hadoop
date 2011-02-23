@@ -1,7 +1,7 @@
 From 522fd421225fbab7258a2977e4d40c0c13179376 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 3 Mar 2010 19:09:49 -0800
-Subject: [PATCH 534/887] HDFS-1019. Incorrect default values for delegation tokens in hdfs-default.xml
+Subject: [PATCH 534/890] HDFS-1019. Incorrect default values for delegation tokens in hdfs-default.xml
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437832/HDFS-1019-y20.1.patch
 Author: Jitendra Nath Pandey

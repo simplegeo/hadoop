@@ -1,7 +1,7 @@
 From 8424e32eb866d677f40a9446f9c4cf74972b751e Mon Sep 17 00:00:00 2001
 From: Chad Metcalf <chad@cloudera.com>
 Date: Thu, 18 Mar 2010 17:05:47 -0700
-Subject: [PATCH 229/887] HADOOP-6643. Set executable bit for python cloud scripts in the distribution
+Subject: [PATCH 229/890] HADOOP-6643. Set executable bit for python cloud scripts in the distribution
 
 Description: This needs to be set in the tar target.
 Reason: Required for the EC2 scripts.

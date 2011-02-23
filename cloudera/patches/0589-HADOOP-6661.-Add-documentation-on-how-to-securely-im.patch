@@ -1,7 +1,7 @@
 From 976302c14eeebc784e85d4af4746d45d39803a70 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 26 Mar 2010 11:24:22 -0700
-Subject: [PATCH 589/887] HADOOP-6661. Add documentation on how to securely impersonate other users
+Subject: [PATCH 589/890] HADOOP-6661. Add documentation on how to securely impersonate other users
 
 Patch: https://issues.apache.org/jira/secure/attachment/12439897/HADOOP-6661-y20.2.patch
 Author: Jitendra Nath Pandey

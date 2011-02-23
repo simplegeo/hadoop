@@ -1,7 +1,7 @@
 From 51f867aea0667d0191b730ea3abf114e75cafa4b Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:55:54 -0800
-Subject: [PATCH 079/887] MAPREDUCE-907. Sqoop should use more intelligent splits
+Subject: [PATCH 079/890] MAPREDUCE-907. Sqoop should use more intelligent splits
 
 Description: Sqoop should use the new split generation / InputFormat in <a href="http://issues.apache.org/jira/browse/MAPREDUCE-885" title="More efficient SQL queries for DBInputFormat"><del>MAPREDUCE-885</del></a>
 Reason: Performance / scalability improvement

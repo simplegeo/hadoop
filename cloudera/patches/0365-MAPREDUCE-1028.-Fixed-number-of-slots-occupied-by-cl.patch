@@ -1,7 +1,7 @@
 From 48bfdd9b2a6eac72ac42b0defe5e86501001a7ab Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 28 Sep 2009 13:54:07 -0700
-Subject: [PATCH 365/887] MAPREDUCE-1028. Fixed number of slots occupied by cleanup tasks to one irrespective of slot size for the job.
+Subject: [PATCH 365/890] MAPREDUCE-1028. Fixed number of slots occupied by cleanup tasks to one irrespective of slot size for the job.
 
 Patch: http://issues.apache.org/jira/secure/attachment/12420581/yhadoop-0.20-MR1028.patch
 Author: Ravi Gummadi

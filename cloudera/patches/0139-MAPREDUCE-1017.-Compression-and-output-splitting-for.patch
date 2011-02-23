@@ -1,7 +1,7 @@
 From e9b04609d88ed5d1af442ee950aa5dcd6646e830 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:22:08 -0800
-Subject: [PATCH 139/887] MAPREDUCE-1017. Compression and output splitting for Sqoop
+Subject: [PATCH 139/890] MAPREDUCE-1017. Compression and output splitting for Sqoop
 
 Description: Sqoop "direct mode" writing will generate a single large text file in HDFS. It is important to be able to compress this data before it reaches HDFS. Due to the difficulty in splitting compressed files in HDFS for use by MapReduce jobs, data should also be split at compression time.
 Reason: New feature

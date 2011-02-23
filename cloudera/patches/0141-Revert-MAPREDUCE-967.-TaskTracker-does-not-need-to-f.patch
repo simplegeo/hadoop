@@ -1,7 +1,7 @@
 From 4e7d205daa86d904614252101bb422664ab6d203 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:22:47 -0800
-Subject: [PATCH 141/887] Revert MAPREDUCE-967. TaskTracker does not need to fully unjar job jars
+Subject: [PATCH 141/890] Revert MAPREDUCE-967. TaskTracker does not need to fully unjar job jars
 
 Author: Todd Lipcon
 Ref: UNKNOWN

@@ -1,7 +1,7 @@
 From 0f0f7b996033179d70f3750b3d1d0ff4a1b1aef3 Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Wed, 5 Jan 2011 11:32:26 -0800
-Subject: [PATCH 767/887] CLOUDERA-BUILD. Fix documentation urls that use "current".
+Subject: [PATCH 767/890] CLOUDERA-BUILD. Fix documentation urls that use "current".
 
 Reason: Bug
 Author: Eli Collins

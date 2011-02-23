@@ -1,7 +1,7 @@
 From dd51c56ab63cb12bc207647f314ab99e1e8da32b Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 17 Feb 2011 16:37:05 -0800
-Subject: [PATCH 886/887] Amend HADOOP-7070. Fix spurious warning message when running on machine with no krb5.conf
+Subject: [PATCH 886/890] Amend HADOOP-7070. Fix spurious warning message when running on machine with no krb5.conf
 
 The issue is that UGI.initialize would call KerberosName.setConfiguration before setting
 its own flag to indicate it was initialized. Then, if there was no krb5.conf,

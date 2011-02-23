@@ -28,9 +28,9 @@ ifdef native_dir
 	JAVA_HOME=/usr/lib/jvm/java-6-sun ant -propertyfile  \
 	build.properties -propertyfile cloudera/build.properties -Dfusedfs=1 -Dcompile.native=true \
 	-Dhadoop.conf.dir=/etc/hadoop-0.20/conf \
-	-Dlibhdfs=1 -Dcompile.c++=true task-controller bin-package compile-contrib
+	-Dlibhdfs=1 -Dcompile.c++=true -Dcdh.maven=true task-controller bin-package compile-contrib
 else
-	JAVA_HOME=/usr/lib/jvm/java-6-sun ant -propertyfile build.properties -propertyfile cloudera/build.properties bin-package
+	JAVA_HOME=/usr/lib/jvm/java-6-sun ant -Dcdh.maven=true -propertyfile build.properties -propertyfile cloudera/build.properties bin-package
 endif
 	touch $@
 
@@ -38,7 +38,7 @@ clean:
 	dh_testdir
 	dh_testroot
 	rm -f build-arch-stamp build-indep-stamp build-stamp
-	ant clean
+	ant -Dcdh.maven=true clean
 
 	dh_clean
 

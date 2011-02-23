@@ -1,7 +1,7 @@
 From 6c2dc76b06cb9967d89e6ab94465e0668b921dfa Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 5 Nov 2009 14:46:23 -0800
-Subject: [PATCH 385/887] HADOOP-6343. Stack trace of any runtime exceptions should be recorded in the server logs.
+Subject: [PATCH 385/890] HADOOP-6343. Stack trace of any runtime exceptions should be recorded in the server logs.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12424150/HADOOP-6343.0-20.patch
 Author: Jitendra Nath Pandey

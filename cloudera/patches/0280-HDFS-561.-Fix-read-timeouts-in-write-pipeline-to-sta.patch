@@ -1,7 +1,7 @@
 From a30c033c1eed744948ddfddb82b81b06e12bba46 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 16 Apr 2010 15:19:08 -0700
-Subject: [PATCH 280/887] HDFS-561. Fix read timeouts in write pipeline to stage correctly
+Subject: [PATCH 280/890] HDFS-561. Fix read timeouts in write pipeline to stage correctly
 
 Description: Previously, the read timeout on the write pipeline was
              incorrectly calculated. This caused the client to detect

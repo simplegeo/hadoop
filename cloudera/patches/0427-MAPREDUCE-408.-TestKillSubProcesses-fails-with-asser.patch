@@ -1,7 +1,7 @@
 From 3b9ed4395593a6f67897126126e7c4c74a35c42c Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 15 Jan 2010 19:47:22 +0530
-Subject: [PATCH 427/887] MAPREDUCE-408. TestKillSubProcesses fails with assertion failure sometimes
+Subject: [PATCH 427/890] MAPREDUCE-408. TestKillSubProcesses fails with assertion failure sometimes
 
 Patch: https://issues.apache.org/jira/secure/attachment/12430404/MR-408.v1.1.y20.patch
 Author: Ravi Gummadi

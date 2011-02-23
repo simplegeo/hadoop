@@ -1,7 +1,7 @@
 From 807e918943e9f17d4ab7912bdb9cc90970c02ef6 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 16:59:52 -0800
-Subject: [PATCH 839/887] HADOOP-6859. Introduce additional statistics to FileSystem to track file system operations.
+Subject: [PATCH 839/890] HADOOP-6859. Introduce additional statistics to FileSystem to track file system operations.
 
 Author: Suresh Srinivas
 Ref: CDH-2622

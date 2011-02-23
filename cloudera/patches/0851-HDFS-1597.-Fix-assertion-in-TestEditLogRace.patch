@@ -1,7 +1,7 @@
 From bb004aae8abc4f7e772adda6a75f433cf7cb198d Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 19 Jan 2011 18:02:52 -0800
-Subject: [PATCH 851/887] HDFS-1597. Fix assertion in TestEditLogRace
+Subject: [PATCH 851/890] HDFS-1597. Fix assertion in TestEditLogRace
 
 Reason: Sporadic test failure
 Author: Todd Lipcon

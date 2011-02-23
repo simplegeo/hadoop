@@ -1,7 +1,7 @@
 From ecc1a3b745384b0f925cb6efc7b6775240ad9195 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 2 Aug 2010 17:47:05 -0700
-Subject: [PATCH 671/887] HDFS-1164. Fix problem in TestHdfsProxy when user running tests doesn't belong to 'users' group
+Subject: [PATCH 671/890] HDFS-1164. Fix problem in TestHdfsProxy when user running tests doesn't belong to 'users' group
 
 Author: Todd Lipcon
 Reason: fix broken unit test

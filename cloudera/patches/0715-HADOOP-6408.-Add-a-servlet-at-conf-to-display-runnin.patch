@@ -1,7 +1,7 @@
 From 78625c0dfb4e0f819f79ce29d215097e87790012 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 29 Sep 2010 22:44:25 -0700
-Subject: [PATCH 715/887] HADOOP-6408. Add a servlet at /conf to display running configuration
+Subject: [PATCH 715/890] HADOOP-6408. Add a servlet at /conf to display running configuration
 
 Reason: Easier debugging and support
 Author: Todd Lipcon

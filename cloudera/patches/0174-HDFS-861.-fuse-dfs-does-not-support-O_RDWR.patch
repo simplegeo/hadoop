@@ -1,7 +1,7 @@
 From 4ca1c78e1b257eefa10b5ed94479df8a6473d3e9 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:32:50 -0800
-Subject: [PATCH 174/887] HDFS-861. fuse-dfs does not support O_RDWR
+Subject: [PATCH 174/890] HDFS-861. fuse-dfs does not support O_RDWR
 
 Description: Some applications (for us, the big one is rsync) will open a file in read-write mode when it really only intends to read xor write (not both).  fuse-dfs should try to not fail until the application actually tries to write to a pre-existing file or read from a newly created file.
 Reason: bugfix

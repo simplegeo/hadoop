@@ -1,7 +1,7 @@
 From 35f87aef6d7cd4030644a1d454da2e0a6e2969c0 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:30:18 -0800
-Subject: [PATCH 165/887] MAPREDUCE-1310. CREATE TABLE statements for Hive do not correctly specify delimiters
+Subject: [PATCH 165/890] MAPREDUCE-1310. CREATE TABLE statements for Hive do not correctly specify delimiters
 
 Description: Imports to HDFS via Sqoop that also inject metadata into Hive do not correctly specify delimiters; using Hive to access the data results in rows being parsed as NULL characters. See <span class="nobr"><a href="http://getsatisfaction.com/cloudera/topics/sqoop_hive_import_giving_null_query_values">http://getsatisfaction.com/cloudera/topics/sqoop_hive_import_giving_null_query_values<sup><img class="rendericon" src="https://issues.apache.org/jira/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"/></sup></a></span> for an example bug report
 Reason: Bugfix

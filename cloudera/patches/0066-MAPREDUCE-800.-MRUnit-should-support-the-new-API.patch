@@ -1,7 +1,7 @@
 From 59677d22261974560117fa82e74d9a7f80f804d5 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:52:06 -0800
-Subject: [PATCH 066/887] MAPREDUCE-800. MRUnit should support the new API
+Subject: [PATCH 066/890] MAPREDUCE-800. MRUnit should support the new API
 
 Description: MRUnit's TestDriver implementations use the old org.apache.hadoop.mapred-based classes. TestDrivers and associated mock object implementations are required for org.apache.hadoop.mapreduce-based code.
 Reason: New feature (API Compatibility)

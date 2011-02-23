@@ -1,7 +1,7 @@
 From 24a779aa3f4ee27c596f26c0a524433422c91689 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 13 May 2010 19:08:04 -0700
-Subject: [PATCH 651/887] HADOOP-6760. WebServer shouldn't increase port number in case of negative port setting caused by Jetty's race
+Subject: [PATCH 651/890] HADOOP-6760. WebServer shouldn't increase port number in case of negative port setting caused by Jetty's race
 
 Patch: https://issues.apache.org/jira/secure/attachment/12444455/HADOOP-6760.0.20.patch
 Author: Konstantin Boudnik

@@ -1,7 +1,7 @@
 From 4a097b35bf1264a0606f2ebe410c45f16f900f03 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:42:05 -0800
-Subject: [PATCH 042/887] MAPREDUCE-705. User-configurable quote and delimiter characters for Sqoop records and record reparsing
+Subject: [PATCH 042/890] MAPREDUCE-705. User-configurable quote and delimiter characters for Sqoop records and record reparsing
 
 Description: Sqoop needs a mechanism for users to govern how fields are quoted and what delimiter characters separate fields and records. With delimiters providing an unambiguous format, a parse method can reconstitute the generated record data object from a text-based representation of the same record.
 Reason: New feature

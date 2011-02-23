@@ -1,7 +1,7 @@
 From 6f017db468a82e336a28f451c7d90bc225130094 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:47:33 -0800
-Subject: [PATCH 055/887] MAPREDUCE-840. DBInputFormat leaves open transaction
+Subject: [PATCH 055/890] MAPREDUCE-840. DBInputFormat leaves open transaction
 
 Description: DBInputFormat.getSplits() does not call connection.commit() after the COUNT query. This can leave an open transaction against the database which interferes with other connections to the same table.
 Reason: bugfix

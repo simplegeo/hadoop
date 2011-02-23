@@ -1,7 +1,7 @@
 From 98c55c28258aa6f42250569bd7fa431ac657bdbd Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 8 Oct 2010 17:07:56 -0700
-Subject: [PATCH 737/887] CLOUDERA-BUILD. Fix ownership of .out files when starting daemons as root
+Subject: [PATCH 737/890] CLOUDERA-BUILD. Fix ownership of .out files when starting daemons as root
 
 Author: Todd Lipcon
 ---

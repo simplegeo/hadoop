@@ -1,7 +1,7 @@
 From e3356ca6f8a2ee616f610da19fc141d7578a905d Mon Sep 17 00:00:00 2001
 From: Andrew Bayer <andrew.bayer@gmail.com>
 Date: Thu, 27 Jan 2011 15:55:01 -0800
-Subject: [PATCH 799/887] CLOUDERA-BUILD. Changes to support CDH Mavenization.
+Subject: [PATCH 799/890] CLOUDERA-BUILD. Changes to support CDH Mavenization.
 
 ---
  build.xml                                          |   42 ++---

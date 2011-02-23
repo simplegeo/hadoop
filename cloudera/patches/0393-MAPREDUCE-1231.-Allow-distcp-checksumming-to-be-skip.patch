@@ -1,7 +1,7 @@
 From 9fa324d4ff152e41e2afada5990d26b0ba296e17 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 27 Nov 2009 11:38:52 +0530
-Subject: [PATCH 393/887] MAPREDUCE-1231. Allow distcp checksumming to be skipped for faster startup time
+Subject: [PATCH 393/890] MAPREDUCE-1231. Allow distcp checksumming to be skipped for faster startup time
 
 Patch: https://issues.apache.org/jira/secure/attachment/12426265/mapred-1231-y20-v4.patch
 Author: Jothi Padmanabhan

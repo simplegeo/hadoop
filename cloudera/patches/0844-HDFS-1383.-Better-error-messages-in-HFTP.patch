@@ -1,7 +1,7 @@
 From 3d026b0a1706483a4860ad80fc17b103448ac1b0 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 16:59:52 -0800
-Subject: [PATCH 844/887] HDFS-1383. Better error messages in HFTP
+Subject: [PATCH 844/890] HDFS-1383. Better error messages in HFTP
 
 Author: Tsz Wo (Nicholas) Sze
 Ref: CDH-2622

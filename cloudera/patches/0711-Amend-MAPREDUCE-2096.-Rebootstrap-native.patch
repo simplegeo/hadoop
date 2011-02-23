@@ -1,7 +1,7 @@
 From 66e1ba8787ef26f68cc3ec125efd85a776748c36 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 29 Sep 2010 13:13:30 -0700
-Subject: [PATCH 711/887] Amend MAPREDUCE-2096. Rebootstrap native
+Subject: [PATCH 711/890] Amend MAPREDUCE-2096. Rebootstrap native
 
 Reason: Previous libtoolize wasn't run with --copy, so broken link was in repo
 Author: Todd Lipcon

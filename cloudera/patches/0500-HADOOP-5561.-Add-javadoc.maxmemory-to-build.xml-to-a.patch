@@ -1,7 +1,7 @@
 From 74cc8e6e9836a9daab24553b41efca110f50411a Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 25 Feb 2010 10:29:08 -0800
-Subject: [PATCH 500/887] HADOOP-5561. Add javadoc.maxmemory to build.xml to allow larger memory.
+Subject: [PATCH 500/890] HADOOP-5561. Add javadoc.maxmemory to build.xml to allow larger memory.
 
 Author: Jakob Homan
 Ref: YDH

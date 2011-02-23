@@ -1,7 +1,7 @@
 From b68a6a3c45b48d7681f5e8dc51571b161a90daec Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 22 Oct 2009 20:31:26 +0530
-Subject: [PATCH 377/887] MAPREDUCE-947. OutputCommitter should have an abortJob method
+Subject: [PATCH 377/890] MAPREDUCE-947. OutputCommitter should have an abortJob method
 
 Patch: https://issues.apache.org/jira/secure/attachment/12422899/mr-947-y20.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12423191/yhadoop20-bug-fix-947.patch

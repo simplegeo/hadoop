@@ -1,7 +1,7 @@
 From 216d29555d3fb62aca7362a5611bbc5ec7846b6a Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 16:59:52 -0800
-Subject: [PATCH 847/887] HDFS-599. Allow NameNode to have a separate port for service requests from client requests.
+Subject: [PATCH 847/890] HDFS-599. Allow NameNode to have a separate port for service requests from client requests.
 
 Reason: Allows port-based QoS to prioritize DN RPCs over client RPCs, also increases fairness
 Author: Dmytro Molkov

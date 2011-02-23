@@ -1,7 +1,7 @@
 From 0d4eb1a867620813affdfd3291cb618d6fce63ca Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 28 Jan 2011 10:33:02 -0800
-Subject: [PATCH 793/887] HADOOP-7122. Shell commands leak Timers when timeout expires
+Subject: [PATCH 793/890] HADOOP-7122. Shell commands leak Timers when timeout expires
 
 Reason: Thread leak seen on JT
 Author: Todd Lipcon

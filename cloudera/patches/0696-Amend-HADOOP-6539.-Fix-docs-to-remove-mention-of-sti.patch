@@ -1,7 +1,7 @@
 From a9adf89fd17aa3199c4c4f26d7a2d5f8ccffc84d Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 10 Sep 2010 16:15:12 -0700
-Subject: [PATCH 696/887] Amend HADOOP-6539. Fix docs to remove mention of sticky bit feature not backported
+Subject: [PATCH 696/890] Amend HADOOP-6539. Fix docs to remove mention of sticky bit feature not backported
 
 Author: Todd Lipcon
 Ref: CDH-648

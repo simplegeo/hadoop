@@ -1,3 +1,25 @@
+commit e4596923b767eb163e141e41d5058c983e95f885
+Author: Andrew Bayer <andrew.bayer@gmail.com>
+Date:   Wed Feb 23 09:53:00 2011 -0800
+
+    CLOUDERA-BUILD. Fixing reactor repo specification.
+
+commit 80e7cd19dd23f552efd0bdf1f8b0509aa6b4b3d3
+Author: Andrew Bayer <andrew.bayer@gmail.com>
+Date:   Mon Feb 21 10:32:23 2011 -0800
+
+    CLOUDERA-BUILD. Using local Maven repo as primary first in chain.
+    
+    Tweaks to pre-fetch dependencies into ~/.m2/repository before ant
+    build is run, with Ivy configured to get from there before trying
+    Maven Central.
+
+commit af111808a1edd957a56fe77d1ba2fdc4233cafda
+Author: Jenkins <dev-kitchen@cloudera.com>
+Date:   Sat Feb 19 00:28:02 2011 -0800
+
+    CLOUDERA-BUILD. Preparing for cdh3u0 development.
+
 commit 3aa7c91592ea1c53f3a913a581dbfcdfebe98bfe
 Author: Jenkins <dev-kitchen@cloudera.com>
 Date:   Sat Feb 19 00:27:52 2011 -0800

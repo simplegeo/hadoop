@@ -1,7 +1,7 @@
 From 8f3777a09e9cc3e260e68c1a177908204b0dad8c Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 19 Mar 2010 13:26:36 +0530
-Subject: [PATCH 574/887] MAPREDUCE-1417. Forrest documentation should be updated to reflect the changes in MAPREDUCE-744
+Subject: [PATCH 574/890] MAPREDUCE-1417. Forrest documentation should be updated to reflect the changes in MAPREDUCE-744
 
 Patch: https://issues.apache.org/jira/secure/attachment/12439247/MAPREDUCE-1417-20.patch
 Author: Ravi Gummadi

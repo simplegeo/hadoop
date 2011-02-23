@@ -1,7 +1,7 @@
 From a6670de0a1c4b03c293ae47d1595e8c33764aaa5 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:33:43 -0800
-Subject: [PATCH 025/887] HADOOP-5613. change S3Exception to checked exception
+Subject: [PATCH 025/890] HADOOP-5613. change S3Exception to checked exception
 
 Description: Currently the S3 filesystems can throw unchecked exceptions (S3Exception) which are not declared in the interface of FileSystem. These aren't caught by the various callers and can cause unpredictable behavior. IOExceptions are caught by most users of FileSystem since it is declared in the interface and hence is handled better.
 

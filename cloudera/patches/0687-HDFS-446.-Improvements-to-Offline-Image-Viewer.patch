@@ -1,7 +1,7 @@
 From cdb501c28dcdeec73ccf92a886bf943f665a5693 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 3 Sep 2010 17:09:58 -0700
-Subject: [PATCH 687/887] HDFS-446. Improvements to Offline Image Viewer.
+Subject: [PATCH 687/890] HDFS-446. Improvements to Offline Image Viewer.
 
 Author: Jakob Homan
 Ref: CDH-2106

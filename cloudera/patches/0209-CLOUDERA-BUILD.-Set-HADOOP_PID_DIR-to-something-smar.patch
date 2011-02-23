@@ -1,7 +1,7 @@
 From bd4e81234dd12fa9534577f0caa0db5c3d0a99fc Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:47:30 -0800
-Subject: [PATCH 209/887] CLOUDERA-BUILD. Set HADOOP_PID_DIR to something smarter than /tmp
+Subject: [PATCH 209/890] CLOUDERA-BUILD. Set HADOOP_PID_DIR to something smarter than /tmp
 
 Author: Chad Metcalf
 ---

@@ -1,7 +1,7 @@
 From 5d44075f3ac224bf9a259b0731035734d9c152a2 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 3 Feb 2011 09:23:55 -0800
-Subject: [PATCH 861/887] Ammend MAPREDUCE-2234. TaskTracker should fail on startup if log dir isn't writable
+Subject: [PATCH 861/890] Ammend MAPREDUCE-2234. TaskTracker should fail on startup if log dir isn't writable
 
 Reapply after MAPREDUCE-2178 backport.
 

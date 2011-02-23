@@ -1,7 +1,7 @@
 From b10afd0f9b75e7deb5045e19a9a954769c0925e6 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 26 Feb 2010 18:40:08 +0000
-Subject: [PATCH 564/887] HDFS-985. HDFS should issue multiple RPCs for listing a large directory
+Subject: [PATCH 564/890] HDFS-985. HDFS should issue multiple RPCs for listing a large directory
 
 Patch: http://issues.apache.org/jira/secure/attachment/12437088/iterativeLS_yahoo1.patc
 Patch: http://issues.apache.org/jira/secure/attachment/12437499/testFileStatus.patch

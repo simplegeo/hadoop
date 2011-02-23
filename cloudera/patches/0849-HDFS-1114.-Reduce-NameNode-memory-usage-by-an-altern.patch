@@ -1,7 +1,7 @@
 From 0d086cde04450cbb5a5f6d39a345aafcdadaa511 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 16:59:52 -0800
-Subject: [PATCH 849/887] HDFS-1114. Reduce NameNode memory usage by an alternate hash table
+Subject: [PATCH 849/890] HDFS-1114. Reduce NameNode memory usage by an alternate hash table
 
 Author: Tsz Wo (Nicholas) Sze
 Reason: reduce memory usage in the NameNode

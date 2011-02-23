@@ -1,7 +1,7 @@
 From 0c9d8c2dd9693f0a7317a139b5911a32c85aab61 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 1 Mar 2010 00:27:00 -0800
-Subject: [PATCH 523/887] HDFS-1005. Fsck security
+Subject: [PATCH 523/890] HDFS-1005. Fsck security
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437435/HDFS-1005-BP20.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12438474/HDFS-1005-BP20-1.patch

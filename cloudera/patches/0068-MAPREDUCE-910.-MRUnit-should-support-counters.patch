@@ -1,7 +1,7 @@
 From 074e824f5d3d2f6ab862083e6eb4b0df8c881bfc Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:52:27 -0800
-Subject: [PATCH 068/887] MAPREDUCE-910. MRUnit should support counters
+Subject: [PATCH 068/890] MAPREDUCE-910. MRUnit should support counters
 
 Description: incrCounter() is currently a dummy stub method in MRUnit that does nothing. Would be good for the mock reporter/context implementations to support counters.
 Reason: New feature

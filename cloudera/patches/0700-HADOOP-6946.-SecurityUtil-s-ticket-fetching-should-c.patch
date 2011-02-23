@@ -1,7 +1,7 @@
 From 6931d93bec73254f13ba08cbe49589a747eb399d Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 8 Sep 2010 21:51:47 -0400
-Subject: [PATCH 700/887] HADOOP-6946. SecurityUtil's ticket-fetching should call UGI.getCurrentUser rather than directly accessing JAAS
+Subject: [PATCH 700/890] HADOOP-6946. SecurityUtil's ticket-fetching should call UGI.getCurrentUser rather than directly accessing JAAS
 
 This fixes a bug where a daemon could call login() and thus set the loginUser(),
 and then still have a null Subject, leading to an inability to fetch TGTs.

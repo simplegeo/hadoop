@@ -1,7 +1,7 @@
 From bfa0b28baad26de8315ec1f9282728913863c3e7 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 10 Feb 2011 14:27:45 -0800
-Subject: [PATCH 816/887] Partial HADOOP-6965. Refactor getTGT and getRefreshTime out of anonymous class, add synchronized block around relogin
+Subject: [PATCH 816/890] Partial HADOOP-6965. Refactor getTGT and getRefreshTime out of anonymous class, add synchronized block around relogin
 
 Author: Jitendra Pandey
 Ref: CDH-2622

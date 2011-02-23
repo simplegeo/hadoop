@@ -1,7 +1,7 @@
 From 2c5115af8426e44b9de804b80fcc9502d64efadd Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 10 Feb 2011 15:16:56 -0800
-Subject: [PATCH 807/887] MAPREDUCE-1118. Enhance the JobTracker web-ui to ensure tabular columns are sortable, also added a /scheduler servlet to CapacityScheduler for enhanced UI for queue information.
+Subject: [PATCH 807/890] MAPREDUCE-1118. Enhance the JobTracker web-ui to ensure tabular columns are sortable, also added a /scheduler servlet to CapacityScheduler for enhanced UI for queue information.
 
 Author: Krishna Ramachandran
 Ref: CDH-2622

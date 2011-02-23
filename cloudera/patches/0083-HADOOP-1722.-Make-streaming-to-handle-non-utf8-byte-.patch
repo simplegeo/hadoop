@@ -1,7 +1,7 @@
 From b30fc99332c4a444d275731dac4b4245115d65b2 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:56:59 -0800
-Subject: [PATCH 083/887] HADOOP-1722. Make streaming to handle non-utf8 byte array
+Subject: [PATCH 083/890] HADOOP-1722. Make streaming to handle non-utf8 byte array
 
 Description: Right now, the streaming framework expects the output sof the steam process (mapper or reducer) are line <br/>
 oriented UTF-8 text. This limit makes it impossible to use those programs whose outputs may be non-UTF-8<br/>

@@ -1,7 +1,7 @@
 From 083a6a1cfb2a5198243aa82a020681ad62da5938 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:33:58 -0800
-Subject: [PATCH 178/887] HADOOP-6444. Support additional security group option in hadoop-ec2 script
+Subject: [PATCH 178/890] HADOOP-6444. Support additional security group option in hadoop-ec2 script
 
 Description: When deploying a hadoop cluster on ec2 alongside other services it is very useful to be able to specify additional (pre-existing) security groups to facilitate access control.  For example one could use this feature to add a cluster to a generic "hadoop" group, which authorizes hdfs access from instances outside the cluster.  Without such an option the access control for the security groups created by the script need to manually updated after cluster launch.
 Reason: Security improvement

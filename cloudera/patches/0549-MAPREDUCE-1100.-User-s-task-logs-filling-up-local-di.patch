@@ -1,7 +1,7 @@
 From 897cd8d3d578c3cee70f039050f3cdd800daafb1 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 10 Mar 2010 15:45:12 +0530
-Subject: [PATCH 549/887] MAPREDUCE-1100. User's task-logs filling up local disks on the TaskTrackers
+Subject: [PATCH 549/890] MAPREDUCE-1100. User's task-logs filling up local disks on the TaskTrackers
 
 Patch: https://issues.apache.org/jira/secure/attachment/12438394/patch-1100-fix-ydist.2.txt
 Author: Vinod K V

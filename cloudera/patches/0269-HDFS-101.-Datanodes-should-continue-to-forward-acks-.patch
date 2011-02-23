@@ -1,7 +1,7 @@
 From f5ace5f920bc16fd202a6e4a53fe0ffe0cb5045e Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@lipcon.org>
 Date: Thu, 20 May 2010 01:23:15 -0700
-Subject: [PATCH 269/887] HDFS-101. Datanodes should continue to forward acks until client stops pipeline.
+Subject: [PATCH 269/890] HDFS-101. Datanodes should continue to forward acks until client stops pipeline.
 
 Description: When one node in the pipeline dies, the datanodes in between the client
              and the dead node should stay alive and continue to forward acks until

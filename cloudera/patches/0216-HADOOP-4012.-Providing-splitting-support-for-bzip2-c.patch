@@ -1,7 +1,7 @@
 From bdf576aa69eeb56a954416f7c2fcbe0136f421bd Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:51:16 -0800
-Subject: [PATCH 216/887] HADOOP-4012. Providing splitting support for bzip2 compressed files
+Subject: [PATCH 216/890] HADOOP-4012. Providing splitting support for bzip2 compressed files
 
 Description: Hadoop assumes that if the input data is compressed, it can not be split (mainly due to the limitation of many codecs that they need the whole input stream to decompress successfully).  So in such a case, Hadoop prepares only one split per compressed file, where the lower split limit is at 0 while the upper limit is the end of the file.  The consequence of this decision is that, one compress file goes to a single mapper. Although it circumvents the limitation of codecs (as mentioned above) but reduces the parallelism substantially, as it was possible otherwise in case of splitting.
 

@@ -1,7 +1,7 @@
 From 89e10647b3c733c16124b648a6bfe187670390da Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 18 Mar 2010 17:02:47 -0700
-Subject: [PATCH 572/887] HADOOP-6642. Fix javac, javadoc, findbugs warnings
+Subject: [PATCH 572/890] HADOOP-6642. Fix javac, javadoc, findbugs warnings
 
 Patch: https://issues.apache.org/jira/secure/attachment/12439225/C6642-1y20.patch
 Author: Chris Douglas

@@ -1,7 +1,7 @@
 From a61718b87c36dbeddcc6f9917438f81ebdda0214 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:10:22 -0800
-Subject: [PATCH 110/887] HADOOP-6133. ReflectionUtils performance regression
+Subject: [PATCH 110/890] HADOOP-6133. ReflectionUtils performance regression
 
 Description: <a href="http://issues.apache.org/jira/browse/HADOOP-4187" title="Create a MapReduce-specific ReflectionUtils that handles JobConf and JobConfigurable"><del>HADOOP-4187</del></a> introduced extra calls to Class.forName in ReflectionUtils.setConf. This caused a fairly large performance regression. Attached is a microbenchmark that shows the following timings (ms) for 100M constructions of new instances:
 

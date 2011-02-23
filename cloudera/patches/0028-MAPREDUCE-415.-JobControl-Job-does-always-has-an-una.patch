@@ -1,7 +1,7 @@
 From 9cf8f0cb6ed744439d8e90e3ba376edb5d9521f3 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:36:22 -0800
-Subject: [PATCH 028/887] MAPREDUCE-415. JobControl Job does always has an unassigned name
+Subject: [PATCH 028/890] MAPREDUCE-415. JobControl Job does always has an unassigned name
 
 Description: When creating and adding org.apache.hadoop.mapred.jobcontrol.Job(s) they don't use the names specified in their respective JobConf files.  Instead it's just hardcoded to "unassigned".
 Reason: bugfix

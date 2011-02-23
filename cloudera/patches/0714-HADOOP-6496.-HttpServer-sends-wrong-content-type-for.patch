@@ -1,7 +1,7 @@
 From 91fa1dfdd74ebac1e88da1d3adb644cf5fe84e7a Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 29 Sep 2010 00:44:57 -0700
-Subject: [PATCH 714/887] HADOOP-6496. HttpServer sends wrong content-type for CSS files (and others)
+Subject: [PATCH 714/890] HADOOP-6496. HttpServer sends wrong content-type for CSS files (and others)
 
 Author: Todd Lipcon
 Reason: Fixes styling on web UIs

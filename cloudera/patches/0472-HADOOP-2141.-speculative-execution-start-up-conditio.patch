@@ -1,7 +1,7 @@
 From 176816d52d875d33877baba51294de5b1868d3aa Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sun, 14 Feb 2010 14:50:27 +0530
-Subject: [PATCH 472/887] HADOOP-2141. speculative execution start up condition based on completion time
+Subject: [PATCH 472/890] HADOOP-2141. speculative execution start up condition based on completion time
 
 Patch: https://issues.apache.org/jira/secure/attachment/12435253/hadoop-2141-yahoo-v1.4.8.patch (only test related changes)
 Author: Andy Konwinski

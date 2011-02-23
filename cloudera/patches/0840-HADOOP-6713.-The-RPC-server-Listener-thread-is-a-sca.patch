@@ -1,7 +1,7 @@
 From 66beb0bfe053b9c0fa02f7ac82310081fa6da2cd Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 16:59:52 -0800
-Subject: [PATCH 840/887] HADOOP-6713. The RPC server Listener thread is a scalability bottleneck.
+Subject: [PATCH 840/890] HADOOP-6713. The RPC server Listener thread is a scalability bottleneck.
 
 Author: Dmytro Molkov
 Ref: CDH-2622

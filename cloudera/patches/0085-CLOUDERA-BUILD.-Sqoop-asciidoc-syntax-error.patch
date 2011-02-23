@@ -1,7 +1,7 @@
 From e97883c5b9c389f82a6447e4cb1678c0a0ed83ba Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:57:19 -0800
-Subject: [PATCH 085/887] CLOUDERA-BUILD. Sqoop asciidoc syntax error
+Subject: [PATCH 085/890] CLOUDERA-BUILD. Sqoop asciidoc syntax error
 
 Author: Aaron Kimball
 ---

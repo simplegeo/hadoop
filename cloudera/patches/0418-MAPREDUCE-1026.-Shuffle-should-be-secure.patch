@@ -1,7 +1,7 @@
 From f9bf7f1aa9a663f09e3377671722e4bce0fa5f20 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 6 Jan 2010 13:53:05 -0800
-Subject: [PATCH 418/887] MAPREDUCE-1026. Shuffle should be secure
+Subject: [PATCH 418/890] MAPREDUCE-1026. Shuffle should be secure
 
 Patch: https://issues.apache.org/jira/secure/attachment/12429584/MR-1026-0_20.2.patch
 Author: Boris Shkolnik

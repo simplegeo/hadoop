@@ -1,7 +1,7 @@
 From 912eed1c5d50066e68700d2143b775914d7f8e54 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Thu, 17 Jun 2010 16:00:49 -0700
-Subject: [PATCH 260/887] MAPREDUCE-1489. DataDrivenDBInputFormat should not query the database when generating only one split
+Subject: [PATCH 260/890] MAPREDUCE-1489. DataDrivenDBInputFormat should not query the database when generating only one split
 
 Description: DataDrivenDBInputFormat runs a query to establish bounding values for each split it
 generates; but if it's going to generate only one split (mapreduce.job.maps == 1), then there's no

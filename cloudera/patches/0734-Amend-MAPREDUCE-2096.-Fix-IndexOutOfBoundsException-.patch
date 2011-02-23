@@ -1,7 +1,7 @@
 From 374e10963329ec08d861774d056d1c5ee673f4c8 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 8 Oct 2010 12:43:11 -0700
-Subject: [PATCH 734/887] Amend MAPREDUCE-2096. Fix IndexOutOfBoundsException truncating logs when tasks produced no log output
+Subject: [PATCH 734/890] Amend MAPREDUCE-2096. Fix IndexOutOfBoundsException truncating logs when tasks produced no log output
 
 Author: Todd Lipcon
 Ref: CDH-648

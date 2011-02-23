@@ -1,7 +1,7 @@
 From 675d02da77a6db7b98e8a30afda2926fe768fe3e Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 12 Jan 2010 15:43:25 -0800
-Subject: [PATCH 423/887] MAPREDUCE-181. Secure job submission
+Subject: [PATCH 423/890] MAPREDUCE-181. Secure job submission
 
 Patch: https://issues.apache.org/jira/secure/attachment/12430064/181.20.s.3.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12436083/jobclient.patch

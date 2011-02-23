@@ -1,7 +1,7 @@
 From af1598cf2f8ce26c43f74b0be684662287e34095 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 18:03:25 -0800
-Subject: [PATCH 808/887] HDFS-1101. TestDiskError should check all nodes in cluster for test case
+Subject: [PATCH 808/890] HDFS-1101. TestDiskError should check all nodes in cluster for test case
 
 Reason: Test failure
 Author: Chris Douglas

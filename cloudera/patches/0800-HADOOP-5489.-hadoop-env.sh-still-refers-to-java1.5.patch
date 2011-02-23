@@ -1,7 +1,7 @@
 From f40f6bef0808d34b0632bd759b7916946b6a500c Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Sun, 6 Feb 2011 14:01:28 -0800
-Subject: [PATCH 800/887] HADOOP-5489. hadoop-env.sh still refers to java1.5.
+Subject: [PATCH 800/890] HADOOP-5489. hadoop-env.sh still refers to java1.5.
 
 Reason: Bug
 Author: Steve Loughran

@@ -1,7 +1,7 @@
 From f04a321596a513e71354f2a6829b44e474077507 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 15:02:22 -0800
-Subject: [PATCH 095/887] HADOOP-5650. Namenode log that indicates why it is not leaving safemode may be confusing
+Subject: [PATCH 095/890] HADOOP-5650. Namenode log that indicates why it is not leaving safemode may be confusing
 
 Description: A namenode with a large number of datablocks is setup with dfs.safemode.threshold.pct set to 1.0. With a small number of unreported blocks, namenode prints the following as the reason for not leaving safe mode:<br/>
 <tt>The ratio of reported blocks 1.0000 has not reached the threshold 1.0000</tt>

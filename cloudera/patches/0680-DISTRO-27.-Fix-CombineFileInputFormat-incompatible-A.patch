@@ -1,7 +1,7 @@
 From 62661841b0687c431f4a066323b8ebb959b90612 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 1 Sep 2010 09:51:41 -0700
-Subject: [PATCH 680/887] DISTRO-27. Fix CombineFileInputFormat incompatible API change
+Subject: [PATCH 680/890] DISTRO-27. Fix CombineFileInputFormat incompatible API change
 
 - Revert CombineFileInputFormat to branch-0.20 r990003
 - Reapply following patches to old-API CombineFileInputFormat:

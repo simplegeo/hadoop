@@ -1,7 +1,7 @@
 From 5dcc0777f30ae030e20e5e1e3512a0ed6a90e7fc Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Sun, 6 Feb 2011 13:22:31 -0800
-Subject: [PATCH 804/887] DISTRO-90. FUSE can pick up the wrong libjvm.so.
+Subject: [PATCH 804/890] DISTRO-90. FUSE can pick up the wrong libjvm.so.
 
 Reason: Bug
 Author: Eli Collins

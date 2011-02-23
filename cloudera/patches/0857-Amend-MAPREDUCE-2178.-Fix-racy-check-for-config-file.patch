@@ -1,7 +1,7 @@
 From b8f3851b9604b8c1156c4a9df5c6a8b532676104 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 11 Feb 2011 12:11:15 -0800
-Subject: [PATCH 857/887] Amend MAPREDUCE-2178. Fix racy check for config file perms
+Subject: [PATCH 857/890] Amend MAPREDUCE-2178. Fix racy check for config file perms
 
 Reason: Security fix
 Author: Todd Lipcon

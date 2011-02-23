@@ -1,7 +1,7 @@
 From 000ab92d9544f483b3c59c0c100154badf8fd8a6 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 18 Aug 2009 09:07:19 -0700
-Subject: [PATCH 353/887] MAPREDUCE-467. Collect information about number of tasks succeeded / total per time unit for a tasktracker.
+Subject: [PATCH 353/890] MAPREDUCE-467. Collect information about number of tasks succeeded / total per time unit for a tasktracker.
 
 Author: Sharad Agarwal
 Reason: Useful operational feature

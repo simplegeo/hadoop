@@ -1,7 +1,7 @@
 From 936a67ba3b34dc8c8efd3df92d9e50309fafb8f6 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Mon, 29 Mar 2010 23:50:14 -0700
-Subject: [PATCH 236/887] MAPREDUCE-1460. Oracle support in DataDrivenDBInputFormat
+Subject: [PATCH 236/890] MAPREDUCE-1460. Oracle support in DataDrivenDBInputFormat
 
 Description: DataDrivenDBInputFormat does not work with Oracle due to various SQL syntax issues.
 Reason: Required for Sqoop/Oracle integration

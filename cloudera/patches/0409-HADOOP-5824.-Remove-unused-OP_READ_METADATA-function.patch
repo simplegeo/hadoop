@@ -1,7 +1,7 @@
 From 97b3aed79705201bfe0bea392ca19e3fc96cd81e Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 22 Dec 2009 12:26:46 -0800
-Subject: [PATCH 409/887] HADOOP-5824. Remove unused OP_READ_METADATA functionality from Datanode
+Subject: [PATCH 409/890] HADOOP-5824. Remove unused OP_READ_METADATA functionality from Datanode
 
 Patch: https://issues.apache.org/jira/secure/attachment/12428759/HADOOP-5824-0_20.1.patch
 Author: Kan Zhang

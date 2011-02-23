@@ -1,7 +1,7 @@
 From 06ceb079693292a41085af795c5b2bbc3fd10af2 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:34:24 -0800
-Subject: [PATCH 180/887] HADOOP-6454. Create setup.py for EC2 cloud scripts
+Subject: [PATCH 180/890] HADOOP-6454. Create setup.py for EC2 cloud scripts
 
 Description: This would make it easier to install the scripts.
 Reason: Installation improvement

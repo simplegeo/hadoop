@@ -1,7 +1,7 @@
 From ee57d93dde68a072985a44e025594bbb8c9340b0 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sat, 27 Feb 2010 16:41:17 +0530
-Subject: [PATCH 518/887] MAPREDUCE-1493. Authorization for job-history pages
+Subject: [PATCH 518/890] MAPREDUCE-1493. Authorization for job-history pages
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437336/MAPREDUCE-1493-20100227.3-ydist.txt
 Author: Vinod K V

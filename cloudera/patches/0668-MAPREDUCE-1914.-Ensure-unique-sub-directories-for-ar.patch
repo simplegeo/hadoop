@@ -1,7 +1,7 @@
 From d9b7bd0ff1b74a579761d1bd8d9130c7adb9e80c Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 2 Jul 2010 16:49:11 -0700
-Subject: [PATCH 668/887] MAPREDUCE-1914. Ensure unique sub-directories for artifacts in the DistributedCache are cleaned up.
+Subject: [PATCH 668/890] MAPREDUCE-1914. Ensure unique sub-directories for artifacts in the DistributedCache are cleaned up.
 
 Author: Dick King
 Reason: Without patch, distributed cache accumulates directories until reaching dirent limit (32K)

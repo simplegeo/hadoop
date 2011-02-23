@@ -1,7 +1,7 @@
 From 52f7ba19fcd24172f1576b7c19db1c45427fe85d Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 3 Mar 2010 18:53:33 -0800
-Subject: [PATCH 532/887] MAPREDUCE-1559. The DelegationTokenRenewal timer task should use the jobtracker's credentials to create the filesystem
+Subject: [PATCH 532/890] MAPREDUCE-1559. The DelegationTokenRenewal timer task should use the jobtracker's credentials to create the filesystem
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437821/mr-1559.patch
 Author: Devaraj Das

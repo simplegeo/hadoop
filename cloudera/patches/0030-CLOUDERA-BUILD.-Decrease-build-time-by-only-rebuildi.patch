@@ -1,7 +1,7 @@
 From 3ecb9c07279302d18f7367d49bcd98c4391cbb68 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:37:27 -0800
-Subject: [PATCH 030/887] CLOUDERA-BUILD. Decrease build time by only rebuilding the native code for each platform
+Subject: [PATCH 030/890] CLOUDERA-BUILD. Decrease build time by only rebuilding the native code for each platform
 
 Reason: build system improvement
 Author: Todd Lipcon

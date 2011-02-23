@@ -24,13 +24,13 @@
   <parent>
     <groupId>com.cloudera.cdh</groupId>
     <artifactId>hadoop-root</artifactId>
-    <version>3.0-beta-4</version>
+    <version>3.0-SNAPSHOT</version>
   </parent>
   
   <groupId>org.apache.hadoop</groupId>
   <artifactId>hadoop-tools</artifactId>
   <packaging>jar</packaging>
-  <version>0.20.2-CDH3B4</version>
+  <version>0.20.2-cdh3u0-SNAPSHOT</version>
   
   <name>hadoop-tools</name>
   
@@ -44,7 +44,7 @@
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-core</artifactId>
-      <version>0.20.2-CDH3B4</version>
+      <version>0.20.2-cdh3u0-SNAPSHOT</version>
     </dependency>
   </dependencies>
   

@@ -1,7 +1,7 @@
 From adbf650d942aff9d372289110672916fcb4574a7 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 19 Mar 2010 10:03:46 +0530
-Subject: [PATCH 573/887] HADOOP-6634. AccessControlList uses full-principal names to verify acls causing queue-acls to fail
+Subject: [PATCH 573/890] HADOOP-6634. AccessControlList uses full-principal names to verify acls causing queue-acls to fail
 
 Patch: https://issues.apache.org/jira/secure/attachment/12439238/HADOOP-6634-20100317-ydist.1.txt
 Author: Vinod K V

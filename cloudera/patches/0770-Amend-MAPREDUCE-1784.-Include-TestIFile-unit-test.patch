@@ -1,7 +1,7 @@
 From 5c54c0cae529a17fe30d17642b868f2609c0731b Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 13 Jan 2011 11:54:25 -0800
-Subject: [PATCH 770/887] Amend MAPREDUCE-1784. Include TestIFile unit test
+Subject: [PATCH 770/890] Amend MAPREDUCE-1784. Include TestIFile unit test
 
 Reason: missed in prior commit
 Author: Eli Collins

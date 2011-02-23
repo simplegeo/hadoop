@@ -1,7 +1,7 @@
 From 34ca2a5547398f9435a5d3d22603d0f7da420226 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:17:48 -0800
-Subject: [PATCH 127/887] MAPREDUCE-551. Add preemption to the fair scheduler
+Subject: [PATCH 127/890] MAPREDUCE-551. Add preemption to the fair scheduler
 
 Description: Task preemption is necessary in a multi-user Hadoop cluster for two reasons: users might submit long-running tasks by mistake (e.g. an infinite loop in a map program), or tasks may be long due to having to process large amounts of data. The Fair Scheduler (<a href="http://issues.apache.org/jira/browse/HADOOP-3746" title="A fair sharing job scheduler"><del>HADOOP-3746</del></a>) has a concept of guaranteed capacity for certain queues, as well as a goal of providing good performance for interactive jobs on average through fair sharing. Therefore, it will support preempting under two conditions:<br/>
 1) A job isn't getting its <em>guaranteed</em> share of the cluster for at least T1 seconds.<br/>

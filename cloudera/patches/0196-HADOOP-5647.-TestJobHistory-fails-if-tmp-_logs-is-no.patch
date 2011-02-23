@@ -1,7 +1,7 @@
 From f84830ae5e6c862cd0e2b8ebea57880e54c8a082 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:42:33 -0800
-Subject: [PATCH 196/887] HADOOP-5647. TestJobHistory fails if /tmp/_logs is not writable to. Testcase should not depend on /tmp
+Subject: [PATCH 196/890] HADOOP-5647. TestJobHistory fails if /tmp/_logs is not writable to. Testcase should not depend on /tmp
 
 Description: TestJobHistory sets /tmp as hadoop.job.history.user.location to check if the history file is created in that directory or not. If /tmp/_logs is already created by some other user, this test will fail because of not having write permission.
 Reason: Bugfix in test harness

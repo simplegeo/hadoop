@@ -1,7 +1,7 @@
 From e02e4b0320d45fe401470e72d62b73d18a3dd579 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sun, 31 Jan 2010 20:00:10 -0800
-Subject: [PATCH 446/887] HADOOP-6299. Use JAAS LoginContext for our login
+Subject: [PATCH 446/890] HADOOP-6299. Use JAAS LoginContext for our login
 
 Patch: https://issues.apache.org/jira/secure/attachment/12434362/HADOOP-6299-Y20.patch
 Author: Owen O'Malley

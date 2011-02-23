@@ -1,7 +1,7 @@
 From ef89b9ba5cacecaf5fd292b8cf2e6ebe347e85b7 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 19 Mar 2010 19:49:22 +0530
-Subject: [PATCH 577/887] MAPREDUCE-1609. TaskTracker.localizeJob should not set permissions on job log directory recursively
+Subject: [PATCH 577/890] MAPREDUCE-1609. TaskTracker.localizeJob should not set permissions on job log directory recursively
 
 Patch: https://issues.apache.org/jira/secure/attachment/12439278/MAPREDUCE-1609-20-1.patch
 Author: Amareshwari Sriramadasu

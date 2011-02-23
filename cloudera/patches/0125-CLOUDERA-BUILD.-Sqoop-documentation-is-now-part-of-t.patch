@@ -1,7 +1,7 @@
 From 975647b6c3a6644cabbd48bf14e074a0efda2cb9 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:17:15 -0800
-Subject: [PATCH 125/887] CLOUDERA-BUILD. Sqoop documentation is now part of the generated tarball. Updated the install script to reflect that change.
+Subject: [PATCH 125/890] CLOUDERA-BUILD. Sqoop documentation is now part of the generated tarball. Updated the install script to reflect that change.
 
 Author: Matt Massie
 ---

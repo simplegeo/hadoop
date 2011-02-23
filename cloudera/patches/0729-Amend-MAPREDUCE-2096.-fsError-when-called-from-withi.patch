@@ -1,7 +1,7 @@
 From 8bb561e0dc46995cca059b5de334b3b790b8ae17 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@lipcon.org>
 Date: Wed, 6 Oct 2010 17:29:17 -0700
-Subject: [PATCH 729/887] Amend MAPREDUCE-2096. fsError() when called from within MR should not do authorization
+Subject: [PATCH 729/890] Amend MAPREDUCE-2096. fsError() when called from within MR should not do authorization
 
 Reason: Fix incorrect authorization exception
 Author: Todd Lipcon / Devaraj Das

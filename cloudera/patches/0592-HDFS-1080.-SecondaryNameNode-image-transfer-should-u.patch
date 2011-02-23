@@ -1,7 +1,7 @@
 From 46bb5af895747384e2698de9a628b8bea86093d0 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 5 Apr 2010 16:28:56 -0700
-Subject: [PATCH 592/887] HDFS-1080. SecondaryNameNode image transfer should use the defined http address rather than local ip address
+Subject: [PATCH 592/890] HDFS-1080. SecondaryNameNode image transfer should use the defined http address rather than local ip address
 
 Patch: https://issues.apache.org/jira/secure/attachment/12440810/HDFS-1080-Y20.patch
 Author: Jakob Homan

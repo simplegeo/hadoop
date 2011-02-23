@@ -1,7 +1,7 @@
 From 1ee8f38881d450a818754c889038ef2ea8de865d Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 22 Feb 2010 23:47:58 +0000
-Subject: [PATCH 484/887] HADOOP-6558. archive does not work with distcp -update
+Subject: [PATCH 484/890] HADOOP-6558. archive does not work with distcp -update
 
 Patch: http://issues.apache.org/jira/secure/attachment/12436264/c6558_20100216b_y0.20.patch
 Author: Tsz Wo (Nicholas), SZE

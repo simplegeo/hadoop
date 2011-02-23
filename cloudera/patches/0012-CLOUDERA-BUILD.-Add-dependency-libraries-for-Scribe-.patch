@@ -1,7 +1,7 @@
 From aaeb69f8dda72a2e7aecacd622e99c00bc961efa Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:23:23 -0800
-Subject: [PATCH 012/887] CLOUDERA-BUILD. Add dependency libraries for Scribe/log4j
+Subject: [PATCH 012/890] CLOUDERA-BUILD. Add dependency libraries for Scribe/log4j
 
 Author: Todd Lipcon
 ---

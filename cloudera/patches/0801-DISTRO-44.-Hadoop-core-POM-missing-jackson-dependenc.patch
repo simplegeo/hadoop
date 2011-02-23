@@ -1,7 +1,7 @@
 From fa3b91e008607ff69bd2796f025680aacc97bd11 Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Sat, 5 Feb 2011 16:21:19 -0800
-Subject: [PATCH 801/887] DISTRO-44. Hadoop core POM missing jackson dependency.
+Subject: [PATCH 801/890] DISTRO-44. Hadoop core POM missing jackson dependency.
 
 Reason: Bug
 Author: Eli Collins

@@ -1,7 +1,7 @@
 From b48ee52a2c451a673765c67141448fa9cdc7e37a Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 13 Jan 2011 11:56:04 -0800
-Subject: [PATCH 769/887] HADOOP-7101. UserGroupInformation.getCurrentUser() fails when called from non-Hadoop JAAS context
+Subject: [PATCH 769/890] HADOOP-7101. UserGroupInformation.getCurrentUser() fails when called from non-Hadoop JAAS context
 
 Reason: Hadoop access fails running from within JMX-created JAAS context
 Author: Todd Lipcon

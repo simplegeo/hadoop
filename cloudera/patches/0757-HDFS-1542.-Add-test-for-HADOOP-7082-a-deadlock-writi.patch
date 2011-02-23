@@ -1,7 +1,7 @@
 From a3421bf550672c6615541e1f73a5e0add9fcc158 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 7 Jan 2011 13:59:13 -0800
-Subject: [PATCH 757/887] HDFS-1542. Add test for HADOOP-7082, a deadlock writing Configuration to HDFS.
+Subject: [PATCH 757/890] HDFS-1542. Add test for HADOOP-7082, a deadlock writing Configuration to HDFS.
 
 Author: Todd Lipcon
 Ref: CDH-2498

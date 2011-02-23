@@ -1,7 +1,7 @@
 From 9600765ec5d6c3cef9ab34ecb573cbb876acf7ee Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:21:01 -0800
-Subject: [PATCH 005/887] CLOUDERA-BUILD. Move install_hadoop.sh into hadoop repo
+Subject: [PATCH 005/890] CLOUDERA-BUILD. Move install_hadoop.sh into hadoop repo
 
 ---
  cloudera/install_hadoop.sh |  217 ++++++++++++++++++++++++++++++++++++++++++++

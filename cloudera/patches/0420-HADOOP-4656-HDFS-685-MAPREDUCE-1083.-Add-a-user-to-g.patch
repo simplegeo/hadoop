@@ -1,7 +1,7 @@
 From 0045482b56026f2858bdd983d09ab2a38e06bfa8 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 8 Jan 2010 18:49:32 -0800
-Subject: [PATCH 420/887] HADOOP-4656, HDFS-685, MAPREDUCE-1083. Add a user to groups mapping service
+Subject: [PATCH 420/890] HADOOP-4656, HDFS-685, MAPREDUCE-1083. Add a user to groups mapping service
 
 Patch: https://issues.apache.org/jira/secure/attachment/12429805/MR-1083-0_20.2.patch
 Author: Boris Shkolnik

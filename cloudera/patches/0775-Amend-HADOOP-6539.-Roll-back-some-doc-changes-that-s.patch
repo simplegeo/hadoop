@@ -1,7 +1,7 @@
 From a144f415c0e14d1b4d42c72ccf5c97dc8f8423e8 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 18 Jan 2011 14:17:56 -0800
-Subject: [PATCH 775/887] Amend HADOOP-6539. Roll back some doc changes that snuck in from trunk
+Subject: [PATCH 775/890] Amend HADOOP-6539. Roll back some doc changes that snuck in from trunk
 
 Reason: referenced features not backported into CDH3
 Author: Todd Lipcon

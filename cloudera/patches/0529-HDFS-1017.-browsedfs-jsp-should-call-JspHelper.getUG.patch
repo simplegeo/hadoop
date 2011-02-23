@@ -1,7 +1,7 @@
 From a4c9f34046770120a47ba864eaaaab0ecc952d86 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 3 Mar 2010 10:50:34 -0800
-Subject: [PATCH 529/887] HDFS-1017. browsedfs jsp should call JspHelper.getUGI rather than using createRemoteUser()
+Subject: [PATCH 529/890] HDFS-1017. browsedfs jsp should call JspHelper.getUGI rather than using createRemoteUser()
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437683/HDFS-1017-Y20-2.patch
 Author: Jakob Homan

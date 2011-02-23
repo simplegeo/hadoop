@@ -1,7 +1,7 @@
 From 364fd3118df3fb08ec239306fcc3b1762cb803d0 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 22 Feb 2010 17:11:21 +0530
-Subject: [PATCH 481/887] MAPREDUCE-1316. JobTracker holds stale references to retired jobs via unreported tasks
+Subject: [PATCH 481/890] MAPREDUCE-1316. JobTracker holds stale references to retired jobs via unreported tasks
 
 Patch: https://issues.apache.org/jira/secure/attachment/12436563/mapreduce-1316-y20s.patch
 Author: Amar Kamat

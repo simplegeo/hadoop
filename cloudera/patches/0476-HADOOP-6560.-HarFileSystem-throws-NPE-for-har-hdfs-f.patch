@@ -1,7 +1,7 @@
 From 205a6b6697f7a8934f684e08c187682d0f1d3b2d Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 18 Feb 2010 22:12:29 +0000
-Subject: [PATCH 476/887] HADOOP-6560. HarFileSystem throws NPE for har://hdfs-/foo
+Subject: [PATCH 476/890] HADOOP-6560. HarFileSystem throws NPE for har://hdfs-/foo
 
 Patch: http://issues.apache.org/jira/secure/attachment/12436045/c6560_20100212_y0.20.patch
 Author: Tsz Wo (Nicholas), SZE

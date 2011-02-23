@@ -1,7 +1,7 @@
 From 945dc2bdacb99855b66ce70b3024a6f0f8b9f2d6 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 23 Jun 2010 14:37:10 -0700
-Subject: [PATCH 664/887] HADOOP-6832. Add a static user plugin for web auth for external users.
+Subject: [PATCH 664/890] HADOOP-6832. Add a static user plugin for web auth for external users.
 
 Author: Owen O'Malley
 Reason: Security

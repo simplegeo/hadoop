@@ -1,7 +1,7 @@
 From e8c47124bb2ada5de0cfdf49150dd7296a41df71 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:29:04 -0800
-Subject: [PATCH 159/887] MAPREDUCE-1069. Implement Sqoop API refactoring
+Subject: [PATCH 159/890] MAPREDUCE-1069. Implement Sqoop API refactoring
 
 Description: Implement refactoring decisions outlined in <a href="http://issues.apache.org/jira/browse/MAPREDUCE-1036" title="An API Specification for Sqoop"><del>MAPREDUCE-1036</del></a>
 Reason: API compatibility

@@ -1,7 +1,7 @@
 From 4ba384d2b9f92f7300ce06b35a967e4edc3ba671 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 4 Jun 2010 15:10:00 -0700
-Subject: [PATCH 299/887] HADOOP-6762. Interrupting a thread performing an RPC should not hang that thread.
+Subject: [PATCH 299/890] HADOOP-6762. Interrupting a thread performing an RPC should not hang that thread.
 
 Description: Moves the sending of parameters for RPC calls to a separate
              thread, such that interrupting a thread that is making

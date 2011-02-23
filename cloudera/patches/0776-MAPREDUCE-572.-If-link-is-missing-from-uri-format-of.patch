@@ -1,7 +1,7 @@
 From 2b0e1289ccbdb9c6837e4ab11fdf73fa8980571c Mon Sep 17 00:00:00 2001
 From: Tom White <tom@cloudera.com>
 Date: Tue, 18 Jan 2011 13:33:40 -0800
-Subject: [PATCH 776/887] MAPREDUCE-572. If #link is missing from uri format of -cacheArchive then streaming does not throw error.
+Subject: [PATCH 776/890] MAPREDUCE-572. If #link is missing from uri format of -cacheArchive then streaming does not throw error.
 
 Reason: bug fix
 Author: Amareshwari Sriramadasu
