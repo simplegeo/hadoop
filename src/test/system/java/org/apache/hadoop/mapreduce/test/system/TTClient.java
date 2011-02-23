@@ -27,6 +27,11 @@ import org.apache.hadoop.mapred.JobTracker;
 import org.apache.hadoop.mapred.TaskTrackerStatus;
 import org.apache.hadoop.net.NetUtils;
 import org.apache.hadoop.test.system.process.RemoteProcess;
+import org.apache.commons.logging.LogFactory;
+import org.apache.commons.logging.Log;
+import org.apache.hadoop.mapred.TaskID;
+import org.apache.hadoop.mapred.TaskStatus;
+import org.apache.hadoop.mapred.UtilsForTests;
 
 /**
  * TaskTracker client for system tests. Assumption of the class is that the
@@ -37,6 +42,7 @@ import org.apache.hadoop.test.system.process.RemoteProcess;
 public class TTClient extends MRDaemonClient<TTProtocol> {
 
   TTProtocol proxy;
+  static final Log LOG = LogFactory.getLog(TTClient.class);
 
   public TTClient(Configuration conf, RemoteProcess daemon) 
       throws IOException {
@@ -86,5 +92,70 @@ public class TTClient extends MRDaemonClient<TTProtocol> {
   public TaskTrackerStatus getStatus() throws IOException {
     return getProxy().getStatus();
   }
+  
+  /**
+   * This methods provides the information on the particular task managed
+   * by a task tracker has stopped or not. 
+   * @param TaskID is id of the task to get the status.
+   * @throws IOException if there is an error. 
+   * @return true is stopped. 
+   */
+  public boolean isTaskStopped(TaskID tID) throws IOException {
+    int counter = 0;
+    if(tID != null && proxy.getTask(tID) != null) {
+      TaskStatus.State tState= proxy.getTask(tID).getTaskStatus().getRunState();
+      while ( counter < 60) {
+        if(tState != TaskStatus.State.RUNNING && 
+            tState != TaskStatus.State.UNASSIGNED) {
+          break;
+        }
+        UtilsForTests.waitFor(1000);
+        tState= proxy.getTask(tID).getTaskStatus().getRunState();
+        counter++;
+      }      
+    }
+    return (counter != 60)? true : false;
+  }
 
+  /**
+   * Waits till this Tasktracker daemon process is stopped <br/>
+   *
+   * @return void
+   * @throws IOException
+   */
+  public void waitForTTStop() throws IOException {
+    LOG.info("Waiting for Tasktracker:" + getHostName()
+        + " to stop.....");
+    while (true) {
+      try {
+        ping();
+        LOG.debug(getHostName() +" is waiting state to stop.");
+        UtilsForTests.waitFor(10000);
+      } catch (Exception exp) {
+        LOG.info("TaskTracker : " + getHostName() + " is stopped...");
+        break;
+      }
+    }
+  }
+
+  /**
+   * Waits till this Tasktracker daemon process is started <br/>
+   *
+   * @return void
+   * @throws IOException
+   */
+  public void waitForTTStart() throws
+     IOException {
+    LOG.debug("Waiting for Tasktracker:" + getHostName() + " to come up.");
+    while (true) {
+      try {
+        ping();
+        LOG.debug("TaskTracker : " + getHostName() + " is pinging...");
+        break;
+      } catch (Exception exp) {
+        LOG.info(getHostName() + " is waiting to come up.");
+        UtilsForTests.waitFor(10000);
+      }
+    }
+  }
 }

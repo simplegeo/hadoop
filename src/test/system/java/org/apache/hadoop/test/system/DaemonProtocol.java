@@ -23,8 +23,10 @@ import java.io.IOException;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileStatus;
+import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.io.Writable;
 import org.apache.hadoop.ipc.VersionedProtocol;
+import org.apache.hadoop.fs.permission.FsPermission;
 
 /**
  * RPC interface of a given Daemon.
@@ -75,6 +77,28 @@ public interface DaemonProtocol extends VersionedProtocol{
    *         IOException see specific implementation
    */
   FileStatus getFileStatus(String path, boolean local) throws IOException;
+
+  /**
+   * Create a file with given permissions in a file system.
+   * @param path - source path where the file has to create.
+   * @param fileName - file name.
+   * @param permission - file permissions.
+   * @param local - identifying the path whether its local or not.
+   * @throws IOException - if an I/O error occurs.
+   */
+  void createFile(String path, String fileName, 
+      FsPermission permission, boolean local) throws IOException;
+   
+  /**
+   * Create a folder with given permissions in a file system.
+   * @param path - source path where the file has to be creating.
+   * @param folderName - folder name.
+   * @param permission - folder permissions.
+   * @param local - identifying the path whether its local or not.
+   * @throws IOException - if an I/O error occurs.
+   */
+  public void createFolder(String path, String folderName, 
+      FsPermission permission, boolean local) throws IOException;
 
   /**
    * List the statuses of the files/directories in the given path if the path is
@@ -147,12 +171,12 @@ public interface DaemonProtocol extends VersionedProtocol{
    * <b><i>Please note that search spans across all previous messages of
    * Daemon, so better practice is to get previous counts before an operation
    * and then re-check if the sequence of action has caused any problems</i></b>
-   * @param pattern to look for in the damon's log file
-   * @param List of exceptions to ignore
+   * @param pattern to look for in the daemon's log file
+   * @param list Exceptions that will be ignored from log file. 
    * @return number of times the pattern if found in log file.
    * @throws IOException in case of errors
    */
-  int getNumberOfMatchesInLogFile(String pattern,String[] list) 
+  int getNumberOfMatchesInLogFile(String pattern, String[] list) 
       throws IOException;
 
   /**
@@ -162,4 +186,21 @@ public interface DaemonProtocol extends VersionedProtocol{
    * @throws IOException in case of errors
    */
   String getDaemonUser() throws IOException;
+  
+  /**
+   * It uses for suspending the process.
+   * @param pid process id.
+   * @return true if the process is suspended otherwise false.
+   * @throws IOException if an I/O error occurs.
+   */
+  boolean suspendProcess(String pid) throws IOException;
+
+  /**
+   * It uses for resuming the suspended process.
+   * @param pid process id
+   * @return true if suspended process is resumed otherwise false.
+   * @throws IOException if an I/O error occurs.
+   */
+  boolean resumeProcess(String pid) throws IOException;
+
 }

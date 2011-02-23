@@ -18,10 +18,18 @@
 
 package org.apache.hadoop.mapreduce.test.system;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.StringTokenizer;
 
 import junit.framework.Assert;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileStatus;
 import org.apache.hadoop.fs.Path;
@@ -30,13 +38,10 @@ import org.apache.hadoop.mapred.JobConf;
 import org.apache.hadoop.mapred.JobStatus;
 import org.apache.hadoop.mapred.JobTracker;
 import org.apache.hadoop.mapred.RunningJob;
+import org.apache.hadoop.mapred.TaskStatus;
+import org.apache.hadoop.mapred.UtilsForTests;
 import org.apache.hadoop.mapreduce.JobID;
 import org.apache.hadoop.test.system.process.RemoteProcess;
-import org.apache.hadoop.mapred.TaskStatus;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import org.apache.hadoop.mapreduce.test.system.TaskInfo;
-import static org.junit.Assert.*;
 
 /**
  * JobTracker client for system tests.
@@ -164,17 +169,6 @@ public class JTClient extends MRDaemonClient<JTProtocol> {
           org.apache.hadoop.mapred.JobID.downgrade(id));
     }
     verifyJobDetails(id);
-    JobInfo jobInfo = getJobInfo(id);
-    if(jobInfo != null) {
-      while(!jobInfo.isHistoryFileCopied()) {
-        Thread.sleep(1000);
-        LOG.info(id+" waiting for history file to copied");
-        jobInfo = getJobInfo(id);
-        if(jobInfo == null) {
-          break;
-        }
-      }
-    }
     verifyJobHistory(id);
   }
 
@@ -325,5 +319,98 @@ public class JTClient extends MRDaemonClient<JTProtocol> {
           "when job is completed" , st);
     }
     LOG.info("Verified the job history for the jobId : " + jobId);
+  }
+
+  /**
+   * The method provides the information on the job has stopped or not
+   * @return indicates true if the job has stopped false otherwise.
+   * @param job id has the information of the running job.
+   * @throw IOException is thrown if the job info cannot be fetched.   
+   */
+  public boolean isJobStopped(JobID id) throws IOException{
+    int counter = 0;
+    JobInfo jInfo = getProxy().getJobInfo(id);
+    if(jInfo != null ) {
+      while (counter < 60) {
+        if (jInfo.getStatus().isJobComplete()) {
+          break;
+        }
+        UtilsForTests.waitFor(1000);
+        jInfo = getProxy().getJobInfo(id);
+        counter ++;
+      }
+    }
+    return (counter != 60)? true : false;
+  }
+
+  /**
+   * It uses to check whether job is started or not.
+   * @param id job id
+   * @return true if job is running.
+   * @throws IOException if an I/O error occurs.
+   */
+  public boolean isJobStarted(JobID id) throws IOException {
+    JobInfo jInfo = getJobInfo(id);
+    int counter = 0;
+    while (counter < 60) {
+      if (jInfo.getStatus().getRunState() == JobStatus.RUNNING) {
+        break;
+      } else {
+        UtilsForTests.waitFor(1000);
+        jInfo = getJobInfo(jInfo.getID());
+        Assert.assertNotNull("Job information is null",jInfo);
+      }
+      counter++;
+    }
+    return (counter != 60)? true : false ;
+  }
+
+  /**
+   * It uses to check whether task is started or not.
+   * @param taskInfo task information
+   * @return true if task is running.
+   * @throws IOException if an I/O error occurs.
+   */
+  public boolean isTaskStarted(TaskInfo taskInfo) throws IOException { 
+    JTProtocol wovenClient = getProxy();
+    int counter = 0;
+    while (counter < 60) {
+      if (taskInfo.getTaskStatus().length > 0) {
+        if (taskInfo.getTaskStatus()[0].getRunState() == 
+            TaskStatus.State.RUNNING) {
+          break;
+        }
+      }
+      UtilsForTests.waitFor(1000);
+      taskInfo = wovenClient.getTaskInfo(taskInfo.getTaskID());
+      counter++;
+    }
+    return (counter != 60)? true : false;
+  }
+  /**
+   * Get the jobtracker log files as pattern.
+   * @return String - Jobtracker log file pattern.
+   * @throws IOException - if I/O error occurs.
+   */
+  public String getJobTrackerLogFilePattern() throws IOException  {
+    return getProxy().getFilePattern();
+  }
+
+  /**
+   * It uses to get the job summary details of given job id. .
+   * @param jobID - job id
+   * @return HashMap -the job summary details as map.
+   * @throws IOException if any I/O error occurs.
+   */
+  public HashMap<String,String> getJobSummary(JobID jobID)
+      throws IOException {
+    String output = getProxy().getJobSummaryInfo(jobID);
+    StringTokenizer strToken = new StringTokenizer(output,",");
+    HashMap<String,String> mapcollect = new HashMap<String,String>();
+    while(strToken.hasMoreTokens()) {
+      String keypair = strToken.nextToken();
+      mapcollect.put(keypair.split("=")[0], keypair.split("=")[1]);
+    }
+    return mapcollect;
   }
 }

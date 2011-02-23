@@ -237,6 +237,11 @@
   before delegating them to the job history.</td>
 </tr>
 <tr>
+<td><a name="mapreduce.reduce.input.limit">mapreduce.reduce.input.limit</a></td><td>-1</td><td>The limit on the input size of the reduce. If the estimated
+  input size of the reduce is greater than this value, job is failed. A
+  value of -1 means that there is no limit set. </td>
+</tr>
+<tr>
 <td><a name="mapred.job.tracker.retiredjobs.cache.size">mapred.job.tracker.retiredjobs.cache.size</a></td><td>1000</td><td>The number of retired job status to keep in the cache.
   </td>
 </tr>
@@ -281,6 +286,64 @@
   
   Note: mapred.child.ulimit must be greater than or equal to the -Xmx passed to
   JavaVM, else the VM might not start. 
+  </td>
+</tr>
+<tr>
+<td><a name="mapred.cluster.map.memory.mb">mapred.cluster.map.memory.mb</a></td><td>-1</td><td>The size, in terms of virtual memory, of a single map slot 
+  in the Map-Reduce framework, used by the scheduler. 
+  A job can ask for multiple slots for a single map task via 
+  mapred.job.map.memory.mb, upto the limit specified by 
+  mapred.cluster.max.map.memory.mb, if the scheduler supports the feature. 
+  The value of -1 indicates that this feature is turned off.
+  </td>
+</tr>
+<tr>
+<td><a name="mapred.cluster.reduce.memory.mb">mapred.cluster.reduce.memory.mb</a></td><td>-1</td><td>The size, in terms of virtual memory, of a single reduce slot 
+  in the Map-Reduce framework, used by the scheduler. 
+  A job can ask for multiple slots for a single reduce task via 
+  mapred.job.reduce.memory.mb, upto the limit specified by 
+  mapred.cluster.max.reduce.memory.mb, if the scheduler supports the feature. 
+  The value of -1 indicates that this feature is turned off.
+  </td>
+</tr>
+<tr>
+<td><a name="mapred.cluster.max.map.memory.mb">mapred.cluster.max.map.memory.mb</a></td><td>-1</td><td>The maximum size, in terms of virtual memory, of a single map 
+  task launched by the Map-Reduce framework, used by the scheduler. 
+  A job can ask for multiple slots for a single map task via 
+  mapred.job.map.memory.mb, upto the limit specified by 
+  mapred.cluster.max.map.memory.mb, if the scheduler supports the feature. 
+  The value of -1 indicates that this feature is turned off.
+  </td>
+</tr>
+<tr>
+<td><a name="mapred.cluster.max.reduce.memory.mb">mapred.cluster.max.reduce.memory.mb</a></td><td>-1</td><td>The maximum size, in terms of virtual memory, of a single reduce 
+  task launched by the Map-Reduce framework, used by the scheduler. 
+  A job can ask for multiple slots for a single reduce task via 
+  mapred.job.reduce.memory.mb, upto the limit specified by 
+  mapred.cluster.max.reduce.memory.mb, if the scheduler supports the feature. 
+  The value of -1 indicates that this feature is turned off.
+  </td>
+</tr>
+<tr>
+<td><a name="mapred.job.map.memory.mb">mapred.job.map.memory.mb</a></td><td>-1</td><td>The size, in terms of virtual memory, of a single map task 
+  for the job.
+  A job can ask for multiple slots for a single map task, rounded up to the 
+  next multiple of mapred.cluster.map.memory.mb and upto the limit 
+  specified by mapred.cluster.max.map.memory.mb, if the scheduler supports 
+  the feature. 
+  The value of -1 indicates that this feature is turned off iff 
+  mapred.cluster.map.memory.mb is also turned off (-1).
+  </td>
+</tr>
+<tr>
+<td><a name="mapred.job.reduce.memory.mb">mapred.job.reduce.memory.mb</a></td><td>-1</td><td>The size, in terms of virtual memory, of a single reduce task 
+  for the job.
+  A job can ask for multiple slots for a single map task, rounded up to the 
+  next multiple of mapred.cluster.reduce.memory.mb and upto the limit 
+  specified by mapred.cluster.max.reduce.memory.mb, if the scheduler supports 
+  the feature. 
+  The value of -1 indicates that this feature is turned off iff
+  mapred.cluster.reduce.memory.mb is also turned off (-1).  
   </td>
 </tr>
 <tr>
@@ -409,6 +472,10 @@
 <td><a name="mapred.userlog.retain.hours">mapred.userlog.retain.hours</a></td><td>24</td><td>The maximum time, in hours, for which the user-logs are to be 
                retained after the job completion.
   </td>
+</tr>
+<tr>
+<td><a name="mapred.user.jobconf.limit">mapred.user.jobconf.limit</a></td><td>5242880</td><td>The maximum allowed size of the user jobconf. The 
+  default is set to 5 MB</td>
 </tr>
 <tr>
 <td><a name="mapred.hosts">mapred.hosts</a></td><td></td><td>Names a file that contains the list of nodes that may
@@ -604,6 +671,13 @@
     operations like viewing the job-details (See mapreduce.job.acl-view-job)
     or for modifying the job (See mapreduce.job.acl-modify-job) using
     Map/Reduce APIs, RPCs or via the console and web user interfaces.
+  </td>
+</tr>
+<tr>
+<td><a name="mapred.queue.default.state">mapred.queue.default.state</a></td><td>RUNNING</td><td>
+   This values defines the state , default queue is in.
+   the values can be either "STOPPED" or "RUNNING"
+   This value can be changed at runtime.
   </td>
 </tr>
 <tr>

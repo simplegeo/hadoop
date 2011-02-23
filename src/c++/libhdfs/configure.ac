@@ -25,6 +25,11 @@ AC_PREFIX_DEFAULT([`pwd`/../install])
 AM_INIT_AUTOMAKE(foreign no-dist)
 AC_CONFIG_FILES(Makefile)
 
+# Dont generate rules to re-automake if timestamps are off
+# since we check in the generated files and revision control
+# doesn't track timestamps
+AM_MAINTAINER_MODE
+
 LT_INIT
  
 AC_CONFIG_MACRO_DIR([m4])

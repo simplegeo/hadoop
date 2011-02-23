@@ -18,7 +18,7 @@ org.apache.hadoop.security.UserGroupInformation
     <TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
     <TABLE summary="Navigation bar" BORDER="0" CELLPADDING="0" CELLSPACING="3">
     <TR ALIGN="center" VALIGN="top">
-      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../../api/org/apache/hadoop/security/UserGroupInformation.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>hadoop 0.20.2+791</tt></B></FONT></A>&nbsp;</TD>
+      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../../api/org/apache/hadoop/security/UserGroupInformation.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>hadoop 0.20.2-CDH3B4</tt></B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="changes-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="pkg_org.apache.hadoop.security.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
@@ -129,6 +129,13 @@ Class org.apache.hadoop.security.<A HREF="../../api/org/apache/hadoop/security/U
   <nobr><code>boolean</code>&nbsp;<A HREF="../../api/org/apache/hadoop/security/UserGroupInformation.html#addTokenIdentifier(org.apache.hadoop.security.token.TokenIdentifier)" target="_top"><tt>addTokenIdentifier</tt></A>(<code>TokenIdentifier</code>)</nobr>
   </TD>
   <TD VALIGN="TOP">Add a TokenIdentifier to this UGI.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.security.UserGroupInformation.checkTGTAndReloginFromKeytab_added()"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../api/org/apache/hadoop/security/UserGroupInformation.html#checkTGTAndReloginFromKeytab()" target="_top"><tt>checkTGTAndReloginFromKeytab</tt></A>()</nobr>
+  </TD>
+  <TD VALIGN="TOP">Re-login a user from keytab if TGT is expired or is close to expiry.</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
@@ -394,7 +401,7 @@ Changed from abstract to non-abstract.
     <TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
     <TABLE summary="Navigation bar" BORDER="0" CELLPADDING="0" CELLSPACING="3">
     <TR ALIGN="center" VALIGN="top">
-      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../../api/org/apache/hadoop/security/UserGroupInformation.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>hadoop 0.20.2+791</tt></B></FONT></A>&nbsp;</TD>
+      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../../api/org/apache/hadoop/security/UserGroupInformation.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>hadoop 0.20.2-CDH3B4</tt></B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="changes-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="pkg_org.apache.hadoop.security.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>

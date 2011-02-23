@@ -1,7 +1,7 @@
 From 32330fbadb4aed16627397979b90d52f2474ef38 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Mon, 29 Mar 2010 15:50:20 -0700
-Subject: [PATCH 232/791] MAPREDUCE-1423. Improve performance of CombineFileInputFormat when multiple pools are configured
+Subject: [PATCH 232/887] MAPREDUCE-1423. Improve performance of CombineFileInputFormat when multiple pools are configured
 
 Description: I have a map-reduce job that is using CombineFileInputFormat. It has configured 10000
 pools and 30000 files. The time to create the splits takes more than an hour. The reaosn being that

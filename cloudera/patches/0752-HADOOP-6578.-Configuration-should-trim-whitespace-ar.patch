@@ -1,7 +1,7 @@
-From 1064a3bcc6115fea0255c8461a7ce4b9712b36ef Mon Sep 17 00:00:00 2001
+From f9f9182ecf6d208fd28b23941b5e851e1efedec7 Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Mon, 3 Jan 2011 21:35:29 -0800
-Subject: [PATCH 752/791] HADOOP-6578. Configuration should trim whitespace around a lot of value types.
+Subject: [PATCH 752/887] HADOOP-6578. Configuration should trim whitespace around a lot of value types.
 
 Reason: Improvement
 Author: Michele Catasta

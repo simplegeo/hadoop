@@ -1,7 +1,7 @@
 From 6e467c42d62aafd00fd2f38269806680427631c8 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Thu, 17 Jun 2010 18:50:47 -0700
-Subject: [PATCH 262/791] MAPREDUCE-1213. TaskTrackers restart is very slow because it deletes distributed cache directory synchronously
+Subject: [PATCH 262/887] MAPREDUCE-1213. TaskTrackers restart is very slow because it deletes distributed cache directory synchronously
 
 Description: We are seeing that when we restart a tasktracker, it tries to recursively delete all
 the file in the distributed cache. It invoked FileUtil.fullyDelete() which is very very slow. This

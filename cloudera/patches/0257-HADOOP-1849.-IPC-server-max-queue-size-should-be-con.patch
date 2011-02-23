@@ -1,7 +1,7 @@
 From e95781032b5d886aa6583cab1306025fe372babf Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Tue, 25 May 2010 13:20:00 -0700
-Subject: [PATCH 257/791] HADOOP-1849. IPC server max queue size should be configurable.
+Subject: [PATCH 257/887] HADOOP-1849. IPC server max queue size should be configurable.
 
 Description: Currently max queue size for IPC server is set to (100 *
 handlers). Usually when RPC failures are observed (e.g. HADOOP-1763),

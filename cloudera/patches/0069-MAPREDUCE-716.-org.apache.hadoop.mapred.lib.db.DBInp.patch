@@ -1,7 +1,7 @@
 From e39ae9d017e89e4df193b1f8075184320230499b Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:52:45 -0800
-Subject: [PATCH 069/791] MAPREDUCE-716. org.apache.hadoop.mapred.lib.db.DBInputformat not working with oracle
+Subject: [PATCH 069/887] MAPREDUCE-716. org.apache.hadoop.mapred.lib.db.DBInputformat not working with oracle
 
 Description: Applied "trunk" version of the patch after incorporating
 HADOOP-4687's move of DBInputFormat-related files. (Prior patch was 0.20-branch

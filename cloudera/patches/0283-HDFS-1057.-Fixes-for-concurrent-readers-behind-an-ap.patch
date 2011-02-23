@@ -1,7 +1,7 @@
 From 07711a4ea3edd1a504eb9bbb13c93d5573620d34 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 3 May 2010 12:04:49 -0700
-Subject: [PATCH 283/791] HDFS-1057. Fixes for concurrent readers behind an appended file
+Subject: [PATCH 283/887] HDFS-1057. Fixes for concurrent readers behind an appended file
 
 Description: Allows a client to read a file while it is still being
              written by a writer, so long as the writer has called

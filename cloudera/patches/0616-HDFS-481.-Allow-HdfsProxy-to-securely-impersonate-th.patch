@@ -1,7 +1,7 @@
 From cb39a8280712bb507e159151de5e62895d79268d Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 20 Apr 2010 01:01:07 +0530
-Subject: [PATCH 616/791] HDFS-481. Allow HdfsProxy to securely impersonate the real user
+Subject: [PATCH 616/887] HDFS-481. Allow HdfsProxy to securely impersonate the real user
 
 Patch: https://issues.apache.org/jira/secure/attachment/12442210/HDFS-481-NEW.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12442280/HDFS-481-bp-y20s.patch

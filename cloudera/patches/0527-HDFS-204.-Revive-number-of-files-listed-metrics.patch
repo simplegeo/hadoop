@@ -1,7 +1,7 @@
 From d763323e21122018c746515655c9fdff00547635 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 3 Mar 2010 00:36:08 +0000
-Subject: [PATCH 527/791] HDFS-204. Revive number of files listed metrics
+Subject: [PATCH 527/887] HDFS-204. Revive number of files listed metrics
 
 Patch: http://issues.apache.org/jira/secure/attachment/12437576/getFileNum-yahoo20.patch
 Author: Jitendra Nath Pandey

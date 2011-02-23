@@ -1,7 +1,7 @@
-From 3e3dd5754bb824bd008a2e73f795761984a18ef2 Mon Sep 17 00:00:00 2001
+From 5b2e26fd1cfa592931dc9606d6cb81aaf9a5712d Mon Sep 17 00:00:00 2001
 From: Tom White <tom@cloudera.com>
 Date: Mon, 10 Jan 2011 16:31:24 -0800
-Subject: [PATCH 762/791] HADOOP-5170. Reverted: "Set max map/reduce tasks on a per-job basis, either per-node or cluster-wide"
+Subject: [PATCH 762/887] HADOOP-5170. Reverted: "Set max map/reduce tasks on a per-job basis, either per-node or cluster-wide"
 
 Reason: Patch not accepted upstream. See MAPREDUCE-698 and MAPREDUCE-704.
 Author: Tom White

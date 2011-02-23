@@ -1,7 +1,7 @@
 From a9847d0ea9f695dca2d3dca6e81a8cd1f29665fc Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 25 Feb 2010 18:25:29 -0800
-Subject: [PATCH 503/791] MAPREDUCE-1532. Delegation token is obtained as the superuser
+Subject: [PATCH 503/887] MAPREDUCE-1532. Delegation token is obtained as the superuser
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437096/1532-bp20.4.patch
 Author: Devaraj Das

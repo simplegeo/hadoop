@@ -1,7 +1,7 @@
 From ba1b824bfccac3386041eab7dbf29f5c7d4b8662 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sat, 20 Mar 2010 15:22:59 -0700
-Subject: [PATCH 584/791] HADOOP-6649. The login object should be moved to the subject in the UGI.
+Subject: [PATCH 584/887] HADOOP-6649. The login object should be moved to the subject in the UGI.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12439344/HADOOP-6649-y20.1.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12439391/HADOOP-6649-y20.1.1.patch

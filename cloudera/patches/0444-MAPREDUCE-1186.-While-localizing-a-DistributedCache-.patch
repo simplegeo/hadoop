@@ -1,7 +1,7 @@
 From 662c95fb0e8b2aaefb64362119aef66a04268eb1 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 27 Jan 2010 21:58:11 +0530
-Subject: [PATCH 444/791] MAPREDUCE-1186. While localizing a DistributedCache file, TT sets permissions recursively on the whole base-dir
+Subject: [PATCH 444/887] MAPREDUCE-1186. While localizing a DistributedCache file, TT sets permissions recursively on the whole base-dir
 
 Patch: https://issues.apache.org/jira/secure/attachment/12431573/1186.20S-6.patch
 Author: Amareshwari Sriramadasu

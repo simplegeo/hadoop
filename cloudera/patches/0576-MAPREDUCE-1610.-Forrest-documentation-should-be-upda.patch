@@ -1,7 +1,7 @@
 From 9d3a600899712a637109816b5f50b99257ceb79c Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 19 Mar 2010 14:27:30 +0530
-Subject: [PATCH 576/791] MAPREDUCE-1610. Forrest documentation should be updated to reflect the changes in MAPREDUCE-856
+Subject: [PATCH 576/887] MAPREDUCE-1610. Forrest documentation should be updated to reflect the changes in MAPREDUCE-856
 
 Patch: https://issues.apache.org/jira/secure/attachment/12439252/MAPREDUCE-1610-20.patch
 Author: Ravi Gummadi

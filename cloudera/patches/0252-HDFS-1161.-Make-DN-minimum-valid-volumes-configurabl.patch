@@ -1,7 +1,7 @@
 From e810911445859693ee0b868c2a5d8bc18360cdb9 Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Tue, 18 May 2010 14:30:04 -0700
-Subject: [PATCH 252/791] HDFS-1161. Make DN minimum valid volumes configurable
+Subject: [PATCH 252/887] HDFS-1161. Make DN minimum valid volumes configurable
 
 Description: This change adds a dfs.datanode.failed.volumes.tolerated parameter so that users can configure the number of volumes that are allowed to fail before a datanode stops offering service. By default any volume failure will cause a datanode to shutdown.
 

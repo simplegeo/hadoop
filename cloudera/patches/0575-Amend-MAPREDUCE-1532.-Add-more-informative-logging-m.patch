@@ -1,7 +1,7 @@
 From aa3c9671cd7cfa6818c913f293d2605b87431e60 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 19 Mar 2010 01:10:57 -0700
-Subject: [PATCH 575/791] Amend MAPREDUCE-1532. Add more informative logging messages for configuration-authentication mismatch
+Subject: [PATCH 575/887] Amend MAPREDUCE-1532. Add more informative logging messages for configuration-authentication mismatch
 
 Patch: https://issues.apache.org/jira/secure/attachment/12439248/1532-bp20.4.2.patch
 Author: Devaraj Das

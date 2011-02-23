@@ -1,7 +1,7 @@
 From a1cdd7b028bfd5aaf6bdbfe18122b9a0fb44ed12 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 17 Sep 2010 10:50:38 -0700
-Subject: [PATCH 707/791] CLOUDERA-BUILD. Upgrade Jackson to 1.5.2 to avoid conflicts with Avro and HBase
+Subject: [PATCH 707/887] CLOUDERA-BUILD. Upgrade Jackson to 1.5.2 to avoid conflicts with Avro and HBase
 
 Author: Todd Lipcon
 ---

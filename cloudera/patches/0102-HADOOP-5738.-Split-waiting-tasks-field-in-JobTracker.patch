@@ -1,7 +1,7 @@
 From 955fe9433b13f21079f92e4035393b683486ad07 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:05:59 -0800
-Subject: [PATCH 102/791] HADOOP-5738. Split waiting tasks field in JobTracker metrics to individual tasks
+Subject: [PATCH 102/887] HADOOP-5738. Split waiting tasks field in JobTracker metrics to individual tasks
 
 Description: Currently, job tracker metrics reports waiting tasks as a single field in metrics. It would be better if we can split waiting tasks into maps and reduces.
 Reason: User experience improvement

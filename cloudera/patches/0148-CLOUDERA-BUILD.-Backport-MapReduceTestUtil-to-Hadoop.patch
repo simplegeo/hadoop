@@ -1,7 +1,7 @@
 From 50726d13750f3f71d2fc5d3a012ce81aa2adb26d Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:24:46 -0800
-Subject: [PATCH 148/791] CLOUDERA-BUILD. Backport MapReduceTestUtil to Hadoop 0.20
+Subject: [PATCH 148/887] CLOUDERA-BUILD. Backport MapReduceTestUtil to Hadoop 0.20
 
 Description: MapReduceTestUtil is required for unit tests in subsequent
 patches, but this class itself was not created in one clean JIRA. Therefore

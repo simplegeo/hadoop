@@ -1,7 +1,7 @@
-From ae4dfe20e7390b2a8d555b52f32ca4567be8b31b Mon Sep 17 00:00:00 2001
+From 51399a0f149292ee18138646488a8070c8b7f34c Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 25 Jan 2011 15:03:29 -0800
-Subject: [PATCH 791/791] HADOOP-7118. Fix NullPointerException in Configuration.writeXml
+Subject: [PATCH 791/887] HADOOP-7118. Fix NullPointerException in Configuration.writeXml
 
 Reason: Bug fix
 Author: Todd Lipcon

@@ -1,7 +1,7 @@
 From 587de668e43486f7109a885f617b9b757d7a649e Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sat, 24 Apr 2010 17:33:34 -0700
-Subject: [PATCH 282/791] HADOOP-6722. Workaround a TCP spec quirk by not allowing NetUtils.connect to connect to itself
+Subject: [PATCH 282/887] HADOOP-6722. Workaround a TCP spec quirk by not allowing NetUtils.connect to connect to itself
 
 Description: TCP's ephemeral port assignment results in the possibility
              that a client can connect back to its own outgoing socket,

@@ -1,7 +1,7 @@
 From a268e40988a356cb7d6912906b88c8752c226656 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 21 Oct 2009 23:06:57 +0530
-Subject: [PATCH 376/791] MAPREDUCE-1105. CapacityScheduler: It should be possible to set queue hard-limit beyond its actual capacity
+Subject: [PATCH 376/887] MAPREDUCE-1105. CapacityScheduler: It should be possible to set queue hard-limit beyond its actual capacity
 
 Patch: https://issues.apache.org/jira/secure/attachment/12422823/MAPREDUCE-1105-yahoo-version20-5.patch
 Author: rahul k singh

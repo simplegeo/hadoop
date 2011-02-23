@@ -23,6 +23,8 @@ import java.io.IOException;
 import org.apache.hadoop.mapreduce.JobID;
 import org.apache.hadoop.mapreduce.TaskID;
 import org.apache.hadoop.test.system.DaemonProtocol;
+import org.apache.hadoop.mapred.TaskTrackerStatus;
+import org.apache.hadoop.mapred.StatisticsCollectionHandler;
 
 /**
  * Client side API's exposed from JobTracker.
@@ -118,4 +120,88 @@ public interface JTProtocol extends DaemonProtocol {
    * @throws IOException
    */
   String getJobHistoryLocationForRetiredJob(JobID jobID) throws IOException;
+  
+  /**
+   * This directly calls the JobTracker public with no modifications
+   * @param trackerID uniquely indentifies the task tracker
+   * @return
+   * @throws IOException is thrown in case of RPC error
+   */
+  public boolean isBlackListed(String trackerID) throws IOException;
+
+  /**
+   * Get the job summary details from the jobtracker log files.
+   * @param jobID - job id
+   * @param filePattern - jobtracker log file pattern.
+   * @return String - the job summary details
+   * @throws IOException if any I/O error occurs.
+   */
+  public String getJobSummaryFromLog(JobID jobId, String filePattern)
+    throws IOException;
+
+  /**
+   * Get the job summary information of given job id.
+   * @param jobID - job id
+   * @return String - the job summary details as map.
+   * @throws IOException if any I/O error occurs.
+   */
+   public String getJobSummaryInfo(JobID jobId) throws IOException;
+
+
+   /**
+    * This gets the value of one task tracker window in the tasktracker page.
+    *
+    * @param TaskTrackerStatus,
+    * timePeriod and totalTasksOrSucceededTasks, which are requried to
+    * identify the window
+    * @return value of one task in a single Job tracker window
+    */
+   public int getTaskTrackerLevelStatistics(TaskTrackerStatus ttStatus,
+       String timePeriod, String totalTasksOrSucceededTasks)
+       throws IOException;
+
+   /**
+    * This gets the value of all task trackers windows in the tasktracker page.
+    *
+    * @param none,
+    * return a object which returns all the tasktracker info
+    */
+   public StatisticsCollectionHandler getInfoFromAllClientsForAllTaskType()
+     throws Exception;
+
+   /**
+    * Get Information for Time Period and TaskType box
+    * from all tasktrackers
+    * @param
+    * timePeriod and totalTasksOrSucceededTasks, which are requried to
+    * identify the window
+    * @return The total number of tasks info for a particular column in
+    * tasktracker page.
+    */
+   public int getInfoFromAllClients(String timePeriod,
+       String totalTasksOrSucceededTasks) throws IOException;
+
+   /**
+    * This gets the value of all task trackers windows in the tasktracker page.
+    */
+   public int getTaskTrackerHeartbeatInterval() throws Exception;
+   
+
+   
+   /**
+    * The method with access the history data in JobTracker, it will only do a 
+    * read on the data structure none is returned, this is used to verify a
+    * bug with simultaneously accessing history data
+    * @param jobId
+    * @throws Exception
+    */
+   public void accessHistoryData(JobID jobId) throws Exception;
+
+
+  /**
+   * Finds out if the given Task tracker client is decommissioned or not
+   */
+  public boolean isNodeDecommissioned(String ttClientHostName) 
+      throws IOException;
+
 }

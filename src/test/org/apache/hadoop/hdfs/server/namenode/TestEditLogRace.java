@@ -23,7 +23,10 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
+import java.util.concurrent.Callable;
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicReference;
 
 import junit.framework.TestCase;
@@ -40,6 +43,7 @@ import org.apache.hadoop.hdfs.server.common.Storage.StorageDirectory;
 import org.apache.hadoop.hdfs.server.namenode.FSImage.NameNodeDirType;
 import org.apache.hadoop.hdfs.server.namenode.FSImage.NameNodeFile;
 import org.apache.hadoop.hdfs.server.namenode.metrics.NameNodeMetrics;
+import org.apache.hadoop.metrics.util.MetricsTimeVaryingInt;
 
 import org.mockito.Mockito;
 import org.mockito.invocation.InvocationOnMock;
@@ -73,7 +77,7 @@ public class TestEditLogRace extends TestCase {
 
   private List<Transactions> workers = new ArrayList<Transactions>();
 
-  private static final int NUM_DATA_NODES = 1;
+  private static final int NUM_DATA_NODES = 0;
 
   /**
    * Several of the test cases work by introducing a sleep
@@ -252,7 +256,7 @@ public class TestEditLogRace extends TestCase {
       assertTrue(editLog.getEditStreams().size() > 0);
       startTransactionWorkers(namesystem, caughtErr);
 
-      for (int i = 0; i < NUM_SAVE_IMAGE; i++) {
+      for (int i = 0; i < NUM_SAVE_IMAGE && caughtErr.get() == null; i++) {
         try {
           Thread.sleep(20);
         } catch (InterruptedException e) {}
@@ -287,6 +291,7 @@ public class TestEditLogRace extends TestCase {
  
   private Configuration getConf() {
     Configuration conf = new Configuration();
+    conf.set("fs.default.name", "hdfs://localhost/");
     conf.set("dfs.name.dir", MiniDFSCluster.getBaseDir() + "/data");
     conf.setBoolean("dfs.permissions", false);
     return conf;
@@ -484,4 +489,142 @@ public class TestEditLogRace extends TestCase {
       if(namesystem != null) namesystem.close();
     }
   }  
+  
+  private void doLogEdit(ExecutorService exec, final FSEditLog log,
+      final String filename) throws Exception
+  {
+    exec.submit(new Callable<Void>() {
+      public Void call() {
+        log.logSetReplication(filename, (short)1);
+        return null;
+      }
+    }).get();
+  }
+  
+  private void doCallLogSync(ExecutorService exec, final FSEditLog log)
+    throws Exception
+  {
+    exec.submit(new Callable<Void>() {
+      public Void call() throws Exception {
+        log.logSync();
+        return null;
+      }
+    }).get();
+  }
+
+  private void doCallLogSyncAll(ExecutorService exec, final FSEditLog log)
+    throws Exception
+  {
+    exec.submit(new Callable<Void>() {
+      public Void call() throws Exception {
+        log.logSyncAll();
+        return null;
+      }
+    }).get();
+  }
+
+  public void testSyncBatching() throws Exception {
+    // start a cluster 
+    Configuration conf = new Configuration();
+    MiniDFSCluster cluster = null;
+    FileSystem fileSys = null;
+    ExecutorService threadA = Executors.newSingleThreadExecutor();
+    ExecutorService threadB = Executors.newSingleThreadExecutor();
+    try {
+      cluster = new MiniDFSCluster(conf, NUM_DATA_NODES, true, null);
+      cluster.waitActive();
+      fileSys = cluster.getFileSystem();
+      final FSNamesystem namesystem = cluster.getNameNode().namesystem;
+
+      FSImage fsimage = namesystem.getFSImage();
+      final FSEditLog editLog = fsimage.getEditLog();
+
+      assertEquals("should start with no txids synced",
+        0, editLog.getSyncTxId());
+      
+      // Log an edit from thread A
+      doLogEdit(threadA, editLog, "thread-a 1");
+      assertEquals("logging edit without syncing should do not affect txid",
+        0, editLog.getSyncTxId());
+
+      // Log an edit from thread B
+      doLogEdit(threadB, editLog, "thread-b 1");
+      assertEquals("logging edit without syncing should do not affect txid",
+        0, editLog.getSyncTxId());
+
+      // Now ask to sync edit from B, which should sync both edits.
+      doCallLogSync(threadB, editLog);
+      assertEquals("logSync from second thread should bump txid up to 2",
+        2, editLog.getSyncTxId());
+
+      // Now ask to sync edit from A, which was already batched in - thus
+      // it should increment the batch count metric
+      NameNodeMetrics metrics = NameNode.getNameNodeMetrics();
+      metrics.transactionsBatchedInSync = Mockito.mock(MetricsTimeVaryingInt.class);
+
+      doCallLogSync(threadA, editLog);
+      assertEquals("logSync from first thread shouldn't change txid",
+        2, editLog.getSyncTxId());
+
+      //Should have incremented the batch count exactly once
+      Mockito.verify(metrics.transactionsBatchedInSync,
+                    Mockito.times(1)).inc();
+    } finally {
+      threadA.shutdown();
+      threadB.shutdown();
+      if(fileSys != null) fileSys.close();
+      if(cluster != null) cluster.shutdown();
+    }
+  }
+  
+  /**
+   * Test what happens with the following sequence:
+   *
+   *  Thread A writes edit
+   *  Thread B calls logSyncAll
+   *           calls close() on stream
+   *  Thread A calls logSync
+   *
+   * This sequence is legal and can occur if enterSafeMode() is closely
+   * followed by saveNamespace.
+   */
+  public void testBatchedSyncWithClosedLogs() throws Exception {
+    // start a cluster 
+    Configuration conf = new Configuration();
+    MiniDFSCluster cluster = null;
+    FileSystem fileSys = null;
+    ExecutorService threadA = Executors.newSingleThreadExecutor();
+    ExecutorService threadB = Executors.newSingleThreadExecutor();
+    try {
+      cluster = new MiniDFSCluster(conf, NUM_DATA_NODES, true, null);
+      cluster.waitActive();
+      fileSys = cluster.getFileSystem();
+      final FSNamesystem namesystem = cluster.getNameNode().namesystem;
+
+      FSImage fsimage = namesystem.getFSImage();
+      final FSEditLog editLog = fsimage.getEditLog();
+
+      // Log an edit from thread A
+      doLogEdit(threadA, editLog, "thread-a 1");
+      assertEquals("logging edit without syncing should do not affect txid",
+        0, editLog.getSyncTxId());
+
+      // logSyncAll in Thread B
+      doCallLogSyncAll(threadB, editLog);
+      assertEquals("logSyncAll should sync thread A's transaction",
+        1, editLog.getSyncTxId());
+
+      // Close edit log
+      editLog.close();
+
+      // Ask thread A to finish sync (which should be a no-op)
+      doCallLogSync(threadA, editLog);
+    } finally {
+      threadA.shutdown();
+      threadB.shutdown();
+      if(fileSys != null) fileSys.close();
+      if(cluster != null) cluster.shutdown();
+    }
+  }
+
 }

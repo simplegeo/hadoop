@@ -1,7 +1,7 @@
 From 5880960fb32ae0fc2c16bac1f333dbb237c3448f Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:30:27 -0800
-Subject: [PATCH 166/791] CLOUDERA-BUILD. Solaris do-release-build fix
+Subject: [PATCH 166/887] CLOUDERA-BUILD. Solaris do-release-build fix
 
 Author: Eli Collins
 Ref: CDH-531

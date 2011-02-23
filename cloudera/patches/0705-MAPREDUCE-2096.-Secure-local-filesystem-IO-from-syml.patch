@@ -1,7 +1,7 @@
 From 6b3856a94ca4748cc8e891cdd11473c03f821ee4 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 6 Sep 2010 12:54:33 -0700
-Subject: [PATCH 705/791] MAPREDUCE-2096. Secure local filesystem IO from symlink vulnerabilities
+Subject: [PATCH 705/887] MAPREDUCE-2096. Secure local filesystem IO from symlink vulnerabilities
 
 Reason: security vulnerability that could be exploited to gain access to
         other user's job credentials, task output, etc.

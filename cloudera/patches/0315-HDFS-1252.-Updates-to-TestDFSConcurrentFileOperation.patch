@@ -1,7 +1,7 @@
 From 0e1d71c08923bb4c4172ef043b0b2d82f95b92fa Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sat, 19 Jun 2010 16:26:39 -0700
-Subject: [PATCH 315/791] HDFS-1252. Updates to TestDFSConcurrentFileOperations (test was previously broken)
+Subject: [PATCH 315/887] HDFS-1252. Updates to TestDFSConcurrentFileOperations (test was previously broken)
 
 Description: Fixes TestDFSConcurrentFileOperations to test the correct
              semantics for sync feature

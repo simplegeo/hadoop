@@ -1,7 +1,7 @@
 From ac18b1312c05f9d85b23686807c9b0120f99eac0 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 4 Jan 2010 14:50:55 -0800
-Subject: [PATCH 416/791] HADOOP-6415. Adding a common token interface for both job token and delegation token
+Subject: [PATCH 416/887] HADOOP-6415. Adding a common token interface for both job token and delegation token
 
 Patch: https://issues.apache.org/jira/secure/attachment/12429399/HADOOP-6415-0_20.2.patch
 Author: Kan Zhang

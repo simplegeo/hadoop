@@ -284,6 +284,10 @@
         HtmlQuoting.quoteHtmlChars(profile.getJobName()) + "<br>\n");
     out.print("<b>Job File:</b> <a href=\"jobconf.jsp?jobid=" + jobId + "\">" +
         profile.getJobFile() + "</a><br>\n");
+    out.print("<b>Submit Host:</b> " +
+        HtmlQuoting.quoteHtmlChars(job.getJobSubmitHostName()) + "<br>\n");
+    out.print("<b>Submit Host Address:</b> " +
+        HtmlQuoting.quoteHtmlChars(job.getJobSubmitHostAddress()) + "<br>\n");
 
     Map<JobACL, AccessControlList> jobAcls = status.getJobACLs();
     JSPUtil.printJobACLs(tracker, jobAcls, out);
@@ -306,6 +310,8 @@
             job.getFinishTime(), job.getStartTime()) + "<br>\n");
       } else if (runState == JobStatus.FAILED) {
         out.print("<b>Status:</b> Failed<br>\n");
+        out.print("<b>Failure Info:</b>" + 
+                   HtmlQuoting.quoteHtmlChars(status.getFailureInfo()) + "<br>\n");
         out.print("<b>Started at:</b> " + new Date(job.getStartTime()) + "<br>\n");
         out.print("<b>Failed at:</b> " + new Date(job.getFinishTime()) +
                   "<br>\n");
@@ -313,6 +319,8 @@
             job.getFinishTime(), job.getStartTime()) + "<br>\n");
       } else if (runState == JobStatus.KILLED) {
         out.print("<b>Status:</b> Killed<br>\n");
+        out.print("<b>Failure Info:</b>" + 
+                   HtmlQuoting.quoteHtmlChars(status.getFailureInfo()) + "<br>\n");
         out.print("<b>Started at:</b> " + new Date(job.getStartTime()) + "<br>\n");
         out.print("<b>Killed at:</b> " + new Date(job.getFinishTime()) +
                   "<br>\n");

@@ -1,7 +1,7 @@
 From 353f7813bf7dfb0bca1362f9370f6a080256a345 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:36:58 -0800
-Subject: [PATCH 188/791] MAPREDUCE-1198. Alternatively schedule different types of tasks in fair share scheduler
+Subject: [PATCH 188/887] MAPREDUCE-1198. Alternatively schedule different types of tasks in fair share scheduler
 
 Description: Matei has mentioned in <a href="http://issues.apache.org/jira/browse/MAPREDUCE-961" title="ResourceAwareLoadManager to dynamically decide new tasks based on current CPU/memory load on TaskTracker(s)">MAPREDUCE-961</a> that the current scheduler will first try to launch map tasks until canLaunthTask() returns false then look for reduce tasks. This might starve reduce task. He also mention that alternatively schedule different types of tasks can solve this problem.
 Reason: bugfix

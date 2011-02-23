@@ -1,7 +1,7 @@
 From 0dbd09e5e1a6f3eaa76ad7a54815d03707da5a27 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 11 Dec 2009 13:31:45 +0530
-Subject: [PATCH 399/791] MAPREDUCE-1171. Allow the read-error notification in shuffle to be configurable.
+Subject: [PATCH 399/887] MAPREDUCE-1171. Allow the read-error notification in shuffle to be configurable.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12427571/patch-1171-1-ydist.txt
 Author: Amareshwari Sriramadasu

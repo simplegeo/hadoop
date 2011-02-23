@@ -1,7 +1,7 @@
 From f0f38e93276cd5ca8a12c26a0cf138c65fef1951 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 12 Apr 2010 11:10:09 +0530
-Subject: [PATCH 600/791] MAPREDUCE-1635. Fix ResourceEstimator after MAPREDUCE-842
+Subject: [PATCH 600/887] MAPREDUCE-1635. Fix ResourceEstimator after MAPREDUCE-842
 
 Patch: https://issues.apache.org/jira/secure/attachment/12441448/patch-1635-ydist.txt
 Author: Amareshwari Sriramadasu

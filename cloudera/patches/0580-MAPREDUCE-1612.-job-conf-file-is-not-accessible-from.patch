@@ -1,7 +1,7 @@
 From ea78340db1b2eb3333a5f79fad076285f82917e7 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sat, 20 Mar 2010 00:01:23 +0530
-Subject: [PATCH 580/791] MAPREDUCE-1612. job conf file is not accessible from job history web page
+Subject: [PATCH 580/887] MAPREDUCE-1612. job conf file is not accessible from job history web page
 
 Patch: https://issues.apache.org/jira/secure/attachment/12439310/jobconf_history_jsp.fix.20S.patch
 Author: Ravi Gummadi

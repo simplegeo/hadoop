@@ -1,7 +1,7 @@
 From 2b0d6bb28d3733a2c42ebbbb4bfc294044c8e619 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 7 May 2010 11:52:42 +0530
-Subject: [PATCH 641/791] MAPREDUCE-1754, HADOOP-6748. Replace mapred.permissions.supergroup with an ACL instead of single group
+Subject: [PATCH 641/887] MAPREDUCE-1754, HADOOP-6748. Replace mapred.permissions.supergroup with an ACL instead of single group
 
 Patch: https://issues.apache.org/jira/secure/attachment/12443928/patch-1754-ydist.txt.
 Author: Amareshwari Sriramadasu

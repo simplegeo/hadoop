@@ -1,7 +1,7 @@
 From 60a6eece06bde26516649bdcbed4096dd734503e Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 4 Oct 2010 18:01:39 -0700
-Subject: [PATCH 726/791] CLOUDERA-BUILD. Send SecurityAudit logs to the console unless running through hadoop-daemon.sh
+Subject: [PATCH 726/887] CLOUDERA-BUILD. Send SecurityAudit logs to the console unless running through hadoop-daemon.sh
 
 Reason: Fixes issue where clients would try to write SecurityAuth.audit logs
 Author: Todd Lipcon

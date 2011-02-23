@@ -1,7 +1,7 @@
 From 2acd7103481363aeadb4593738cc8e6f8f11f483 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 16 Mar 2010 15:46:02 -0700
-Subject: [PATCH 556/791] HDFS-1039. Service should be set in the token in JspHelper.getUGI
+Subject: [PATCH 556/887] HDFS-1039. Service should be set in the token in JspHelper.getUGI
 
 Patch: https://issues.apache.org/jira/secure/attachment/12438896/HDFS-1039-y20.2.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12439603/HDFS-1039-y20.2.1.patch

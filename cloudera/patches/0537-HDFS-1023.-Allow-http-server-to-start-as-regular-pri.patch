@@ -1,7 +1,7 @@
 From e5a03085722a84a8ee0419ba8d91cd022023c0a0 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 4 Mar 2010 19:05:52 -0800
-Subject: [PATCH 537/791] HDFS-1023. Allow http server to start as regular principal if https principal not defined.
+Subject: [PATCH 537/887] HDFS-1023. Allow http server to start as regular principal if https principal not defined.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437962/HADOOP-1023-Y20-1.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12437962/HADOOP-1023-Y20-1.patch

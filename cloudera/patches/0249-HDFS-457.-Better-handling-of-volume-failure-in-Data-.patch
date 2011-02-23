@@ -1,7 +1,7 @@
 From 4a925fe53a2015e504cd8c8796e0e590d22019c4 Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Thu, 22 Apr 2010 14:41:08 -0700
-Subject: [PATCH 249/791] HDFS-457. Better handling of volume failure in Data Node storage.
+Subject: [PATCH 249/887] HDFS-457. Better handling of volume failure in Data Node storage.
 
 Description: Current implementation shuts DataNode down completely when one of the configured volumes of the storage fails. This is rather wasteful behavior because it decreases utilization (good storage becomes unavailable) and imposes extra load on the system (replication of the blocks from the good volumes). These problems will become even more prominent when we move to mixed (heterogeneous) clusters with many more volumes per Data Node.
 

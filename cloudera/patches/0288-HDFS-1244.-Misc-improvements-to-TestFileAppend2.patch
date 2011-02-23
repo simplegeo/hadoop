@@ -1,7 +1,7 @@
 From b7f908bc77d9344c36dcc409bbfe92709b98cf88 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 6 May 2010 08:52:18 -0700
-Subject: [PATCH 288/791] HDFS-1244. Misc improvements to TestFileAppend2
+Subject: [PATCH 288/887] HDFS-1244. Misc improvements to TestFileAppend2
 
 Description: Improvements made to a test case to enable it to be run
              from the command line, with the various test parameters

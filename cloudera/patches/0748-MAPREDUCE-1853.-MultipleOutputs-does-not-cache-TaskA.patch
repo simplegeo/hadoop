@@ -1,7 +1,7 @@
-From eb8315057aaccebeeef2e80dde0061fbad9fb174 Mon Sep 17 00:00:00 2001
+From ba2c7a5b99915ca1431e3024dd80ac359c8005a1 Mon Sep 17 00:00:00 2001
 From: Tom White <tom@cloudera.com>
 Date: Tue, 14 Dec 2010 17:41:09 -0800
-Subject: [PATCH 748/791] MAPREDUCE-1853. MultipleOutputs does not cache TaskAttemptContext
+Subject: [PATCH 748/887] MAPREDUCE-1853. MultipleOutputs does not cache TaskAttemptContext
 
 Reason: Bug
 Author: Torsten Curdt

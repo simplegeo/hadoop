@@ -1,7 +1,7 @@
 From ac73e6d51d5ad1df993097349602e5f3199b952a Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:48:40 -0800
-Subject: [PATCH 058/791] HADOOP-6148. Implement a pure Java CRC32 calculator
+Subject: [PATCH 058/887] HADOOP-6148. Implement a pure Java CRC32 calculator
 
 Description: We've seen a reducer writing 200MB to HDFS with replication = 1 spending a long time in crc calculation. In particular, it was spending 5 seconds in crc calculation out of a total of 6 for the write. I suspect that it is the java-jni border that is causing us grief.
 

@@ -1,7 +1,7 @@
 From 4bd437c9d70f2c0d68047e0376a7af21cc4a70e0 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:13:17 -0800
-Subject: [PATCH 115/791] HADOOP-5891. If dfs.http.address is default, SecondaryNameNode can't find NameNode
+Subject: [PATCH 115/887] HADOOP-5891. If dfs.http.address is default, SecondaryNameNode can't find NameNode
 
 Description: As detailed in this blog post:<br/>
 <span class="nobr"><a href="http://www.cloudera.com/blog/2009/02/10/multi-host-secondarynamenode-configuration/">http://www.cloudera.com/blog/2009/02/10/multi-host-secondarynamenode-configuration/<sup><img class="rendericon" src="https://issues.apache.org/jira/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"/></sup></a></span><br/>

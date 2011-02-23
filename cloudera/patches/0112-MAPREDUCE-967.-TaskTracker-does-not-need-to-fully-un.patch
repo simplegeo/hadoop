@@ -1,7 +1,7 @@
 From 15660507606b32c3c6c2878f8ed69fe106119bc9 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:10:51 -0800
-Subject: [PATCH 112/791] MAPREDUCE-967. TaskTracker does not need to fully unjar job jars
+Subject: [PATCH 112/887] MAPREDUCE-967. TaskTracker does not need to fully unjar job jars
 
 Description: In practice we have seen some users submitting job jars that consist of 10,000+ classes. Unpacking these jars into mapred.local.dir and then cleaning up after them has a significant cost (both in wall clock and in unnecessary heavy disk utilization). This cost can be easily avoided
 Reason: Performance improvement

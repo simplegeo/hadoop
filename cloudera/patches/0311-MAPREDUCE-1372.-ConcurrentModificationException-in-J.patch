@@ -1,7 +1,7 @@
 From d8dc8dad821a02619afdbfc3d1cb978b86cb071b Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 18 Jun 2010 17:24:07 -0700
-Subject: [PATCH 311/791] MAPREDUCE-1372. ConcurrentModificationException in JobInProgress
+Subject: [PATCH 311/887] MAPREDUCE-1372. ConcurrentModificationException in JobInProgress
 
 Description: Fixes a ConcurrentModificationException in JobInProgress
 Reason: Bug

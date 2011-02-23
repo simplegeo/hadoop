@@ -1,7 +1,7 @@
 From 1756e97a35451bbc01a493e843f1ec0885c99792 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 18 Jun 2010 11:37:22 -0700
-Subject: [PATCH 265/791] MAPREDUCE-1644. Remove Sqoop from Apache Hadoop (moving to github)
+Subject: [PATCH 265/887] MAPREDUCE-1644. Remove Sqoop from Apache Hadoop (moving to github)
 
 Description: Sqoop is moving to github! All code for sqoop is already live at
 http://github.com/cloudera/sqoop - this issue removes the duplicate code from the Apache Hadoop

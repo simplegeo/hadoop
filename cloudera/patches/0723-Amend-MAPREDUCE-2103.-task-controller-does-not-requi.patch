@@ -1,7 +1,7 @@
 From d56be41bb9648f721ba6714827ccfbf503af7d84 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 4 Oct 2010 12:32:09 -0700
-Subject: [PATCH 723/791] Amend MAPREDUCE-2103. task-controller does not require setgid permissions
+Subject: [PATCH 723/887] Amend MAPREDUCE-2103. task-controller does not require setgid permissions
 
 ---
  src/c++/task-controller/main.c                     |    9 ++++-----

@@ -1,7 +1,7 @@
 From ad1f19c5727c6457a4e37c26cc1ede0dae3b76ec Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 22 Dec 2009 18:05:31 -0800
-Subject: [PATCH 411/791] HDFS-195. Need to handle access token expiration when re-establishing the pipeline for dfs write
+Subject: [PATCH 411/887] HDFS-195. Need to handle access token expiration when re-establishing the pipeline for dfs write
 
 Patch: https://issues.apache.org/jira/secure/attachment/12428788/HDFS-195-0_20.1.patch
 Author: Kan Zhang

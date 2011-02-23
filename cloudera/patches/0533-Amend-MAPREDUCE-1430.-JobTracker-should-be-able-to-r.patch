@@ -1,7 +1,7 @@
 From 7187e0d7a8367e5e072b5e589db5becae0e6eb1d Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 3 Mar 2010 18:55:35 -0800
-Subject: [PATCH 533/791] Amend MAPREDUCE-1430. JobTracker should be able to renew delegation tokens for the jobs
+Subject: [PATCH 533/887] Amend MAPREDUCE-1430. JobTracker should be able to renew delegation tokens for the jobs
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437822/1430-bp20-bugfix.patch
 Author: Devaraj Das

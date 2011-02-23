@@ -1,7 +1,7 @@
 From d1c4359e1abc3f3e5e4fa16ee1c83a3d7f015da3 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 14 Apr 2010 14:59:39 -0700
-Subject: [PATCH 278/791] HDFS-1211. BlockReceiver logs too much at INFO level when using sync()
+Subject: [PATCH 278/887] HDFS-1211. BlockReceiver logs too much at INFO level when using sync()
 
 Description: Reduces the log level from INFO to DEBUG for a common message
              in the datanode log when using the sync feature.

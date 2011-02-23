@@ -1,7 +1,7 @@
 From 36710ad2bc76df6df01ef540df21fedb9b702160 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 25 Feb 2010 18:28:07 -0800
-Subject: [PATCH 504/791] HDFS-1000. libhdfs needs to be updated to use the new UGI
+Subject: [PATCH 504/887] HDFS-1000. libhdfs needs to be updated to use the new UGI
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437071/hdfs-1000-bp20.4.patch
 Author: Devaraj Das

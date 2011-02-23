@@ -1,7 +1,7 @@
 From 57783d0683f0d675423369e0a0f9f5dd520c17f2 Mon Sep 17 00:00:00 2001
 From: todd <todd@monster01.sf.cloudera.com>
 Date: Sun, 21 Mar 2010 03:36:45 -0700
-Subject: [PATCH 275/791] HDFS-1055. Improve thread naming in DN Xceiver
+Subject: [PATCH 275/887] HDFS-1055. Improve thread naming in DN Xceiver
 
 Description: Names the threads created by the DataNode based on the action
              they are performing.

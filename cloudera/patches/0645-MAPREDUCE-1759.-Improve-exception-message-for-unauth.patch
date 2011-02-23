@@ -1,7 +1,7 @@
 From 6951f1e5bbac61b1a1cc3587b712598ed993c729 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 7 May 2010 23:50:08 +0530
-Subject: [PATCH 645/791] MAPREDUCE-1759. Improve exception message for unauthorized user doing killJob, killTask, setJobPriority
+Subject: [PATCH 645/887] MAPREDUCE-1759. Improve exception message for unauthorized user doing killJob, killTask, setJobPriority
 
 Patch: https://issues.apache.org/jira/secure/attachment/12443983/1759.20S.1.patch.
 Author: Ravi Gummadi

@@ -1,7 +1,7 @@
 From 7fda23b419b1c98e84eea43a0f35191d41032e18 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:51:53 -0800
-Subject: [PATCH 065/791] MAPREDUCE-799. Some of MRUnit's self-tests were not being run
+Subject: [PATCH 065/887] MAPREDUCE-799. Some of MRUnit's self-tests were not being run
 
 Description: Due to method naming issues, some test cases were not being executed.
 Reason: Bugfix; test coverage

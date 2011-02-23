@@ -1,7 +1,7 @@
 From f37d58671d0e9d601cfd446e6966b3a906d95029 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 16 Apr 2010 14:43:28 +0530
-Subject: [PATCH 605/791] MAPREDUCE-587. Fix TestStreamingExitStatus failure case on OSX
+Subject: [PATCH 605/887] MAPREDUCE-587. Fix TestStreamingExitStatus failure case on OSX
 
 Patch: https://issues.apache.org/jira/secure/attachment/12414990/MAPREDUCE-587-v1.0.patch.
 Author: Amar Kamat

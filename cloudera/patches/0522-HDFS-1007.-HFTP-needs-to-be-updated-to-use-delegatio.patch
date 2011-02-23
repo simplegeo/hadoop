@@ -1,7 +1,7 @@
 From 5a1ea2b0a3050a0a8fdae64902067504d6f8c8eb Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 1 Mar 2010 00:09:00 -0800
-Subject: [PATCH 522/791] HDFS-1007. HFTP needs to be updated to use delegation tokens
+Subject: [PATCH 522/887] HDFS-1007. HFTP needs to be updated to use delegation tokens
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437458/distcp-hftp.2.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12437464/distcp-hftp.2.1.patch

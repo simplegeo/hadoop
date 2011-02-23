@@ -1,7 +1,7 @@
 From 1beeed7552f5e83ef24f8926450bb81d7be02b8d Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 19 Apr 2010 11:00:05 +0530
-Subject: [PATCH 614/791] MAPREDUCE-1692.  Remove TestStreamedMerge from the streaming tests
+Subject: [PATCH 614/887] MAPREDUCE-1692.  Remove TestStreamedMerge from the streaming tests
 
 Patch: https://issues.apache.org/jira/secure/attachment/12442134/patch-1692-ydist.txt.
 Author: Amareshwari Sriramadasu

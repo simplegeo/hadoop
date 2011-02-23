@@ -1,7 +1,7 @@
 From dfac0482267aaf0fabac97c163e0015306ec5b16 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:05:16 -0800
-Subject: [PATCH 100/791] HADOOP-4842. Streaming combiner should allow command, not just JavaClass
+Subject: [PATCH 100/887] HADOOP-4842. Streaming combiner should allow command, not just JavaClass
 
 Description: Streaming jobs are way slower than Java jobs for many reasons, but certainly stopping the shell-only programmer from using the combiner feature won't help. Right now, the streaming usage says:
 

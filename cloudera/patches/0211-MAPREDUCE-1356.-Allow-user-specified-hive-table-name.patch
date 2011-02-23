@@ -1,7 +1,7 @@
 From 8d4807322a42509726b376b37a89739acd6cbd7d Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:47:55 -0800
-Subject: [PATCH 211/791] MAPREDUCE-1356. Allow user-specified hive table name in sqoop
+Subject: [PATCH 211/887] MAPREDUCE-1356. Allow user-specified hive table name in sqoop
 
 Description: The table name used in a hive-destination import is currently pegged to the input table name. This should be user-configurable.
 Reason: New feature

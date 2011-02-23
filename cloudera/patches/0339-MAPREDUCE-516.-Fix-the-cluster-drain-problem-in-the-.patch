@@ -1,7 +1,7 @@
 From a89847e2c69619eff9ced8b86c81bfab321a9918 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 30 Jul 2009 17:40:34 -0700
-Subject: [PATCH 339/791] MAPREDUCE-516. Fix the 'cluster drain' problem in the Capacity Scheduler wrt High RAM Jobs
+Subject: [PATCH 339/887] MAPREDUCE-516. Fix the 'cluster drain' problem in the Capacity Scheduler wrt High RAM Jobs
 
 Reason: When a HighRAMJob turns up at the head of the queue, the current implementation
         of support for HighRAMJobs in the Capacity Scheduler has a problem in that the

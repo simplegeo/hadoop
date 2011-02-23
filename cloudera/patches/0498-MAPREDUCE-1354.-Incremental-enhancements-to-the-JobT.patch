@@ -1,7 +1,7 @@
 From a04e3abfd58010fd99877910c0f15bbbebb1b45a Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 25 Feb 2010 20:48:43 +0530
-Subject: [PATCH 498/791] MAPREDUCE-1354. Incremental enhancements to the JobTracker for better scalability
+Subject: [PATCH 498/887] MAPREDUCE-1354. Incremental enhancements to the JobTracker for better scalability
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437010/mr-1354-y20.patch
 Author: Dick King

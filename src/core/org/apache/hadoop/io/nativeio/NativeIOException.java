@@ -25,6 +25,7 @@ import java.io.IOException;
  * These exceptions simply wrap <i>errno</i> result codes.
  */
 public class NativeIOException extends IOException {
+  private static final long serialVersionUID = -6615764817732323232L;
   private Errno errno;
 
   public NativeIOException(String msg, Errno errno) {

@@ -43,6 +43,16 @@ public class ShellBasedUnixGroupsMapping implements GroupMappingServiceProvider 
     return getUnixGroups(user);
   }
 
+  @Override
+  public void cacheGroupsRefresh() throws IOException {
+    // does nothing in this provider of user to groups mapping
+  }
+
+  @Override
+  public void cacheGroupsAdd(List<String> groups) throws IOException {
+    // does nothing in this provider of user to groups mapping
+  }
+
   /** 
    * Get the current user's group list from Unix by running the command 'groups'
    * NOTE. For non-existing user it will return EMPTY list

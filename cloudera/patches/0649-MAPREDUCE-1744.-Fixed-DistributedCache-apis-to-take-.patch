@@ -1,7 +1,7 @@
 From 7a38053228f4b8368c183a6658d93df2a216d4ab Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sun, 9 May 2010 09:19:41 -0700
-Subject: [PATCH 649/791] MAPREDUCE-1744. Fixed DistributedCache apis to take a user-supplied FileSystem to allow for better proxy behaviour for Oozie.
+Subject: [PATCH 649/887] MAPREDUCE-1744. Fixed DistributedCache apis to take a user-supplied FileSystem to allow for better proxy behaviour for Oozie.
 
 Amended to not deprecate any methods, since their future in the next major release has not been decided yet.
 Patch: https://issues.apache.org/jira/secure/attachment/12444060/MAPREDUCE-1744.patch

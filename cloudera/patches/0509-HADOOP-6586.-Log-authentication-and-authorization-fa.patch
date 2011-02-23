@@ -1,7 +1,7 @@
 From c697b870f3d87e17438115a037e9fd831e757e3f Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 26 Feb 2010 18:27:28 -0800
-Subject: [PATCH 509/791] HADOOP-6586. Log authentication and authorization failures and successes
+Subject: [PATCH 509/887] HADOOP-6586. Log authentication and authorization failures and successes
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437302/HADOOP-6586-8-BP20-1.patch
 Author: Boris Shkolnik

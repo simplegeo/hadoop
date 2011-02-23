@@ -1,7 +1,7 @@
 From 4ba755db0d9eae199355905193c424d1a8a78dae Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 14 Dec 2009 19:45:50 -0800
-Subject: [PATCH 400/791] HDFS-595. FsPermission tests need to be updated for new octal configuration parameter from HADOOP-6234
+Subject: [PATCH 400/887] HDFS-595. FsPermission tests need to be updated for new octal configuration parameter from HADOOP-6234
 
 Patch: https://issues.apache.org/jira/secure/attachment/12427977/HDFS-595-Y20.patch
 Author: Jakob Homan

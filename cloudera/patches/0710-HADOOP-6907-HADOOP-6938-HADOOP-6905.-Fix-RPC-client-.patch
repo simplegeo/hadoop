@@ -1,7 +1,7 @@
 From 90167ef041f15f351ac6357212c477c682373e05 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 27 Sep 2010 16:38:35 -0700
-Subject: [PATCH 710/791] HADOOP-6907, HADOOP-6938, HADOOP-6905. Fix RPC client behavior to use a per-connection configuration.
+Subject: [PATCH 710/887] HADOOP-6907, HADOOP-6938, HADOOP-6905. Fix RPC client behavior to use a per-connection configuration.
 
 Author: Kan Zhang
 Ref: CDH-648

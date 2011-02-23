@@ -1,7 +1,7 @@
 From 2bb607d29d9080a7ca3bce72739ccef654d5392d Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:30:46 -0800
-Subject: [PATCH 022/791] HADOOP-5175. Option to prohibit jars unpacking
+Subject: [PATCH 022/887] HADOOP-5175. Option to prohibit jars unpacking
 
 Description: The task tracker moves all unpacked jars into
 ${hadoop.tmp.dir}/mapred/local/taskTracker. When using a lot of external

@@ -1,7 +1,7 @@
 From 641090318603c47bfd55e1eea2b039f37e5b723a Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 14 May 2010 19:20:10 -0700
-Subject: [PATCH 295/791] HDFS-1218. Replicas that are recovered during DN startup should not be allowed to truncate better replicas.
+Subject: [PATCH 295/887] HDFS-1218. Replicas that are recovered during DN startup should not be allowed to truncate better replicas.
 
 Description: If a datanode loses power and then recovers, its replicas
              may be truncated due to the recovery of the local FS

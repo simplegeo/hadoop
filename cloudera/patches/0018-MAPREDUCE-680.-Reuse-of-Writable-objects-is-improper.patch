@@ -1,7 +1,7 @@
 From 4ee0ecf4760d7adb3e1a81e018a3b5cd6d2e9775 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:27:44 -0800
-Subject: [PATCH 018/791] MAPREDUCE-680. Reuse of Writable objects is improperly handled by MRUnit
+Subject: [PATCH 018/887] MAPREDUCE-680. Reuse of Writable objects is improperly handled by MRUnit
 
 Description: As written, MRUnit's MockOutputCollector simply stores references to the objects passed in to its collect() method. Thus if the same Text (or other Writable) object is reused as an output containiner multiple times with different values, these separate values will not all be collected. MockOutputCollector needs to properly use io.serializations to deep copy the objects sent in.
 Reason: Bugfix; see description.

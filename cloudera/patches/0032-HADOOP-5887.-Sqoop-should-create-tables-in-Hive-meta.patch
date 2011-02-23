@@ -1,7 +1,7 @@
 From b8f5d1d3a30a7461936f3f92bd9f007ed2db43e8 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:38:23 -0800
-Subject: [PATCH 032/791] HADOOP-5887. Sqoop should create tables in Hive metastore after importing to HDFS
+Subject: [PATCH 032/887] HADOOP-5887. Sqoop should create tables in Hive metastore after importing to HDFS
 
 Description: Sqoop (<a href="http://issues.apache.org/jira/browse/HADOOP-5815" title="Sqoop: A database import tool for Hadoop"><del>HADOOP-5815</del></a>) imports tables into HDFS; it is a straightforward enhancement to then generate a Hive DDL statement to recreate the table definition in the Hive metastore and move the imported table into the Hive warehouse directory from its upload target.
 

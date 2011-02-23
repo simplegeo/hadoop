@@ -1,7 +1,7 @@
 From eac5f2a5d51414c8fea6ea9792e21cf85433d017 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 24 Sep 2009 16:06:26 -0700
-Subject: [PATCH 361/791] MAPREDUCE-945. Modifies MRBench and TestMapRed to use ToolRunner so that options such as queue name can be passed via command line.
+Subject: [PATCH 361/887] MAPREDUCE-945. Modifies MRBench and TestMapRed to use ToolRunner so that options such as queue name can be passed via command line.
 
 Patch: http://issues.apache.org/jira/secure/attachment/12418910/mapreduce-945-internal-3.8.patch.txt
 Author: Sreekanth Ramakrishnan

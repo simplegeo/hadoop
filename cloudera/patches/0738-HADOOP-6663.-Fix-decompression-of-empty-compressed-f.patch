@@ -1,7 +1,7 @@
-From 9f1bf3801098f0290aec2bc464c7f24832fd0224 Mon Sep 17 00:00:00 2001
+From 62a9a1327165a1a363639c2f21b79be61616f7b3 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 14 Oct 2010 16:21:34 -0400
-Subject: [PATCH 738/791] HADOOP-6663. Fix decompression of empty compressed files
+Subject: [PATCH 738/887] HADOOP-6663. Fix decompression of empty compressed files
 
 Author: Kang Xiao
 Ref: CDH-2215

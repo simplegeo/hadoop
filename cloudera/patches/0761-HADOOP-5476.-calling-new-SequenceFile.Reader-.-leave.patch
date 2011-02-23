@@ -1,7 +1,7 @@
-From d64b0bd5370cf6dc69611a712b9f1ed8525884f5 Mon Sep 17 00:00:00 2001
+From 51a15afdd3f2b33e9c6573bfa9d002034edaaaf7 Mon Sep 17 00:00:00 2001
 From: Tom White <tom@cloudera.com>
 Date: Mon, 10 Jan 2011 13:49:10 -0800
-Subject: [PATCH 761/791] HADOOP-5476. calling new SequenceFile.Reader(...) leaves an InputStream open, if the given sequence file is broken
+Subject: [PATCH 761/887] HADOOP-5476. calling new SequenceFile.Reader(...) leaves an InputStream open, if the given sequence file is broken
 
 Reason: Fix file handle leak, as requested on Hive list.
 Author: Michael Tamm

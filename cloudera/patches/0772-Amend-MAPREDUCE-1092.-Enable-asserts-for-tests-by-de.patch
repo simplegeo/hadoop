@@ -1,7 +1,7 @@
-From c373a45b44c4eb94709b1435e1eeb8525e926182 Mon Sep 17 00:00:00 2001
+From 390cedb3ba0ec9bf7e4859f89c3e10dd40be2763 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 14 Jan 2011 17:39:21 -0800
-Subject: [PATCH 772/791] Amend MAPREDUCE-1092. Enable asserts for tests by default
+Subject: [PATCH 772/887] Amend MAPREDUCE-1092. Enable asserts for tests by default
 
 Reason: reapply patch accidentally reverted by Herriot merge
 Author: Todd Lipcon

@@ -18,7 +18,7 @@ org.apache.hadoop.fs.FileSystem.Statistics
     <TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
     <TABLE summary="Navigation bar" BORDER="0" CELLPADDING="0" CELLSPACING="3">
     <TR ALIGN="center" VALIGN="top">
-      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../../api/org/apache/hadoop/fs/FileSystem.Statistics.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>hadoop 0.20.2+791</tt></B></FONT></A>&nbsp;</TD>
+      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../../api/org/apache/hadoop/fs/FileSystem.Statistics.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>hadoop 0.20.2-CDH3B4</tt></B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="changes-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="pkg_org.apache.hadoop.fs.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
@@ -76,10 +76,52 @@ Change in type from <code>void</code> to <code>String</code>.<br>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.fs.FileSystem.Statistics.getLargeReadOps_added()"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../api/org/apache/hadoop/fs/FileSystem.Statistics.html#getLargeReadOps()" target="_top"><tt>getLargeReadOps</tt></A>()</nobr>
+  </TD>
+  <TD VALIGN="TOP">Get the number of large file system read operations such as list files under a large directory </TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.fs.FileSystem.Statistics.getReadOps_added()"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../api/org/apache/hadoop/fs/FileSystem.Statistics.html#getReadOps()" target="_top"><tt>getReadOps</tt></A>()</nobr>
+  </TD>
+  <TD VALIGN="TOP">Get the number of file system read operations such as list files </TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="org.apache.hadoop.fs.FileSystem.Statistics.getScheme_added()"></A>
   <nobr><code>String</code>&nbsp;<A HREF="../../api/org/apache/hadoop/fs/FileSystem.Statistics.html#getScheme()" target="_top"><tt>getScheme</tt></A>()</nobr>
   </TD>
   <TD VALIGN="TOP">Get the uri scheme associated with this statistics object.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.fs.FileSystem.Statistics.getWriteOps_added()"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../api/org/apache/hadoop/fs/FileSystem.Statistics.html#getWriteOps()" target="_top"><tt>getWriteOps</tt></A>()</nobr>
+  </TD>
+  <TD VALIGN="TOP">Get the number of file system write operations such as create append rename etc.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.fs.FileSystem.Statistics.incrementLargeReadOps_added(int)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../api/org/apache/hadoop/fs/FileSystem.Statistics.html#incrementLargeReadOps(int)" target="_top"><tt>incrementLargeReadOps</tt></A>(<code>int</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Increment the number of large read operations </TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.fs.FileSystem.Statistics.incrementReadOps_added(int)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../api/org/apache/hadoop/fs/FileSystem.Statistics.html#incrementReadOps(int)" target="_top"><tt>incrementReadOps</tt></A>(<code>int</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Increment the number of read operations </TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.fs.FileSystem.Statistics.incrementWriteOps_added(int)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../api/org/apache/hadoop/fs/FileSystem.Statistics.html#incrementWriteOps(int)" target="_top"><tt>incrementWriteOps</tt></A>(<code>int</code>)</nobr>
+  </TD>
+  <TD VALIGN="TOP">Increment the number of write operations </TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
@@ -98,7 +140,7 @@ Change in type from <code>void</code> to <code>String</code>.<br>
     <TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
     <TABLE summary="Navigation bar" BORDER="0" CELLPADDING="0" CELLSPACING="3">
     <TR ALIGN="center" VALIGN="top">
-      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../../api/org/apache/hadoop/fs/FileSystem.Statistics.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>hadoop 0.20.2+791</tt></B></FONT></A>&nbsp;</TD>
+      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../../api/org/apache/hadoop/fs/FileSystem.Statistics.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>hadoop 0.20.2-CDH3B4</tt></B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="changes-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="pkg_org.apache.hadoop.fs.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>

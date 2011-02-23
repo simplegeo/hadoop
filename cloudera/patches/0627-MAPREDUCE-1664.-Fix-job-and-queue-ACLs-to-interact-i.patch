@@ -1,7 +1,7 @@
 From 13c09b6981b1f5bd8e58b3586d67e4652ab716c8 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sat, 24 Apr 2010 00:22:59 +0530
-Subject: [PATCH 627/791] MAPREDUCE-1664. Fix job and queue ACLs to interact in a more useful manner.
+Subject: [PATCH 627/887] MAPREDUCE-1664. Fix job and queue ACLs to interact in a more useful manner.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12442697/1664.20S.3.4.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12443139/M1664y20s-testfix.patch

@@ -1,7 +1,7 @@
 From 91d28f32f9db514661cc9bd755c8e85756c09cfc Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 30 Jul 2009 17:40:26 -0700
-Subject: [PATCH 335/791] HADOOP-5818. Revert the renaming from checkSuperuserPrivilege to checkAccess by HADOOP-5643
+Subject: [PATCH 335/887] HADOOP-5818. Revert the renaming from checkSuperuserPrivilege to checkAccess by HADOOP-5643
 
 Author: Amar Kamat
 Ref: YDH

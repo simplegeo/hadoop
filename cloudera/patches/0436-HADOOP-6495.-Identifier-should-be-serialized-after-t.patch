@@ -1,7 +1,7 @@
 From 478ebff927c0a45f72c531952bcaf7632e990a12 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 22 Jan 2010 17:17:08 -0800
-Subject: [PATCH 436/791] HADOOP-6495. Identifier should be serialized after the password is created In Token constructor
+Subject: [PATCH 436/887] HADOOP-6495. Identifier should be serialized after the password is created In Token constructor
 
 Patch: https://issues.apache.org/jira/secure/attachment/12431145/HADOOP-6495-0_20.2.patch
 Author: Jitendra Nath Pandey

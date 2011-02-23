@@ -39,7 +39,7 @@ class ResourceEstimator {
 
   private int completedMapsUpdates;
   final private JobInProgress job;
-  final private int threshholdToUse;
+  private int threshholdToUse;
 
   public ResourceEstimator(JobInProgress job) {
     this.job = job;
@@ -73,7 +73,9 @@ class ResourceEstimator {
     } else {
       long inputSize = job.getInputLength() + job.desiredMaps(); 
       //add desiredMaps() so that randomwriter case doesn't blow up
-      long estimate = Math.round((inputSize * 
+      //the multiplication might lead to overflow, casting it with
+      //double prevents it
+      long estimate = Math.round(((double)inputSize * 
           completedMapsOutputSize * 2.0)/completedMapsInputSize);
       if (LOG.isDebugEnabled()) {
         LOG.debug("estimate total map output will be " + estimate);
@@ -106,5 +108,14 @@ class ResourceEstimator {
     }
   }
   
-
+  /**
+   * the number of maps after which reduce starts launching
+   * @param numMaps the number of maps after which reduce starts
+   * launching. It acts as the upper bound for the threshhold, so
+   * that we can get right estimates before we reach these number
+   * of maps.
+   */
+  void setThreshhold(int numMaps) {
+    threshholdToUse = Math.min(threshholdToUse, numMaps);
+  }
 }

@@ -1,7 +1,7 @@
 From eddbfbca420bfb81a3a565e4324f6189bfd97e41 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:24:58 -0800
-Subject: [PATCH 014/791] HADOOP-5815. Sqoop: A database import tool for Hadoop
+Subject: [PATCH 014/887] HADOOP-5815. Sqoop: A database import tool for Hadoop
 
 Description:
 Sqoop is a tool designed to help users import existing relational databases into their Hadoop clusters. Sqoop uses JDBC to connect to a database, examine the schema for tables, and auto-generate the necessary classes to import data into HDFS. It then instantiates a MapReduce job to read the table from the database via the DBInputFormat (JDBC-based InputFormat). The table is read into a set of files loaded into HDFS. Both SequenceFile and text-based targets are supported.

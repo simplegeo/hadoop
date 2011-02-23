@@ -1,7 +1,7 @@
-From aa9fcf0ce97a4017dddea80b889b2fc7fa8d7a50 Mon Sep 17 00:00:00 2001
+From 329ae61a7987d576c0d73a395f773fa820594ea4 Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Fri, 7 Jan 2011 10:47:45 -0800
-Subject: [PATCH 768/791] HADOOP-7089. Fix link resolution logic in hadoop-config.sh.
+Subject: [PATCH 768/887] HADOOP-7089. Fix link resolution logic in hadoop-config.sh.
 
 The link resolution logic in bin/hadoop-config.sh fails when when
 executed via a symlink, from the root directory. We can replace this

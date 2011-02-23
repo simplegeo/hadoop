@@ -1,7 +1,7 @@
 From a696ed00e06ec9cac5b0f0e53a7fc6bcafb6c69f Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sun, 9 May 2010 01:30:36 -0700
-Subject: [PATCH 648/791] MAPREDUCE-1733. Authentication between pipes processes and java counterparts.
+Subject: [PATCH 648/887] MAPREDUCE-1733. Authentication between pipes processes and java counterparts.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12444054/MR-1733-y20.3.patch
 Author: Jitendra Nath Pandey

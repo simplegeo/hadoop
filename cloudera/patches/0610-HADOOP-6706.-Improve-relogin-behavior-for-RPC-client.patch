@@ -1,7 +1,7 @@
 From cbc852fdeccf007260c6e81a15280272a6f90def Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 16 Apr 2010 12:45:26 -0700
-Subject: [PATCH 610/791] HADOOP-6706. Improve relogin behavior for RPC clients
+Subject: [PATCH 610/887] HADOOP-6706. Improve relogin behavior for RPC clients
 
 Patch: https://issues.apache.org/jira/secure/attachment/12441782/6706.bp20.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12442253/6706.bp20.1.patch

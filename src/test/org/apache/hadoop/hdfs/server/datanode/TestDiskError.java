@@ -162,20 +162,18 @@ public class TestDiskError extends TestCase {
     
     try {
       // Start the cluster
-      cluster = 
-        new MiniDFSCluster(0, conf, 1, true,  
-                          true, false,  null, null, null, null);
+      cluster = new MiniDFSCluster(conf, 1, true, null);
       cluster.waitActive();
       
       // Check permissions on directories in 'dfs.data.dir'
       FileSystem localFS = FileSystem.getLocal(conf);
-      String[] dataDirs = conf.getStrings(DataNode.DATA_DIR_KEY);
-      for (String dir : dataDirs) {
-        Path dataDir = new Path(dir);
-        FsPermission actual = localFS.getFileStatus(dataDir).getPermission(); 
-        assertEquals("Permission for dir: " + dataDir + ", is " + actual + 
-                         ", while expected is " + expected, 
-                     expected, actual);
+      for (DataNode dn : cluster.getDataNodes()) {
+        String[] dataDirs = dn.getConf().getStrings(DataNode.DATA_DIR_KEY);
+        for (String dir : dataDirs) {
+          Path dataDir = new Path(dir);
+          FsPermission actual = localFS.getFileStatus(dataDir).getPermission();
+          assertEquals("Permission for dir: " + dataDir, expected, actual);
+        }
       }
     } finally {
       if (cluster != null)

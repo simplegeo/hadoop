@@ -1,7 +1,7 @@
 From 93ea3b6b97dd23cc0a69eacd2438f11e8a64be54 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 28 Oct 2009 21:12:36 +0530
-Subject: [PATCH 382/791] MAPREDUCE-1158. running_maps metric is not decremented when the tasks of a job is killed/failed
+Subject: [PATCH 382/887] MAPREDUCE-1158. running_maps metric is not decremented when the tasks of a job is killed/failed
 
 Patch: https://issues.apache.org/jira/secure/attachment/12423451/1158_yahoo.patch
 Author: Sharad Agarwal

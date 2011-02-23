@@ -1,7 +1,7 @@
 From b14b570878b9262f1a77c668b5123345406f8374 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 5 Feb 2010 17:29:01 -0800
-Subject: [PATCH 460/791] HDFS-737. Improvement in metasave output
+Subject: [PATCH 460/887] HDFS-737. Improvement in metasave output
 
 Patch: https://issues.apache.org/jira/secure/attachment/12435041/HDFS-737.3.rel20.patch
 Author: Jitendra Nath Pandey

@@ -22,6 +22,12 @@ AC_INIT(hadoop-pipes-examples, 0.13.0, omalley@apache.org)
 
 AM_INIT_AUTOMAKE([subdir-objects foreign no-dist])
 
+# Dont generate rules to re-automake if timestamps are off
+# since we check in the generated files and revision control
+# doesn't track timestamps
+AM_MAINTAINER_MODE
+
+
 AC_CONFIG_SRCDIR([impl/wordcount-simple.cc])
 AC_CONFIG_HEADER([impl/config.h])
 AC_CONFIG_FILES([Makefile])

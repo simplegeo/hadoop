@@ -1,7 +1,7 @@
 From 084c390ed5fcb03c456121c8497759b40a74f809 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:18:13 -0800
-Subject: [PATCH 128/791] MAPREDUCE-1089. Fair Scheduler preemption triggers NPE when tasks are scheduled but not running
+Subject: [PATCH 128/887] MAPREDUCE-1089. Fair Scheduler preemption triggers NPE when tasks are scheduled but not running
 
 Description: We see exceptions like this when preemption runs when a task has been scheduled on a TT but has not yet started running.
 

@@ -1,7 +1,7 @@
 From a2d051bcf456fde45c0a0c3aa512872ce6059a97 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:21:08 -0800
-Subject: [PATCH 006/791] CLOUDERA-BUILD. Add Hadoop manpage to Hadoop 0.20 repository
+Subject: [PATCH 006/887] CLOUDERA-BUILD. Add Hadoop manpage to Hadoop 0.20 repository
 
 ---
  cloudera/files/hadoop.1.gz |  Bin 0 -> 4201 bytes

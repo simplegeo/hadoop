@@ -1,7 +1,7 @@
 From ff8f5ea311eb73564805f083a379147fd5aa6d47 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 23 Feb 2010 20:28:10 +0000
-Subject: [PATCH 488/791] HDFS-946. NameNode should not return full path name when lisitng a directory or getting the status of a file
+Subject: [PATCH 488/887] HDFS-946. NameNode should not return full path name when lisitng a directory or getting the status of a file
 
 Patch: http://issues.apache.org/jira/secure/attachment/12436753/HdfsFileStatus-yahoo20.patch.
 Patch: http://issues.apache.org/jira/secure/attachment/12436769/HdfsFileStatusProxy-Yahoo20.patch

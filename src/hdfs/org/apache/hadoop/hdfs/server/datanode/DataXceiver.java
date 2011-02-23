@@ -283,8 +283,8 @@ class DataXceiver extends Thread implements Runnable, FSConstants {
     Token<BlockTokenIdentifier> accessToken = new Token<BlockTokenIdentifier>();
     accessToken.readFields(in);
     DataOutputStream replyOut = null;   // stream to prev target
-    replyOut = new DataOutputStream(
-                   NetUtils.getOutputStream(s, datanode.socketWriteTimeout));
+    replyOut = new DataOutputStream(new BufferedOutputStream(
+                   NetUtils.getOutputStream(s, datanode.socketWriteTimeout)));
     if (datanode.isBlockTokenEnabled) {
       try {
         datanode.blockTokenSecretManager.checkAccess(accessToken, null, block, 

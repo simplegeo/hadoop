@@ -1,7 +1,7 @@
 From 506dc096fcc4a288fc853dfb527d7fa8888dd6f6 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Bruno=20Mah=C3=A9?= <bruno@cloudera.com>
 Date: Fri, 16 Jul 2010 19:51:45 -0700
-Subject: [PATCH 322/791] CDH-1085. $SYSTEM_LIB_DIR default value shouldn't contain $PREFIX.
+Subject: [PATCH 322/887] CDH-1085. $SYSTEM_LIB_DIR default value shouldn't contain $PREFIX.
 
 Description: $SYSTEM_LIB_DIR default value shouldn't contain $PREFIX.
 $PREFIX will be prepended later on

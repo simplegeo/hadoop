@@ -1,7 +1,7 @@
 From a1871a06d05bcaa41c68673b68339a10c5f5e183 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sat, 20 Mar 2010 17:06:36 -0700
-Subject: [PATCH 585/791] HADOOP-6652. Remove redundant cache in ShellBasedUnixGroupsMapping
+Subject: [PATCH 585/887] HADOOP-6652. Remove redundant cache in ShellBasedUnixGroupsMapping
 
 Patch: https://issues.apache.org/jira/secure/attachment/12439372/groups.patch
 Author: Devaraj Das

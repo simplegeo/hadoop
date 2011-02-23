@@ -1,7 +1,7 @@
 From 3f2759c884c496ef71a75db9d436ebfe61e04111 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@lipcon.org>
 Date: Mon, 27 Sep 2010 22:35:31 -0700
-Subject: [PATCH 709/791] MAPREDUCE-1288. DistributedCache may localize a private file for multiple users
+Subject: [PATCH 709/887] MAPREDUCE-1288. DistributedCache may localize a private file for multiple users
 
 Reason: bug fix when multiple users add the same "private" file to their distributed caches
 Author: Devaraj Das

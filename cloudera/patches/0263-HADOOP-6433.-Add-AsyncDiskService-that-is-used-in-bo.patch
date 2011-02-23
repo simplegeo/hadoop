@@ -1,7 +1,7 @@
 From 456821d6934fd769ab317c2290a4ff53b075269e Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Thu, 17 Jun 2010 19:04:31 -0700
-Subject: [PATCH 263/791] HADOOP-6433. Add AsyncDiskService that is used in both hdfs and mapreduce
+Subject: [PATCH 263/887] HADOOP-6433. Add AsyncDiskService that is used in both hdfs and mapreduce
 
 Description: create a thread pool per disk volume, and use that for scheduling async disk
 operations.

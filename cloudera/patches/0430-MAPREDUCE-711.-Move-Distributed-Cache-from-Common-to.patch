@@ -1,7 +1,7 @@
 From 5d79da536f9811f47af0e073aa68ca776c24b0da Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 19 Jan 2010 20:06:10 +0530
-Subject: [PATCH 430/791] MAPREDUCE-711. Move Distributed Cache from Common to Map/Reduce
+Subject: [PATCH 430/887] MAPREDUCE-711. Move Distributed Cache from Common to Map/Reduce
 
 Patch: https://issues.apache.org/jira/secure/attachment/12430713/711.20S.patch
 Author: Vinod K V

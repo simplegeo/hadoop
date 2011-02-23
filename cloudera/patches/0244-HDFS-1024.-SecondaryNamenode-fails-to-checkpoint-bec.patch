@@ -1,7 +1,7 @@
 From 0f2f19e1bd5725f6163998ae86d9103c0d552de3 Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Thu, 13 May 2010 20:07:02 -0700
-Subject: [PATCH 244/791] HDFS-1024. SecondaryNamenode fails to checkpoint because namenode fails with CancelledKeyException.
+Subject: [PATCH 244/887] HDFS-1024. SecondaryNamenode fails to checkpoint because namenode fails with CancelledKeyException.
 
 Description: The secondary namenode fails to retrieve the entire fsimage from the Namenode. It fetches a part of the fsimage but believes that it has fetched the entire fsimage file and proceeds ahead with the checkpointing.
 

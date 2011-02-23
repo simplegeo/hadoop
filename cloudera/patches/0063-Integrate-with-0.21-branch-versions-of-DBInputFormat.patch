@@ -1,7 +1,7 @@
 From 5c873336b3380e6c8f07ca28230ede9d41e4e840 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:50:05 -0800
-Subject: [PATCH 063/791] Integrate with 0.21-branch versions of DBInputFormat
+Subject: [PATCH 063/887] Integrate with 0.21-branch versions of DBInputFormat
 
 Description: In 0.21 there is now a DBInputFormat in the mapred/lib/ package
 as well as mapreduce/lib/db. This patch backports the new API edition of

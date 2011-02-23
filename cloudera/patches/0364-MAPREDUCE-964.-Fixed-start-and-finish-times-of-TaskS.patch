@@ -1,7 +1,7 @@
 From 3ce342baafd3774e4d920a7fcb49a7e091a0cad1 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 28 Sep 2009 13:36:31 -0700
-Subject: [PATCH 364/791] MAPREDUCE-964. Fixed start and finish times of TaskStatus to be consistent, thereby fixing inconsistencies in metering tasks.
+Subject: [PATCH 364/887] MAPREDUCE-964. Fixed start and finish times of TaskStatus to be consistent, thereby fixing inconsistencies in metering tasks.
 
 Patch: http://issues.apache.org/jira/secure/attachment/12420539/mapreduce-964-ydist.patch
 Patch: http://issues.apache.org/jira/secure/attachment/12420893/mapreduce-964-ydist-1.patch

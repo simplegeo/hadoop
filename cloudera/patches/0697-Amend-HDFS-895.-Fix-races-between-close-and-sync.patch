@@ -1,7 +1,7 @@
 From 593f3831671202afef2555243f37ca8f7ac2c46c Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 8 Sep 2010 14:30:44 -0700
-Subject: [PATCH 697/791] Amend HDFS-895. Fix races between close() and sync()
+Subject: [PATCH 697/887] Amend HDFS-895. Fix races between close() and sync()
 
 ---
  src/hdfs/org/apache/hadoop/hdfs/DFSClient.java |   32 +++++++++++++++++++----

@@ -1,7 +1,7 @@
 From 5dfcc6d2d7806636c6237996e1b28a00ba075b4b Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:43:05 -0800
-Subject: [PATCH 198/791] HADOOP-6503. contrib projects should pull in the ivy-fetched libs from the root project
+Subject: [PATCH 198/887] HADOOP-6503. contrib projects should pull in the ivy-fetched libs from the root project
 
 Description: On branch-20 currently, I get an error just running "ant contrib -Dtestcase=TestHdfsProxy". In a full "ant test" build sometimes this doesn't appear to be an issue. The problem is that the contrib projects don't automatically pull in the dependencies of the "Hadoop" ivy project. Thus, they each have to declare all of the common dependencies like commons-cli, etc. Some are missing and this causes test failures.
 Reason: Build system improvement

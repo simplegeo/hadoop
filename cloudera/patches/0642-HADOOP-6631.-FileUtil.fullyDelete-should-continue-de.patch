@@ -1,7 +1,7 @@
 From b24898d75d8239697d215475dfe1b305ada90e5f Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 7 May 2010 12:37:30 +0530
-Subject: [PATCH 642/791] HADOOP-6631. FileUtil.fullyDelete should continue deleting after partial failure
+Subject: [PATCH 642/887] HADOOP-6631. FileUtil.fullyDelete should continue deleting after partial failure
 
 Patch: https://issues.apache.org/jira/secure/attachment/12443931/HADOOP-6631-20100506-ydist.final.txt
 Author: Ravi Gummadi

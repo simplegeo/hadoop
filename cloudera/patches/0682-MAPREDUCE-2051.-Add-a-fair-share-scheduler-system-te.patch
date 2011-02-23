@@ -1,7 +1,7 @@
 From ae58865f3d65faa78707c79536c16e5b7ce40c16 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 2 Sep 2010 16:44:47 -0700
-Subject: [PATCH 682/791] MAPREDUCE-2051. Add a fair share scheduler system test
+Subject: [PATCH 682/887] MAPREDUCE-2051. Add a fair share scheduler system test
 
 Reason: Helps identify deadlocks or races in fair scheduler
 Author: Todd Lipcon

@@ -1,7 +1,7 @@
 From c145357a86dcabe072a3f93775c8f45161452841 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 2 Apr 2010 17:30:00 -0700
-Subject: [PATCH 597/791] HADOOP-5958. Replace fork of DF with library call.
+Subject: [PATCH 597/887] HADOOP-5958. Replace fork of DF with library call.
 
 Author: Aaron Kimball
 Ref: YDH

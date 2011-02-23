@@ -1,7 +1,7 @@
 From 3cc1405289ac4ec6616a5ba9da18ff421a93678e Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@lipcon.org>
 Date: Mon, 14 Jun 2010 01:43:18 -0700
-Subject: [PATCH 301/791] HDFS-1209. Add parameter dfs.client.block.recovery.retries to determine how many times to try to recover block
+Subject: [PATCH 301/887] HDFS-1209. Add parameter dfs.client.block.recovery.retries to determine how many times to try to recover block
 
 Reason: Used by append tests
 Author: Todd Lipcon

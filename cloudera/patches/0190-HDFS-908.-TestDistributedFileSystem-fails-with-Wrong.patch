@@ -1,7 +1,7 @@
 From 47c404e0cf10ceb31336d2a77d53e0a971348102 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:37:37 -0800
-Subject: [PATCH 190/791] HDFS-908. TestDistributedFileSystem fails with Wrong FS on weird hosts
+Subject: [PATCH 190/887] HDFS-908. TestDistributedFileSystem fails with Wrong FS on weird hosts
 
 Description: On the same host where I experienced <a href="http://issues.apache.org/jira/browse/HDFS-874" title="TestHDFSFileContextMainOperations fails on weirdly configured DNS hosts">HDFS-874</a>, I also experience this failure for TestDistributedFileSystem:
 

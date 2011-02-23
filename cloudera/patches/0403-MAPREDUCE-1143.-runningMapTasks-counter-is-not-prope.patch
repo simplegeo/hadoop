@@ -1,7 +1,7 @@
 From 4e30197fdddc64b48c0a3fb4575cdea4e5eaaf9b Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 15 Dec 2009 18:52:33 +0530
-Subject: [PATCH 403/791] MAPREDUCE-1143. runningMapTasks counter is not properly decremented in case of failed Tasks.
+Subject: [PATCH 403/887] MAPREDUCE-1143. runningMapTasks counter is not properly decremented in case of failed Tasks.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12427898/MAPRED-1143-ydist-9.patch
 Author: rahul k singh

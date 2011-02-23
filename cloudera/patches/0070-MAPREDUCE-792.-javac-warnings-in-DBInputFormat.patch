@@ -1,7 +1,7 @@
 From 0ca54f2722206685d9e36fcbb2656d0ac1957311 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:53:47 -0800
-Subject: [PATCH 070/791] MAPREDUCE-792. javac warnings in DBInputFormat
+Subject: [PATCH 070/887] MAPREDUCE-792. javac warnings in DBInputFormat
 
 Description: <a href="http://issues.apache.org/jira/browse/MAPREDUCE-716" title="org.apache.hadoop.mapred.lib.db.DBInputformat not working with oracle"><del>MAPREDUCE-716</del></a> introduces javac warnings
 Reason: Technical debt

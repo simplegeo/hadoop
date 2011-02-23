@@ -35,24 +35,62 @@ privileged aspect JobInProgressAspect {
    */
   public JobInfo JobInProgress.getJobInfo() {
     String historyLoc = getHistoryPath();
-    if (tasksInited.get()) {
-      return new JobInfoImpl(
+    JobInfoImpl jobInfoImpl;
+    if (tasksInited) {
+      jobInfoImpl = new JobInfoImpl(
           this.getJobID(), this.isSetupLaunched(), this.isSetupFinished(), this
               .isCleanupLaunched(), this.runningMaps(), this.runningReduces(),
           this.pendingMaps(), this.pendingReduces(), this.finishedMaps(), this
               .finishedReduces(), this.getStatus(), historyLoc, this
               .getBlackListedTrackers(), false, this.numMapTasks,
-          this.numReduceTasks, this.isHistoryFileCopied());
+          this.numReduceTasks);
     } else {
-      return new JobInfoImpl(
+      jobInfoImpl = new JobInfoImpl(
           this.getJobID(), false, false, false, 0, 0, this.pendingMaps(), this
               .pendingReduces(), this.finishedMaps(), this.finishedReduces(),
           this.getStatus(), historyLoc, this.getBlackListedTrackers(), this
-              .isComplete(), this.numMapTasks, this.numReduceTasks, 
-              this.isHistoryFileCopied());
+              .isComplete(), this.numMapTasks, this.numReduceTasks);
     }
+    jobInfoImpl.setFinishTime(getJobFinishTime());
+    jobInfoImpl.setLaunchTime(getJobLaunchTime());
+    jobInfoImpl.setNumSlotsPerReduce(getJobNumSlotsPerReduce());
+    jobInfoImpl.setNumSlotsPerMap(getJobNumSlotsPerMap());
+    return jobInfoImpl;
   }
   
+  private long JobInProgress.getJobFinishTime() {
+    long finishTime = 0;
+    if (this.isComplete()) {
+      finishTime = this.getFinishTime();
+    }
+    return finishTime;
+  }
+
+  private long JobInProgress.getJobLaunchTime() {
+    long LaunchTime = 0;
+    if (this.isComplete()) {
+      LaunchTime = this.getLaunchTime();
+    }
+    return LaunchTime;
+  }
+
+  private int JobInProgress.getJobNumSlotsPerReduce() {
+    int numSlotsPerReduce = 0;
+    if (this.isComplete()) {
+      numSlotsPerReduce = this.getNumSlotsPerReduce();
+    }
+    return numSlotsPerReduce;
+  }
+
+  private int JobInProgress.getJobNumSlotsPerMap() {
+    int numSlotsPerMap = 0;
+    if (this.isComplete()) {
+      numSlotsPerMap = this.getNumSlotsPerMap();
+    }
+    return numSlotsPerMap;
+ }
+
+
   private String JobInProgress.getHistoryPath() {
     String historyLoc = "";
     if(this.isComplete()) {

@@ -1,7 +1,7 @@
-From e54070cf22a4ec6df58d5f4d260fbeb32a2f858d Mon Sep 17 00:00:00 2001
+From 4214d3e60326a9b41e84f85895aca325d634c304 Mon Sep 17 00:00:00 2001
 From: Konstantin Boudnik <cos@apache.org>
 Date: Mon, 20 Dec 2010 12:16:32 -0800
-Subject: [PATCH 751/791] CDH-2381. org.apache.hadoop.cli.TestCLI.testAll (from TestCLI) failing in golden CDH3-Hadoop Hudson job
+Subject: [PATCH 751/887] CDH-2381. org.apache.hadoop.cli.TestCLI.testAll (from TestCLI) failing in golden CDH3-Hadoop Hudson job
 
 Description:
 Reason: test is affected.

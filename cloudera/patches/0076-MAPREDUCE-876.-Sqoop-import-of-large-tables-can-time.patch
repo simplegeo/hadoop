@@ -1,7 +1,7 @@
 From 7b89feb34fafd2365f75ab744db9cb07a5443046 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:55:05 -0800
-Subject: [PATCH 076/791] MAPREDUCE-876. Sqoop import of large tables can time out
+Subject: [PATCH 076/887] MAPREDUCE-876. Sqoop import of large tables can time out
 
 Description: Related to <a href="http://issues.apache.org/jira/browse/MAPREDUCE-875" title="Make DBRecordReader execute queries lazily"><del>MAPREDUCE-875</del></a>, Sqoop should use a background thread to ensure that progress is being reported while a database does external work for the MapReduce task.
 Reason: Scalability improvement

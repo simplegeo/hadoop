@@ -1,7 +1,7 @@
 From b29023803d1136bf7d4de45853a2d4481fb36d3c Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:29:24 -0800
-Subject: [PATCH 161/791] MAPREDUCE-1169. Improvements to mysqldump use in Sqoop
+Subject: [PATCH 161/887] MAPREDUCE-1169. Improvements to mysqldump use in Sqoop
 
 Description: Improve Sqoop's integration with mysqldump
 Reason: Feature/performance improvements

@@ -1,7 +1,7 @@
 From c04645dd48af89b8191e090efd15f8520946a606 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 30 Apr 2010 14:34:53 -0700
-Subject: [PATCH 633/791] HADOOP-6693. Add metrics to track kerberos login activity
+Subject: [PATCH 633/887] HADOOP-6693. Add metrics to track kerberos login activity
 
 Patch: https://issues.apache.org/jira/secure/attachment/12443326/HADOOP-6693.rel20.1.patch
 Author: Suresh Srinivas

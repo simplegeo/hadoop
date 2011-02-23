@@ -34,6 +34,10 @@ import org.apache.hadoop.test.system.process.HadoopDaemonRemoteCluster;
 import org.apache.hadoop.test.system.process.MultiUserHadoopDaemonRemoteCluster;
 import org.apache.hadoop.test.system.process.RemoteProcess;
 import org.apache.hadoop.test.system.process.HadoopDaemonRemoteCluster.HadoopDaemonInfo;
+import org.apache.hadoop.mapred.JobID;
+import org.apache.hadoop.mapred.TaskID;
+import java.util.Collection;
+import org.apache.hadoop.mapred.UtilsForTests;
 
 /**
  * Concrete AbstractDaemonCluster representing a Map-Reduce cluster.
@@ -57,7 +61,7 @@ public class MRCluster extends AbstractDaemonCluster {
   private static String TT_hostFileName;
   private static String jtHostName;
 
-  protected enum Role {JT, TT};
+  public enum Role {JT, TT};
 
   static{
     Configuration.addDefaultResource("mapred-default.xml");
@@ -131,6 +135,19 @@ public class MRCluster extends AbstractDaemonCluster {
     }
     return null;
   }
+  
+  /**
+   * This function will give access to one of many TTClient present
+   * @return an Instance of TTclient 
+   */
+  public TTClient getTTClient() {
+    for (TTClient c: getTTClients()) {
+      if (c != null){
+        return c;
+      }
+    }
+    return null;
+  }
 
   @Override
   public void ensureClean() throws IOException {
@@ -141,6 +158,26 @@ public class MRCluster extends AbstractDaemonCluster {
     for(JobInfo job : jobs) {
       jtClient.getClient().killJob(
           org.apache.hadoop.mapred.JobID.downgrade(job.getID()));
+    }
+  }
+  /**
+    * Allow the job to continue through MR control job.
+    * @param id of the job. 
+    * @throws IOException when failed to get task info. 
+    */
+  public void signalAllTasks(JobID id) throws IOException{
+    TaskInfo[] taskInfos = getJTClient().getProxy().getTaskInfo(id);
+    if(taskInfos !=null) {
+      for (TaskInfo taskInfoRemaining : taskInfos) {
+        if(taskInfoRemaining != null) {
+          FinishTaskControlAction action = new FinishTaskControlAction(TaskID
+              .downgrade(taskInfoRemaining.getTaskID()));
+          Collection<TTClient> tts = getTTClients();
+          for (TTClient cli : tts) {
+            cli.getProxy().sendAction(action);
+          }
+        }
+      }  
     }
   }
 
@@ -167,4 +204,34 @@ public class MRCluster extends AbstractDaemonCluster {
       super(mrDaemonInfos);
     }
   }
+
+  /**
+   * Get a TTClient Instance from a running task <br/>
+   * @param Task Information of the running task
+   * @return TTClient instance
+   * @throws IOException
+   */
+  public TTClient getTTClientInstance(TaskInfo taskInfo)
+      throws IOException {
+    JTProtocol remoteJTClient = getJTClient().getProxy();
+    String [] taskTrackers = taskInfo.getTaskTrackers();
+    int counter = 0;
+    TTClient ttClient = null;
+    while (counter < 60) {
+      if (taskTrackers.length != 0) {
+        break;
+      }
+      UtilsForTests.waitFor(100);
+      taskInfo = remoteJTClient.getTaskInfo(taskInfo.getTaskID());
+      taskTrackers = taskInfo.getTaskTrackers();
+      counter ++;
+    }
+    if ( taskTrackers.length != 0 ) {
+      String hostName = taskTrackers[0].split("_")[1];
+      hostName = hostName.split(":")[0];
+      ttClient = getTTClient(hostName);
+    }
+    return ttClient;
+  }
+
 }

@@ -1,7 +1,7 @@
 From 02d4404d39e60322ea13a2ce0160635df4ef3155 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 17 Mar 2010 10:30:20 -0700
-Subject: [PATCH 562/791] MAPREDUCE-1606. TestJobACLs may timeout as there are no slots for launching JOB_CLEANUP task
+Subject: [PATCH 562/887] MAPREDUCE-1606. TestJobACLs may timeout as there are no slots for launching JOB_CLEANUP task
 
 Patch: https://issues.apache.org/jira/secure/attachment/12439054/MR1606.20S.1.patch
 Author: Ravi Gummadi

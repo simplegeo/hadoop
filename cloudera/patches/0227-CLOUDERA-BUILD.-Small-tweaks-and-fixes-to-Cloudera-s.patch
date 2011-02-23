@@ -1,7 +1,7 @@
 From 54e1aefdd7a25a539831cac2c9b1bc3597f119ea Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:56:07 -0800
-Subject: [PATCH 227/791] CLOUDERA-BUILD. Small tweaks and fixes to Cloudera styling:
+Subject: [PATCH 227/887] CLOUDERA-BUILD. Small tweaks and fixes to Cloudera styling:
 
 Description:
     - Fixes trivial CSS bug for missing table cell borders in Chrome

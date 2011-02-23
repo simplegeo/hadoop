@@ -1,7 +1,7 @@
 From 5838b15e3232608c1358887b8910638b1497043f Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 19 Feb 2010 23:55:25 -0800
-Subject: [PATCH 479/791] HADOOP-6572. RPC responses may be out-of-order with respect to SASL
+Subject: [PATCH 479/887] HADOOP-6572. RPC responses may be out-of-order with respect to SASL
 
 Patch: https://issues.apache.org/jira/secure/attachment/12436421/6572-bp20.patch
 Author: Kan Zhang

@@ -1,7 +1,7 @@
 From 80cf01124877a5aebd742142b10fda45910f0328 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:44:42 -0800
-Subject: [PATCH 046/791] CLOUDERA-BUILD. Rename the hadoop man page to be hadoop-0.20
+Subject: [PATCH 046/887] CLOUDERA-BUILD. Rename the hadoop man page to be hadoop-0.20
 
 Author: Matt Massie
 Ref: UNKNOWN

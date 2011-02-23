@@ -1,7 +1,7 @@
 From 600a35b4e22088859c7b12ece7fa67dbfe489c2b Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 15 Dec 2009 15:38:41 +0530
-Subject: [PATCH 401/791] HADOOP-5582. Fix Hadoop Vaidya to use new Counters in org.apache.hadoop.mapreduce package. Contributed by Suhas Gogate.
+Subject: [PATCH 401/887] HADOOP-5582. Fix Hadoop Vaidya to use new Counters in org.apache.hadoop.mapreduce package. Contributed by Suhas Gogate.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12407120/vaidya-0.21.0-5582-5764.patch
 Author: Suhas Gogate

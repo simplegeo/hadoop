@@ -1,7 +1,7 @@
 From f7d0a20e0d74f1aac1fb96f3c08ce31e9b9ca5d9 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:20:25 -0800
-Subject: [PATCH 002/791] CLOUDERA-BUILD. Remove redundant code in build.xml between package and bin-package
+Subject: [PATCH 002/887] CLOUDERA-BUILD. Remove redundant code in build.xml between package and bin-package
 
 ---
  build.xml |   72 ++----------------------------------------------------------

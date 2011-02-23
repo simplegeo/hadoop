@@ -1,7 +1,7 @@
 From 82b157a5b805c10485712ddb108aa8248ad0df0c Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 22 Apr 2010 10:13:04 -0700
-Subject: [PATCH 624/791] HADOOP-6716. System won't start in non-secure mode when kerb5.conf (edu.mit.kerberos on Mac) is not present
+Subject: [PATCH 624/887] HADOOP-6716. System won't start in non-secure mode when kerb5.conf (edu.mit.kerberos on Mac) is not present
 
 Patch: https://issues.apache.org/jira/secure/attachment/12442487/HADOOP-6716-BP20-3.patch
 Author: Boris Shkolnik

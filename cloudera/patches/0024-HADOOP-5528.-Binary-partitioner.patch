@@ -1,7 +1,7 @@
 From 1f11b63a42ae441eb8d0693ed0e4e01aca553e42 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:33:09 -0800
-Subject: [PATCH 024/791] HADOOP-5528. Binary partitioner
+Subject: [PATCH 024/887] HADOOP-5528. Binary partitioner
 
 Description: It would be useful to have a <tt>BinaryPartitioner</tt> that partitions <tt>BinaryComparable</tt> keys by hashing a configurable part of the bytes array corresponding to each key.
 Reason: New feature

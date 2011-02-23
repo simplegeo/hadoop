@@ -1,7 +1,7 @@
 From 2471700c34dece87f611cceaf5b961647ab58700 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 19 Feb 2010 15:58:46 -0800
-Subject: [PATCH 480/791] HADOOP-6551, HDFS-986, MAPREDUCE-1503. Change API for tokens to throw
+Subject: [PATCH 480/887] HADOOP-6551, HDFS-986, MAPREDUCE-1503. Change API for tokens to throw
  exceptions instead of returning booleans.
 
 Author: Owen O'Malley

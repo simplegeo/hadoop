@@ -21,20 +21,34 @@ package org.apache.hadoop.mapred;
 import java.io.IOException;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Set;
 
 import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FileSystem;
+import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.mapred.JobConf;
+import org.apache.hadoop.mapred.JobStatus;
+import org.apache.hadoop.mapred.JobHistory.Keys;
 import org.apache.hadoop.mapred.JobTracker.RetireJobInfo;
+import org.apache.hadoop.mapred.Counters;
 import org.apache.hadoop.mapreduce.JobID;
 import org.apache.hadoop.mapreduce.TaskID;
+import org.apache.hadoop.mapreduce.TaskType;
+import org.apache.hadoop.mapred.TaskTrackerStatus;
+import org.apache.hadoop.mapred.StatisticsCollector;
+import org.apache.hadoop.mapred.StatisticsCollectionHandler;
 import org.apache.hadoop.mapreduce.server.jobtracker.TaskTracker;
 import org.apache.hadoop.mapreduce.test.system.JTProtocol;
 import org.apache.hadoop.mapreduce.test.system.JobInfo;
 import org.apache.hadoop.mapreduce.test.system.TTInfo;
 import org.apache.hadoop.mapreduce.test.system.TaskInfo;
+import org.apache.hadoop.mapreduce.ClusterMetrics;
 import org.apache.hadoop.security.UserGroupInformation;
 import org.apache.hadoop.test.system.DaemonProtocol;
+import org.apache.hadoop.util.Shell.ShellCommandExecutor;
+import org.apache.hadoop.util.Shell;
+import org.apache.hadoop.util.StringUtils;
 
 /**
  * Aspect class which injects the code for {@link JobTracker} class.
@@ -43,6 +57,8 @@ import org.apache.hadoop.test.system.DaemonProtocol;
 public privileged aspect JobTrackerAspect {
 
 
+  private static JobTracker tracker;
+  
   public Configuration JobTracker.getDaemonConf() throws IOException {
     return conf;
   }
@@ -155,6 +171,10 @@ public privileged aspect JobTrackerAspect {
     return retireJobs.get(
         org.apache.hadoop.mapred.JobID.downgrade(id))!=null?true:false;
   }
+  
+  public boolean JobTracker.isBlackListed(String trackerName) throws IOException {
+    return isBlacklisted(trackerName);
+  }
 
   public String JobTracker.getJobHistoryLocationForRetiredJob(
       JobID id) throws IOException {
@@ -203,6 +223,7 @@ public privileged aspect JobTrackerAspect {
       tracker.LOG.warn("Unable to get the user information for the " +
       		"Jobtracker");
     }
+    this.tracker = tracker;
     tracker.setReady(true);
   }
   
@@ -225,5 +246,310 @@ public privileged aspect JobTrackerAspect {
             .numTaskFailures(), status, (tip.isJobSetupTask() || tip
             .isJobCleanupTask()), trackers);
     return info;
+  }
+  
+  /**
+   * Get the job summary details from the jobtracker log files.
+   * @param jobId - job id
+   * @param filePattern - jobtracker log file pattern.
+   * @return String - Job summary details of given job id.
+   * @throws IOException if any I/O error occurs.
+   */
+  public String JobTracker.getJobSummaryFromLogs(JobID jobId,
+      String filePattern) throws IOException {
+    String pattern = "JobId=" + jobId.toString() + ",submitTime";
+    String[] cmd = new String[] {
+                   "bash",
+                   "-c",
+                   "grep -i " 
+                 + pattern + " " 
+                 + filePattern + " " 
+                 + "| sed s/'JobSummary: '/'^'/g | cut -d'^' -f2"};
+    ShellCommandExecutor shexec = new ShellCommandExecutor(cmd);
+    shexec.execute();
+    return shexec.getOutput();
+  }
+  
+  /**
+   * Get the job summary information for given job id.
+   * @param jobId - job id.
+   * @return String - Job summary details as key value pair.
+   * @throws IOException if any I/O error occurs.
+   */
+  public String JobTracker.getJobSummaryInfo(JobID jobId) throws IOException {
+    StringBuffer jobSummary = new StringBuffer();
+    JobInProgress jip = jobs.
+        get(org.apache.hadoop.mapred.JobID.downgrade(jobId));
+    if (jip == null) {
+      LOG.warn("Job has not been found - " + jobId);
+      return null;
+    }
+    JobProfile profile = jip.getProfile();
+    JobStatus status = jip.getStatus();
+    final char[] charsToEscape = {StringUtils.COMMA, '=', 
+        StringUtils.ESCAPE_CHAR};
+    String user = StringUtils.escapeString(profile.getUser(), 
+        StringUtils.ESCAPE_CHAR, charsToEscape);
+    String queue = StringUtils.escapeString(profile.getQueueName(), 
+        StringUtils.ESCAPE_CHAR, charsToEscape);
+    Counters jobCounters = jip.getJobCounters();
+    long mapSlotSeconds = (jobCounters.getCounter(
+        JobInProgress.Counter.SLOTS_MILLIS_MAPS) + 
+        jobCounters.getCounter(JobInProgress.
+        Counter.FALLOW_SLOTS_MILLIS_MAPS)) / 1000;
+    long reduceSlotSeconds = (jobCounters.getCounter(
+        JobInProgress.Counter.SLOTS_MILLIS_REDUCES) + 
+       jobCounters.getCounter(JobInProgress.
+       Counter.FALLOW_SLOTS_MILLIS_REDUCES)) / 1000;
+    jobSummary.append("jobId=");
+    jobSummary.append(jip.getJobID());
+    jobSummary.append(",");
+    jobSummary.append("startTime=");
+    jobSummary.append(jip.getStartTime());
+    jobSummary.append(",");
+    jobSummary.append("launchTime=");
+    jobSummary.append(jip.getLaunchTime());
+    jobSummary.append(",");
+    jobSummary.append("finishTime=");
+    jobSummary.append(jip.getFinishTime());
+    jobSummary.append(",");
+    jobSummary.append("numMaps=");
+    jobSummary.append(jip.getTasks(TaskType.MAP).length);
+    jobSummary.append(",");
+    jobSummary.append("numSlotsPerMap=");
+    jobSummary.append(jip.getNumSlotsPerMap() );
+    jobSummary.append(",");
+    jobSummary.append("numReduces=");
+    jobSummary.append(jip.getTasks(TaskType.REDUCE).length);
+    jobSummary.append(",");
+    jobSummary.append("numSlotsPerReduce=");
+    jobSummary.append(jip.getNumSlotsPerReduce());
+    jobSummary.append(",");
+    jobSummary.append("user=");
+    jobSummary.append(user);
+    jobSummary.append(",");
+    jobSummary.append("queue=");
+    jobSummary.append(queue);
+    jobSummary.append(",");
+    jobSummary.append("status=");
+    jobSummary.append(JobStatus.getJobRunState(status.getRunState()));
+    jobSummary.append(",");
+    jobSummary.append("mapSlotSeconds=");
+    jobSummary.append(mapSlotSeconds);
+    jobSummary.append(",");
+    jobSummary.append("reduceSlotsSeconds=");
+    jobSummary.append(reduceSlotSeconds);
+    jobSummary.append(",");
+    jobSummary.append("clusterMapCapacity=");
+    jobSummary.append(tracker.getClusterMetrics().getMapSlotCapacity());
+    jobSummary.append(",");
+    jobSummary.append("clusterReduceCapacity=");
+    jobSummary.append(tracker.getClusterMetrics().getReduceSlotCapacity());
+    return jobSummary.toString();
+  }
+
+  /**
+   * This gets the value of one task tracker window in the tasktracker page. 
+   *
+   * @param TaskTrackerStatus, 
+   * timePeriod and totalTasksOrSucceededTasks, which are requried to 
+   * identify the window
+   * @return The number of tasks info in a particular window in 
+   * tasktracker page. 
+   */
+  public int JobTracker.getTaskTrackerLevelStatistics( 
+      TaskTrackerStatus ttStatus, String timePeriod,
+      String totalTasksOrSucceededTasks) throws IOException {
+
+    LOG.info("ttStatus host :" + ttStatus.getHost());
+    if (timePeriod.matches("since_start")) {
+      StatisticsCollector.TimeWindow window = getStatistics().
+          collector.DEFAULT_COLLECT_WINDOWS[0];
+      return(getNumberOfTasks(window, ttStatus , 
+          totalTasksOrSucceededTasks));
+    } else if (timePeriod.matches("last_day")) {
+      StatisticsCollector.TimeWindow window = getStatistics().
+          collector.DEFAULT_COLLECT_WINDOWS[1];
+      return(getNumberOfTasks(window, ttStatus, 
+          totalTasksOrSucceededTasks));
+    } else if (timePeriod.matches("last_hour")) {
+      StatisticsCollector.TimeWindow window = getStatistics().
+          collector.DEFAULT_COLLECT_WINDOWS[2];
+      return(getNumberOfTasks(window, ttStatus , 
+          totalTasksOrSucceededTasks));
+    }
+    return -1;
+  }
+
+  /**
+   * Get Information for Time Period and TaskType box
+   * from all tasktrackers
+   *
+   * @param 
+   * timePeriod and totalTasksOrSucceededTasks, which are requried to
+   * identify the window
+   * @return The total number of tasks info for a particular column in
+   * tasktracker page.
+   */
+  public int JobTracker.getInfoFromAllClients(String timePeriod,
+      String totalTasksOrSucceededTasks) throws IOException {
+   
+    int totalTasksCount = 0;
+    int totalTasksRanForJob = 0;
+    for (TaskTracker tt : taskTrackers.values()) {
+      TaskTrackerStatus ttStatus = tt.getStatus();
+      String tasktrackerName = ttStatus.getHost();
+      List<Integer> taskTrackerValues = new LinkedList<Integer>();
+      JobTrackerStatistics.TaskTrackerStat ttStat = getStatistics().
+             getTaskTrackerStat(ttStatus.getTrackerName());
+      int totalTasks = getTaskTrackerLevelStatistics(
+          ttStatus, timePeriod, totalTasksOrSucceededTasks);
+      totalTasksCount += totalTasks;
+    }
+    return totalTasksCount;
+  }
+
+  private int JobTracker.getNumberOfTasks(StatisticsCollector.TimeWindow 
+    window, TaskTrackerStatus ttStatus, String totalTasksOrSucceededTasks ) { 
+    JobTrackerStatistics.TaskTrackerStat ttStat = getStatistics().
+             getTaskTrackerStat(ttStatus.getTrackerName());
+    if (totalTasksOrSucceededTasks.matches("total_tasks")) {
+      return ttStat.totalTasksStat.getValues().
+          get(window).getValue();
+    } else if (totalTasksOrSucceededTasks.matches("succeeded_tasks")) {
+      return ttStat.succeededTasksStat.getValues().
+          get(window).getValue();
+    }
+    return -1;
+  }
+
+  /**
+   * This gets the value of all task trackers windows in the tasktracker page.
+   *
+   * @param none,
+   * @return StatisticsCollectionHandler class which holds the number
+   * of all jobs ran from all tasktrackers, in the sequence given below
+   * "since_start - total_tasks"
+   * "since_start - succeeded_tasks"
+   * "last_hour - total_tasks"
+   * "last_hour - succeeded_tasks"
+   * "last_day - total_tasks"
+   * "last_day - succeeded_tasks"
+   */
+  public StatisticsCollectionHandler JobTracker.
+    getInfoFromAllClientsForAllTaskType() throws Exception { 
+
+    //The outer list will have a list of each tasktracker list.
+    //The inner list will have a list of all number of tasks in 
+    //one tasktracker.
+    List<List<Integer>> ttInfoList = new LinkedList<List<Integer>>();
+
+    // Go through each tasktracker and get all the number of tasks
+    // six window's values of that tasktracker.Each window points to 
+    // specific value for that tasktracker.  
+    //"since_start - total_tasks"
+    //"since_start - succeeded_tasks"
+    //"last_hour - total_tasks"
+    //"last_hour - succeeded_tasks"
+    //"last_day - total_tasks"
+    //"last_day - succeeded_tasks"
+
+    for (TaskTracker tt : taskTrackers.values()) {
+      TaskTrackerStatus ttStatus = tt.getStatus();
+      String tasktrackerName = ttStatus.getHost();
+      List<Integer> taskTrackerValues = new LinkedList<Integer>(); 
+      JobTrackerStatistics.TaskTrackerStat ttStat = getStatistics().
+             getTaskTrackerStat(ttStatus.getTrackerName());
+
+      int value;
+      int totalCount = 0;
+      for (int i = 0; i < 3; i++) { 
+        StatisticsCollector.TimeWindow window = getStatistics().
+          collector.DEFAULT_COLLECT_WINDOWS[i];
+        value=0;
+        value = ttStat.totalTasksStat.getValues().
+          get(window).getValue();
+        taskTrackerValues.add(value);
+        value=0;
+        value  = ttStat.succeededTasksStat.getValues().
+          get(window).getValue(); 
+        taskTrackerValues.add(value);
+      }
+      ttInfoList.add(taskTrackerValues);
+    }
+
+    //The info is collected in the order described above  by going 
+    //through each tasktracker list 
+    int totalInfoValues = 0; 
+    StatisticsCollectionHandler statisticsCollectionHandler = 
+      new StatisticsCollectionHandler();
+    for (int i = 0; i < 6; i++) {
+      totalInfoValues = 0;
+      for (int j = 0; j < ttInfoList.size(); j++) { 
+         List<Integer> list = ttInfoList.get(j);
+         totalInfoValues += list.get(i); 
+      }
+      switch (i) {
+        case 0: statisticsCollectionHandler.
+          setSinceStartTotalTasks(totalInfoValues);
+          break;
+        case 1: statisticsCollectionHandler.
+          setSinceStartSucceededTasks(totalInfoValues);
+          break;
+        case 2: statisticsCollectionHandler.
+          setLastHourTotalTasks(totalInfoValues);
+          break;
+        case 3: statisticsCollectionHandler.
+          setLastHourSucceededTasks(totalInfoValues);
+          break;
+        case 4: statisticsCollectionHandler.
+          setLastDayTotalTasks(totalInfoValues);
+          break;
+        case 5: statisticsCollectionHandler.
+          setLastDaySucceededTasks(totalInfoValues);
+          break;
+      }
+    } 
+      return statisticsCollectionHandler;
+  }
+
+  /*
+   * Get the Tasktrcker Heart beat interval 
+   */
+  public int JobTracker.getTaskTrackerHeartbeatInterval()
+      throws Exception {
+    return (getNextHeartbeatInterval());
+  }
+  
+  //access the job data the method only does a get on read-only data
+  //it does not return anything purposely, since the test case
+  //does not require this but this can be extended in future
+  public void JobTracker.accessHistoryData(JobID id) throws Exception {
+    String location = getJobHistoryLocationForRetiredJob(id);
+    Path logFile = new Path(location);
+    FileSystem fs = logFile.getFileSystem(getConf());
+    JobHistory.JobInfo jobInfo  = new JobHistory.JobInfo(id.toString());
+    DefaultJobHistoryParser.parseJobTasks(location,
+        jobInfo, fs);
+    //Now read the info so two threads can access the info at the
+    //same time from client side
+    LOG.info("user " +jobInfo.get(Keys.USER));
+    LOG.info("jobname "+jobInfo.get(Keys.JOBNAME));
+    jobInfo.get(Keys.JOBCONF);
+    jobInfo.getJobACLs();
+  }
+  
+  /**
+   * Verifies whether Node is decommissioned or not
+   * @param
+   * tasktracker Client host name
+   * @return boolean true for Decommissoned and false for not decommissioned.
+   */
+  public boolean JobTracker.isNodeDecommissioned(String ttClientHostName)
+      throws IOException {
+    Set<String> excludedNodes = hostsReader.getExcludedHosts();
+    LOG.info("ttClientHostName is :" + ttClientHostName);
+    boolean b =  excludedNodes.contains(ttClientHostName);
+    return b;
   }
 }

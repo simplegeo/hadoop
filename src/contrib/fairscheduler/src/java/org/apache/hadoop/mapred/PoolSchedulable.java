@@ -41,11 +41,11 @@ public class PoolSchedulable extends Schedulable {
   private PoolManager poolMgr;
   private List<JobSchedulable> jobScheds = new LinkedList<JobSchedulable>();
   private int demand = 0;
-  
+
   // Variables used for preemption
   long lastTimeAtMinShare;
   long lastTimeAtHalfFairShare;
-
+  
   public PoolSchedulable(FairScheduler scheduler, Pool pool, TaskType type) {
     this.scheduler = scheduler;
     this.pool = pool;
@@ -54,6 +54,8 @@ public class PoolSchedulable extends Schedulable {
     long currentTime = scheduler.getClock().getTime();
     this.lastTimeAtMinShare = currentTime;
     this.lastTimeAtHalfFairShare = currentTime;
+    
+    initMetrics();
   }
 
   public void addJob(JobInProgress job) {
@@ -67,6 +69,7 @@ public class PoolSchedulable extends Schedulable {
       JobSchedulable jobSched = it.next();
       if (jobSched.getJob() == job) {
         it.remove();
+        jobSched.cleanupMetrics();
         break;
       }
     }
@@ -171,6 +174,7 @@ public class PoolSchedulable extends Schedulable {
     return pool;
   }
 
+  @Override
   public TaskType getTaskType() {
     return taskType;
   }
@@ -193,5 +197,26 @@ public class PoolSchedulable extends Schedulable {
   
   public void setLastTimeAtHalfFairShare(long lastTimeAtHalfFairShare) {
     this.lastTimeAtHalfFairShare = lastTimeAtHalfFairShare;
+  }
+
+  protected String getMetricsContextName() {
+    return "pools";
+  }
+  
+  @Override
+  public void updateMetrics() {
+    super.setMetricValues(metrics);
+    
+    if (scheduler.isPreemptionEnabled()) {
+      // These won't be set if preemption is off
+      long lastCheck = scheduler.getLastPreemptionUpdateTime();
+      metrics.setMetric("millisSinceAtMinShare", lastCheck - lastTimeAtMinShare);
+      metrics.setMetric("millisSinceAtHalfFairShare", lastCheck - lastTimeAtHalfFairShare);
+    }
+    metrics.update();
+
+    for (JobSchedulable job : jobScheds) {
+      job.updateMetrics();
+    }
   }
 }

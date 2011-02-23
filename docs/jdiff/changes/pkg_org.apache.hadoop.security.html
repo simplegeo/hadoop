@@ -18,7 +18,7 @@ org.apache.hadoop.security
     <TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
     <TABLE summary="Navigation bar" BORDER="0" CELLPADDING="0" CELLSPACING="3">
     <TR ALIGN="center" VALIGN="top">
-      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../../api/org/apache/hadoop/security/package-summary.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>hadoop 0.20.2+791</tt></B></FONT></A>&nbsp;</TD>
+      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../../api/org/apache/hadoop/security/package-summary.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>hadoop 0.20.2-CDH3B4</tt></B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="changes-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Package</B></FONT>&nbsp;</TD>
       <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"> &nbsp;<FONT CLASS="NavBarFont1">Class</FONT>&nbsp;</TD>
@@ -85,6 +85,20 @@ Package <A HREF="../../api/org/apache/hadoop/security/package-summary.html" targ
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="JniBasedUnixGroupsMapping"></A>
+  <nobr><A HREF="../../api/org/apache/hadoop/security/JniBasedUnixGroupsMapping.html" target="_top"><tt>JniBasedUnixGroupsMapping</tt></A></nobr>
+  </TD>
+  <TD VALIGN="TOP">A JNI-based implementation of <A HREF="../../api/org/apache/hadoop/security/JniBasedUnixGroupsMapping/GroupMappingServiceProvider.html" target="_top">GroupMappingServiceProvider</A> that invokes libC calls to get the group memberships of a given user.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="JniBasedUnixGroupsNetgroupMapping"></A>
+  <nobr><A HREF="../../api/org/apache/hadoop/security/JniBasedUnixGroupsNetgroupMapping.html" target="_top"><tt>JniBasedUnixGroupsNetgroupMapping</tt></A></nobr>
+  </TD>
+  <TD VALIGN="TOP">A JNI-based implementation of <A HREF="../../api/org/apache/hadoop/security/JniBasedUnixGroupsNetgroupMapping/GroupMappingServiceProvider.html" target="_top">GroupMappingServiceProvider</A> that invokes libC calls to get the group memberships of a given user.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="KerberosInfo"></A>
   <nobr><A HREF="../../api/org/apache/hadoop/security/KerberosInfo.html" target="_top"><tt><I>KerberosInfo</I></tt></A></nobr>
   </TD>
@@ -131,6 +145,13 @@ Package <A HREF="../../api/org/apache/hadoop/security/package-summary.html" targ
   <nobr><A HREF="../../api/org/apache/hadoop/security/Krb5AndCertsSslSocketConnector.MODE.html" target="_top"><tt>Krb5AndCertsSslSocketConnector.<br>MODE</tt></A></nobr>
   </TD>
   <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="NetgroupCache"></A>
+  <nobr><A HREF="../../api/org/apache/hadoop/security/NetgroupCache.html" target="_top"><tt>NetgroupCache</tt></A></nobr>
+  </TD>
+  <TD VALIGN="TOP">Class that caches the netgroups and inverts group-to-user map to user-to-group map</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
@@ -218,6 +239,13 @@ Package <A HREF="../../api/org/apache/hadoop/security/package-summary.html" targ
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="ShellBasedUnixGroupsNetgroupMapping"></A>
+  <nobr><A HREF="../../api/org/apache/hadoop/security/ShellBasedUnixGroupsNetgroupMapping.html" target="_top"><tt>ShellBasedUnixGroupsNetgroupMapping</tt></A></nobr>
+  </TD>
+  <TD VALIGN="TOP">A simple shell-based implementation of <A HREF="../../api/org/apache/hadoop/security/ShellBasedUnixGroupsNetgroupMapping/GroupMappingServiceProvider.html" target="_top">GroupMappingServiceProvider</A> that exec's the <code>groups</code> shell command to fetch the group memberships of a given user.</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="UserGroupInformation.AuthenticationMethod"></A>
   <nobr><A HREF="../../api/org/apache/hadoop/security/UserGroupInformation.AuthenticationMethod.html" target="_top"><tt>UserGroupInformation.<br>AuthenticationMethod</tt></A></nobr>
   </TD>
@@ -261,7 +289,7 @@ Package <A HREF="../../api/org/apache/hadoop/security/package-summary.html" targ
     <TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
     <TABLE summary="Navigation bar" BORDER="0" CELLPADDING="0" CELLSPACING="3">
     <TR ALIGN="center" VALIGN="top">
-      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../../api/org/apache/hadoop/security/package-summary.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>hadoop 0.20.2+791</tt></B></FONT></A>&nbsp;</TD>
+      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../../api/org/apache/hadoop/security/package-summary.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>hadoop 0.20.2-CDH3B4</tt></B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="changes-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Package</B></FONT>&nbsp;</TD>
       <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1"> &nbsp;<FONT CLASS="NavBarFont1">Class</FONT>&nbsp;</TD>

@@ -1,7 +1,7 @@
 From 37bbc27c772ba033670be8d6323ca1a9191d34a7 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 7 May 2010 16:23:32 -0700
-Subject: [PATCH 647/791] HADOOP-6756. Clean up and document configuration keys in CommonConfigurationKeys.java
+Subject: [PATCH 647/887] HADOOP-6756. Clean up and document configuration keys in CommonConfigurationKeys.java
 
 Patch: https://issues.apache.org/jira/secure/attachment/12444008/jira.HADOOP-6756-0.20-1.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12444017/jira.HADOOP-6756-0.20-1-FS_DEFAULT_NAME_KEY.patch

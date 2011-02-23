@@ -1,7 +1,7 @@
 From 2466310d0e2a426e848860e9a8411b8ea14e1bb1 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:47:07 -0800
-Subject: [PATCH 208/791] HADOOP-6453. Hadoop wrapper script shouldn't ignore an existing JAVA_LIBRARY_PATH
+Subject: [PATCH 208/887] HADOOP-6453. Hadoop wrapper script shouldn't ignore an existing JAVA_LIBRARY_PATH
 
 Description: Currently the hadoop wrapper script assumes its the only place that uses JAVA_LIBRARY_PATH and initializes it to a blank line.
 

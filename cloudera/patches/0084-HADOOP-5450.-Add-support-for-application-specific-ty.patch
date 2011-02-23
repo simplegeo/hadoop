@@ -1,7 +1,7 @@
 From 520bda2edcb90dfe9461e16b96aa4a048d33ed7b Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:57:11 -0800
-Subject: [PATCH 084/791] HADOOP-5450. Add support for application-specific typecodes to typed bytes
+Subject: [PATCH 084/887] HADOOP-5450. Add support for application-specific typecodes to typed bytes
 
 Description: For serializing objects of types that are not supported by typed bytes serialization, applications might want to use a custom serialization format. Right now, typecode 0 has to be used for the bytes resulting from this custom serialization, which could lead to problems when deserializing the objects because the application cannot know if a byte sequence following typecode 0 is a customly serialized object or just a raw sequence of bytes. Therefore, a range of typecodes that are treated as aliases for 0 should be added, such that different typecodes can be used for application-specific purposes.
 Reason: New feature

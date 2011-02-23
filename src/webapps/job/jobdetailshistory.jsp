@@ -159,7 +159,7 @@ Hadoop Job <%=jobid %> on History Viewer
 </tr>
 <tr>
 <th>Setup</th>
-    <th><a href="jobtaskshistory.jsp?logFile=<%=encodedLogFileName%>&taskType=<%=Values.SETUP.name() %>&status=all">
+    <td><a href="jobtaskshistory.jsp?logFile=<%=encodedLogFileName%>&taskType=<%=Values.SETUP.name() %>&status=all">
         <%=totalSetups%></a></td>
     <td><a href="jobtaskshistory.jsp?logFile=<%=encodedLogFileName%>&taskType=<%=Values.SETUP.name() %>&status=<%=Values.SUCCESS %>">
         <%=numFinishedSetups%></a></td>

@@ -1,7 +1,7 @@
 From 48788d6ab1852ee1f47b56ee6f097022c30ec409 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 23 Feb 2010 17:29:15 -0800
-Subject: [PATCH 491/791] MAPREDUCE-1505. Cluster class should create the rpc client only when needed
+Subject: [PATCH 491/887] MAPREDUCE-1505. Cluster class should create the rpc client only when needed
 
 Patch: https://issues.apache.org/jira/secure/attachment/12436628/MAPREDUCE-1505_yhadoop20.patch
 Author: Dick King

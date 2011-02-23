@@ -1,7 +1,7 @@
 From ab177895085d9b5fcfcb1fc695bbd94b753b9160 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 23 Feb 2010 22:38:02 +0530
-Subject: [PATCH 486/791] MAPREDUCE-1476. committer.needsTaskCommit should not be called for a task cleanup attempt
+Subject: [PATCH 486/887] MAPREDUCE-1476. committer.needsTaskCommit should not be called for a task cleanup attempt
 
 Patch: https://issues.apache.org/jira/secure/attachment/12436722/mr-1476-y20.patch
 Author: Amareshwari Sriramadasu

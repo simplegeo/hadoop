@@ -1,7 +1,7 @@
 From 10024643cacf3d40faa870505c83dd344f8ff366 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 13 Jan 2010 15:28:34 -0800
-Subject: [PATCH 424/791] MAPREDUCE-1342. Fixed deadlock in global blacklisting of tasktrackers.
+Subject: [PATCH 424/887] MAPREDUCE-1342. Fixed deadlock in global blacklisting of tasktrackers.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12430116/patch-1342-3-ydist.txt
 Author: Amareshwari Sriramadasu

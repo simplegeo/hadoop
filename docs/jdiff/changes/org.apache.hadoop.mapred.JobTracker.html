@@ -18,7 +18,7 @@ org.apache.hadoop.mapred.JobTracker
     <TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
     <TABLE summary="Navigation bar" BORDER="0" CELLPADDING="0" CELLSPACING="3">
     <TR ALIGN="center" VALIGN="top">
-      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../../api/org/apache/hadoop/mapred/JobTracker.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>hadoop 0.20.2+791</tt></B></FONT></A>&nbsp;</TD>
+      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../../api/org/apache/hadoop/mapred/JobTracker.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>hadoop 0.20.2-CDH3B4</tt></B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="changes-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="pkg_org.apache.hadoop.mapred.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
@@ -48,7 +48,7 @@ CONSTRUCTORS&nbsp;|&nbsp;
 <H2>
 Class org.apache.hadoop.mapred.<A HREF="../../api/org/apache/hadoop/mapred/JobTracker.html" target="_top"><tt>JobTracker</tt></A>
 </H2>
-<p><font size="+1">Added interfaces <code>org.apache.hadoop.mapred.AdminOperationsProtocol, org.apache.hadoop.security.RefreshUserMappingsProtocol, org.apache.hadoop.security.authorize.RefreshAuthorizationPolicyProtocol</code>.<br></font>
+<p><font size="+1">Added interfaces <code>org.apache.hadoop.mapred.AdminOperationsProtocol, org.apache.hadoop.mapred.JobTrackerMXBean, org.apache.hadoop.security.RefreshUserMappingsProtocol, org.apache.hadoop.security.authorize.RefreshAuthorizationPolicyProtocol</code>.<br></font>
 <a NAME="constructors"></a>
 <a NAME="methods"></a>
 <p>
@@ -87,6 +87,20 @@ Class org.apache.hadoop.mapred.<A HREF="../../api/org/apache/hadoop/mapred/JobTr
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.mapred.JobTracker.getAliveNodesInfoJson_added()"></A>
+  <nobr><code>String</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/JobTracker.html#getAliveNodesInfoJson()" target="_top"><tt>getAliveNodesInfoJson</tt></A>()</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.mapred.JobTracker.getBlacklistedNodesInfoJson_added()"></A>
+  <nobr><code>String</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/JobTracker.html#getBlacklistedNodesInfoJson()" target="_top"><tt>getBlacklistedNodesInfoJson</tt></A>()</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="org.apache.hadoop.mapred.JobTracker.getClock_added()"></A>
   <nobr><code>Clock</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/JobTracker.html#getClock()" target="_top"><tt>getClock</tt></A>()</nobr>
   </TD>
@@ -122,6 +136,13 @@ Class org.apache.hadoop.mapred.<A HREF="../../api/org/apache/hadoop/mapred/JobTr
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.mapred.JobTracker.getConfigVersion_added()"></A>
+  <nobr><code>String</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/JobTracker.html#getConfigVersion()" target="_top"><tt>getConfigVersion</tt></A>()</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="org.apache.hadoop.mapred.JobTracker.getDelegationToken_added(org.apache.hadoop.io.Text)"></A>
   <nobr><code>Token</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/JobTracker.html#getDelegationToken(org.apache.hadoop.io.Text)" target="_top"><tt>getDelegationToken</tt></A>(<code>Text</code>)</nobr>
   </TD>
@@ -143,6 +164,13 @@ Class org.apache.hadoop.mapred.<A HREF="../../api/org/apache/hadoop/mapred/JobTr
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.mapred.JobTracker.getHostname_added()"></A>
+  <nobr><code>String</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/JobTracker.html#getHostname()" target="_top"><tt>getHostname</tt></A>()</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="org.apache.hadoop.mapred.JobTracker.getQueueAclsForCurrentUser_added()"></A>
   <nobr><code>QueueAclsInfo[]</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/JobTracker.html#getQueueAclsForCurrentUser()" target="_top"><tt>getQueueAclsForCurrentUser</tt></A>()</nobr>
   </TD>
@@ -157,6 +185,13 @@ Class org.apache.hadoop.mapred.<A HREF="../../api/org/apache/hadoop/mapred/JobTr
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.mapred.JobTracker.getQueueInfoJson_added()"></A>
+  <nobr><code>String</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/JobTracker.html#getQueueInfoJson()" target="_top"><tt>getQueueInfoJson</tt></A>()</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="org.apache.hadoop.mapred.JobTracker.getStagingAreaDir_added()"></A>
   <nobr><code>String</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/JobTracker.html#getStagingAreaDir()" target="_top"><tt>getStagingAreaDir</tt></A>()</nobr>
   </TD>
@@ -164,8 +199,29 @@ Class org.apache.hadoop.mapred.<A HREF="../../api/org/apache/hadoop/mapred/JobTr
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.mapred.JobTracker.getSummaryJson_added()"></A>
+  <nobr><code>String</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/JobTracker.html#getSummaryJson()" target="_top"><tt>getSummaryJson</tt></A>()</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="org.apache.hadoop.mapred.JobTracker.getTaskTrackerStatus_added(java.lang.String)"></A>
   <nobr><code>TaskTrackerStatus</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/JobTracker.html#getTaskTrackerStatus(java.lang.String)" target="_top"><tt>getTaskTrackerStatus</tt></A>(<code>String</code>)</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.mapred.JobTracker.getThreadCount_added()"></A>
+  <nobr><code>int</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/JobTracker.html#getThreadCount()" target="_top"><tt>getThreadCount</tt></A>()</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.mapred.JobTracker.getVersion_added()"></A>
+  <nobr><code>String</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/JobTracker.html#getVersion()" target="_top"><tt>getVersion</tt></A>()</nobr>
   </TD>
   <TD>&nbsp;</TD>
 </TR>
@@ -192,8 +248,8 @@ Class org.apache.hadoop.mapred.<A HREF="../../api/org/apache/hadoop/mapred/JobTr
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="org.apache.hadoop.mapred.JobTracker.refreshQueueAcls_added()"></A>
-  <nobr><code>void</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/JobTracker.html#refreshQueueAcls()" target="_top"><tt>refreshQueueAcls</tt></A>()</nobr>
+  <A NAME="org.apache.hadoop.mapred.JobTracker.refreshQueues_added()"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/JobTracker.html#refreshQueues()" target="_top"><tt>refreshQueues</tt></A>()</nobr>
   </TD>
   <TD>&nbsp;</TD>
 </TR>
@@ -482,6 +538,13 @@ Change in return type from <code>TaskTrackerStatus></code> to <code>Collection</
   </TD>
   <TD>&nbsp;</TD>
 </TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="org.apache.hadoop.mapred.JobTracker.MAX_USER_JOBCONF_SIZE_KEY"></A>
+  <nobr><code>String</code>&nbsp;<A HREF="../../api/org/apache/hadoop/mapred/JobTracker.html#MAX_USER_JOBCONF_SIZE_KEY" target="_top"><tt>MAX_USER_JOBCONF_SIZE_KEY</tt></A></nobr>
+  </TD>
+  <TD VALIGN="TOP">the config key for max user jobconf size</TD>
+</TR>
 </TABLE>
 &nbsp;
 <HR>
@@ -491,7 +554,7 @@ Change in return type from <code>TaskTrackerStatus></code> to <code>Collection</
     <TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
     <TABLE summary="Navigation bar" BORDER="0" CELLPADDING="0" CELLSPACING="3">
     <TR ALIGN="center" VALIGN="top">
-      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../../api/org/apache/hadoop/mapred/JobTracker.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>hadoop 0.20.2+791</tt></B></FONT></A>&nbsp;</TD>
+      <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="../../api/org/apache/hadoop/mapred/JobTracker.html" target="_top"><FONT CLASS="NavBarFont1"><B><tt>hadoop 0.20.2-CDH3B4</tt></B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="changes-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"> <A HREF="pkg_org.apache.hadoop.mapred.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
       <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>

@@ -1,7 +1,7 @@
 From 330f009bae260ac990426a988fc56913897a50ca Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:35:03 -0800
-Subject: [PATCH 027/791] HADOOP-5805. problem using top level s3 buckets as input/output directories
+Subject: [PATCH 027/887] HADOOP-5805. problem using top level s3 buckets as input/output directories
 
 Description: When I specify top level s3 buckets as input or output directories, I get the following exception.
 

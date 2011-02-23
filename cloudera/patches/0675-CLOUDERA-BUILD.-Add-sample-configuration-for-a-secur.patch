@@ -1,7 +1,7 @@
 From e7c81789d095a30fb8abf93557d10b84ea66eaea Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 28 Jun 2010 13:37:33 -0700
-Subject: [PATCH 675/791] CLOUDERA-BUILD. Add sample configuration for a secure cluster based on YDH's sample
+Subject: [PATCH 675/887] CLOUDERA-BUILD. Add sample configuration for a secure cluster based on YDH's sample
 
 Ref: CDH-648
 ---

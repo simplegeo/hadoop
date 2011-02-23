@@ -1,7 +1,7 @@
 From e1ab72fadf1fc48bb21a44c62edd39b3883a392a Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 29 Jan 2010 00:00:30 +0530
-Subject: [PATCH 445/791] Amend MAPREDUCE-842. Per-job local data on the TaskTracker node should have right access-control
+Subject: [PATCH 445/887] Amend MAPREDUCE-842. Per-job local data on the TaskTracker node should have right access-control
 
 Reason: follow-up patch to fix a backport bug
 Patch: https://issues.apache.org/jira/secure/attachment/12431690/MR-842-follow-up.patch

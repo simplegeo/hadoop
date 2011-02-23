@@ -1,7 +1,7 @@
 From 5699f5483e2a9ee9debd0f0154c6506ee5dc87e2 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:28:03 -0800
-Subject: [PATCH 154/791] MAPREDUCE-1285. DistCp cannot handle -delete if destination is local filesystem
+Subject: [PATCH 154/887] MAPREDUCE-1285. DistCp cannot handle -delete if destination is local filesystem
 
 Description: The following exception is thrown:
 <div class="code panel" style="border-width: 1px;"><div class="codeContent panelContent">

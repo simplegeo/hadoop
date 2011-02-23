@@ -1,7 +1,7 @@
 From b6f790774d34ed34bb7c649142dc770c25121ac3 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:10:13 -0800
-Subject: [PATCH 109/791] HADOOP-5981. HADOOP-2838 doesnt work as expected
+Subject: [PATCH 109/887] HADOOP-5981. HADOOP-2838 doesnt work as expected
 
 Description: The substitution feature i.e X=$X:/tmp doesnt work as expected.
 

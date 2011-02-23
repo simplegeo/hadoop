@@ -1,7 +1,7 @@
 From 69059680d9e0df4004ac7199c2c54ea658c35173 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 5 Mar 2010 05:58:25 +0000
-Subject: [PATCH 538/791] HDFS-814. Add an api to get the visible length of a DFSDataInputStream.
+Subject: [PATCH 538/887] HDFS-814. Add an api to get the visible length of a DFSDataInputStream.
 
 Patch: http://issues.apache.org/jira/secure/attachment/12437934/getLength-yahoo-0.20.patch
 Patch: http://issues.apache.org/jira/secure/attachment/12438026/privateInputStream.patch

@@ -1,7 +1,7 @@
 From 3ad925fb44f4e98e986b5648e2c593d1feabafd4 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sat, 27 Feb 2010 15:33:40 +0530
-Subject: [PATCH 516/791] MAPREDUCE-1307. Introduce the concept of Job Permissions
+Subject: [PATCH 516/887] MAPREDUCE-1307. Introduce the concept of Job Permissions
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437331/MAPREDUCE-1307-20100227-ydist.txt
 Author: Vinod K V

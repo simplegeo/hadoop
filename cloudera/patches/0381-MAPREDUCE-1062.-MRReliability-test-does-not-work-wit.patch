@@ -1,7 +1,7 @@
 From 5165b65008a62a834903f46db18b991dfe2aeacf Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 26 Oct 2009 09:21:56 +0530
-Subject: [PATCH 381/791] MAPREDUCE-1062. MRReliability test does not work with retired jobs
+Subject: [PATCH 381/887] MAPREDUCE-1062. MRReliability test does not work with retired jobs
 
 Patch: https://issues.apache.org/jira/secure/attachment/12422201/mapreduce-1062-3-ydist.patch
 Author: Sreekanth Ramakrishnan

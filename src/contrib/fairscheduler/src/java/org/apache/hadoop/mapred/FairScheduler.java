@@ -36,6 +36,9 @@ import org.apache.hadoop.http.HttpServer;
 import org.apache.hadoop.util.ReflectionUtils;
 import org.apache.hadoop.mapreduce.server.jobtracker.TaskTracker;
 import org.apache.hadoop.mapreduce.TaskType;
+import org.apache.hadoop.metrics.MetricsContext;
+import org.apache.hadoop.metrics.MetricsUtil;
+import org.apache.hadoop.metrics.Updater;
 
 /**
  * A {@link TaskScheduler} that implements fair sharing.
@@ -68,6 +71,7 @@ public class FairScheduler extends TaskScheduler {
   protected Map<JobInProgress, JobInfo> infos = // per-job scheduling variables
     new HashMap<JobInProgress, JobInfo>();
   protected long lastUpdateTime;           // Time when we last updated infos
+  protected long lastPreemptionUpdateTime; // Time when we last updated preemption vars
   protected boolean initialized;  // Are we initialized?
   protected volatile boolean running; // Are we running?
   protected boolean assignMultiple; // Simultaneously assign map and reduce?
@@ -91,7 +95,6 @@ public class FairScheduler extends TaskScheduler {
   protected long lastDumpTime;       // Time when we last dumped state to log
   protected long lastHeartbeatTime;  // Time we last ran assignTasks 
   private long lastPreemptCheckTime; // Time we last ran preemptTasksIfNecessary
-   
 
   /**
    * A class for holding per-job scheduler variables. These always contain the
@@ -210,6 +213,9 @@ public class FairScheduler extends TaskScheduler {
         infoServer.addServlet("scheduler", "/scheduler",
             FairSchedulerServlet.class);
       }
+      
+      initMetrics();
+      
       eventLog.log("INITIALIZED");
     } catch (Exception e) {
       // Can't load one of the managers - crash the JobTracker now while it is
@@ -217,6 +223,15 @@ public class FairScheduler extends TaskScheduler {
       throw new RuntimeException("Failed to start FairScheduler", e);
     }
     LOG.info("Successfully configured FairScheduler");
+  }
+
+  /**
+   * Register metrics for the fair scheduler, and start a thread
+   * to update them periodically.
+   */
+  private void initMetrics() {
+    MetricsContext context = MetricsUtil.getContext("fairscheduler");
+    context.registerUpdater(new MetricsUpdater());
   }
 
   @Override
@@ -230,6 +245,20 @@ public class FairScheduler extends TaskScheduler {
       taskTrackerManager.removeJobInProgressListener(eagerInitListener);
     if (eventLog != null)
       eventLog.shutdown();
+  }
+
+  /**
+   * Responsible for updating metrics when the metrics context requests it.
+   */
+  private class MetricsUpdater implements Updater {
+    @Override
+    public void doUpdates(MetricsContext context) {
+      updateMetrics();
+    }    
+  }
+  
+  synchronized void updateMetrics() {
+    poolMgr.updateMetrics();
   }
   
   /**
@@ -685,6 +714,7 @@ public class FairScheduler extends TaskScheduler {
    */
   private void updatePreemptionVariables() {
     long now = clock.getTime();
+    lastPreemptionUpdateTime = now;
     for (TaskType type: MAP_AND_REDUCE) {
       for (PoolSchedulable sched: getPoolSchedulables(type)) {
         if (!isStarvedForMinShare(sched)) {
@@ -808,7 +838,8 @@ public class FairScheduler extends TaskScheduler {
       JobInProgress job = taskTrackerManager.getJob(jobID);
       Pool pool = poolMgr.getPool(job);
       PoolSchedulable sched = pool.getSchedulable(taskType);
-      if (tasksLeft.get(pool) > sched.getFairShare()) {
+      int tasksLeftForPool = tasksLeft.get(pool);
+      if (tasksLeftForPool > sched.getFairShare()) {
         eventLog.log("PREEMPT", status.getTaskID(),
             status.getTaskTracker());
         try {
@@ -816,6 +847,9 @@ public class FairScheduler extends TaskScheduler {
           tasksToPreempt--;
           if (tasksToPreempt == 0)
             break;
+
+          // reduce tasks left for pool
+          tasksLeft.put(pool, --tasksLeftForPool);
         } catch (IOException e) {
           LOG.error("Failed to kill task " + status.getTaskID(), e);
         }
@@ -982,5 +1016,12 @@ public class FairScheduler extends TaskScheduler {
 
   public JobInfo getJobInfo(JobInProgress job) {
     return infos.get(job);
+  }
+  
+  boolean isPreemptionEnabled() {
+    return preemptionEnabled;
+  }
+  long getLastPreemptionUpdateTime() {
+    return lastPreemptionUpdateTime;
   }
 }

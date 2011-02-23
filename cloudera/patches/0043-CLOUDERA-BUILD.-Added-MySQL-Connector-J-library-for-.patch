@@ -1,7 +1,7 @@
 From 79a2645bc81894331721ef94c255992075ccf195 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:42:14 -0800
-Subject: [PATCH 043/791] CLOUDERA-BUILD. Added MySQL Connector/J library for Sqoop.
+Subject: [PATCH 043/887] CLOUDERA-BUILD. Added MySQL Connector/J library for Sqoop.
 
 Description: We can ship MySQL Connector/J with CDH because the licenses
 are compatible. However, the public Apache project will not include this

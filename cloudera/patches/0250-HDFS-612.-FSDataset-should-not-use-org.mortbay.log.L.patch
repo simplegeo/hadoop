@@ -1,7 +1,7 @@
 From 90f5a4bf77d17adcabb834a3cc2e02becb9f012d Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Mon, 17 May 2010 18:53:50 -0700
-Subject: [PATCH 250/791] HDFS-612. FSDataset should not use org.mortbay.log.Log.
+Subject: [PATCH 250/887] HDFS-612. FSDataset should not use org.mortbay.log.Log.
 
 Description: Cleans up HDFS-547 logging.
 

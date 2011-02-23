@@ -1,7 +1,7 @@
 From 00f6976093cc20ea825a35f6831f645dc5f61637 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:32:17 -0800
-Subject: [PATCH 173/791] HDFS-860. fuse-dfs truncate behavior causes issues with scp
+Subject: [PATCH 173/887] HDFS-860. fuse-dfs truncate behavior causes issues with scp
 
 Description: For whatever reason, scp issues a "truncate" once it's written a file to truncate the file to the # of bytes it has written (i.e., if a file is X bytes, it calls truncate(X)).
 

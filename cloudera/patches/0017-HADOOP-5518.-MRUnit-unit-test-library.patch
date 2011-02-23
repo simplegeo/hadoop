@@ -1,7 +1,7 @@
 From c2026460d4cf7049c67da65d3a2db2e9bcd9c848 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:27:14 -0800
-Subject: [PATCH 017/791] HADOOP-5518. MRUnit unit test library
+Subject: [PATCH 017/887] HADOOP-5518. MRUnit unit test library
 
 Description: MRUnit is a tool to help authors of MapReduce programs write unit tests.
 

@@ -415,6 +415,7 @@ case "$_HADOOP_RUN_MODE" in
       touch $log_path
       tail -f $log_path &
     fi
+    unset _HADOOP_DAEMON_DETACHED
 
     exec "$_JSVC_PATH" -Dproc_$COMMAND \
                        $_JSVC_FLAGS \
@@ -433,6 +434,7 @@ case "$_HADOOP_RUN_MODE" in
     fi
 
     if [ "$_HADOOP_DAEMON_DETACHED" = "true" ]; then
+      unset _HADOOP_DAEMON_DETACHED
       touch $_HADOOP_DAEMON_OUT
       nohup $_JAVA_EXEC -Dproc_$COMMAND $JAVA_HEAP_MAX $HADOOP_OPTS -classpath "$CLASSPATH" $CLASS "$@" > "$_HADOOP_DAEMON_OUT" 2>&1 < /dev/null &
       if [ "$EUID" == "0" ]; then

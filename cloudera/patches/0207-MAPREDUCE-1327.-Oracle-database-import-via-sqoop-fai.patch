@@ -1,7 +1,7 @@
 From a67b4b1c361c26e002da64953a7f8bc068d29b98 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:46:42 -0800
-Subject: [PATCH 207/791] MAPREDUCE-1327. Oracle database import via sqoop fails when a table contains the column types such as TIMESTAMP(6) WITH LOCAL TIME ZONE and TIMESTAMP(6) WITH TIME ZONE
+Subject: [PATCH 207/887] MAPREDUCE-1327. Oracle database import via sqoop fails when a table contains the column types such as TIMESTAMP(6) WITH LOCAL TIME ZONE and TIMESTAMP(6) WITH TIME ZONE
 
 Description: When Oracle table contains the columns "TIMESTAMP(6) WITH LOCAL TIME ZONE" and "TIMESTAMP(6) WITH TIME ZONE", Sqoop fails to map values for those columns to valid Java data types, resulting in the following exception:
 

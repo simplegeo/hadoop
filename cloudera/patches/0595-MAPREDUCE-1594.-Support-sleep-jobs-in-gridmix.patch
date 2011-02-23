@@ -1,7 +1,7 @@
 From 9d2cc8f9f81c8a39f4c8e1d7e00765ee29808145 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 7 Apr 2010 10:56:55 +0530
-Subject: [PATCH 595/791] MAPREDUCE-1594. Support sleep jobs in gridmix
+Subject: [PATCH 595/887] MAPREDUCE-1594. Support sleep jobs in gridmix
 
 Patch: https://issues.apache.org/jira/secure/attachment/12440983/1594-yhadoop-20-1xx-1-5.patch
 Author: rahul k singh

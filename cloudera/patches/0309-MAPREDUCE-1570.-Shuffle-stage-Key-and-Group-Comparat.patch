@@ -1,7 +1,7 @@
 From 23e68e669a118d34e265af5e8ffda3615c2666f9 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 18 Jun 2010 15:52:15 -0700
-Subject: [PATCH 309/791] MAPREDUCE-1570. Shuffle stage - Key and Group Comparators
+Subject: [PATCH 309/887] MAPREDUCE-1570. Shuffle stage - Key and Group Comparators
 
 Description: Shuffle method in org.apache.hadoop.mrunit.MapReduceDriverBase
 doesn't currently allow the use of custom GroupingComparator and

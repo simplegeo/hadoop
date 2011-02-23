@@ -1,7 +1,7 @@
 From be7f1dc031e17dc4f53ebe76d27c1b9242105785 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:56:26 -0800
-Subject: [PATCH 081/791] MAPREDUCE-840. DBInputFormat leaves open transaction
+Subject: [PATCH 081/887] MAPREDUCE-840. DBInputFormat leaves open transaction
 
 Description: (Reapplied after HADOOP-4687)
 Reason: MISSING: Reason for inclusion

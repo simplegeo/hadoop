@@ -1,7 +1,7 @@
 From 8a3b6472ae00542dadf7f7d60991ec0f21b38177 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:39:40 -0800
-Subject: [PATCH 034/791] HADOOP-5968. Sqoop should only print a warning about mysql import speed once
+Subject: [PATCH 034/887] HADOOP-5968. Sqoop should only print a warning about mysql import speed once
 
 Description: After <a href="http://issues.apache.org/jira/browse/HADOOP-5844" title="Use mysqldump when connecting to local mysql instance in Sqoop"><del>HADOOP-5844</del></a>, Sqoop can use mysqldump as an alternative to JDBC for importing from MySQL. If you use the JDBC mechanism, it prints a warning if you could have enabled the mysqldump path instead. But the warning is printed multiple times (every time the LocalMySQLManager is instantiated), and also when the MySQL manager is used for informational queries (e.g., listing tables) rather than true imports.
 

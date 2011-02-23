@@ -1,7 +1,7 @@
 From ebc7ac47eb93eeab3f8b8987ac74a56b0e40a982 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 1 Mar 2010 17:25:45 -0800
-Subject: [PATCH 525/791] HDFS-1014. Error in reading delegation tokens from edit logs.
+Subject: [PATCH 525/887] HDFS-1014. Error in reading delegation tokens from edit logs.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437547/HDFS-1014-y20.1.patch
 Author: Jitendra Nath Pandey

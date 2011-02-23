@@ -1,7 +1,7 @@
 From 349281bfa0243f5adbbd459266f4a9ac7ac8c1cc Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:30:16 -0800
-Subject: [PATCH 021/791] CLOUDERA-BUILD. Fix scribe-log4j's ivy.xml to properly get log4j on the compile classpath
+Subject: [PATCH 021/887] CLOUDERA-BUILD. Fix scribe-log4j's ivy.xml to properly get log4j on the compile classpath
 
 Author: Todd Lipcon
 Reason: bugfix to build system

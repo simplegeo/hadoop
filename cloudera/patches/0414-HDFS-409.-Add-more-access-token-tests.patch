@@ -1,7 +1,7 @@
 From 6205b10e6bbd702cab014af83061791b35a2248a Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 24 Dec 2009 11:50:12 -0800
-Subject: [PATCH 414/791] HDFS-409. Add more access token tests
+Subject: [PATCH 414/887] HDFS-409. Add more access token tests
 
 Patch: https://issues.apache.org/jira/secure/attachment/12428924/HDFS-409-0_20.4.patch
 Author: Kan Zhang

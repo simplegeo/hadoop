@@ -129,15 +129,22 @@ class MapTask extends Task {
   
   @Override
   public TaskRunner createRunner(TaskTracker tracker, 
-      TaskTracker.TaskInProgress tip) {
-    return new MapTaskRunner(tip, tracker, this.conf);
+                                 TaskTracker.TaskInProgress tip,
+                                 TaskTracker.RunningJob rjob
+                                 ) throws IOException {
+    return new MapTaskRunner(tip, tracker, this.conf, rjob);
   }
 
   @Override
   public void write(DataOutput out) throws IOException {
     super.write(out);
     if (isMapOrReduce()) {
-      splitMetaInfo.write(out);
+      if (splitMetaInfo != null) {
+        splitMetaInfo.write(out);
+      } else {
+        new TaskSplitIndex().write(out);
+      }
+      //TODO do we really need to set this to null?
       splitMetaInfo = null;
     }
   }
@@ -164,7 +171,7 @@ class MapTask extends Task {
     private TaskReporter reporter;
     private long beforePos = -1;
     private long afterPos = -1;
-    
+
     TrackedRecordReader(RecordReader<K,V> raw, TaskReporter reporter) 
       throws IOException{
       rawIn = raw;
@@ -197,10 +204,10 @@ class MapTask extends Task {
      
     protected synchronized boolean moveToNext(K key, V value)
       throws IOException {
-      reporter.setProgress(getProgress());
       beforePos = getPos();
       boolean ret = rawIn.next(key, value);
       afterPos = getPos();
+      reporter.setProgress(getProgress());
       return ret;
     }
     
@@ -1477,8 +1484,7 @@ class MapTask extends Task {
       // read in paged indices
       for (int i = indexCacheList.size(); i < numSpills; ++i) {
         Path indexFileName = mapOutputFile.getSpillIndexFile(i);
-        indexCacheList.add(new SpillRecord(indexFileName, job, 
-            UserGroupInformation.getCurrentUser().getShortUserName()));
+        indexCacheList.add(new SpillRecord(indexFileName, job, null));
       }
 
       //make correction in the length to include the sequence file header

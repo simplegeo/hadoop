@@ -26,6 +26,7 @@ import java.io.InputStream;
 import java.io.RandomAccessFile;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -438,6 +439,10 @@ public class FSDataset implements FSConstants, FSDatasetInterface {
       return (remaining > 0) ? remaining : 0;
     }
       
+    long getReserved(){
+      return reserved;
+    }
+    
     String getMount() throws IOException {
       return usage.getMount();
     }
@@ -1914,6 +1919,48 @@ public class FSDataset implements FSConstants, FSDatasetInterface {
       // paranoia! verify that the contents of the stored block
       // matches the block file on disk.
       validateBlockMetadata(stored);
+      return info;
+    }
+  }
+
+  /**
+   * Class for representing the Datanode volume information
+   */
+  static class VolumeInfo {
+    final String directory;
+    final long usedSpace;
+    final long freeSpace;
+    final long reservedSpace;
+
+    VolumeInfo(String dir, long usedSpace, long freeSpace, long reservedSpace) {
+      this.directory = dir;
+      this.usedSpace = usedSpace;
+      this.freeSpace = freeSpace;
+      this.reservedSpace = reservedSpace;
+    }
+  }  
+  
+  synchronized Collection<VolumeInfo> getVolumeInfo() {
+    Collection<VolumeInfo> info = new ArrayList<VolumeInfo>();
+    synchronized(volumes.volumes) {
+      for (FSVolume volume : volumes.volumes) {
+        long used = 0;
+        try {
+          used = volume.getDfsUsed();
+        } catch (IOException e) {
+          DataNode.LOG.warn(e.getMessage());
+        }
+        
+        long free= 0;
+        try {
+          free = volume.getAvailable();
+        } catch (IOException e) {
+          DataNode.LOG.warn(e.getMessage());
+        }
+        
+        info.add(new VolumeInfo(volume.toString(), used, free, 
+            volume.getReserved()));
+      }
       return info;
     }
   }

@@ -26,6 +26,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.InputStreamReader;
 import java.io.Writer;
+import java.lang.management.ManagementFactory;
 import java.net.BindException;
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
@@ -81,6 +82,7 @@ import org.apache.hadoop.mapred.JobInProgress.KillInterruptedException;
 import org.apache.hadoop.mapred.JobStatusChangeEvent.EventType;
 import org.apache.hadoop.mapred.QueueManager.QueueACL;
 import org.apache.hadoop.mapred.TaskTrackerStatus.TaskTrackerHealthStatus;
+import org.apache.hadoop.metrics.util.MBeanUtil;
 import org.apache.hadoop.net.DNSToSwitchMapping;
 import org.apache.hadoop.net.NetUtils;
 import org.apache.hadoop.net.NetworkTopology;
@@ -111,6 +113,7 @@ import org.apache.hadoop.mapreduce.security.token.DelegationTokenRenewal;
 import org.apache.hadoop.mapreduce.security.token.JobTokenSecretManager;
 import org.apache.hadoop.mapreduce.server.jobtracker.TaskTracker;
 import org.apache.hadoop.security.Credentials;
+import org.mortbay.util.ajax.JSON;
 
 /*******************************************************
  * JobTracker is the central location for submitting and 
@@ -119,7 +122,8 @@ import org.apache.hadoop.security.Credentials;
  *******************************************************/
 public class JobTracker implements MRConstants, InterTrackerProtocol,
     JobSubmissionProtocol, TaskTrackerManager, RefreshUserMappingsProtocol,
-    RefreshAuthorizationPolicyProtocol, AdminOperationsProtocol {
+    RefreshAuthorizationPolicyProtocol, AdminOperationsProtocol,
+    JobTrackerMXBean {
 
   static{
     Configuration.addDefaultResource("mapred-default.xml");
@@ -148,7 +152,14 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
   // tracker could be blacklisted across all jobs
   private int MAX_BLACKLISTS_PER_TRACKER = 4;
   
-  //Delegation token related keys
+
+  /** the maximum allowed size of the jobconf **/
+  long MAX_JOBCONF_SIZE = 5*1024*1024L;
+  /** the config key for max user jobconf size **/
+  public static final String MAX_USER_JOBCONF_SIZE_KEY = 
+      "mapred.user.jobconf.limit";
+
+  // Delegation token related keys
   public static final String  DELEGATION_KEY_UPDATE_INTERVAL_KEY =  
     "mapreduce.cluster.delegation.key.update-interval";
   public static final long    DELEGATION_KEY_UPDATE_INTERVAL_DEFAULT =  
@@ -250,6 +261,9 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
 
   public static final Log LOG = LogFactory.getLog(JobTracker.class);
   
+  static final String CONF_VERSION_KEY = "mapreduce.jobtracker.conf.version";
+  static final String CONF_VERSION_DEFAULT = "default";
+
   private PluginDispatcher<JobTrackerPlugin> pluginDispatcher;
 
   public Clock getClock() {
@@ -298,6 +312,7 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
     }
     if (result != null) {
       JobEndNotifier.startNotifier();
+      MBeanUtil.registerMBean("JobTracker", "JobTrackerInfo", result);
     }    
     return result;
   }
@@ -513,9 +528,11 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
     final JobStatus status;
     final JobProfile profile;
     final long finishTime;
+    final Counters counters;
     private String historyFile;
-    RetireJobInfo(JobStatus status, JobProfile profile, long finishTime, 
-        String historyFile) {
+    RetireJobInfo(Counters counters, JobStatus status, JobProfile profile, 
+        long finishTime, String historyFile) {
+      this.counters = counters;
       this.status = status;
       this.profile = profile;
       this.finishTime = finishTime;
@@ -540,7 +557,7 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
     }
 
     synchronized void addToCache(JobInProgress job) {
-      RetireJobInfo info = new RetireJobInfo(job.getStatus(), 
+      RetireJobInfo info = new RetireJobInfo(job.getCounters(), job.getStatus(),
           job.getProfile(), job.getFinishTime(), job.getHistoryFile());
       jobRetireInfoQ.add(info);
       jobIDStatusMap.put(info.status.getJobID(), info);
@@ -2054,7 +2071,7 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
                                        DELEGATION_TOKEN_GC_INTERVAL);
     secretManager.startThreads();
        
-
+    MAX_JOBCONF_SIZE = conf.getLong(MAX_USER_JOBCONF_SIZE_KEY, MAX_JOBCONF_SIZE);
     //
     // Grab some static constants
     //
@@ -3749,7 +3766,10 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
         throw new IOException("Queue \"" + queue + "\" does not exist");
       }
 
-      // check for access
+      // check if queue is RUNNING
+      if (!queueManager.isRunning(queue)) {
+        throw new IOException("Queue \"" + queue + "\" is not running");
+      }
       try {
         aclsManager.checkAccess(job, ugi, Operation.SUBMIT_JOB);
       } catch (IOException ioe) {
@@ -4008,9 +4028,11 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
           StringUtils.stringifyException(kie));
       killJob(job);
     } catch (Throwable t) {
+      String failureInfo = 
+        "Job initialization failed:\n" + StringUtils.stringifyException(t);
       // If the job initialization is failed, job state will be FAILED
-      LOG.error("Job initialization failed:\n" +
-          StringUtils.stringifyException(t));
+      LOG.error(failureInfo);
+      job.getStatus().setFailureInfo(failureInfo);
       failJob(job);
     }
 	 }
@@ -4119,7 +4141,12 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
         aclsManager.checkAccess(job, callerUGI, Operation.VIEW_JOB_COUNTERS);
 
         return isJobInited(job) ? job.getCounters() : EMPTY_COUNTERS;
-      } 
+      } else {
+        RetireJobInfo info = retireJobs.get(jobid);
+        if (info != null) {
+          return info.counters;
+        }
+      }
     }
 
     return completedJobStatusStore.readCounters(jobid);
@@ -4946,10 +4973,15 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
   }
 
   @Override
-  public void refreshQueueAcls() throws IOException{
-    LOG.info("Refreshing queue acls. requested by : " + 
+  public void refreshQueues() throws IOException {
+    LOG.info("Refreshing queue information. requested by : " +
         UserGroupInformation.getCurrentUser().getShortUserName());
-    this.queueManager.refreshAcls(new Configuration(this.conf));
+    this.queueManager.refreshQueues(new Configuration());
+    
+    synchronized (taskScheduler) {
+      taskScheduler.refresh();
+    }
+
   }
   
   synchronized String getReasonsForBlacklisting(String host) {
@@ -5016,4 +5048,110 @@ public class JobTracker implements MRConstants, InterTrackerProtocol,
     return aclsManager;
   }
 
+  // Begin MXBean implementation
+  @Override
+  public String getHostname() {
+    return StringUtils.simpleHostname(getJobTrackerMachine());
+  }
+
+  @Override
+  public String getVersion() {
+    return VersionInfo.getVersion() +", r"+ VersionInfo.getRevision();
+  }
+
+  @Override
+  public String getConfigVersion() {
+    return conf.get(CONF_VERSION_KEY, CONF_VERSION_DEFAULT);
+  }
+
+  @Override
+  public int getThreadCount() {
+    return ManagementFactory.getThreadMXBean().getThreadCount();
+  }
+
+  @Override
+  public String getSummaryJson() {
+    return getSummary().toJson();
+  }
+
+  InfoMap getSummary() {
+    final ClusterMetrics metrics = getClusterMetrics();
+    InfoMap map = new InfoMap();
+    map.put("nodes", metrics.getTaskTrackerCount()
+            + getBlacklistedTrackerCount());
+    map.put("alive", metrics.getTaskTrackerCount());
+    map.put("blacklisted", getBlacklistedTrackerCount());
+    map.put("slots", new InfoMap() {{
+      put("map_slots", metrics.getMapSlotCapacity());
+      put("map_slots_used", metrics.getOccupiedMapSlots());
+      put("reduce_slots", metrics.getReduceSlotCapacity());
+      put("reduce_slots_used", metrics.getOccupiedReduceSlots());
+    }});
+    map.put("jobs", metrics.getTotalJobSubmissions());
+    return map;
+  }
+
+  @Override
+  public String getAliveNodesInfoJson() {
+    return JSON.toString(getAliveNodesInfo());
+  }
+
+  List<InfoMap> getAliveNodesInfo() {
+    List<InfoMap> info = new ArrayList<InfoMap>();
+    for (final TaskTrackerStatus  tts : activeTaskTrackers()) {
+      final int mapSlots = tts.getMaxMapSlots();
+      final int redSlots = tts.getMaxReduceSlots();
+      info.add(new InfoMap() {{
+        put("hostname", tts.getHost());
+        put("last_seen", tts.getLastSeen());
+        put("health", tts.getHealthStatus().isNodeHealthy() ? "OK" : "");
+        put("slots", new InfoMap() {{
+          put("map_slots", mapSlots);
+          put("map_slots_used", mapSlots - tts.getAvailableMapSlots());
+          put("reduce_slots", redSlots);
+          put("reduce_slots_used", redSlots - tts.getAvailableReduceSlots());
+        }});
+        put("failures", tts.getFailures());
+      }});
+    }
+    return info;
+  }
+
+  @Override
+  public String getBlacklistedNodesInfoJson() {
+    return JSON.toString(getUnhealthyNodesInfo(blacklistedTaskTrackers()));
+  }
+
+  List<InfoMap> getUnhealthyNodesInfo(Collection<TaskTrackerStatus> list) {
+    List<InfoMap> info = new ArrayList<InfoMap>();
+    for (final TaskTrackerStatus tts : list) {
+      info.add(new InfoMap() {{
+        put("hostname", tts.getHost());
+        put("last_seen", tts.getLastSeen());
+        put("reason", tts.getHealthStatus().getHealthReport());
+      }});
+    }
+    return info;
+  }
+  
+  @Override
+  public String getQueueInfoJson() {
+    return getQueueInfo().toJson();
+  }
+
+  InfoMap getQueueInfo() {
+    InfoMap map = new InfoMap();
+    try {
+      for (final JobQueueInfo q : getQueues()) {
+        map.put(q.getQueueName(), new InfoMap() {{
+          put("info", q.getSchedulingInfo());
+        }});
+      }
+    }
+    catch (Exception e) {
+      throw new RuntimeException("Getting queue info", e);
+    }
+    return map;
+  }
+  // End MXbean implementaiton
 }

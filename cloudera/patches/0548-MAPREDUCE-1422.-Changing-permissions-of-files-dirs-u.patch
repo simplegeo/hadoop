@@ -1,7 +1,7 @@
 From 6cbba23fe597ada4f109fc92ecbffc3d01dcc8ac Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 10 Mar 2010 15:17:17 +0530
-Subject: [PATCH 548/791] MAPREDUCE-1422. Changing permissions of files/dirs under job-work-dir may be needed sothat cleaning up of job-dir in all mapred-local-directories succeeds always
+Subject: [PATCH 548/887] MAPREDUCE-1422. Changing permissions of files/dirs under job-work-dir may be needed sothat cleaning up of job-dir in all mapred-local-directories succeeds always
 
 Patch: https://issues.apache.org/jira/secure/attachment/12438393/mapreduce-1422-y20s.patch
 Author: Amar Kamat

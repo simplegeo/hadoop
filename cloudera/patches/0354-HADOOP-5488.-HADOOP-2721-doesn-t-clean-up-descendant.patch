@@ -1,7 +1,7 @@
 From e2a79393fa3a9f88029f289e89831c5dcbd7274c Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 18 Aug 2009 09:12:41 -0700
-Subject: [PATCH 354/791] HADOOP-5488. HADOOP-2721 doesn't clean up descendant processes of a jvm
+Subject: [PATCH 354/887] HADOOP-5488. HADOOP-2721 doesn't clean up descendant processes of a jvm
  that exits cleanly after running a task successfully
 
 Author: Ravi Gummadi

@@ -1,7 +1,7 @@
 From 542f37d8c93b1cae42aec29789068d27bc2330fb Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 9 Feb 2010 12:07:45 +0530
-Subject: [PATCH 466/791] HADOOP-5879. GzipCodec should read compression level etc from configuration
+Subject: [PATCH 466/887] HADOOP-5879. GzipCodec should read compression level etc from configuration
 
 Patch: http://issues.apache.org/jira/secure/attachment/12435254/hadoop-5879-yahoo-0.20-v1.0.patch
 Author: He Yongqiang

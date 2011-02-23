@@ -1,7 +1,7 @@
 From c58318cfa6e26b7dbacd4093d646fc8b66f9eda6 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:58:23 -0800
-Subject: [PATCH 090/791] HADOOP-5640. Allow ServicePlugins to hook callbacks into key service events
+Subject: [PATCH 090/887] HADOOP-5640. Allow ServicePlugins to hook callbacks into key service events
 
 Description: <a href="http://issues.apache.org/jira/browse/HADOOP-5257" title="Export namenode/datanode functionality through a pluggable RPC layer"><del>HADOOP-5257</del></a> added the ability for NameNode and DataNode to start and stop ServicePlugin implementations at NN/DN start/stop. However, this is insufficient integration for some common use cases.
 

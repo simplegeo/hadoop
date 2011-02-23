@@ -1,7 +1,7 @@
 From 77510480a8b45b2f9e605b720671d609d7bf4687 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 2 Feb 2010 16:25:41 -0800
-Subject: [PATCH 453/791] HADOOP-6204. Implementing aspects development and fault injection framework for Hadoop
+Subject: [PATCH 453/887] HADOOP-6204. Implementing aspects development and fault injection framework for Hadoop
 
 Patch: https://issues.apache.org/jira/secure/attachment/12434616/HADOOP-6204-ydist.patch
 Author: Konstantin Boudnik

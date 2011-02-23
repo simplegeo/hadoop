@@ -1,7 +1,7 @@
 From 139bea6660193cc73852832e03fe570437343e96 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 15:02:55 -0800
-Subject: [PATCH 097/791] HDFS-528. Add ability for safemode to wait for a minimum number of live datanodes
+Subject: [PATCH 097/887] HDFS-528. Add ability for safemode to wait for a minimum number of live datanodes
 
 Description: When starting up a fresh cluster programatically, users often want to wait until DFS is "writable" before continuing in a script. "dfsadmin -safemode wait" doesn't quite work for this on a completely fresh cluster, since when there are 0 blocks on the system, 100% of them are accounted for before any DNs have reported.
 

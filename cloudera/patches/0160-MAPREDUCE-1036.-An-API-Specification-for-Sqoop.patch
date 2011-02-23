@@ -1,7 +1,7 @@
 From 26ba4fd749755a3df79eaa27792662e5b7e3da80 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:29:15 -0800
-Subject: [PATCH 160/791] MAPREDUCE-1036. An API Specification for Sqoop
+Subject: [PATCH 160/887] MAPREDUCE-1036. An API Specification for Sqoop
 
 Description: Over the last several months, Sqoop has evolved to a state that is functional and has room for extensions. Developing extensions requires a stable API and documentation. I am attaching to this ticket a description of Sqoop's design and internal APIs, which include some open questions. I would like to solicit input on the design regarding these open questions and standardize the API.
 Reason: Documentation

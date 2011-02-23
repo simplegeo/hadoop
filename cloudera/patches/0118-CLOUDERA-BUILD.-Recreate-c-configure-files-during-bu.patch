@@ -1,7 +1,7 @@
 From 8bf845170decdcb12254bc1dc98ccbf0fda7d233 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:15:01 -0800
-Subject: [PATCH 118/791] CLOUDERA-BUILD. Recreate c++ configure files during build if we have the right build dependencies
+Subject: [PATCH 118/887] CLOUDERA-BUILD. Recreate c++ configure files during build if we have the right build dependencies
 
 Author: Todd Lipcon
 ---

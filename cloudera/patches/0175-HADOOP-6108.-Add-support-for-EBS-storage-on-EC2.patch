@@ -1,7 +1,7 @@
 From 361221a2a082d0ab7a87ba0226dbe05938440738 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:33:07 -0800
-Subject: [PATCH 175/791] HADOOP-6108. Add support for EBS storage on EC2
+Subject: [PATCH 175/887] HADOOP-6108. Add support for EBS storage on EC2
 
 Description: By using EBS for namenode and datanode storage we can have persistent, restartable Hadoop clusters running on EC2.
 Reason: New feature

@@ -1,0 +1,2 @@
+version=org.apache.hadoop:hadoop-core.version
+hadoop.version=org.apache.hadoop:hadoop-core.version

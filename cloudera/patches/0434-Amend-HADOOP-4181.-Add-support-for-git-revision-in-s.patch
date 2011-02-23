@@ -1,7 +1,7 @@
 From 6b6fdbe4b79d6e623fdbcc60f052749cf99b0c32 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 21 Jan 2010 12:30:20 -0800
-Subject: [PATCH 434/791] Amend HADOOP-4181. Add support for git revision in saveVersion.sh
+Subject: [PATCH 434/887] Amend HADOOP-4181. Add support for git revision in saveVersion.sh
 
 Author: Owen O'Malley
 Reason: Support git revisions without explicitly passing them in

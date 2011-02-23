@@ -159,7 +159,7 @@ public class HttpServer implements FilterContainer {
 
     webServer.setThreadPool(new QueuedThreadPool());
 
-    final String appDir = getWebAppsPath(name);
+    final String appDir = getWebAppsPath();
     ContextHandlerCollection contexts = new ContextHandlerCollection();
     webServer.setHandler(contexts);
 
@@ -434,17 +434,14 @@ public class HttpServer implements FilterContainer {
 
   /**
    * Get the pathname to the webapps files.
-   * @param appName eg "secondary" or "datanode"
    * @return the pathname as a URL
-   * @throws FileNotFoundException if 'webapps' directory cannot be found on CLASSPATH.
+   * @throws IOException if 'webapps' directory cannot be found on CLASSPATH.
    */
-  private String getWebAppsPath(String appName) throws FileNotFoundException {
-    URL url = getClass().getClassLoader().getResource("webapps/" + appName);
-    if (url == null)
-      throw new FileNotFoundException("webapps/" + appName
-          + " not found in CLASSPATH");
-    String urlString = url.toString();
-    return urlString.substring(0, urlString.lastIndexOf('/'));
+  protected String getWebAppsPath() throws IOException {
+    URL url = getClass().getClassLoader().getResource("webapps");
+    if (url == null) 
+      throw new IOException("webapps not found in CLASSPATH"); 
+    return url.toString();
   }
 
   /**

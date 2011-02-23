@@ -1,7 +1,7 @@
 From 7c168a8a2613d93e19508a91e7c4db3b3cfb503b Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:15:26 -0800
-Subject: [PATCH 119/791] HADOOP-6269. Missing synchronization for defaultResources in Configuration.addResource
+Subject: [PATCH 119/887] HADOOP-6269. Missing synchronization for defaultResources in Configuration.addResource
 
 Description: Configuration.defaultResources is a simple ArrayList. In two places in Configuration it is accessed without appropriate synchronization, which we've seen to occasionally result in ConcurrentModificationExceptions.
 Reason: bugfix (race condition)

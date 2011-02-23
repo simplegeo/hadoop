@@ -1,7 +1,7 @@
 From 5d4e93d8e0df3c445f56c5eb51965eef92bebd78 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:09:46 -0800
-Subject: [PATCH 108/791] HADOOP-2838. Add HADOOP_LIBRARY_PATH config setting so Hadoop will include external directories for jni
+Subject: [PATCH 108/887] HADOOP-2838. Add HADOOP_LIBRARY_PATH config setting so Hadoop will include external directories for jni
 
 Description: Currently there is no way to configure Hadoop to use external JNI directories. I propose we add a new variable like HADOOP_CLASS_PATH that is added to the JAVA_LIBRARY_PATH before the process is run.
 

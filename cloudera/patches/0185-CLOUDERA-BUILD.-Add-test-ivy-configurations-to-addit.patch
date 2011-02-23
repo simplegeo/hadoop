@@ -1,7 +1,7 @@
 From d93dad715d3c702d15c2a32c85d586c708e70857 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:36:23 -0800
-Subject: [PATCH 185/791] CLOUDERA-BUILD. Add test ivy configurations to additional projects.
+Subject: [PATCH 185/887] CLOUDERA-BUILD. Add test ivy configurations to additional projects.
 
 Author: Aaron Kimball
 Reason: Build system improvement

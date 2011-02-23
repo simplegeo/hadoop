@@ -1,7 +1,7 @@
 From 9e3f0d458c0ac31bad77cc336b6fdf0206fbe0d6 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sat, 23 Jan 2010 14:00:14 +0530
-Subject: [PATCH 438/791] MAPREDUCE-1098. Incorrect synchronization in DistributedCache causes TaskTrackers to freeze up during localization of Cache for tasks.
+Subject: [PATCH 438/887] MAPREDUCE-1098. Incorrect synchronization in DistributedCache causes TaskTrackers to freeze up during localization of Cache for tasks.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12431207/patch-1098-7-y20.txt
 Author: Amareshwari Sriramadasu

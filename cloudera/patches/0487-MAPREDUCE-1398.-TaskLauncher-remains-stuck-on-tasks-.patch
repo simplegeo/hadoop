@@ -1,7 +1,7 @@
 From a3fe5640d9cdab14cc7080093b2dbb7933d640d9 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 23 Feb 2010 23:04:04 +0530
-Subject: [PATCH 487/791] MAPREDUCE-1398. TaskLauncher remains stuck on tasks waiting for free nodes even if task is killed.
+Subject: [PATCH 487/887] MAPREDUCE-1398. TaskLauncher remains stuck on tasks waiting for free nodes even if task is killed.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12436724/mr-1398-y20.patch
 Author: Amareshwari Sriramadasu

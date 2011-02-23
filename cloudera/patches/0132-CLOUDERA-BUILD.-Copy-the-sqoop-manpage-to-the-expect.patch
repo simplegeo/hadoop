@@ -1,7 +1,7 @@
 From 604d3a71334b9340a6219e3b88bf563b79f5d083 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:19:11 -0800
-Subject: [PATCH 132/791] CLOUDERA-BUILD. Copy the sqoop manpage to the expected version number
+Subject: [PATCH 132/887] CLOUDERA-BUILD. Copy the sqoop manpage to the expected version number
 
 Author: Chad Metcalf
 ---

@@ -1,7 +1,7 @@
 From 16ba98db9791a1a24aff066ae884c64abb4b589a Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 8 Oct 2010 14:10:50 -0700
-Subject: [PATCH 736/791] CLOUDERA-BUILD. Use su instead of sudo for dropping root privileges.
+Subject: [PATCH 736/887] CLOUDERA-BUILD. Use su instead of sudo for dropping root privileges.
 
 This fixes an issue on EC2, where some AMIs don't properly support
 sudo.

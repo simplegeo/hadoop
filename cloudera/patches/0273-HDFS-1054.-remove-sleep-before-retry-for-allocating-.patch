@@ -1,7 +1,7 @@
 From bc5217543eccc2cfd8a182cdbb051b39d2abf3e7 Mon Sep 17 00:00:00 2001
 From: Dhruba Borthakur <dhruba@apache.org>
 Date: Fri, 11 Jun 2010 23:37:38 +0000
-Subject: [PATCH 273/791] HDFS-1054. remove sleep before retry for allocating a block.
+Subject: [PATCH 273/887] HDFS-1054. remove sleep before retry for allocating a block.
 
 Description: When the write pipeline fails to allocate a new block,
              it previously slept for hard-coded 6 seconds before

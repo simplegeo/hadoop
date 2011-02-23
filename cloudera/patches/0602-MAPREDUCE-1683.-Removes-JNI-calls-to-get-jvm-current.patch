@@ -1,7 +1,7 @@
 From 87c3e693adb3912b5c2755cf7e31f9c1b9973273 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 12 Apr 2010 16:48:37 -0700
-Subject: [PATCH 602/791] MAPREDUCE-1683. Removes JNI calls to get jvm current/max heap usage in ClusterStatus by default.
+Subject: [PATCH 602/887] MAPREDUCE-1683. Removes JNI calls to get jvm current/max heap usage in ClusterStatus by default.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12441563/MAPREDUCE-1683_yhadoop_20_S.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12441978/MAPREDUCE-1683_part2_yhadoop_20_10.patch

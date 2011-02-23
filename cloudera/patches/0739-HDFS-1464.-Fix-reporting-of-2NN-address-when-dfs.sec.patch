@@ -1,7 +1,7 @@
-From 7a3e67006cec29bca339350ab910731296db7561 Mon Sep 17 00:00:00 2001
+From 835e4b2f8d5f5b8de9eaaf6b2585a62224574323 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 19 Oct 2010 15:19:34 -0700
-Subject: [PATCH 739/791] HDFS-1464. Fix reporting of 2NN address when dfs.secondary.http.address is default
+Subject: [PATCH 739/887] HDFS-1464. Fix reporting of 2NN address when dfs.secondary.http.address is default
 
 Reason: regression due to HDFS-1080
 Author: Todd Lipcon

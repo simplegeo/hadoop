@@ -1,7 +1,7 @@
 From bf08bde983501e3ce8ebf6197049262518580611 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 23 Jun 2010 16:14:50 -0700
-Subject: [PATCH 317/791] HDFS-1260. tryUpdateBlock should do validation before renaming meta file
+Subject: [PATCH 317/887] HDFS-1260. tryUpdateBlock should do validation before renaming meta file
 
 Description: Solves bug where block became inaccessible in certain failure
              conditions (particularly network partitions). Observed under

@@ -1,7 +1,7 @@
 From 50ddfaab96c196a2342e7807423d31f5bd10a18e Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 24 Feb 2010 17:04:46 +0530
-Subject: [PATCH 495/791] MAPREDUCE-1403. Save file-sizes of each of the artifacts in DistributedCache in the JobConf
+Subject: [PATCH 495/887] MAPREDUCE-1403. Save file-sizes of each of the artifacts in DistributedCache in the JobConf
 
 Patch: https://issues.apache.org/jira/secure/attachment/12436842/MAPREDUCE-1403_yhadoop20-2.patch
 Author: Arun C Murthy

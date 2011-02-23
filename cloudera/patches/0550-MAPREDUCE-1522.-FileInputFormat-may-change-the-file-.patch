@@ -1,7 +1,7 @@
 From 3d43a9035ebaf0c449647c5f35fbd37444708d9f Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 11 Mar 2010 10:48:27 -0800
-Subject: [PATCH 550/791] MAPREDUCE-1522. FileInputFormat may change the file system of an input path
+Subject: [PATCH 550/887] MAPREDUCE-1522. FileInputFormat may change the file system of an input path
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437994/M1522-1v20.patch
 Author: Tsz Wo (Nicholas), SZE

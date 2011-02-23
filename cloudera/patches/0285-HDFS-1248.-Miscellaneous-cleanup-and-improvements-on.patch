@@ -1,7 +1,7 @@
 From 77ac4f46fb5c011b5ac7c5fedb4c51b31580c9ba Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@lipcon.org>
 Date: Tue, 15 Jun 2010 18:33:58 -0700
-Subject: [PATCH 285/791] HDFS-1248. Miscellaneous cleanup and improvements on 0.20 append branch
+Subject: [PATCH 285/887] HDFS-1248. Miscellaneous cleanup and improvements on 0.20 append branch
 
 Description: Miscellaneous code cleanup and logging changes, including:
  - Slight cleanup to recoverFile() function in TestFileAppend4

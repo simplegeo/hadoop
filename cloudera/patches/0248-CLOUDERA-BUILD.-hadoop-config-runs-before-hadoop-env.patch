@@ -1,7 +1,7 @@
 From 3af9533ee6f260373f302ff4a16dd04eb75e0616 Mon Sep 17 00:00:00 2001
 From: Chad Metcalf <chad@cloudera.com>
 Date: Mon, 1 Mar 2010 15:28:19 -0800
-Subject: [PATCH 248/791] CLOUDERA-BUILD. hadoop-config runs before hadoop-env.sh
+Subject: [PATCH 248/887] CLOUDERA-BUILD. hadoop-config runs before hadoop-env.sh
 
     conf/hadoop-env.sh says you can update JAVA_HOME there, but it gets
     sourced after hadoop-config.sh, which errors out if JAVA_HOME is not

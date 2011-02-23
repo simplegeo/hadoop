@@ -1,7 +1,7 @@
 From 7276208c2789f2c3961c6dc9fa1d2757774971b1 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 16 Jun 2010 12:16:25 -0700
-Subject: [PATCH 304/791] HDFS-1243. Replication tests in TestFileAppend4 should wait for a second for replication to occur
+Subject: [PATCH 304/887] HDFS-1243. Replication tests in TestFileAppend4 should wait for a second for replication to occur
 
 Reason: Test error - fix sporadic failure of TestFileAppend4
 Author: Todd Lipcon

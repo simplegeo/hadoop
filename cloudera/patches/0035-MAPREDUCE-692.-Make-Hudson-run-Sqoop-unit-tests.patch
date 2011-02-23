@@ -1,7 +1,7 @@
 From b8e54791e990328db983f070e9a04952301eda35 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:40:04 -0800
-Subject: [PATCH 035/791] MAPREDUCE-692. Make Hudson run Sqoop unit tests
+Subject: [PATCH 035/887] MAPREDUCE-692. Make Hudson run Sqoop unit tests
 
 Description: Running 'ant test-contrib' didn't test Sqoop because it wasn't explicitly listed in the build.xml file in src/contrib/
 Reason: Test coverage

@@ -1,7 +1,7 @@
 From 110cd5235ba960e003ac94824a29a8b0ac36a031 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sat, 24 Apr 2010 09:23:55 -0700
-Subject: [PATCH 606/791] MAPREDUCE-1718. Fix a bug in HFTPFileSystem so that delegation tokens function correctly
+Subject: [PATCH 606/887] MAPREDUCE-1718. Fix a bug in HFTPFileSystem so that delegation tokens function correctly
 
 Patch: https://issues.apache.org/jira/secure/attachment/12442726/MAPREDUCE-1718-BP20-2.patch
 Author: Boris Shkolnik

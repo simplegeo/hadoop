@@ -1,7 +1,7 @@
 From 4aa8da2788a0794be5469227140509cc87d29c47 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 20 Apr 2010 01:13:14 +0530
-Subject: [PATCH 618/791] HDFS-1011. Improve Logging in HDFSProxy to include cluster name associated with the request
+Subject: [PATCH 618/887] HDFS-1011. Improve Logging in HDFSProxy to include cluster name associated with the request
 
 Patch: https://issues.apache.org/jira/secure/attachment/12441031/HDFS-1011-bp-y20s.patch
 Author: Ramesh Sekaran

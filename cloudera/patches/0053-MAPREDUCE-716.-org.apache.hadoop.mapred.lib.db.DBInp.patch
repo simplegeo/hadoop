@@ -1,7 +1,7 @@
 From ce75318a484615dc7b161a41710884f34db50c86 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:46:34 -0800
-Subject: [PATCH 053/791] MAPREDUCE-716. org.apache.hadoop.mapred.lib.db.DBInputformat not working with oracle
+Subject: [PATCH 053/887] MAPREDUCE-716. org.apache.hadoop.mapred.lib.db.DBInputformat not working with oracle
 
 Description: <p>The out of the box implementation of the Hadoop is working properly with mysql/hsqldb, but NOT with oracle.<br/>
 Reason is DBInputformat is implemented with mysql/hsqldb specific query constructs like "LIMIT", "OFFSET".</p>

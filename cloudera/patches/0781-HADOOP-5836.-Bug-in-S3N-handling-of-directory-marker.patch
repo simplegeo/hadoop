@@ -1,7 +1,7 @@
-From 7ac796d35f26b5c87d318e1e93247a7a8f31a1f5 Mon Sep 17 00:00:00 2001
+From b715fdffb59ad674e16d31db09b75884ddd2e0fa Mon Sep 17 00:00:00 2001
 From: Tom White <tom@cloudera.com>
 Date: Mon, 24 Jan 2011 17:41:41 -0800
-Subject: [PATCH 781/791] HADOOP-5836. Bug in S3N handling of directory markers using an object with a trailing "/" causes jobs to fail
+Subject: [PATCH 781/887] HADOOP-5836. Bug in S3N handling of directory markers using an object with a trailing "/" causes jobs to fail
 
 Reason: Bug fix
 Author: Ian Nowland

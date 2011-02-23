@@ -1,7 +1,7 @@
 From 33e4f0a87effa466914e292488c47977245edc96 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:04:06 -0800
-Subject: [PATCH 099/791] MAPREDUCE-987. Exposing MiniDFS and MiniMR clusters as a single process command-line
+Subject: [PATCH 099/887] MAPREDUCE-987. Exposing MiniDFS and MiniMR clusters as a single process command-line
 
 Description: It's hard to test non-Java programs that rely on significant mapreduce functionality.  The patch I'm proposing shortly will let you just type "bin/hadoop jar hadoop-hdfs-hdfswithmr-test.jar minicluster" to start a cluster (internally, it's using Mini{MR,HDFS}Cluster) with a specified number of daemons, etc.  A test that checks how some external process interacts with Hadoop might start minicluster as a subprocess, run through its thing, and then simply kill the java subprocess.
 

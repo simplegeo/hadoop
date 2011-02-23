@@ -74,7 +74,7 @@ public class TestJobTrackerSafeMode extends TestCase {
    *   - check that after all the trackers are recovered, scheduling is opened 
    */
   private void testSafeMode(MiniDFSCluster dfs, MiniMRCluster mr) 
-  throws IOException {
+  throws Exception {
     FileSystem fileSys = dfs.getFileSystem();
     JobConf jobConf = mr.createJobConf();
     String mapSignalFile = UtilsForTests.getMapSignalFile(shareDir);
@@ -219,7 +219,7 @@ public class TestJobTrackerSafeMode extends TestCase {
   /**
    * Test {@link JobTracker}'s safe mode.
    */
-  public void testJobTrackerSafeMode() throws IOException {
+  public void testJobTrackerSafeMode() throws Exception {
     String namenode = null;
     MiniDFSCluster dfs = null;
     MiniMRCluster mr = null;
@@ -278,7 +278,7 @@ public class TestJobTrackerSafeMode extends TestCase {
     }
   }
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws Exception  {
     new TestJobTrackerSafeMode().testJobTrackerSafeMode();
   }
 }

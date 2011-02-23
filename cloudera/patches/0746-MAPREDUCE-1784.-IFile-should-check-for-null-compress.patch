@@ -1,7 +1,7 @@
-From 6f138d0a0ccfdaf5fd7786e50a10aa5b8c1da46c Mon Sep 17 00:00:00 2001
+From af9ef1fcde9aa7ed6d84481837dd5c3e6e4ecc14 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 7 Dec 2010 18:29:42 -0800
-Subject: [PATCH 746/791] MAPREDUCE-1784. IFile should check for null compressor.
+Subject: [PATCH 746/887] MAPREDUCE-1784. IFile should check for null compressor.
 
 Reason: Avoid NPE
 Author: Eli Collins

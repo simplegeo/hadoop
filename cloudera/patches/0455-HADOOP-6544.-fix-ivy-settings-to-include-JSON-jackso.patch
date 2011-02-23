@@ -1,7 +1,7 @@
 From ee18c74b284b015975b0df13c750e135ff938fbe Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 5 Feb 2010 20:23:24 +0000
-Subject: [PATCH 455/791] HADOOP-6544. fix ivy settings to include JSON jackson.codehause.org libs for .20
+Subject: [PATCH 455/887] HADOOP-6544. fix ivy settings to include JSON jackson.codehause.org libs for .20
 
 Patch: https://issues.apache.org/jira/secure/attachment/12435002/contrib.ivy.jackson.patch-3
 Author: Boris Shkolnik

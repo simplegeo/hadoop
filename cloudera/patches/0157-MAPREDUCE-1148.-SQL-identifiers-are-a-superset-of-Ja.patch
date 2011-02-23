@@ -1,7 +1,7 @@
 From 0629ac30abb5e58fb80be56a385867ac7360de22 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:28:37 -0800
-Subject: [PATCH 157/791] MAPREDUCE-1148. SQL identifiers are a superset of Java identifiers
+Subject: [PATCH 157/887] MAPREDUCE-1148. SQL identifiers are a superset of Java identifiers
 
 Description: SQL identifiers can contain arbitrary characters, can start with numbers, can be words like <tt>class</tt> which are reserved in Java, etc. If Sqoop uses these names literally for class and field names then compilation errors can occur in auto-generated classes. SQL identifiers need to be cleansed to map onto Java identifiers.
 Reason: bugfix

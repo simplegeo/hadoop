@@ -1,7 +1,7 @@
 From 877288c5ab55849a08a89ce342a8d5984f18a6df Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 20 Apr 2010 01:21:33 +0530
-Subject: [PATCH 619/791] HDFS-1012. HDFSProxy support for fully qualified HDFS path in addition to simple unqualified path
+Subject: [PATCH 619/887] HDFS-1012. HDFSProxy support for fully qualified HDFS path in addition to simple unqualified path
 
 Patch: https://issues.apache.org/jira/secure/attachment/12441034/HDFS-1012-bp-y20s.patch
 Author: Srikanth Sundarrajan

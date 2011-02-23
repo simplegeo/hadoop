@@ -1,7 +1,7 @@
 From 590a82c257842be51170619deafd15cc2988541e Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Thu, 13 May 2010 21:25:53 -0700
-Subject: [PATCH 245/791] HADOOP-4885. Try to restore failed replicas of Name Node storage (at checkpoint time).
+Subject: [PATCH 245/887] HADOOP-4885. Try to restore failed replicas of Name Node storage (at checkpoint time).
 
 Description: If one of the replicas of the NameNode storage fails for whatever reason (for example temporarily failure of NFS) this Storage object is removed from the list of storage objects forever. It can be added back only on restart of the NameNode. We propose to check the status of a failed storage on every checkpoint and if it becomes valid - try to restore the edits and fsimage.
 

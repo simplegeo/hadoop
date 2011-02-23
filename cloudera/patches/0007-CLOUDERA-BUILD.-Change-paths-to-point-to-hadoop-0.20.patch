@@ -1,7 +1,7 @@
 From ee255f3909b9938b1023be6a2c59a8429227c766 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:21:27 -0800
-Subject: [PATCH 007/791] CLOUDERA-BUILD. Change paths to point to hadoop-0.20 where necessary
+Subject: [PATCH 007/887] CLOUDERA-BUILD. Change paths to point to hadoop-0.20 where necessary
 
 ---
  bin/hadoop-config.sh                    |    6 +++---

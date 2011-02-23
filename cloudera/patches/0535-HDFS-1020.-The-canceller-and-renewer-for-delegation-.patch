@@ -1,7 +1,7 @@
 From 23cdcc2b187566333ae2201cd9706655f55ebf15 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 3 Mar 2010 19:14:35 -0800
-Subject: [PATCH 535/791] HDFS-1020. The canceller and renewer for delegation tokens should be long names.
+Subject: [PATCH 535/887] HDFS-1020. The canceller and renewer for delegation tokens should be long names.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437838/HDFS-1020-y20.2.patch
 Author: Jitendra Nath Pandey

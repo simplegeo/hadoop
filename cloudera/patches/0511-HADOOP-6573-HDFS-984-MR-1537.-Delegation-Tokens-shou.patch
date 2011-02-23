@@ -1,7 +1,7 @@
 From 2a717fe40d0a2514647f25457e6a8f344dff7941 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 26 Feb 2010 21:22:54 -0800
-Subject: [PATCH 511/791] HADOOP-6573, HDFS-984, MR-1537. Delegation Tokens should be persisted.
+Subject: [PATCH 511/887] HADOOP-6573, HDFS-984, MR-1537. Delegation Tokens should be persisted.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437292/HDFS-984-0_20.4.patch
 Author: Jitendra Nath Pandey

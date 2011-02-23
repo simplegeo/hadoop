@@ -1,7 +1,7 @@
 From d6dc22fecc058e12695a481fa354078d9b012089 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:27:21 -0800
-Subject: [PATCH 151/791] MAPREDUCE-1293. AutoInputFormat doesn't work with non-default FileSystems
+Subject: [PATCH 151/887] MAPREDUCE-1293. AutoInputFormat doesn't work with non-default FileSystems
 
 Description: AutoInputFormat uses the wrong FileSystem.get() method when getting a reference to a FileSystem object. AutoInputFormat gets the default FileSystem, so this method breaks if the InputSplit's path is pointing to a different FileSystem.
 Reason: bugfix

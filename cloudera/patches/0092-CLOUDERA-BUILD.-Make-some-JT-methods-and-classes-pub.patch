@@ -1,7 +1,7 @@
 From 90f9c40df18fe464383de52e3d3952638a393e34 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 15:01:08 -0800
-Subject: [PATCH 092/791] CLOUDERA-BUILD. Make some JT methods and classes public for use from within contrib plugins
+Subject: [PATCH 092/887] CLOUDERA-BUILD. Make some JT methods and classes public for use from within contrib plugins
 
 Author: Henry Robinson
 ---

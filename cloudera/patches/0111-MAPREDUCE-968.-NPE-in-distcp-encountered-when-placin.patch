@@ -1,7 +1,7 @@
 From 648e30e074a16de837fb4c604a198bc780c2e6c5 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:10:34 -0800
-Subject: [PATCH 111/791] MAPREDUCE-968. NPE in distcp encountered when placing _logs directory on S3FileSystem
+Subject: [PATCH 111/887] MAPREDUCE-968. NPE in distcp encountered when placing _logs directory on S3FileSystem
 
 Description: If distcp is pointed to an empty S3 bucket as the destination for an s3:// filesystem transfer, it will fail with the following exception
 
