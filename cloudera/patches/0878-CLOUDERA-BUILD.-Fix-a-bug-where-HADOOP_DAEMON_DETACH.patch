@@ -1,7 +1,7 @@
 From 061eb38e4b442cf3f97fcb45a3059384fd74d036 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 15 Feb 2011 10:17:37 -0800
-Subject: [PATCH 878/887] CLOUDERA-BUILD. Fix a bug where HADOOP_DAEMON_DETACHED leaked into the environment of children
+Subject: [PATCH 878/890] CLOUDERA-BUILD. Fix a bug where HADOOP_DAEMON_DETACHED leaked into the environment of children
 
 This fixes a problem reported on the cdh-user list where tasks that forked out to
 call bin/hadoop ended up only catching the first 10 lines of output.

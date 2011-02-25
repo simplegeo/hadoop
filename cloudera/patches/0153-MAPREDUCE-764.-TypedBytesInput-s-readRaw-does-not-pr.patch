@@ -1,7 +1,7 @@
 From 34bb813a5884aeb05909c2ce2cc541882ca3eda1 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:27:53 -0800
-Subject: [PATCH 153/887] MAPREDUCE-764. TypedBytesInput's readRaw() does not preserve custom type codes
+Subject: [PATCH 153/890] MAPREDUCE-764. TypedBytesInput's readRaw() does not preserve custom type codes
 
 Description: The typed bytes format supports byte sequences of the form <tt>&lt;custom type code&gt; &lt;length&gt; &lt;bytes&gt;</tt>. When reading such a sequence via <tt>TypedBytesInput</tt>'s <tt>readRaw()</tt> method, however, the returned sequence currently is <tt>0 &lt;length&gt; &lt;bytes&gt;</tt> (0 is the type code for a bytes array), which leads to bugs such as the one described <span class="nobr"><a href="http://dumbo.assembla.com/spaces/dumbo/tickets/54">here<sup><img class="rendericon" src="https://issues.apache.org/jira/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"/></sup></a></span>.
 Reason: bugfix

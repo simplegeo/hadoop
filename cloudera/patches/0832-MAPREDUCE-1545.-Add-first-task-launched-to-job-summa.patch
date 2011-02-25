@@ -1,7 +1,7 @@
 From 562d6a6d79943f4c132e9db773898db533b4dbfd Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 16:59:51 -0800
-Subject: [PATCH 832/887] MAPREDUCE-1545. Add 'first-task-launched' to job-summary
+Subject: [PATCH 832/890] MAPREDUCE-1545. Add 'first-task-launched' to job-summary
 
 Author: Luke Lu
 Ref: CDH-2622

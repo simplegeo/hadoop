@@ -1,7 +1,7 @@
 From 5b18d7b8a13873ca3b0cb3f5da074f3ee846e63c Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 15 Oct 2009 16:05:41 +0530
-Subject: [PATCH 371/887] MAPREDUCE-732. Node health check script should not log "UNHEALTHY" status for every heartbeat in INFO mode
+Subject: [PATCH 371/890] MAPREDUCE-732. Node health check script should not log "UNHEALTHY" status for every heartbeat in INFO mode
 
 Patch: http://issues.apache.org/jira/secure/attachment/12413001/MAPRED-732-ydist.patch
 Author: Sreekanth Ramakrishnan

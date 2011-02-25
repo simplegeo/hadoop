@@ -1,7 +1,7 @@
 From e8b759460ab487e98093292be7fa90afa65f47ec Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 10 Feb 2011 14:27:45 -0800
-Subject: [PATCH 815/887] Partial HADOOP-6471. Use StringBuilder in StringUtils.join
+Subject: [PATCH 815/890] Partial HADOOP-6471. Use StringBuilder in StringUtils.join
 
 Author: Yahoo Eng
 Ref: CDH-2622

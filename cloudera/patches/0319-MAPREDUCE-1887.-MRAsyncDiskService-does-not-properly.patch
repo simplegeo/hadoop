@@ -1,7 +1,7 @@
 From 4c50269dda2038d202ddb890ffde38dc3fb2ead2 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Thu, 24 Jun 2010 18:25:09 -0700
-Subject: [PATCH 319/887] MAPREDUCE-1887. MRAsyncDiskService does not properly absolutize volume root paths.
+Subject: [PATCH 319/890] MAPREDUCE-1887. MRAsyncDiskService does not properly absolutize volume root paths.
 
 Description: In MRAsyncDiskService, volume names are sometimes specified as
 relative paths, which are not converted to absolute paths. This can cause

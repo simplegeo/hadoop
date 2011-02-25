@@ -1,7 +1,7 @@
 From b96008a997c4cf52f01a32daa103244a27190639 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 9 Feb 2010 21:06:07 -0800
-Subject: [PATCH 468/887] MAPREDUCE-1433. Create a Delegation token for MapReduce
+Subject: [PATCH 468/890] MAPREDUCE-1433. Create a Delegation token for MapReduce
 
 Patch: https://issues.apache.org/jira/secure/attachment/12435412/1433.bp20.patch
 Author: Owen O'Malley

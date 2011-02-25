@@ -1,7 +1,7 @@
 From f57c22b8ec079abc5a051551bce9b1209fa3e6a3 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 15 Feb 2011 23:32:32 -0800
-Subject: [PATCH 884/887] MAPREDUCE-2332. Improve error message when userlogs dir has bad ownership
+Subject: [PATCH 884/890] MAPREDUCE-2332. Improve error message when userlogs dir has bad ownership
 
 Patch differs from trunk patch on account of MR-2178
 

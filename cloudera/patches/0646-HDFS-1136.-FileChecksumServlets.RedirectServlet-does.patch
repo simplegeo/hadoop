@@ -1,7 +1,7 @@
 From 5127aafd818ec2c57d02481f221bff3534e12d14 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 7 May 2010 15:08:14 -0700
-Subject: [PATCH 646/887] HDFS-1136. FileChecksumServlets.RedirectServlet doesn't carry forward the delegation token
+Subject: [PATCH 646/890] HDFS-1136. FileChecksumServlets.RedirectServlet doesn't carry forward the delegation token
 
 Patch: https://issues.apache.org/jira/secure/attachment/12443986/HDFS-1136-BP20-2.patch
 Author: Boris Shkolnik

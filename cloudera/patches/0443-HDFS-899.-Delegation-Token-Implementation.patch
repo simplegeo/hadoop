@@ -1,7 +1,7 @@
 From 137e608a13a26b47883cea6d03a48974b2f16c68 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 26 Jan 2010 23:40:06 -0800
-Subject: [PATCH 443/887] HDFS-899. Delegation Token Implementation
+Subject: [PATCH 443/890] HDFS-899. Delegation Token Implementation
 
 Patch: https://issues.apache.org/jira/secure/attachment/12431529/HDFS-899-0_20.2.patch
 Author: Jitendra Nath Pandey

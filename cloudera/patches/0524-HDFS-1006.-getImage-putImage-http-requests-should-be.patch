@@ -1,7 +1,7 @@
 From e5ec38e7ece3c2e9d7c64ae8bad4fe60e2a75088 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 1 Mar 2010 01:05:29 -0800
-Subject: [PATCH 524/887] HDFS-1006. getImage/putImage http requests should be https for the case of security enabled.
+Subject: [PATCH 524/890] HDFS-1006. getImage/putImage http requests should be https for the case of security enabled.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437467/HDFS-1006-Y20.1.patch
 Author: Boris Shkolnik

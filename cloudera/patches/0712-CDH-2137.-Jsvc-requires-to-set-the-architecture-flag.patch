@@ -1,7 +1,7 @@
 From daa2fd5e76c63c9d9efa11225383fd5496442862 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Bruno=20Mah=C3=A9?= <bruno@cloudera.com>
 Date: Mon, 27 Sep 2010 16:53:47 -0700
-Subject: [PATCH 712/887] CDH-2137. Jsvc requires to set the architecture flag to the link command
+Subject: [PATCH 712/890] CDH-2137. Jsvc requires to set the architecture flag to the link command
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit

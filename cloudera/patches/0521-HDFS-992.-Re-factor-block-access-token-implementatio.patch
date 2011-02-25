@@ -1,7 +1,7 @@
 From 4bcd449f60c72fb3058a6b3ff1316b7bc10514e8 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sat, 27 Feb 2010 04:04:26 -0800
-Subject: [PATCH 521/887] HDFS-992. Re-factor block access token implementation to conform to the generic Token interface in Common
+Subject: [PATCH 521/890] HDFS-992. Re-factor block access token implementation to conform to the generic Token interface in Common
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437340/h992-BK-0.20-07.patch
 Author: Kan Zhang

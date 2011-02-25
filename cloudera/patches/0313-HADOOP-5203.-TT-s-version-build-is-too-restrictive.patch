@@ -1,7 +1,7 @@
 From 298fda37c4c25434a15886ee9c261e566d595dff Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 18 Jun 2010 18:42:37 -0700
-Subject: [PATCH 313/887] HADOOP-5203. TT's version build is too restrictive.
+Subject: [PATCH 313/890] HADOOP-5203. TT's version build is too restrictive.
 
 Description: Use the md5sum checksum of the source for determining version compatibility.
 Reason: Improvement

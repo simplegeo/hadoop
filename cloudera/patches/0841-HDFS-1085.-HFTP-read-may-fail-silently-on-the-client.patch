@@ -1,7 +1,7 @@
 From b2cfa8caaa27a75a4452d9e26d3f3a169e13730e Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 16:59:52 -0800
-Subject: [PATCH 841/887] HDFS-1085. HFTP read may fail silently on the client side if there is an exception on the server side.
+Subject: [PATCH 841/890] HDFS-1085. HFTP read may fail silently on the client side if there is an exception on the server side.
 
 Author: Tsz Wo (Nicholas) Sze
 Ref: CDH-2622

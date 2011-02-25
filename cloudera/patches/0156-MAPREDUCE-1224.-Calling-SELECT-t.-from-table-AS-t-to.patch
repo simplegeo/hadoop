@@ -1,7 +1,7 @@
 From dec4c616921b547e5a332a254254d77efc3a7d5e Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:28:25 -0800
-Subject: [PATCH 156/887] MAPREDUCE-1224. Calling "SELECT t.* from <table> AS t" to get meta information is too expensive for big tables
+Subject: [PATCH 156/890] MAPREDUCE-1224. Calling "SELECT t.* from <table> AS t" to get meta information is too expensive for big tables
 
 Description: The SqlManager uses the query, "SELECT t.* from &lt;table&gt; AS t" to get table spec is too expensive for big tables, and it was called twice to generate column names and types.  For tables that are big enough to be map-reduced, this is too expensive to make sqoop useful.
 Reason: Performance improvement

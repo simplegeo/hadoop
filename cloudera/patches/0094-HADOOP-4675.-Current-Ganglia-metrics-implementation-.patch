@@ -1,7 +1,7 @@
 From 13e35e654c51a5b1cfe809ef1e2c4d2ca46ed612 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 15:01:52 -0800
-Subject: [PATCH 094/887] HADOOP-4675. Current Ganglia metrics implementation is incompatible with Ganglia 3.1
+Subject: [PATCH 094/890] HADOOP-4675. Current Ganglia metrics implementation is incompatible with Ganglia 3.1
 
 Description: Ganglia changed its wire protocol in the 3.1.x series; the current implementation only works for 3.0.x.
 

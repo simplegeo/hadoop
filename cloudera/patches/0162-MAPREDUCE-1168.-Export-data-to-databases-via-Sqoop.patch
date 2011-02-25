@@ -1,7 +1,7 @@
 From d4b3b7592c94aa1f4608245829b5de202ed1b148 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:29:39 -0800
-Subject: [PATCH 162/887] MAPREDUCE-1168. Export data to databases via Sqoop
+Subject: [PATCH 162/890] MAPREDUCE-1168. Export data to databases via Sqoop
 
 Description: Sqoop can import from a database into HDFS. It's high time it works in reverse too.
 Reason: New feature

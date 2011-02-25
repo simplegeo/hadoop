@@ -1,7 +1,7 @@
 From 2de11fbbf173eef5b35a3ae10777c87728492355 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 9 Apr 2010 15:31:59 -0700
-Subject: [PATCH 596/887] HDFS-999. Secondary namenode should login using kerberos if security is configured.
+Subject: [PATCH 596/890] HDFS-999. Secondary namenode should login using kerberos if security is configured.
 
 Author: Boris Shkolnik
 Ref: CDH-648

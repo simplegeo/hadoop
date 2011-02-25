@@ -1,7 +1,7 @@
 From 11bc9be1ff2fd994046acd660afa7631f9203cfb Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Thu, 27 May 2010 17:44:00 -0700
-Subject: [PATCH 258/887] HADOOP-6714. FsShell 'hadoop fs -text' does not support compression codecs.
+Subject: [PATCH 258/890] HADOOP-6714. FsShell 'hadoop fs -text' does not support compression codecs.
 
 Currently, 'hadoop fs -text myfile' looks at the first few magic bytes
 of a file to determine whether it is gzip compressed or a sequence

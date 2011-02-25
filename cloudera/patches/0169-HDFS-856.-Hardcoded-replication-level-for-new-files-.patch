@@ -1,7 +1,7 @@
 From a4cf3e8e86cbd42bef25eb3aab7e464ac86e3068 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:31:19 -0800
-Subject: [PATCH 169/887] HDFS-856. Hardcoded replication level for new files in fuse-dfs
+Subject: [PATCH 169/890] HDFS-856. Hardcoded replication level for new files in fuse-dfs
 
 Description: In fuse-dfs, the number of replicas is always hardcoded to 3 in the arguments to hdfsOpenFile.  We should use the setting in the hadoop configuration instead.
 Reason: Configuration improvement

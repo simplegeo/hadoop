@@ -1,7 +1,7 @@
 From 6906389e07244931a108f2930544b9feada3a487 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Mon, 29 Mar 2010 15:41:38 -0700
-Subject: [PATCH 231/887] MAPREDUCE-364. Change org.apache.hadoop.examples.MultiFileWordCount to use new mapreduce api.
+Subject: [PATCH 231/890] MAPREDUCE-364. Change org.apache.hadoop.examples.MultiFileWordCount to use new mapreduce api.
 
 Description: Updates MultiFileWordCount example to use the new API in
 org.apache.hadoop.mapreduce instead of the deprecated API of

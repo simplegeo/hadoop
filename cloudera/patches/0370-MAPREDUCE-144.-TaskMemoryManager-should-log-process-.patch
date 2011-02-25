@@ -1,7 +1,7 @@
 From f2f02dce3f12d9fe445f62c6a28a7e89c1f33efa Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 15 Oct 2009 15:47:51 +0530
-Subject: [PATCH 370/887] MAPREDUCE-144. TaskMemoryManager should log process-tree's status while killing tasks.
+Subject: [PATCH 370/890] MAPREDUCE-144. TaskMemoryManager should log process-tree's status while killing tasks.
 
 Patch: http://issues.apache.org/jira/secure/attachment/12418917/MAPREDUCE-144-20090907.internal.txt
 Author: Vinod K V

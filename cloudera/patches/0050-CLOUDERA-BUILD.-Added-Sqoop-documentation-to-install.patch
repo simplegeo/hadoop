@@ -1,7 +1,7 @@
 From 8b09839047997a4b5461703650b5779ec86c1844 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:45:49 -0800
-Subject: [PATCH 050/887] CLOUDERA-BUILD. Added Sqoop documentation to installation script
+Subject: [PATCH 050/890] CLOUDERA-BUILD. Added Sqoop documentation to installation script
 
 Author: Todd Lipcon
 ---

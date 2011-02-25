@@ -1,7 +1,7 @@
 From a529046a05bfd89965d08b1ec6d80c1a777a8136 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 9 Dec 2009 10:23:53 +0530
-Subject: [PATCH 397/887] MAPREDUCE-754. NPE in expiry thread when a TT is lost
+Subject: [PATCH 397/890] MAPREDUCE-754. NPE in expiry thread when a TT is lost
 
 Patch: https://issues.apache.org/jira/secure/attachment/12427347/mapreduce-754-v2.2.1-yahoo.patch
 Author: Amar Kamat

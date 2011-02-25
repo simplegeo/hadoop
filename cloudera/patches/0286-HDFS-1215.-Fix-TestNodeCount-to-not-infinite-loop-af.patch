@@ -1,7 +1,7 @@
 From 7f0d67fa52b9c58360b06e851bf77bc2f909f65f Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 5 May 2010 14:43:40 -0700
-Subject: [PATCH 286/887] HDFS-1215. Fix TestNodeCount to not infinite loop after HDFS-409 MiniCluster changes
+Subject: [PATCH 286/890] HDFS-1215. Fix TestNodeCount to not infinite loop after HDFS-409 MiniCluster changes
 
 Description: Fixes a test to work properly after some test infrastructure
              was changed by HDFS-142 in branch-0.20-append.

@@ -1,7 +1,7 @@
 From b57d9d0a60f8d871511750465ad94dd18a103656 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sat, 18 Dec 2010 15:44:25 -0800
-Subject: [PATCH 759/887] MAPREDUCE-2219. Fix JT startup to not require mapred.system.dir inside a dir that it owns
+Subject: [PATCH 759/890] MAPREDUCE-2219. Fix JT startup to not require mapred.system.dir inside a dir that it owns
 
 Reason: Easier permissions
 Author: Todd Lipcon

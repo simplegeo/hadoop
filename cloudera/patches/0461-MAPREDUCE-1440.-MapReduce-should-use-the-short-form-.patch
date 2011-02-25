@@ -1,7 +1,7 @@
 From 6b874f7d11e11f14450e882b670180daef48a76e Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sat, 6 Feb 2010 12:45:49 -0800
-Subject: [PATCH 461/887] MAPREDUCE-1440. MapReduce should use the short form of the user names
+Subject: [PATCH 461/890] MAPREDUCE-1440. MapReduce should use the short form of the user names
 
 Patch: https://issues.apache.org/jira/secure/attachment/12435087/1440.y20.patch
 Author: Owen O'Malley

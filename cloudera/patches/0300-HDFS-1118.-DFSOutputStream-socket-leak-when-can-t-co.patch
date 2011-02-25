@@ -1,7 +1,7 @@
 From 128395ae4d317204fe8fb118333270826adf96d5 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sun, 6 Jun 2010 16:38:21 -0400
-Subject: [PATCH 300/887] HDFS-1118. DFSOutputStream socket leak when can't connect to DN
+Subject: [PATCH 300/890] HDFS-1118. DFSOutputStream socket leak when can't connect to DN
 
 Reason: Fixes DFS Client socket leaks in an error condition
 Author: Zheng Shao

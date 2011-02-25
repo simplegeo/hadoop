@@ -1,7 +1,7 @@
 From b33265ff77c71af61899a4b3add1e82cc195fdb7 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:23:53 -0800
-Subject: [PATCH 013/887] MAPREDUCE-714. JobConf.findContainingJar unescapes unnecessarily on Linux
+Subject: [PATCH 013/890] MAPREDUCE-714. JobConf.findContainingJar unescapes unnecessarily on Linux
 
 Description: In JobConf.findContainingJar, the path name is decoded using URLDecoder.decode(...). This was done by Doug in r381794 (commit msg "Un-escape containing jar's path, which is URL-encoded.  This fixes things primarily on Windows, where paths are likely to contain spaces.") Unfortunately, jar paths do not appear to be URL encoded on Linux. If you try to use "hadoop jar" on a jar with a "+" in it, this function decodes it to a space and then the job cannot be submitted.
 Reason: Cloudera-based packages include a '+' in the filename; Hadoop's URL escaper will not

@@ -1,7 +1,7 @@
 From ebb508c5a286dc3939d960fbf44ca18b34f1c12f Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 30 Jul 2009 17:40:22 -0700
-Subject: [PATCH 333/887] HADOOP-5419. Provide a way for users to find out what operations they can do on which M/R queues
+Subject: [PATCH 333/890] HADOOP-5419. Provide a way for users to find out what operations they can do on which M/R queues
 
 Reason: Security
 Author: Rahul K Singh

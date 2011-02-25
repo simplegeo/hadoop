@@ -1,7 +1,7 @@
 From 7fd2cb371354219abd108fda35087f08dc481b35 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:27:31 -0800
-Subject: [PATCH 152/887] HADOOP-6400. Log errors getting Unix UGI
+Subject: [PATCH 152/890] HADOOP-6400. Log errors getting Unix UGI
 
 Description: For various reasons, the calls out to `whoami` and `id` can fail when trying to get the unix UGI information. Currently it silently ignores failures and uses the default DrWho/Tardis ugi. This is extremely confusing for users - we should log the exception at warn level when the shell execs fail.
 Reason: Debug logging improvement

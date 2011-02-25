@@ -24,12 +24,12 @@
   <parent>
     <groupId>com.cloudera.cdh</groupId>
     <artifactId>hadoop-root</artifactId>
-    <version>3.0-beta-4</version>
+    <version>3.0-SNAPSHOT</version>
   </parent>
   
   <groupId>org.apache.hadoop</groupId>
   <artifactId>hadoop-examples</artifactId>
-  <version>0.20.2-CDH3B4</version>
+  <version>0.20.2-cdh3u0-SNAPSHOT</version>
   <packaging>jar</packaging>
   
   <name>hadoop-examples</name>

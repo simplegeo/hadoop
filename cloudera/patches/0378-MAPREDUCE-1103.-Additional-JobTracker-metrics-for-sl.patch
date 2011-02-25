@@ -1,7 +1,7 @@
 From 2041bfbf1352a83f450b8fb6680e3899a3582f5f Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sat, 24 Oct 2009 17:42:59 +0530
-Subject: [PATCH 378/887] MAPREDUCE-1103. Additional JobTracker metrics for slot usage
+Subject: [PATCH 378/890] MAPREDUCE-1103. Additional JobTracker metrics for slot usage
 
 Patch: https://issues.apache.org/jira/secure/attachment/12423030/1103_v5_yahoo_1.patch
 Author: Sharad Agarwal

@@ -1,7 +1,7 @@
 From 1444a9469340822ed0af92ee9ac780c7b9835c26 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 23 Apr 2010 09:36:33 -0700
-Subject: [PATCH 609/887] HADOOP-6718. Client does not close connection when an exception happens during SASL negotiation
+Subject: [PATCH 609/890] HADOOP-6718. Client does not close connection when an exception happens during SASL negotiation
 
 Patch: https://issues.apache.org/jira/secure/attachment/12442614/6718-bp20.patch
 Author: Devaraj Das

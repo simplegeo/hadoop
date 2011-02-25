@@ -1,7 +1,7 @@
 From b329fa59501af3bef287aa0bdaa4c517cd41ad04 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 11 Feb 2011 21:17:06 -0800
-Subject: [PATCH 871/887] CLOUDERA-BUILD. Add AM_MAINTAINER_MODE to all configure.ac
+Subject: [PATCH 871/890] CLOUDERA-BUILD. Add AM_MAINTAINER_MODE to all configure.ac
 
 ---
  src/c++/libhdfs/configure.ac         |    5 +++++

@@ -1,7 +1,7 @@
 From c5645ced5c2b32c0657ba3ca60643165c28173ff Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 14 Jan 2011 00:42:43 -0800
-Subject: [PATCH 789/887] MAPREDUCE-1085. For tasks, "ulimit -v -1" is being run when user doesn't specify mapred.child.ulimit
+Subject: [PATCH 789/890] MAPREDUCE-1085. For tasks, "ulimit -v -1" is being run when user doesn't specify mapred.child.ulimit
 
 Reason: spurious errors in logs
 Author: Todd Lipcon

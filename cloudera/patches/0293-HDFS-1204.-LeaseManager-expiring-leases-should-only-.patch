@@ -1,7 +1,7 @@
 From aea067a20e16345f307de7efe80935dd7addbe6b Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 14 May 2010 19:19:56 -0700
-Subject: [PATCH 293/887] HDFS-1204. LeaseManager expiring leases should only expire the single file, not entire lease
+Subject: [PATCH 293/890] HDFS-1204. LeaseManager expiring leases should only expire the single file, not entire lease
 
 Reason: Logic bug in lease recovery could cause incorrectly interrupted
         writers

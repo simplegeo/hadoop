@@ -1,7 +1,7 @@
 From 67e25d271e93cc035ed664f9bfa16705f6a45958 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sun, 14 Feb 2010 23:34:54 -0800
-Subject: [PATCH 473/887] HADOOP-6559. The RPC client should try to re-login when it detects that the TGT expired
+Subject: [PATCH 473/890] HADOOP-6559. The RPC client should try to re-login when it detects that the TGT expired
 
 Patch: https://issues.apache.org/jira/secure/attachment/12435851/h-6559.6.bp20.patch
 Author: Devaraj Das

@@ -1,7 +1,7 @@
 From b4b7c5d9b4cba84bc47f4a48074fd295d060ab35 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:52:17 -0800
-Subject: [PATCH 067/887] MAPREDUCE-798. MRUnit should be able to test a succession of MapReduce passes
+Subject: [PATCH 067/890] MAPREDUCE-798. MRUnit should be able to test a succession of MapReduce passes
 
 Description: MRUnit can currently test that the inputs to a given (mapper, reducer) "job" produce certain outputs at the end of the reducer. It would be good to support more end-to-end tests of a series of MapReduce jobs that form a longer pipeline surrounding some data.
 Reason: New Feature

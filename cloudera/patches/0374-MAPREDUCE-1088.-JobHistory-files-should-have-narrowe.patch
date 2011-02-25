@@ -1,7 +1,7 @@
 From 4d2f9fdf63f30f0149f60142796838e245e7d564 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sun, 18 Oct 2009 23:21:37 -0700
-Subject: [PATCH 374/887] MAPREDUCE-1088. JobHistory files should have narrower 0600 perms
+Subject: [PATCH 374/890] MAPREDUCE-1088. JobHistory files should have narrower 0600 perms
 
 Patch: https://issues.apache.org/jira/secure/attachment/12422526/MAPREDUCE-1088_yhadoop20.patch
 Author: Arun C Murthy

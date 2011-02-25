@@ -1,7 +1,7 @@
 From 51c966ff9e07ff017eb1960cac87d8035e4549c6 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 19 Mar 2010 10:10:35 -0700
-Subject: [PATCH 578/887] HADOOP-6644. Fix incorrect code style in util.Shell
+Subject: [PATCH 578/890] HADOOP-6644. Fix incorrect code style in util.Shell
 
 Patch: https://issues.apache.org/jira/secure/attachment/12439243/HADOOP-6644-BP20.patch
 Author: Boris Shkolnik

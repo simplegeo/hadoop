@@ -1,7 +1,7 @@
 From b350799d72e4a4bec1f76527eb8fe02590295785 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 30 Nov 2009 16:10:53 +0530
-Subject: [PATCH 394/887] HADOOP-4933. ConcurrentModificationException in JobHistory.java
+Subject: [PATCH 394/890] HADOOP-4933. ConcurrentModificationException in JobHistory.java
 
 Patch: http://issues.apache.org/jira/secure/attachment/12397116/HADOOP-4933-v1.1.patch
 Author: Amar Kamat

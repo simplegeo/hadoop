@@ -1,7 +1,7 @@
 From c2b050e2e466b4e43a8458fd05c72e289ed2d563 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 7 Feb 2011 09:55:35 -0800
-Subject: [PATCH 853/887] CLOUDERA-BUILD. Integrate task-controller changes from MAPREDUCE-2178 into Cloudera build
+Subject: [PATCH 853/890] CLOUDERA-BUILD. Integrate task-controller changes from MAPREDUCE-2178 into Cloudera build
 
 ---
  build.xml                            |   82 ++++++++++++----------------------

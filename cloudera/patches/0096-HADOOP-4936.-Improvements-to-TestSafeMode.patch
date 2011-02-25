@@ -1,7 +1,7 @@
 From b301746d45bde2759535549f87c6485f4ee577b2 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 15:02:38 -0800
-Subject: [PATCH 096/887] HADOOP-4936. Improvements to TestSafeMode
+Subject: [PATCH 096/890] HADOOP-4936. Improvements to TestSafeMode
 
 Description: TestSafeMode
 <ul class="alternate" type="square">

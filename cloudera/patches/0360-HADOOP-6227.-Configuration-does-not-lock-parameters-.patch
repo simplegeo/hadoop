@@ -1,7 +1,7 @@
 From 073f548e560fd8de055d8d075ac7c5db0239f6cf Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 3 Sep 2009 11:25:54 -0700
-Subject: [PATCH 360/887] HADOOP-6227. Configuration does not lock parameters marked final if they have no value.
+Subject: [PATCH 360/890] HADOOP-6227. Configuration does not lock parameters marked final if they have no value.
 
 Patch: http://issues.apache.org/jira/secure/attachment/12418242/patch-6227-ydist.txt
 Author: Amareshwari Sriramadasu

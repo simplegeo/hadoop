@@ -1,7 +1,7 @@
 From e212ca0b0abbd78cdea4596fe9f3c6dbbaa57258 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 18 Jun 2010 16:20:01 -0700
-Subject: [PATCH 310/887] MAPREDUCE-1378. Args in job details links on jobhistory.jsp are not URL encoded
+Subject: [PATCH 310/890] MAPREDUCE-1378. Args in job details links on jobhistory.jsp are not URL encoded
 
 Description: The logFile argument in the job links on the JT jobhistory.jsp
 page is not properly URL encoded leading to links that result in 500 errors.

@@ -1,7 +1,7 @@
 From 7e7c0e2d4fe19559a728d2c0860f406124c578e3 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 31 Jan 2011 17:55:47 -0800
-Subject: [PATCH 798/887] Amend MAPREDUCE-1716. Fix test case to wait for up to 20 seconds to verify truncation
+Subject: [PATCH 798/890] Amend MAPREDUCE-1716. Fix test case to wait for up to 20 seconds to verify truncation
 
 Reason: truncation is done in a separate thread at JVM finish time, which may come
   after the job is complete

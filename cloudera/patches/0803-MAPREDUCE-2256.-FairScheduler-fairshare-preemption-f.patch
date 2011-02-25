@@ -1,7 +1,7 @@
 From f8e6600fbdc454600990e4f3732462e9b56e0b1b Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Sun, 6 Feb 2011 13:37:24 -0800
-Subject: [PATCH 803/887] MAPREDUCE-2256. FairScheduler fairshare preemption from multiple pools may
+Subject: [PATCH 803/890] MAPREDUCE-2256. FairScheduler fairshare preemption from multiple pools may
  preempt all tasks from one pool causing that pool to go below fairshare.
 
 You have a cluster with 600 map slots and 3 pools. Fairshare for each pool is

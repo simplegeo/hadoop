@@ -1,7 +1,7 @@
 From 50796a1b13f77ef5c2e098f6a651bf52c05cd2f7 Mon Sep 17 00:00:00 2001
 From: Alejandro Abdelnur <tucu00@gmail.com>
 Date: Tue, 30 Nov 2010 14:03:00 +0800
-Subject: [PATCH 745/887] CDH-2234 adding Oozie needed config to Hadoop config example-confs/
+Subject: [PATCH 745/890] CDH-2234 adding Oozie needed config to Hadoop config example-confs/
 
 Description: adding Oozie needed config to Hadoop config example-confs/
 Reason: to enable zero config for Oozie out of the box

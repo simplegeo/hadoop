@@ -1,7 +1,7 @@
 From e529fcd5080e89bc0e759164d7b7cc6fc19d8f69 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 21 Oct 2009 11:32:59 +0530
-Subject: [PATCH 375/887] MAPREDUCE-1086. hadoop commands in streaming tasks are trying to write to tasktracker's log
+Subject: [PATCH 375/890] MAPREDUCE-1086. hadoop commands in streaming tasks are trying to write to tasktracker's log
 
 Patch: https://issues.apache.org/jira/secure/attachment/12422677/MR-1086-yhadoop20.patch
 Author: Ravi Gummadi

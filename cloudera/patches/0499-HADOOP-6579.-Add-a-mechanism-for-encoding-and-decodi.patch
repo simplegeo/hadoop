@@ -1,7 +1,7 @@
 From 03e35485989da9f5d60dacdcfc67e8566b8590f8 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 25 Feb 2010 10:14:22 -0800
-Subject: [PATCH 499/887] HADOOP-6579. Add a mechanism for encoding and decoding Tokens in to
+Subject: [PATCH 499/890] HADOOP-6579. Add a mechanism for encoding and decoding Tokens in to
  url-safe strings. Also change commons-codec library to 1.4.
 
 Author: Owen O'Malley

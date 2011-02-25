@@ -1,7 +1,7 @@
 From cab178d48ab27c74a44009b9d37e686580172794 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 3 Mar 2010 18:50:32 -0800
-Subject: [PATCH 531/887] MAPREDUCE-1550. UGI.doAs should not be used for getting the history file of jobs
+Subject: [PATCH 531/890] MAPREDUCE-1550. UGI.doAs should not be used for getting the history file of jobs
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437835/1550-2.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12437870/1550-2.1.patch

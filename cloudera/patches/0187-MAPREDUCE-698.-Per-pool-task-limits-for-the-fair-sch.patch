@@ -1,7 +1,7 @@
 From ef449fb7832055951e2364cf12a73717b2add3ce Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:36:50 -0800
-Subject: [PATCH 187/887] MAPREDUCE-698. Per-pool task limits for the fair scheduler
+Subject: [PATCH 187/890] MAPREDUCE-698. Per-pool task limits for the fair scheduler
 
 Description: The fair scheduler could use a way to cap the share of a given pool similar to <a href="http://issues.apache.org/jira/browse/MAPREDUCE-532" title="Allow admins of the Capacity Scheduler to set a hard-limit on the capacity of a queue"><del>MAPREDUCE-532</del></a>.
 Reason: New feature

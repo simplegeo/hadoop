@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/var/lib/hudson/workspace/CDH3B4-Release-Build/build/cdh3/hadoop20/0.20.2-CDH3B4/source/build/c++/Linux-i386-32/lib'
+libdir='/var/lib/hudson/workspace/CDH3-Full-Nightly/build/cdh3/hadoop20/0.20.2-cdh3u0-SNAPSHOT/source/build/c++/Linux-i386-32/lib'

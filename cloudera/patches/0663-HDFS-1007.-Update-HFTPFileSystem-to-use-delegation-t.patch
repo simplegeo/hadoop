@@ -1,7 +1,7 @@
 From 00b53896f9de47f36fe8ea5a4ffaa13a85877a3c Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 29 Apr 2010 12:51:22 -0700
-Subject: [PATCH 663/887] HDFS-1007. Update HFTPFileSystem to use delegation tokens to support security.
+Subject: [PATCH 663/890] HDFS-1007. Update HFTPFileSystem to use delegation tokens to support security.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12443223/1007-bugfix.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12446280/hdfs-1007-long-running-hftp-client.patch

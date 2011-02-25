@@ -1,7 +1,7 @@
 From a2b4149afd53d59fd9a279117c6917e4c83583a3 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 10 Feb 2011 19:40:24 -0800
-Subject: [PATCH 860/887] HDFS-1318, MAPREDUCE-2330. Add MXBeans for JT, TT, DN, NN
+Subject: [PATCH 860/890] HDFS-1318, MAPREDUCE-2330. Add MXBeans for JT, TT, DN, NN
 
 Author: Tanping Wang, Luke Lu
 Ref: CDH-2622

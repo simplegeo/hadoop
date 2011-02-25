@@ -1,7 +1,7 @@
 From 39bdff7bd3b83359884c90ae857d3f3144a94803 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:54:04 -0800
-Subject: [PATCH 071/887] MAPREDUCE-749. Make Sqoop unit tests more Hudson-friendly
+Subject: [PATCH 071/890] MAPREDUCE-749. Make Sqoop unit tests more Hudson-friendly
 
 Description: Hudson servers (other than Apache's) need to be able to run the sqoop unit tests which depend on thirdparty JDBC drivers / database implementations. The build.xml needs some refactoring to make this happen.
 Reason: Test coverage improvement

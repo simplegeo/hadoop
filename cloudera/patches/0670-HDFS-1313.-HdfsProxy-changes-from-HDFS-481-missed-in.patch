@@ -1,7 +1,7 @@
 From bef7c171a5fd2663b5d16bdbba4477ee54947df6 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 2 Aug 2010 17:42:36 -0700
-Subject: [PATCH 670/887] HDFS-1313. HdfsProxy changes from HDFS-481 missed in y20.1xx
+Subject: [PATCH 670/890] HDFS-1313. HdfsProxy changes from HDFS-481 missed in y20.1xx
 
 Author: Rohini Palaniswamy
 Reason: Changes accidentally ommitted from HDFS-481 YDH backport, fixes hdfsproxy

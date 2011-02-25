@@ -1,7 +1,7 @@
 From 4904e0fbd60c5f043bb1451ca4e3be012be8cf59 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 7 Oct 2010 14:50:46 -0700
-Subject: [PATCH 732/887] Amend HDFS-1260. Add some sanity checking on FSDataset
+Subject: [PATCH 732/890] Amend HDFS-1260. Add some sanity checking on FSDataset
 
 Reason: Help debug errors seen in the wild
 Author: Todd Lipcon

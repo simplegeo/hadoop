@@ -1,7 +1,7 @@
 From ed87d9db29b9375d2c10047bbc3e7d136c76a581 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 8 Feb 2010 19:44:20 -0800
-Subject: [PATCH 464/887] HADOOP-6510, HDFS-935, MAPREDUCE-1464. Add support for a superuser authenticating on behalf of a proxy user.
+Subject: [PATCH 464/890] HADOOP-6510, HDFS-935, MAPREDUCE-1464. Add support for a superuser authenticating on behalf of a proxy user.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12435223/HADOOP-6510-0_20.4.patch
 Author: Jitendra Nath Pandey

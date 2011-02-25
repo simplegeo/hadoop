@@ -1,7 +1,7 @@
 From b2586915b911182f60e949de3dd340ae8e8099ca Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 10 Feb 2011 20:59:06 -0800
-Subject: [PATCH 836/887] CLOUDERA-BUILD. Re-bootstrap native
+Subject: [PATCH 836/890] CLOUDERA-BUILD. Re-bootstrap native
 
 ---
  src/native/INSTALL                                 |  243 +++++--

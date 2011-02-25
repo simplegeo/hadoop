@@ -1,7 +1,7 @@
 From 9321b18352e55d4d37c25335b578151b18f938f2 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:57:32 -0800
-Subject: [PATCH 086/887] MAPREDUCE-923. Sqoop's ORM uses URLDecoder on a file, which replaces plus signs in a jar file name with spaces
+Subject: [PATCH 086/890] MAPREDUCE-923. Sqoop's ORM uses URLDecoder on a file, which replaces plus signs in a jar file name with spaces
 
 Description: In findThisJar, sqoop runs URLDecoder.decode on the resulting jar, which has the effect of replacing any + signs in the path with a space.  This obviously breaks the classpath variable that it's trying to set, and the sqoop-generated code fails to compile.  Ironically, Cloudera's hadoop distro is the one that puts + characters in jar files, and so exhibits the bug.  Here is an example from running sqoop with log4j at debug level.  Note the space in the very last term, which should read hadoop-0.20.0+61-sqoop.jar rather than hadoop-0.20.0 61-sqoop.jar.
 

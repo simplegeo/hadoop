@@ -1,7 +1,7 @@
 From 81762d84ddc11fb5268c2ae92feb47d9e1197f1a Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Mon, 20 Sep 2010 09:37:25 -0700
-Subject: [PATCH 716/887] HDFS-1377. Quota bug for partial blocks allows quotas to be violated.
+Subject: [PATCH 716/890] HDFS-1377. Quota bug for partial blocks allows quotas to be violated.
 
 There may be a delta in FSDirectory#replaceNode even with identical
 blocks because INode#diskspaceConsumed rounds up the size of the last

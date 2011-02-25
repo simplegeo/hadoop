@@ -1,7 +1,7 @@
 From 9a17aaf708514474dff8be5706c798b4c1d5199f Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sun, 3 Oct 2010 18:00:24 -0700
-Subject: [PATCH 718/887] CLOUDERA-BUILD. jsvc and task-controller should install into a platform-specific dir
+Subject: [PATCH 718/890] CLOUDERA-BUILD. jsvc and task-controller should install into a platform-specific dir
 
 ---
  bin/hadoop                |    2 +-

@@ -1,7 +1,7 @@
 From 2ad8c54fecae73213da7c74da9f90ba953f9f9c5 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 26 Jan 2011 17:30:18 -0800
-Subject: [PATCH 792/887] MAPREDUCE-2253. Servlets should specify content type
+Subject: [PATCH 792/890] MAPREDUCE-2253. Servlets should specify content type
 
 Reason: Fix display in browsers
 Author: Todd Lipcon

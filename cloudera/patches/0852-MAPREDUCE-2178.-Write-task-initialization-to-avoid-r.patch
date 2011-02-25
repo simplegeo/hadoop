@@ -1,7 +1,7 @@
 From ac1fd5519d4cd7ddc5cf740d4b4459232523fb12 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 9 Feb 2011 16:54:58 -0800
-Subject: [PATCH 852/887] MAPREDUCE-2178. Write task initialization to avoid race conditions leading to privilege escalation and resource leakage by performing more actions as the user.
+Subject: [PATCH 852/890] MAPREDUCE-2178. Write task initialization to avoid race conditions leading to privilege escalation and resource leakage by performing more actions as the user.
 
 Author: Owen O'Malley, Devaraj Das, Chris Douglas
 Ref: CDH-2622

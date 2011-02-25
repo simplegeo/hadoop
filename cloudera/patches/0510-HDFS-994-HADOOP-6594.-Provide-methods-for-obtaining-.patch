@@ -1,7 +1,7 @@
 From 5ba4559365dec19e119d041ddf7f6f65b7fc0c56 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 26 Feb 2010 19:26:55 -0800
-Subject: [PATCH 510/887] HDFS-994, HADOOP-6594. Provide methods for obtaining delegation token from Namenode for hftp and other uses
+Subject: [PATCH 510/890] HDFS-994, HADOOP-6594. Provide methods for obtaining delegation token from Namenode for hftp and other uses
 
 Patch: https://issues.apache.org/jira/secure/attachment/12436748/HADOOP-6594.patch
 Author: Jakob Homan

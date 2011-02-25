@@ -1,7 +1,7 @@
 From a960eea40dbd6a4e87072bdf73ac3b62e772f70a Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@lipcon.org>
 Date: Sun, 13 Jun 2010 23:02:38 -0700
-Subject: [PATCH 302/887] HDFS-1197. Received blocks should not be added to block map prematurely for under construction files
+Subject: [PATCH 302/890] HDFS-1197. Received blocks should not be added to block map prematurely for under construction files
 
 Description: Fixes a possible dataloss scenario when using append() on
              real-life clusters. Also augments unit tests to uncover

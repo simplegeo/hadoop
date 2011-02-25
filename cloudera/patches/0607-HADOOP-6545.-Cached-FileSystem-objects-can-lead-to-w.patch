@@ -1,7 +1,7 @@
 From d60df2ded7690aed311726e6493ca88d578b882b Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sat, 20 Feb 2010 12:17:18 -0800
-Subject: [PATCH 607/887] HADOOP-6545. Cached FileSystem objects can lead to wrong token being used in setting up connections
+Subject: [PATCH 607/890] HADOOP-6545. Cached FileSystem objects can lead to wrong token being used in setting up connections
 
 Patch: https://issues.apache.org/jira/secure/attachment/12436456/6545-bp20.patch
 Author: Devaraj Das

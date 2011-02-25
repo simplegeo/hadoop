@@ -1,7 +1,7 @@
 From cfbc26a6211204e5e87d9986019fc97110662127 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 18 Mar 2010 03:58:08 -0700
-Subject: [PATCH 569/887] HADOOP-6632. Support for using different Kerberos keys for different instances of Hadoop services
+Subject: [PATCH 569/890] HADOOP-6632. Support for using different Kerberos keys for different instances of Hadoop services
 
 Patch: https://issues.apache.org/jira/secure/attachment/12439144/HADOOP-6632-Y20S-22.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12439307/6632.mr.patch

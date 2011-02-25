@@ -1,7 +1,7 @@
 From 24093ee575601dc3cfbb67ac63d742fab1f40f2f Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 27 Apr 2010 14:52:55 -0700
-Subject: [PATCH 629/887] MAPREDUCE-1687. Stress submission policy does not always stress the cluster. (htang)
+Subject: [PATCH 629/890] MAPREDUCE-1687. Stress submission policy does not always stress the cluster. (htang)
 
 Patch: https://issues.apache.org/jira/secure/attachment/12442692/mr-1687-yhadoop-20.1xx-20100423-2.patch.
 Author: rahul k singh

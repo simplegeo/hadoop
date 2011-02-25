@@ -1,7 +1,7 @@
 From d5ead434b221076fb830308d2d112d53aa6dc59f Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:22:26 -0800
-Subject: [PATCH 010/887] CLOUDERA-BUILD. Use cloudera's versioning info from cloudera.hash in saveVersion.sh
+Subject: [PATCH 010/890] CLOUDERA-BUILD. Use cloudera's versioning info from cloudera.hash in saveVersion.sh
 
 Description:
     This should make the "hadoop version" output far more useful for

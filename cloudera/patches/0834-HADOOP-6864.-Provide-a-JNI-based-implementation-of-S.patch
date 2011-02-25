@@ -1,7 +1,7 @@
 From bb55a89bf7a3decd9846989f31d93cb4ed8588b5 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 16:59:51 -0800
-Subject: [PATCH 834/887] HADOOP-6864. Provide a JNI-based implementation of ShellBasedUnixGroupsNetgroupMapping
+Subject: [PATCH 834/890] HADOOP-6864. Provide a JNI-based implementation of ShellBasedUnixGroupsNetgroupMapping
 
 Author: Boris Shkolnik
 Ref: CDH-2622

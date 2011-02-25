@@ -1,7 +1,7 @@
 From 4fe06f63ca10d7cc5949615d2d41261782156653 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sun, 7 Feb 2010 00:22:29 -0800
-Subject: [PATCH 462/887] MAPREDUCE-1457. For secure job execution, couple of more UserGroupInformation.doAs needs to be added
+Subject: [PATCH 462/890] MAPREDUCE-1457. For secure job execution, couple of more UserGroupInformation.doAs needs to be added
 
 Patch: https://issues.apache.org/jira/secure/attachment/12435115/MAPREDUCE-1457-BPY20.patch.1
 Author: Jakob Homan

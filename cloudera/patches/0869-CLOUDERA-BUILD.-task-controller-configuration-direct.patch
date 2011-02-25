@@ -1,7 +1,7 @@
 From 4b44138e14ad63a6b54a962e16c8f1fd922b3a80 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 11 Feb 2011 00:38:48 -0800
-Subject: [PATCH 869/887] CLOUDERA-BUILD. task-controller configuration directory should be inferred from task-controller location
+Subject: [PATCH 869/890] CLOUDERA-BUILD. task-controller configuration directory should be inferred from task-controller location
 
 Searches at ../../conf/ for task-controller.cfg
 

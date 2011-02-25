@@ -1,7 +1,7 @@
 From f879e570e2fe88776d15de04a8597898d06f3f77 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 10 Feb 2011 14:27:45 -0800
-Subject: [PATCH 821/887] HDFS-1364. Makes long running HFTP-based applications do relogins if necessary.
+Subject: [PATCH 821/890] HDFS-1364. Makes long running HFTP-based applications do relogins if necessary.
 
 Author: Jitendra Pandey
 Ref: CDH-2622

@@ -1,7 +1,7 @@
 From ec1f09b887a729a7682047248c624a42584d7233 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 16 Nov 2009 19:35:16 +0000
-Subject: [PATCH 388/887] HADOOP-5675. DistCp should not launch a job if it is not necessary
+Subject: [PATCH 388/890] HADOOP-5675. DistCp should not launch a job if it is not necessary
 
 Patch: https://issues.apache.org/jira/secure/attachment/12406687/5675_20090428.patch
 Author: Tsz Wo (Nicholas), SZE

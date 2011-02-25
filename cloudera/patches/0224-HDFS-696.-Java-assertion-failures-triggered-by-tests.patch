@@ -1,7 +1,7 @@
 From 6f04e94feee3f40a73449cc6fbe7b4e3c48f1fc4 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:54:13 -0800
-Subject: [PATCH 224/887] HDFS-696. Java assertion failures triggered by tests
+Subject: [PATCH 224/890] HDFS-696. Java assertion failures triggered by tests
 
 Description: Re-purposing as catch-all ticket for assertion failures when running tests with java asserts enabled. Running with the attached patch on trunk@823732 the following tests all trigger assertion failures:
 

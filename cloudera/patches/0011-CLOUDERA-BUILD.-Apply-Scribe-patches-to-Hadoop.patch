@@ -1,7 +1,7 @@
 From cb7a3677942c1d2f9e0d2a75dbffa09fa6125e61 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:22:41 -0800
-Subject: [PATCH 011/887] CLOUDERA-BUILD. Apply Scribe patches to Hadoop
+Subject: [PATCH 011/890] CLOUDERA-BUILD. Apply Scribe patches to Hadoop
 
 Description:
     scribe_hadoop_trunk.patch

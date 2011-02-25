@@ -1,7 +1,7 @@
 From 32957687aa59ef0d515682d87e521d8aba244e3b Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 1 Feb 2010 22:52:13 -0800
-Subject: [PATCH 451/887] MAPREDUCE-1383. Allow storage and caching of delegation token.
+Subject: [PATCH 451/890] MAPREDUCE-1383. Allow storage and caching of delegation token.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12434455/MAPREDUCE-1383-BP20-7.patch
 Author: Boris Shkolnik

@@ -1,7 +1,7 @@
 From 7b32dc80001de8b93c52041e15ab29bc52d5a68d Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 9 Mar 2010 17:07:36 -0800
-Subject: [PATCH 545/887] HADOOP-6598. Remove verbose logging from the Groups class
+Subject: [PATCH 545/890] HADOOP-6598. Remove verbose logging from the Groups class
 
 Patch: https://issues.apache.org/jira/secure/attachment/12438059/HADOOP-6598-BP20.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12438562/HADOOP-6598-BP20-Fix.patch

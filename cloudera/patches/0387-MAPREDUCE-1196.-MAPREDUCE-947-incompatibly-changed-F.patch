@@ -1,7 +1,7 @@
 From f7e4f728e818e137066caaa1f0a277a5485a5080 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 9 Nov 2009 16:24:12 -0800
-Subject: [PATCH 387/887] MAPREDUCE-1196. MAPREDUCE-947 incompatibly changed FileOutputCommitter
+Subject: [PATCH 387/890] MAPREDUCE-1196. MAPREDUCE-947 incompatibly changed FileOutputCommitter
 
 Patch: https://issues.apache.org/jira/secure/attachment/12424351/MAPREDUCE-1196_yhadoop20.patch
 Author: Arun C Murthy

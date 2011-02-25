@@ -1,7 +1,7 @@
 From 3f5313383362c86a2df8be55d2c524d82f9fac85 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sun, 13 Feb 2011 20:14:09 -0800
-Subject: [PATCH 874/887] Amend MAPREDUCE-2242. Reapply after MAPREDUCE-2178.
+Subject: [PATCH 874/890] Amend MAPREDUCE-2242. Reapply after MAPREDUCE-2178.
 
 Reason: fix environment escaping
 Author: Todd Lipcon

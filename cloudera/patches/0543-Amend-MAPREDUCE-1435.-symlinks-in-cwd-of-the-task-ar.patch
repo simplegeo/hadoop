@@ -1,7 +1,7 @@
 From 447441ec4a592225dca7d3bf42a6c6c2f977b2dc Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 8 Mar 2010 22:58:43 +0530
-Subject: [PATCH 543/887] Amend MAPREDUCE-1435. symlinks in cwd of the task are not handled properly after MAPREDUCE-896
+Subject: [PATCH 543/890] Amend MAPREDUCE-1435. symlinks in cwd of the task are not handled properly after MAPREDUCE-896
 
 Reason: fixes chmod during cleanup to not make private files group-readable, adds tests
 Patch: https://issues.apache.org/jira/secure/attachment/12438172/MR-1435-y20s-1.txt

@@ -1,7 +1,7 @@
 From 674795fc9a60d06dbea41bd9d5a133439822a62b Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 10 Feb 2011 14:13:46 -0800
-Subject: [PATCH 817/887] Amend HADOOP-6706. Improve retry behavior for RPC clients
+Subject: [PATCH 817/890] Amend HADOOP-6706. Improve retry behavior for RPC clients
 
 Author: Kan Zhang
 Ref: CDH-2622

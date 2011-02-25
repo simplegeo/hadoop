@@ -1,7 +1,7 @@
 From 63152ce4ba3c0cf2006016cc825fc72b0bd23d2d Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:33:49 -0800
-Subject: [PATCH 177/887] HADOOP-6426. Create ant build for running EC2 unit tests
+Subject: [PATCH 177/890] HADOOP-6426. Create ant build for running EC2 unit tests
 
 Description: There is no easy way currently to run the Python unit tests for the cloud contrib.
 Reason: Test coverage improvement

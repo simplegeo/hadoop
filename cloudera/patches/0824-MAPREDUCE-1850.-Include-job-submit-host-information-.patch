@@ -1,7 +1,7 @@
 From a6b1ad67cf903e1e56963dcc64d7d7599321d386 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 16:59:51 -0800
-Subject: [PATCH 824/887] MAPREDUCE-1850. Include job submit host information (name and ip) in jobconf and jobdetails display
+Subject: [PATCH 824/890] MAPREDUCE-1850. Include job submit host information (name and ip) in jobconf and jobdetails display
 
 Author: Krishna Ramachandran
 Ref: CDH-2622

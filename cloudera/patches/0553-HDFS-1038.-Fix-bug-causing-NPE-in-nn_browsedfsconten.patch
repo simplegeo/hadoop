@@ -1,7 +1,7 @@
 From e4974cce6a221e1e4b8206145746e26c83fd9253 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 11 Mar 2010 20:17:52 -0800
-Subject: [PATCH 553/887] HDFS-1038. Fix bug causing NPE in nn_browsedfscontent.jsp when security is disabled
+Subject: [PATCH 553/890] HDFS-1038. Fix bug causing NPE in nn_browsedfscontent.jsp when security is disabled
 
 Patch: https://issues.apache.org/jira/secure/attachment/12438570/HDFS-1038-y20.1.patch
 Author: Jitendra Nath Pandey

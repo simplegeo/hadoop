@@ -1,7 +1,7 @@
 From 57a67dff5d15e3833c7968254df076e440de2765 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:07:39 -0800
-Subject: [PATCH 104/887] MAPREDUCE-416. Move the completed jobs' history files to a DONE subdirectory inside the configured history directory
+Subject: [PATCH 104/890] MAPREDUCE-416. Move the completed jobs' history files to a DONE subdirectory inside the configured history directory
 
 Description: Whenever a job completes, the history file can be moved to a directory called DONE. That would make the management of job history files easier (for example, administrators can move the history files from that directory to some other place, delete them, archive them, etc.).
 Reason: System management improvement

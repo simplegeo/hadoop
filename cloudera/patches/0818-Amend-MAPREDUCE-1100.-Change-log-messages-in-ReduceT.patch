@@ -1,7 +1,7 @@
 From c76f57dcd993063cf960fb42e65219edd5230432 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 9 Feb 2011 17:31:34 -0800
-Subject: [PATCH 818/887] Amend MAPREDUCE-1100. Change log messages in ReduceTask from info to debug level
+Subject: [PATCH 818/890] Amend MAPREDUCE-1100. Change log messages in ReduceTask from info to debug level
 
 Reason: reduces log size for large reduce tasks
 Author: Yahoo Eng

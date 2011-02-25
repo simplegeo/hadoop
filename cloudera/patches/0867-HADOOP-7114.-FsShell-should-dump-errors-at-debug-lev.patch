@@ -1,7 +1,7 @@
 From cc3ba6c2c33ea827e6a54cda2759d03e7e2da4c1 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 19 Jan 2011 15:11:58 -0800
-Subject: [PATCH 867/887] HADOOP-7114. FsShell should dump errors at debug level
+Subject: [PATCH 867/890] HADOOP-7114. FsShell should dump errors at debug level
 
 Reason: easier to debug exceptions thrown in FsShell
 Author: Todd Lipcon

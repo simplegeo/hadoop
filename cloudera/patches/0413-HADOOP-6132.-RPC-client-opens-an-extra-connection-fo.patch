@@ -1,7 +1,7 @@
 From c1c67ca1ab0d958c2258c8c1571adb89996f684a Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 24 Dec 2009 11:46:03 -0800
-Subject: [PATCH 413/887] HADOOP-6132. RPC client opens an extra connection for VersionedProtocol
+Subject: [PATCH 413/890] HADOOP-6132. RPC client opens an extra connection for VersionedProtocol
 
 Patch: https://issues.apache.org/jira/secure/attachment/12428925/HADOOP-6132-0_20.1.patch
 Author: Kan Zhang

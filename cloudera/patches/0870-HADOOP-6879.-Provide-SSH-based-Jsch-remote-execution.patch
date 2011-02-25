@@ -1,7 +1,7 @@
 From 50329213ff9f712bc07922a212c0931d20a31de6 Mon Sep 17 00:00:00 2001
 From: Konstantin Boudnik <cos@apache.org>
 Date: Fri, 11 Feb 2011 17:59:15 -0800
-Subject: [PATCH 870/887] HADOOP-6879. Provide SSH based (Jsch) remote execution API for system tests
+Subject: [PATCH 870/890] HADOOP-6879. Provide SSH based (Jsch) remote execution API for system tests
 
 Reason: missing dependency breaks system tests build
 Author: Konstantin Boudnik

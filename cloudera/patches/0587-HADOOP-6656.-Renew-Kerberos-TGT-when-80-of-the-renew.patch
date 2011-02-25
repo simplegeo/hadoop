@@ -1,7 +1,7 @@
 From c0dbf7361b383dd2e179eb33a5beeb7d6e52fc10 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 23 Mar 2010 00:20:20 -0700
-Subject: [PATCH 587/887] HADOOP-6656. Renew Kerberos TGT when 80% of the renew lifetime has been used up. (omalley)
+Subject: [PATCH 587/890] HADOOP-6656. Renew Kerberos TGT when 80% of the renew lifetime has been used up. (omalley)
 
 Author: Devaraj Das
 Reason: Security framework needs to renew Kerberos tickets while the process is running

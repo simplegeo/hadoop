@@ -1,7 +1,7 @@
 From 07b56fcda093c41a142668171cf7bc953c9e4db8 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 18 May 2010 17:01:12 +0530
-Subject: [PATCH 658/887] Amend MAPREDUCE-1664. Bug fix to enable queue admins to view jobs.
+Subject: [PATCH 658/890] Amend MAPREDUCE-1664. Bug fix to enable queue admins to view jobs.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12444782/1664.qAdminsJobView.20S.v1.6.patch.
 Author: Ravi Gummadi

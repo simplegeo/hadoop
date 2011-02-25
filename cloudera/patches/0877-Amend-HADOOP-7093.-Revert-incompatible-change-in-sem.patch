@@ -1,7 +1,7 @@
 From 88e89c048d8f6f346667e64b782b7daf91d8a019 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sun, 13 Feb 2011 21:06:17 -0800
-Subject: [PATCH 877/887] Amend HADOOP-7093. Revert incompatible change in semantics of HttpServer
+Subject: [PATCH 877/890] Amend HADOOP-7093. Revert incompatible change in semantics of HttpServer
 
 The original backport pulled in part of HADOOP-6461, which changed the way the
 "webapps" directory is located on the classpath. This broke HBase's ability

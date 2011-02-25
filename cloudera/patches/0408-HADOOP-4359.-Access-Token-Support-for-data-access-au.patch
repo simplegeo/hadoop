@@ -1,7 +1,7 @@
 From 459d8d98b1ad0675b0e1525dfa23e445e1f82453 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 22 Dec 2009 00:16:39 -0800
-Subject: [PATCH 408/887] HADOOP-4359. Access Token: Support for data access authorization checking on DataNodes
+Subject: [PATCH 408/890] HADOOP-4359. Access Token: Support for data access authorization checking on DataNodes
 
 Patch: https://issues.apache.org/jira/secure/attachment/12428711/HADOOP-4359-0_20.2.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12435352/4359.patch

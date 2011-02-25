@@ -1,7 +1,7 @@
 From 1b8d8c3de261c8334d6eac4f5d3fd42cad894e81 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@lipcon.org>
 Date: Wed, 2 Jun 2010 21:53:01 -0700
-Subject: [PATCH 297/887] HDFS-1186. Writers should be interrupted when recovery is started, not when it's completed.
+Subject: [PATCH 297/890] HDFS-1186. Writers should be interrupted when recovery is started, not when it's completed.
 
 Description: When the write pipeline recovery process is initiated, this
              interrupts any concurrent writers to the block under recovery.

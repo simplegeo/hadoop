@@ -1,7 +1,7 @@
 From 99dfdb9a98e1ebd643f47877be3541962c32dcd0 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:07:18 -0800
-Subject: [PATCH 103/887] HADOOP-5733. Add map/reduce slot capacity and lost map/reduce slot capacity to JobTracker metrics
+Subject: [PATCH 103/890] HADOOP-5733. Add map/reduce slot capacity and lost map/reduce slot capacity to JobTracker metrics
 
 Description: It would be nice to have the actual map/reduce slot capacity and the lost map/reduce slot capacity (# of blacklisted nodes * map-slot-per-node or reduce-slot-per-node). This information can be used to calculate a JT view of slot utilization.
 Reason: Metrics improvement

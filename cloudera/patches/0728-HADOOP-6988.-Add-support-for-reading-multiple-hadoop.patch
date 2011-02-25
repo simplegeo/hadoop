@@ -1,7 +1,7 @@
 From ce67cd87f21543348ca5c137dee3ff0dc7f338dd Mon Sep 17 00:00:00 2001
 From: Aaron T. Myers <atm@cloudera.com>
 Date: Tue, 5 Oct 2010 21:03:50 -0700
-Subject: [PATCH 728/887] HADOOP-6988. Add support for reading multiple hadoop delegation token files
+Subject: [PATCH 728/890] HADOOP-6988. Add support for reading multiple hadoop delegation token files
 
 Author: Aaron T. Myers
 Reason: So Hue can submit jobs authenticated against both the JT and NN.

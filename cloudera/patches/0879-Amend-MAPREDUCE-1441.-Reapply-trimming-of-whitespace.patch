@@ -1,7 +1,7 @@
 From 2ac40e32af497c4c0d69c5921bd1504356b11086 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 15 Feb 2011 10:47:43 -0800
-Subject: [PATCH 879/887] Amend MAPREDUCE-1441. Reapply trimming of whitespace in mapred.local.dir configurations
+Subject: [PATCH 879/890] Amend MAPREDUCE-1441. Reapply trimming of whitespace in mapred.local.dir configurations
 
 Reason: User bug report - regression from b2 to b3
 Author: Todd Lipcon

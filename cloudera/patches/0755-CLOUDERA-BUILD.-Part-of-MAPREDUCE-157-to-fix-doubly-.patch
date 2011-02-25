@@ -1,7 +1,7 @@
 From 5d85605d7f324d9bb5751bf9e1733170dd97a911 Mon Sep 17 00:00:00 2001
 From: Tom White <tom@cloudera.com>
 Date: Thu, 6 Jan 2011 12:21:40 -0800
-Subject: [PATCH 755/887] CLOUDERA-BUILD. Part of MAPREDUCE-157 to fix doubly-escaped job history links
+Subject: [PATCH 755/890] CLOUDERA-BUILD. Part of MAPREDUCE-157 to fix doubly-escaped job history links
 
 Reason: Bug fix
 Author: Tom White

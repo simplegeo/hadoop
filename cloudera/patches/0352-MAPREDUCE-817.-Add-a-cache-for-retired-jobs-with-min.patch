@@ -1,7 +1,7 @@
 From ef2406bed6475cd6665f3601e9d78972beed739f Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 13 Aug 2009 09:35:35 -0700
-Subject: [PATCH 352/887] MAPREDUCE-817. Add a cache for retired jobs with minimal job info and provide a way to access history file url
+Subject: [PATCH 352/890] MAPREDUCE-817. Add a cache for retired jobs with minimal job info and provide a way to access history file url
 
 Author: Sharad Agarwal
 Reason: Reduces memory usage of JT for completed jobs

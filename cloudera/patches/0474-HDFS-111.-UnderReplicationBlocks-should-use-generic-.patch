@@ -1,7 +1,7 @@
 From dd2ce99bb706ba8e7771b3382de7af687ae8467f Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 16 Feb 2010 12:51:39 -0800
-Subject: [PATCH 474/887] HDFS-111. UnderReplicationBlocks should use generic types
+Subject: [PATCH 474/890] HDFS-111. UnderReplicationBlocks should use generic types
 
 Patch: https://issues.apache.org/jira/secure/attachment/12436027/1026-bp20-bugfix.patch
 Author: Devaraj Das

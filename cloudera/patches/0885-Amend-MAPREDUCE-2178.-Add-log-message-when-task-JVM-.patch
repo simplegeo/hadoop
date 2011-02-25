@@ -1,7 +1,7 @@
 From 1ff4b594c6f9926cf49842672740a229bf06491d Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 16 Feb 2011 11:15:12 -0800
-Subject: [PATCH 885/887] Amend MAPREDUCE-2178. Add log message when task JVM fails to fork
+Subject: [PATCH 885/890] Amend MAPREDUCE-2178. Add log message when task JVM fails to fork
 
 Author: Todd Lipcon
 Ref: CDH-2671

@@ -1,7 +1,7 @@
 From 4b592cf8cb44c018f86abe529d71434d5106ce1e Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Mon, 29 Mar 2010 13:07:15 -0700
-Subject: [PATCH 230/887] HADOOP-6382. Publish hadoop jars to apache mvn repo.
+Subject: [PATCH 230/890] HADOOP-6382. Publish hadoop jars to apache mvn repo.
 
 Description: This provides an 'ant mvn-install' command that will
 install Hadoop core, streaming, examples, etc. jars in a maven repository.

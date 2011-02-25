@@ -1,7 +1,7 @@
 From 6d428f70591a92a90dca5256968c62a510659240 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:18:58 -0800
-Subject: [PATCH 131/887] CLOUDERA-BUILD. Bump jdiff stable to 0.20.1
+Subject: [PATCH 131/890] CLOUDERA-BUILD. Bump jdiff stable to 0.20.1
 
 Author: Chad Metcalf
 ---

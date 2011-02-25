@@ -1,7 +1,7 @@
 From a93572183d61bcc9523206450a017c8908795009 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sun, 3 Oct 2010 22:52:24 -0700
-Subject: [PATCH 720/887] Amend MAPREDUCE-2096. Fix issue where JVM authorization was incorrectly triggered
+Subject: [PATCH 720/890] Amend MAPREDUCE-2096. Fix issue where JVM authorization was incorrectly triggered
 
 Reason: TaskRunner calls TaskTracker.reportDiagonsticInfo directly at one point,
         so the current user is the MR user, rather than the Job. This patch

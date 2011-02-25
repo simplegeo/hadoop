@@ -1,7 +1,7 @@
 From 921c135653736bcc279700435358058762bc8f78 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:56:43 -0800
-Subject: [PATCH 082/887] CLOUDERA-BUILD. More Sqoop documentation updates
+Subject: [PATCH 082/890] CLOUDERA-BUILD. More Sqoop documentation updates
 
 Author: Aaron Kimball
 ---

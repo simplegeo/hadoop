@@ -1,7 +1,7 @@
 From 81bd8d5735c682d69d59712a7333a70d081a4216 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 16:59:51 -0800
-Subject: [PATCH 827/887] MAPREDUCE-1936. Make Gridmix3 more customizable.
+Subject: [PATCH 827/890] MAPREDUCE-1936. Make Gridmix3 more customizable.
 
 Author: Hong Tang
 Ref: CDH-2622

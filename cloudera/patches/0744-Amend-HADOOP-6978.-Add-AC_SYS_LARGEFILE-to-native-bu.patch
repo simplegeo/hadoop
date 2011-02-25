@@ -1,7 +1,7 @@
 From 39b1d616bd1d7cf88cb057d1fd70b0d9b17a9992 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 24 Nov 2010 14:19:20 -0800
-Subject: [PATCH 744/887] Amend HADOOP-6978. Add AC_SYS_LARGEFILE to native build to fix issue with large files
+Subject: [PATCH 744/890] Amend HADOOP-6978. Add AC_SYS_LARGEFILE to native build to fix issue with large files
 
 Author: Owen O'Malley
 Ref: CDH-2009

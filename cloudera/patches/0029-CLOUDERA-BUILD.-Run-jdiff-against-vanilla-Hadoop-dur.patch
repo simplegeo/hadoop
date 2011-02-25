@@ -1,7 +1,7 @@
 From f0c6a810ba7237ec7cc570ecad8a8665768b3d06 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:37:07 -0800
-Subject: [PATCH 029/887] CLOUDERA-BUILD. Run jdiff against vanilla Hadoop during Cloudera release build
+Subject: [PATCH 029/890] CLOUDERA-BUILD. Run jdiff against vanilla Hadoop during Cloudera release build
 
 Author: Todd Lipcon
 Ref: UNKNOWN

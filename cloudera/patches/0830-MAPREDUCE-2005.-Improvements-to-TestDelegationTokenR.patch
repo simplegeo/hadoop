@@ -1,7 +1,7 @@
 From 4cbfcd923d102ce6bcccb5dcddc1ed124f42bb8f Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 9 Feb 2011 17:20:29 -0800
-Subject: [PATCH 830/887] MAPREDUCE-2005. Improvements to TestDelegationTokenRenewal
+Subject: [PATCH 830/890] MAPREDUCE-2005. Improvements to TestDelegationTokenRenewal
 
 Reason: improve test printouts
 Author: Boris Shkolnik

@@ -1,7 +1,7 @@
 From 60784d712cdd5781ceff262bb67e2d484fde428b Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:29:56 -0800
-Subject: [PATCH 164/887] MAPREDUCE-1235. java.io.IOException: Cannot convert value '0000-00-00 00:00:00' from column 6 to TIMESTAMP.
+Subject: [PATCH 164/890] MAPREDUCE-1235. java.io.IOException: Cannot convert value '0000-00-00 00:00:00' from column 6 to TIMESTAMP.
 
 Description: <b>Description</b>: java.io.IOException is thrown when trying to import a table to HDFS using Sqoop. Table has "0" value in a field of type datetime. <br/>
 <b>Full Exception</b>: java.io.IOException: Cannot convert value '0000-00-00 00:00:00' from column 6 to TIMESTAMP. <br/>

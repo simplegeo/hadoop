@@ -1,7 +1,7 @@
 From fa6aca09466301c65d8d8e5d92c43e50f46683ad Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 7 Feb 2011 10:05:49 -0800
-Subject: [PATCH 856/887] Amend MAPREDUCE-2103. Reapply "task-controller permissions checks too stringent" after MAPREDUCE-2173
+Subject: [PATCH 856/890] Amend MAPREDUCE-2103. Reapply "task-controller permissions checks too stringent" after MAPREDUCE-2173
 
 Reason: match documentation
 Author: Todd Lipcon

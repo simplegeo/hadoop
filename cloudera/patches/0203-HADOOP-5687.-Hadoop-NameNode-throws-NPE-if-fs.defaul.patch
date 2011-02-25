@@ -1,7 +1,7 @@
 From d190a8067827ce09cdcb7741d588cce0e0e7aa02 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:45:23 -0800
-Subject: [PATCH 203/887] HADOOP-5687. Hadoop NameNode throws NPE if fs.default.name is the default value
+Subject: [PATCH 203/890] HADOOP-5687. Hadoop NameNode throws NPE if fs.default.name is the default value
 
 Description: Throwing NPE is confusing; instead, an exception with a useful string description could be thrown instead.
 Reason: Logging improvement

@@ -1,7 +1,7 @@
 From 7fafe032223921ad194c69b16ab451b4aade87fa Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:43:41 -0800
-Subject: [PATCH 200/887] HADOOP-4368. Superuser privileges required to do "df"
+Subject: [PATCH 200/890] HADOOP-4368. Superuser privileges required to do "df"
 
 Description: super user privileges are required in DFS in order to get the file system statistics (FSNamesystem.java, getStats method).  This means that when HDFS is mounted via fuse-dfs as a non-root user, "df" is going to return 16exabytes total and 0 free instead of the correct amount.
 

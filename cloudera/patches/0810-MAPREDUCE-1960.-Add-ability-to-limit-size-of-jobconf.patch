@@ -1,7 +1,7 @@
 From 3ae2cde7b036603b8aa19e2ab31994dd3209eded Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 18:35:44 -0800
-Subject: [PATCH 810/887] MAPREDUCE-1960. Add ability to limit size of jobconf
+Subject: [PATCH 810/890] MAPREDUCE-1960. Add ability to limit size of jobconf
 
 Author: Mahadev Konar
 Ref: CDH-2622

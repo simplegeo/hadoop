@@ -1,7 +1,7 @@
 From 23c45791bbc3a23d69c77f3518b5d1a1a4702ccc Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:34:11 -0800
-Subject: [PATCH 179/887] HADOOP-6462. contrib/cloud failing, target "compile" does not exist
+Subject: [PATCH 179/890] HADOOP-6462. contrib/cloud failing, target "compile" does not exist
 
 Description: I'm not seeing this mentioned in hudson or other bugreports, which confuses me. With the addition of a src/contrib/cloud/build.xml from <a href="http://issues.apache.org/jira/browse/HADOOP-6426" title="Create ant build for running EC2 unit tests"><del>HADOOP-6426</del></a>, contrib/build.xml won't build no more: <br/>
 hadoop-common/src/contrib/build.xml:30: The following error occurred while executing this line:<br/>

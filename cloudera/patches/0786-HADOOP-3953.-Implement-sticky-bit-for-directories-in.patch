@@ -1,7 +1,7 @@
 From 8b4374bfa12b1a1ed8cc8e0ab209ad763becf791 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 19 Jan 2011 14:22:55 -0800
-Subject: [PATCH 786/887] HADOOP-3953. Implement sticky bit for directories in HDFS.
+Subject: [PATCH 786/890] HADOOP-3953. Implement sticky bit for directories in HDFS.
 
 Reason: security on /tmp
 Author: Jakob Homan

@@ -1,7 +1,7 @@
 From 8fcb419648160efaed6fdd467875c3b1743d2bee Mon Sep 17 00:00:00 2001
 From: Dhruba Borthakur <dhruba@apache.org>
 Date: Wed, 9 Jun 2010 23:12:21 +0000
-Subject: [PATCH 270/887] HDFS-988. Fix bug where savenameSpace can corrupt edits log.
+Subject: [PATCH 270/890] HDFS-988. Fix bug where savenameSpace can corrupt edits log.
 
 Description: Fixes several synchronization errors in the NameNode and ensures
              that all edits have been synced to the edits log before

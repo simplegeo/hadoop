@@ -1,7 +1,7 @@
 From c109efb9579e830587e5f7c1762c816d5d241b71 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 27 Sep 2010 16:10:43 -0700
-Subject: [PATCH 708/887] HDFS-1301. TestHDFSProxy needs to use the server side conf for ProxyUser settings.
+Subject: [PATCH 708/890] HDFS-1301. TestHDFSProxy needs to use the server side conf for ProxyUser settings.
 
 Reason: Fix failing unit test after HADOOP-6815 application
 Author: Boris Shkolnik

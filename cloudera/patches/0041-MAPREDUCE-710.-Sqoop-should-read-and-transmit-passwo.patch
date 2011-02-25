@@ -1,7 +1,7 @@
 From 58e23056af0e99ef611ac258719207cc9459a849 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:41:47 -0800
-Subject: [PATCH 041/887] MAPREDUCE-710. Sqoop should read and transmit passwords in a more secure manner
+Subject: [PATCH 041/890] MAPREDUCE-710. Sqoop should read and transmit passwords in a more secure manner
 
 Description: Sqoop's current support for passwords involves reading passwords from the command line "--password foo", which makes the password visible to other users via 'ps'. An invisible-console approach should be taken.
 

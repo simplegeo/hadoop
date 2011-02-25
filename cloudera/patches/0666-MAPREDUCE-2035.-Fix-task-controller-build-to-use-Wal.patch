@@ -1,7 +1,7 @@
 From f9051921efb8d76b0dcd0eed27fd15600635caf0 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 27 Jul 2010 19:08:31 -0700
-Subject: [PATCH 666/887] MAPREDUCE-2035. Fix task controller build to use -Wall, fix warnings
+Subject: [PATCH 666/890] MAPREDUCE-2035. Fix task controller build to use -Wall, fix warnings
 
 ---
  src/c++/task-controller/Makefile.in                |   14 +-

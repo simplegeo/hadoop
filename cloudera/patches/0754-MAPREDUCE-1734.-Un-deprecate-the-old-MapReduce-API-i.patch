@@ -1,7 +1,7 @@
 From 73c38ae4211b732cae575d7f52f233e2cf6f909e Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 5 Jan 2011 14:39:10 -0800
-Subject: [PATCH 754/887] MAPREDUCE-1734. Un-deprecate the old MapReduce API in the 0.20 branch.
+Subject: [PATCH 754/890] MAPREDUCE-1734. Un-deprecate the old MapReduce API in the 0.20 branch.
 
 Reason: Old APIs will remain through at least 0.23
 Author: Todd Lipcon

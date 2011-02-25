@@ -1,7 +1,7 @@
 From 5802343b91fc15ee719c2cffabf6a3f9f01f4007 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 3 Mar 2010 09:45:14 +0530
-Subject: [PATCH 528/887] MAPREDUCE-899. When using LinuxTaskController, localized files may become accessible to unintended users if permissions are misconfigured.
+Subject: [PATCH 528/890] MAPREDUCE-899. When using LinuxTaskController, localized files may become accessible to unintended users if permissions are misconfigured.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437670/mr-899-20.patch
 Author: Amareshwari Sriramadasu

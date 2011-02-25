@@ -1,7 +1,7 @@
 From 1fab52d87c29bc7117eb7324d1a152d8d889f62b Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@lipcon.org>
 Date: Wed, 2 Jun 2010 18:25:11 -0700
-Subject: [PATCH 306/887] HDFS-1246. Manual tool to test sync on a cluster
+Subject: [PATCH 306/890] HDFS-1246. Manual tool to test sync on a cluster
 
 Description: Tool for automated testing that sync maintains every edit after kill -9
 Reason: Cluster Testing of Sync support for CDH3

@@ -1,7 +1,7 @@
 From bf655f10661132486cb40ee098fdedbbb5937892 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 19:30:24 -0800
-Subject: [PATCH 811/887] Partial MAPREDUCE-2055. Cache counters in retired job info
+Subject: [PATCH 811/890] Partial MAPREDUCE-2055. Cache counters in retired job info
 
 Does not apply entirety of upstream JIRA as described. Simply caches
 Counters in the retired job info.

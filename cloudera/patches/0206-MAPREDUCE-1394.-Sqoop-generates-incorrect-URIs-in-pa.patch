@@ -1,7 +1,7 @@
 From a937ba2b9b6132883d727f856911ae31d22ad619 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:46:26 -0800
-Subject: [PATCH 206/887] MAPREDUCE-1394. Sqoop generates incorrect URIs in paths sent to Hive
+Subject: [PATCH 206/890] MAPREDUCE-1394. Sqoop generates incorrect URIs in paths sent to Hive
 
 Description: Hive used to require a ':8020' in HDFS URIs used with LOAD DATA statements, even though the normalized form of such a URI does not contain an explicit port number (since 8020 is the default port). Sqoop matched this by hacking the URI strings it forwarded to Hive.
 

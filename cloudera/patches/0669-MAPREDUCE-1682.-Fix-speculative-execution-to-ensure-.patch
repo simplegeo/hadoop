@@ -1,7 +1,7 @@
 From 67048e890eff6c9cd548dcdc980f5ff3072234cc Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 2 Jul 2010 22:53:21 -0700
-Subject: [PATCH 669/887] MAPREDUCE-1682. Fix speculative execution to ensure tasks are not scheduled after job failure.
+Subject: [PATCH 669/890] MAPREDUCE-1682. Fix speculative execution to ensure tasks are not scheduled after job failure.
 
 Author: Arun C Murthy
 Reason: Fixes potential wasted task slots

@@ -1,7 +1,7 @@
 From bff776eae3e576e29b3f48546d620469c7a65a6f Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 7 Jan 2010 11:15:53 -0800
-Subject: [PATCH 419/887] MAPREDUCE-1250. Refactor job token to use a common token interface
+Subject: [PATCH 419/890] MAPREDUCE-1250. Refactor job token to use a common token interface
 
 Patch: https://issues.apache.org/jira/secure/attachment/12429629/MR-1250-0_20.2.patch
 Author: Kan Zhang

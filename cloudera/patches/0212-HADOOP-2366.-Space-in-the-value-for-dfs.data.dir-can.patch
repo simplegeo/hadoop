@@ -1,7 +1,7 @@
 From 65a04ab8197a8db21a97d279ca881b5cd45a5365 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:48:03 -0800
-Subject: [PATCH 212/887] HADOOP-2366. Space in the value for dfs.data.dir can cause great problems
+Subject: [PATCH 212/890] HADOOP-2366. Space in the value for dfs.data.dir can cause great problems
 
 Description: The following configuration causes problems:
 

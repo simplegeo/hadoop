@@ -1,7 +1,7 @@
 From 552ebe400b6d94b02d8a3ffebb61b433f7e13aa1 Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Fri, 12 Nov 2010 23:18:51 -0800
-Subject: [PATCH 743/887] HDFS-1250. Namenode accepts block report from dead datanodes.
+Subject: [PATCH 743/890] HDFS-1250. Namenode accepts block report from dead datanodes.
 
 Reason: Bug
 Author: Suresh Srinivas

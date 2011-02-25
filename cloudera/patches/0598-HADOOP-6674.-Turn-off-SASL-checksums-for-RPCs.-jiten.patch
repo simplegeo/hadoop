@@ -1,7 +1,7 @@
 From 14c524cb4f78e52ee1d916fa92dfd2665a3a2527 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 7 Apr 2010 09:31:55 -0700
-Subject: [PATCH 598/887] HADOOP-6674. Turn off SASL checksums for RPCs. (jitendra via omalley)
+Subject: [PATCH 598/890] HADOOP-6674. Turn off SASL checksums for RPCs. (jitendra via omalley)
 
 Patch: https://issues.apache.org/jira/secure/attachment/12442640/HADOOP-6674-y20.1.bugfix.patch
 Author: Jitendra Nath Pandey

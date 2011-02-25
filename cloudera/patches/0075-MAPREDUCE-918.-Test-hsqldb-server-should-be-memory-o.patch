@@ -1,7 +1,7 @@
 From 61d4ef5175dca1859a1320f9e7cad1caeab5d982 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:54:49 -0800
-Subject: [PATCH 075/887] MAPREDUCE-918. Test hsqldb server should be memory-only.
+Subject: [PATCH 075/890] MAPREDUCE-918. Test hsqldb server should be memory-only.
 
 Description: Sqoop launches a standalone hsqldb server for unit tests, but it currently writes its database to disk and uses a connect string of <tt>//localhost</tt>. If multiple test instances are running concurrently, one test server may serve to the other instance of the unit tests, causing race conditions.
 Reason: Bugfix in test harness

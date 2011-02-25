@@ -1,7 +1,7 @@
 From 7429b6597999c1a867926b61d5075bdf85a1be6d Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 18:04:02 -0800
-Subject: [PATCH 809/887] Amend HDFS-457. Include new test TestDataNodeVolumeFailure
+Subject: [PATCH 809/890] Amend HDFS-457. Include new test TestDataNodeVolumeFailure
 
 Ref: CDH-2622
 Author: Boris Shkolnik

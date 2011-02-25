@@ -1,7 +1,7 @@
 From f6ffedb4441ec43ef7d81fe483807115e98aca41 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 26 Jan 2011 13:31:56 -0800
-Subject: [PATCH 797/887] HADOOP-6882. Update the patch level of Jetty to 6.1.26
+Subject: [PATCH 797/890] HADOOP-6882. Update the patch level of Jetty to 6.1.26
 
 Reason: Address XSS and many other upstream bugs
 Author: Owen O'Malley

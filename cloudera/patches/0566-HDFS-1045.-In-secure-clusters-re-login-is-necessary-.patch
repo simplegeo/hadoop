@@ -1,7 +1,7 @@
 From c69f8f7977591ac297cf5501374c4f40acfea7ee Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 17 Mar 2010 20:32:34 -0700
-Subject: [PATCH 566/887] HDFS-1045. In secure clusters, re-login is necessary for https clients before opening connections
+Subject: [PATCH 566/890] HDFS-1045. In secure clusters, re-login is necessary for https clients before opening connections
 
 Patch: https://issues.apache.org/jira/secure/attachment/12439110/HDFS-1045-Y20.patch
 Author: Jakob Homan

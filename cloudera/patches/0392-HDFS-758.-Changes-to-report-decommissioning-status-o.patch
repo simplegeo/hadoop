@@ -1,7 +1,7 @@
 From becc6bade8b0d4ef4248cd82da7e7d337bc10cbc Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 24 Nov 2009 11:42:17 -0800
-Subject: [PATCH 392/887] HDFS-758. Changes to report decommissioning status on namenode web UI.
+Subject: [PATCH 392/890] HDFS-758. Changes to report decommissioning status on namenode web UI.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12426000/HDFS-758.5.0-20.patch
 Author: Jitendra Nath Pandey

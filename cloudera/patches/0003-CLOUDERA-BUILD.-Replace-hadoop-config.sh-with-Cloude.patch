@@ -1,7 +1,7 @@
 From 14256386d4cb155fea0f5745dd6c49fba74ff40f Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:20:43 -0800
-Subject: [PATCH 003/887] CLOUDERA-BUILD. Replace hadoop-config.sh with Cloudera version
+Subject: [PATCH 003/890] CLOUDERA-BUILD. Replace hadoop-config.sh with Cloudera version
 
 ---
  bin/hadoop-config.sh |   38 ++++++++++++++++++++------------------

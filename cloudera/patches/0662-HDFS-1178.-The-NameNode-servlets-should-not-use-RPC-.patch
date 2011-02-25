@@ -1,7 +1,7 @@
 From 221b3e83ec620bb4903946574fe0b250db58fc8a Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 28 May 2010 15:14:24 -0700
-Subject: [PATCH 662/887] HDFS-1178. The NameNode servlets should not use RPC to connect to the NameNode.
+Subject: [PATCH 662/890] HDFS-1178. The NameNode servlets should not use RPC to connect to the NameNode.
 
 Author: Owen O'Malley
 Reason: Cleanup

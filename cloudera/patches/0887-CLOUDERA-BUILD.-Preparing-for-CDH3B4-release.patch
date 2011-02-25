@@ -1,7 +1,7 @@
 From 3aa7c91592ea1c53f3a913a581dbfcdfebe98bfe Mon Sep 17 00:00:00 2001
 From: Jenkins <dev-kitchen@cloudera.com>
 Date: Sat, 19 Feb 2011 00:27:52 -0800
-Subject: [PATCH 887/887] CLOUDERA-BUILD. Preparing for CDH3B4 release.
+Subject: [PATCH 887/890] CLOUDERA-BUILD. Preparing for CDH3B4 release.
 
 ---
  cloudera-pom.xml                                  |    4 ++--

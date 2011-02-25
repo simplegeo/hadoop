@@ -1,7 +1,7 @@
 From ab98123c7114752945452af0b96c8de04af9ba93 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:26:02 -0800
-Subject: [PATCH 149/887] MAPREDUCE-370. Change org.apache.hadoop.mapred.lib.MultipleOutputs to use new api.
+Subject: [PATCH 149/890] MAPREDUCE-370. Change org.apache.hadoop.mapred.lib.MultipleOutputs to use new api.
 
 Description: Ports the MultipleOutputs OutputFormat to the new context-based API.
 Reason: API compatibility improvement.

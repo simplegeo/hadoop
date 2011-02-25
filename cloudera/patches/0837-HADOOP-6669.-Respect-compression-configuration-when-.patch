@@ -1,7 +1,7 @@
 From 7a31be4853d46090c7bd7798bdb7cd41915b421c Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 18:05:06 -0800
-Subject: [PATCH 837/887] HADOOP-6669. Respect compression configuration when creating DefaultCodec
+Subject: [PATCH 837/890] HADOOP-6669. Respect compression configuration when creating DefaultCodec
 
 Author: Koji Noguchi
 Ref: CDH-2622

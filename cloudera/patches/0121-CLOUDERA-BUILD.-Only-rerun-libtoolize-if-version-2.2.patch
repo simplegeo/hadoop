@@ -1,7 +1,7 @@
 From af158d6aa7ffe72d931bc4763ace7d4a299d077b Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:16:14 -0800
-Subject: [PATCH 121/887] CLOUDERA-BUILD. Only rerun libtoolize if version 2.2 is installed
+Subject: [PATCH 121/890] CLOUDERA-BUILD. Only rerun libtoolize if version 2.2 is installed
 
 Author: Todd Lipcon
 ---

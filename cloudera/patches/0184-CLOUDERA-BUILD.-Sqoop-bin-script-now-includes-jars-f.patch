@@ -1,7 +1,7 @@
 From 5d0c8f82b87e7cbb541ace9e4f22abfad2799e56 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:35:08 -0800
-Subject: [PATCH 184/887] CLOUDERA-BUILD. Sqoop bin script now includes jars from contrib/sqoop/lib/ on classpath.
+Subject: [PATCH 184/890] CLOUDERA-BUILD. Sqoop bin script now includes jars from contrib/sqoop/lib/ on classpath.
 
 Author: Aaron Kimball
 ---

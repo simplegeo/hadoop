@@ -1,7 +1,7 @@
 From 0b213def5dbb9dc7a90009a3446a913ea15f5ee7 Mon Sep 17 00:00:00 2001
 From: Aaron T. Myers <atm@cloudera.com>
 Date: Fri, 24 Sep 2010 11:47:16 -0700
-Subject: [PATCH 704/887] HADOOP-6951. Distinct minicluster services (e.g. NN and JT) overwrite each other's service policies
+Subject: [PATCH 704/890] HADOOP-6951. Distinct minicluster services (e.g. NN and JT) overwrite each other's service policies
 
 Description: Make ServiceAuthorizationManager's map of service ACLs instance-specific, instead of static.
 Reason: To make HUE's tests work against CDH3.

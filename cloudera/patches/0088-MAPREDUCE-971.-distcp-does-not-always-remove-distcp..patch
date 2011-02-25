@@ -1,7 +1,7 @@
 From 155394ca5eed2e2a6151a5c9d9452e9cfbb30a11 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:57:58 -0800
-Subject: [PATCH 088/887] MAPREDUCE-971. distcp does not always remove distcp.tmp.dir
+Subject: [PATCH 088/890] MAPREDUCE-971. distcp does not always remove distcp.tmp.dir
 
 Description: Sometimes distcp leaves behind its tmpdir when the target filesystem is s3n.
 Reason: Bugfix

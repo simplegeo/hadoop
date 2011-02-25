@@ -1,7 +1,7 @@
 From e6e5a1bd6943f228f5271627a200350bff525cba Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sat, 27 Feb 2010 15:44:10 +0530
-Subject: [PATCH 517/887] MAPREDUCE-1455. Authorization for servlets
+Subject: [PATCH 517/890] MAPREDUCE-1455. Authorization for servlets
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437322/1455.20S.2.patch
 Patch: https://issues.apache.org/jira/secure/attachment/12437379/1455.20S.2.fix.patch

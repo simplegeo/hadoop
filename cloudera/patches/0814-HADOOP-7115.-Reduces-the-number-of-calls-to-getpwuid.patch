@@ -1,7 +1,7 @@
 From 3ef31bcc86610d496976b4de9ada82e73f47f162 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 20:03:53 -0800
-Subject: [PATCH 814/887] HADOOP-7115. Reduces the number of calls to getpwuid_r and getpwgid_r, by implementing a cache in NativeIO.
+Subject: [PATCH 814/890] HADOOP-7115. Reduces the number of calls to getpwuid_r and getpwgid_r, by implementing a cache in NativeIO.
 
 Author: Devaraj Das
 Ref: CDH-2622

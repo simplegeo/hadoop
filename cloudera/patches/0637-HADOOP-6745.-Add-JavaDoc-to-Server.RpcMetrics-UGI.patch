@@ -1,7 +1,7 @@
 From 497fefb3b9132b912a569577bc643c20a273707e Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 5 May 2010 09:15:13 -0700
-Subject: [PATCH 637/887] HADOOP-6745. Add JavaDoc to Server.RpcMetrics, UGI
+Subject: [PATCH 637/890] HADOOP-6745. Add JavaDoc to Server.RpcMetrics, UGI
 
 Patch: https://issues.apache.org/jira/secure/attachment/12443726/HADOOP-6745-BP20-2.patch
 Author: Boris Shkolnik

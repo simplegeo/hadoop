@@ -1,7 +1,7 @@
 From 29334f33eee06ef864f1fed490da870050e5c7ff Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 11 Dec 2009 09:13:53 +0530
-Subject: [PATCH 398/887] MAPREDUCE-353. Allow shuffle read and connection timeouts to be configurable.
+Subject: [PATCH 398/890] MAPREDUCE-353. Allow shuffle read and connection timeouts to be configurable.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12427566/patch-353-ydist.txt
 Author: Ravi Gummadi

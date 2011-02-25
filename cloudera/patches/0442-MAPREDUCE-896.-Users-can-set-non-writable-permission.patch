@@ -1,7 +1,7 @@
 From db6344ec8a93fb65830f7902e6566a96619ff7dd Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 26 Jan 2010 15:10:41 +0530
-Subject: [PATCH 442/887] MAPREDUCE-896. Users can set non-writable permissions on temporary files for TT and can abuse disk usage.
+Subject: [PATCH 442/890] MAPREDUCE-896. Users can set non-writable permissions on temporary files for TT and can abuse disk usage.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12431413/MR-896.v8-y20.patch
 Author: Ravi Gummadi

@@ -1,7 +1,7 @@
 From f370a6f8f27d6bc813872a89d9dac122dd357b53 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 22 Feb 2010 14:35:53 -0800
-Subject: [PATCH 482/887] HADOOP-6577. IPC server response buffer reset threshold should be configurable
+Subject: [PATCH 482/890] HADOOP-6577. IPC server response buffer reset threshold should be configurable
 
 Patch: https://issues.apache.org/jira/secure/attachment/12436399/hadoop-6577.2.rel20.patch) from yahoo-hadoop-0.20 into yahoo-hadoop-0.20.1xx
 Author: Suresh Srinivas

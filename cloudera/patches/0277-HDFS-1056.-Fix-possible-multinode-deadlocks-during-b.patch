@@ -1,7 +1,7 @@
 From 23cfa9e8263ad1d92814b5829e2f50bb37d57857 Mon Sep 17 00:00:00 2001
 From: todd <todd@monster01.sf.cloudera.com>
 Date: Sun, 21 Mar 2010 16:25:48 -0700
-Subject: [PATCH 277/887] HDFS-1056. Fix possible multinode deadlocks during block recovery when using ephemeral dataxceiver ports
+Subject: [PATCH 277/890] HDFS-1056. Fix possible multinode deadlocks during block recovery when using ephemeral dataxceiver ports
 
 Description: Fixes the logic by which datanodes identify local RPC targets
              during block recovery for the case when the datanode

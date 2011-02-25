@@ -1,7 +1,7 @@
 From 5dcd47a711f530fb989350569dd5553b93e62490 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 4 Mar 2010 00:55:53 -0800
-Subject: [PATCH 536/887] HDFS-1015. Intermittent failure in TestSecurityTokenEditLog
+Subject: [PATCH 536/890] HDFS-1015. Intermittent failure in TestSecurityTokenEditLog
 
 Patch: https://issues.apache.org/jira/secure/attachment/12437830/HDFS-1015-y20.1.patch
 Author: Jitendra Nath Pandey

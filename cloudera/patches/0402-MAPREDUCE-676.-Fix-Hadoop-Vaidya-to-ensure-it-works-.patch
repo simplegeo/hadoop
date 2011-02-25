@@ -1,7 +1,7 @@
 From e3a25294b2faf7d57fbf69b75060611362a35463 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 15 Dec 2009 15:41:45 +0530
-Subject: [PATCH 402/887] MAPREDUCE-676. Fix Hadoop Vaidya to ensure it works for map-only jobs.
+Subject: [PATCH 402/890] MAPREDUCE-676. Fix Hadoop Vaidya to ensure it works for map-only jobs.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12410257/vaidya-patch-06092009.patch
 Author: Suhas Gogate

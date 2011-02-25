@@ -1,7 +1,7 @@
 From 6ae254e4aef44f833859bb060797bd3177085d4e Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sun, 25 Oct 2009 17:41:49 +0530
-Subject: [PATCH 380/887] MAPREDUCE-1090. Modify log statement in Tasktracker log related to memory monitoring to include attempt id.
+Subject: [PATCH 380/890] MAPREDUCE-1090. Modify log statement in Tasktracker log related to memory monitoring to include attempt id.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12423142/MAPREDUCE-1090-20.patch
 Author: Hemanth Yamijala

@@ -1,7 +1,7 @@
 From 4d9333b00772455a1ca7a365fa5b5b2f6872abd7 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:19:46 -0800
-Subject: [PATCH 134/887] HADOOP-6184. Provide a configuration dump in json format.
+Subject: [PATCH 134/890] HADOOP-6184. Provide a configuration dump in json format.
 
 Description: Configuration dump in json format.
 Reason: New feature

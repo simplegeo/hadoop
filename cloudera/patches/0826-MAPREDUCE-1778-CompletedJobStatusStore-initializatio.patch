@@ -1,7 +1,7 @@
 From 1b9bc9af319325bd26e1530ce18527ca8f74dafd Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 16:59:51 -0800
-Subject: [PATCH 826/887] MAPREDUCE-1778 CompletedJobStatusStore initialization should fail if {mapred.job.tracker.persist.jobstatus.dir} is unwritable
+Subject: [PATCH 826/890] MAPREDUCE-1778 CompletedJobStatusStore initialization should fail if {mapred.job.tracker.persist.jobstatus.dir} is unwritable
 
 Author: Krishna Ramachandran
 Ref: CDH-2622

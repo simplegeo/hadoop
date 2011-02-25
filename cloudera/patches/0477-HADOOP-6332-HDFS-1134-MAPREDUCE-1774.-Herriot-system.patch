@@ -1,7 +1,7 @@
 From a0380f3cae542769bd6861311d0fc709201e9dc3 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 19 Feb 2010 14:35:02 -0800
-Subject: [PATCH 477/887] HADOOP-6332, HDFS-1134, MAPREDUCE-1774. Herriot (system test framework)
+Subject: [PATCH 477/890] HADOOP-6332, HDFS-1134, MAPREDUCE-1774. Herriot (system test framework)
 
 Author: Konstantin Boudnik
 Ref: YDH

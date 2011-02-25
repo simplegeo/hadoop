@@ -1,7 +1,7 @@
 From 5966f146fdb0202c0ffd66d3ec3f0c7c4def6afe Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Wed, 15 Sep 2010 19:55:36 -0700
-Subject: [PATCH 689/887] Revert "HDFS-1000. libhdfs needs to be updated to use the new UGI"
+Subject: [PATCH 689/890] Revert "HDFS-1000. libhdfs needs to be updated to use the new UGI"
 
 Description: This is being reverted to apply a newer version of the patch.
 Author: Devaraj Das

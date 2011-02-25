@@ -1,7 +1,7 @@
 From 2a37b553b8f446f03cb3610b2f7a84f54064f812 Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Tue, 24 Aug 2010 14:01:25 -0700
-Subject: [PATCH 327/887] CLOUDERA-BUILD. Revert scribe log4j.
+Subject: [PATCH 327/890] CLOUDERA-BUILD. Revert scribe log4j.
 
 Revert "CLOUDERA-BUILD. Apply Scribe patches to Hadoop"
 

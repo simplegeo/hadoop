@@ -1,7 +1,7 @@
 From d8de7f9dbe8b94d380849f2f5f4ff357ce50e1a6 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 17 Mar 2010 11:57:13 +0530
-Subject: [PATCH 559/887] HADOOP-5592. Fix typo in streaming documentation
+Subject: [PATCH 559/890] HADOOP-5592. Fix typo in streaming documentation
 
 Patch: https://issues.apache.org/jira/secure/attachment/12436671/patch-5592-ydist.txt
 Author: Corinne Chandel

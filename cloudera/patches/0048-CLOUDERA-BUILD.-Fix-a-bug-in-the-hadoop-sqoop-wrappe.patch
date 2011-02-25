@@ -1,7 +1,7 @@
 From 0caaf80f3a569b91f482de0dcb87f826967f5c7c Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:45:16 -0800
-Subject: [PATCH 048/887] CLOUDERA-BUILD. Fix a bug in the hadoop/sqoop wrapper generation
+Subject: [PATCH 048/890] CLOUDERA-BUILD. Fix a bug in the hadoop/sqoop wrapper generation
 
 Author: Matt Massie
 Ref: UNKNOWN

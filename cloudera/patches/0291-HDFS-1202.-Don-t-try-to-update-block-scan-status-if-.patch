@@ -1,7 +1,7 @@
 From 18174a2abc5a91105ae1adc2bda026d90c41a60b Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 12 May 2010 20:06:33 -0700
-Subject: [PATCH 291/887] HDFS-1202. Don't try to update block scan status if block scanner is not initialized yet
+Subject: [PATCH 291/890] HDFS-1202. Don't try to update block scan status if block scanner is not initialized yet
 
 Reason: Fixes NPE seen at DataNode startup
 Author: Todd Lipcon

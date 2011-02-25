@@ -1,7 +1,7 @@
 From 586992381042e1b4ec8c9ece069561ad2e4dfcc0 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:15:42 -0800
-Subject: [PATCH 120/887] HADOOP-6279. Add JVM memory usage to JvmMetrics
+Subject: [PATCH 120/890] HADOOP-6279. Add JVM memory usage to JvmMetrics
 
 Description: The JvmMetrics currently publish memory usage from the MemoryMXBean. This is useful, but doesn't include the total heap size (eg as displayed in the JT Web UI).
 

@@ -1,7 +1,7 @@
 From aa75ab7f749604c354dcdb0b806aca9cd140f504 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:47:58 -0800
-Subject: [PATCH 056/887] MAPREDUCE-789. Oracle support for Sqoop
+Subject: [PATCH 056/890] MAPREDUCE-789. Oracle support for Sqoop
 
 Description: A separate ConnManager is needed for Oracle to support its slightly different syntax and configuration
 Reason: Compatibility improvement

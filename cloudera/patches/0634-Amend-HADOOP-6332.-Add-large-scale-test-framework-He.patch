@@ -1,7 +1,7 @@
 From 392bd0e68be1621406d3556303c30f00d6dfd019 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 3 May 2010 18:58:34 -0700
-Subject: [PATCH 634/887] Amend HADOOP-6332. Add large-scale test framework "Herriot" that runs against real clusters.
+Subject: [PATCH 634/890] Amend HADOOP-6332. Add large-scale test framework "Herriot" that runs against real clusters.
 
 Reason: Phase two of Herriot framework
 Patch: https://issues.apache.org/jira/secure/attachment/12443539/6332-phase2.patch

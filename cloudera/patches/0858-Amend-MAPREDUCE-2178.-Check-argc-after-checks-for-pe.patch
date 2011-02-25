@@ -1,7 +1,7 @@
 From 717544d462bc56188d165008bc1d841bc1c03904 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 11 Feb 2011 12:16:08 -0800
-Subject: [PATCH 858/887] Amend MAPREDUCE-2178. Check argc *after* checks for perms, etc
+Subject: [PATCH 858/890] Amend MAPREDUCE-2178. Check argc *after* checks for perms, etc
 
 Reason: Fix error messages during taskcontroller setup
 Author: Todd Lipcon

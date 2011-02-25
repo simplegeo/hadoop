@@ -1,7 +1,7 @@
 From 84b622a5f6f5bd145f19f4c08b6263759ac51756 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:47:15 -0800
-Subject: [PATCH 054/887] MAPREDUCE-816. Rename "local" mysql import to "direct"
+Subject: [PATCH 054/890] MAPREDUCE-816. Rename "local" mysql import to "direct"
 
 Description: A mysqldump-based fast path known as "local mode" is used in sqoop when users pass the argument <tt>-<del>local.</tt> The restriction that this only import from localhost was based on an implementation technique that was later abandoned in favor of a more general one, which can support remote hosts as well. Thus, <tt></del><del>local</tt> is a poor name for the flag. <tt></del>-direct</tt> is more general and more descriptive. This should be used instead.
 Reason: Interface clarification

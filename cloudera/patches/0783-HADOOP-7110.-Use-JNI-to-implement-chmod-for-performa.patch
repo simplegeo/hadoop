@@ -1,7 +1,7 @@
 From 2df0683fe8b9a6f1c7dc9f9ec49697960b473add Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 18 Jan 2011 09:46:30 -0800
-Subject: [PATCH 783/887] HADOOP-7110. Use JNI to implement chmod for performance
+Subject: [PATCH 783/890] HADOOP-7110. Use JNI to implement chmod for performance
 
 Reason: fork can be rather slow, chmod is common
 Author: Todd Lipcon

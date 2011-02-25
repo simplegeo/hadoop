@@ -1,7 +1,7 @@
 From 2d0a97cefa559ab9059d976bda66f9dbcf051e79 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:49:28 -0800
-Subject: [PATCH 060/887] MAPREDUCE-782. Use PureJavaCrc32 in mapreduce spills
+Subject: [PATCH 060/890] MAPREDUCE-782. Use PureJavaCrc32 in mapreduce spills
 
 Description: <a href="http://issues.apache.org/jira/browse/HADOOP-6148" title="Implement a pure Java CRC32 calculator"><del>HADOOP-6148</del></a> implemented a Pure Java implementation of CRC32 which performs better than the built-in one. This issue is to make use of it in the mapred package
 Reason: Performance improvement

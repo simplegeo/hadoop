@@ -1,7 +1,7 @@
 From 51804fd45d3a527a130a373c591a17c185102a0c Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:41:40 -0800
-Subject: [PATCH 194/887] Revert "HDFS-127: DFSClient block read failures cause open DFSInputStream to become unusable"
+Subject: [PATCH 194/890] Revert "HDFS-127: DFSClient block read failures cause open DFSInputStream to become unusable"
 
 Description: This is being reverted as it causes infinite retries when there are no valid replicas.
 Reason: bugfix

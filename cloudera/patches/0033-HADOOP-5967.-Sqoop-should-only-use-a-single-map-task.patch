@@ -1,7 +1,7 @@
 From 86211e3714dc5b1dbcb7a3c328336277f6657de7 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:38:44 -0800
-Subject: [PATCH 033/887] HADOOP-5967. Sqoop should only use a single map task
+Subject: [PATCH 033/890] HADOOP-5967. Sqoop should only use a single map task
 
 Description: The current DBInputFormat implementation uses SELECT ... LIMIT ... OFFSET statements to
 read from a database table. This actually results in several queries all accessing the same table at

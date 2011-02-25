@@ -1,7 +1,7 @@
 From 5626a0e301557dbc93ad5084aa9ef4527316db7b Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Thu, 17 Jun 2010 18:45:58 -0700
-Subject: [PATCH 261/887] MAPREDUCE-1443. DBInputFormat can leak connections
+Subject: [PATCH 261/890] MAPREDUCE-1443. DBInputFormat can leak connections
 
 Description: The DBInputFormat creates a Connection to use when enumerating splits, but never closes
 it. This can leak connections to the database which are not cleaned up for a long time.

@@ -1,7 +1,7 @@
 From bf10e46e425395145dcc4b85db66d45cbf9797b0 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:21:45 -0800
-Subject: [PATCH 009/887] CLOUDERA-BUILD. Move saveVersion.sh in build.xml to ensure build
+Subject: [PATCH 009/890] CLOUDERA-BUILD. Move saveVersion.sh in build.xml to ensure build
 
 Description:
     This error is due to ant 1.7.1 not compiling package-info.java if the

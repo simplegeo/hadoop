@@ -1,7 +1,7 @@
 From 07d06691d3d22dc7055568b8ca574ff264faf6ac Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sun, 25 Oct 2009 16:05:47 +0530
-Subject: [PATCH 379/887] MAPREDUCE-1048. Show total slot usage in cluster summary on jobtracker webui
+Subject: [PATCH 379/890] MAPREDUCE-1048. Show total slot usage in cluster summary on jobtracker webui
 
 Patch: http://issues.apache.org/jira/secure/attachment/12423136/MAPREDUCE-1048-20.patch
 Author: Amareshwari Sriramadasu

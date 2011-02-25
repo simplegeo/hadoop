@@ -47,10 +47,13 @@ fi
 BIN_DIR=$(readlink -f $(dirname $0))
 RELEASE_DIR=$BIN_DIR/..
 
+cd $BIN_DIR/maven-packaging
+mvn dependency:tree
+
 cd $RELEASE_DIR
 
 if which aclocal-1.9 && which autoconf ; then
-  ant -Dcompile.c++=true \
+  ant -Dreactor.repo=file://$HOME/.m2/repository -Dcompile.c++=true \
     -Dcompile.native=true create-c++-configure
 fi
 
@@ -69,6 +72,7 @@ JAVA_HOME=$JAVA32_HOME \
   CFLAGS=-m32 \
   CXXFLAGS=-m32 \
   ant \
+  -Dreactor.repo=file://$HOME/.m2/repository \
   -Dlibhdfs=true \
   -Dcompile.native=true \
   -Dcompile.c++=true \
@@ -79,6 +83,7 @@ JAVA_HOME=$JAVA32_HOME \
 
 if [ -z "$SKIP_JDIFF" ]; then
 ant \
+  -Dreactor.repo=file://$HOME/.m2/repository \
   -Djdiff.stable=0.20.1 \
   -Djdiff.build.dir=build/docs/jdiff-cloudera \
   -propertyfile build.properties \
@@ -92,6 +97,7 @@ JAVA_HOME=$JAVA64_HOME \
   CFLAGS=-m64 \
   CXXFLAGS=-m64 \
   ant \
+  -Dreactor.repo=file://$HOME/.m2/repository \
   -Dlibhdfs=true \
   -Dcompile.native=true \
   -Dcompile.c++=true \

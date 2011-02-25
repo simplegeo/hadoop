@@ -1,7 +1,7 @@
 From 0fa65091ecd9dd150d6afb93845d3fb10d80e115 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:16:59 -0800
-Subject: [PATCH 001/887] CLOUDERA-BUILD. Hook build.xml to enable contrib modules
+Subject: [PATCH 001/890] CLOUDERA-BUILD. Hook build.xml to enable contrib modules
 
 ---
  build.xml |   22 +++++++++++++++++++++-

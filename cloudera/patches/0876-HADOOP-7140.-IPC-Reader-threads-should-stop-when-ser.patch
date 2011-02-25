@@ -1,7 +1,7 @@
 From e0934a30d7f6a3adb2b9b2f534eefda9a4ece41d Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 14 Feb 2011 23:31:13 -0800
-Subject: [PATCH 876/887] HADOOP-7140. IPC Reader threads should stop when server stops
+Subject: [PATCH 876/890] HADOOP-7140. IPC Reader threads should stop when server stops
 
 Reason: bug preventing TT from shutting down when build version is incompatible
 Author: Todd Lipcon

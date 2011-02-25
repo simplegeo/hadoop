@@ -1,7 +1,7 @@
 From af4ddb7f8866cf5fdcee45a91a7f10cb2e70c51a Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 6 Apr 2010 17:26:10 -0700
-Subject: [PATCH 594/887] HDFS-955. Fix bug where FSImage.saveFSImage could lose edits
+Subject: [PATCH 594/890] HDFS-955. Fix bug where FSImage.saveFSImage could lose edits
 
 Patch: https://issues.apache.org/jira/secure/attachment/12440925/saveNamespace-0.20.patch
 Author: Konstantin Shvachko

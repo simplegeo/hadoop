@@ -1,7 +1,7 @@
 From f1625663dc6008b89af3ff80e19d64f4717f1a9b Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 16:59:52 -0800
-Subject: [PATCH 845/887] HDFS-1315. Add fsck event to audit log and remove other audit log events corresponding to FSCK listStatus
+Subject: [PATCH 845/890] HDFS-1315. Add fsck event to audit log and remove other audit log events corresponding to FSCK listStatus
 
 Author: Suresh Srinivas
 Ref: CDH-2622

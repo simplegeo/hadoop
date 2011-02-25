@@ -1,7 +1,7 @@
 From 20d5bf205e9f2864f3da53d30408ba97763a46e9 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:51:40 -0800
-Subject: [PATCH 064/887] MAPREDUCE-797. MRUnit MapReduceDriver should support combiners
+Subject: [PATCH 064/890] MAPREDUCE-797. MRUnit MapReduceDriver should support combiners
 
 Description: The MapReduceDriver allows you to specify a mapper and a reducer class with a simple sort/"shuffle" between the passes. It would be nice to also support another Reducer implementation being used as a combiner in the middle.
 Reason: New feature

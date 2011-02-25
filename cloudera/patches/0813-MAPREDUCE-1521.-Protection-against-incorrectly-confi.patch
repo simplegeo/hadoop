@@ -1,7 +1,7 @@
 From d2032071037eb33c562d97b16e0cd291f4e3f23b Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 16:59:51 -0800
-Subject: [PATCH 813/887] MAPREDUCE-1521. Protection against incorrectly configured reduces
+Subject: [PATCH 813/890] MAPREDUCE-1521. Protection against incorrectly configured reduces
 
 Author: Mahadev Konar
 Ref: CDH-2622

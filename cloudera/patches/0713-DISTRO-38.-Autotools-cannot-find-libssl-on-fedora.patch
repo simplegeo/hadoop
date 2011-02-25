@@ -1,7 +1,7 @@
 From 9309cf6f1851cc1b379028235b79cc2cf9fe1774 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Bruno=20Mah=C3=A9?= <bruno@cloudera.com>
 Date: Mon, 27 Sep 2010 19:43:02 -0700
-Subject: [PATCH 713/887] DISTRO-38. Autotools cannot find libssl on fedora
+Subject: [PATCH 713/890] DISTRO-38. Autotools cannot find libssl on fedora
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit

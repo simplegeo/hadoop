@@ -1,7 +1,7 @@
 From 256f62f67d848260f25fca2e052fd878b93bfe17 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sun, 31 Jan 2010 22:53:34 -0800
-Subject: [PATCH 448/887] HADOOP-6517, HADOOP-6518. Ability to add/get tokens from UserGroupInformation
+Subject: [PATCH 448/890] HADOOP-6517, HADOOP-6518. Ability to add/get tokens from UserGroupInformation
 
 Patch: https://issues.apache.org/jira/secure/attachment/12434368/HADOOP-6518-0_20.1.patch
 Author: Owen O'Malley

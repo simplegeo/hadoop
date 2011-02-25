@@ -1,7 +1,7 @@
 From 154c6a6474b02e68c3418fddf9a8ee5d476a8b7d Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:28:14 -0800
-Subject: [PATCH 019/887] HADOOP-3327. Shuffling fetchers waited too long between map output fetch re-tries
+Subject: [PATCH 019/890] HADOOP-3327. Shuffling fetchers waited too long between map output fetch re-tries
 
 Description: Improves handling of READ_TIMEOUT during map output copying.
 Author: Amareshwari Sriramadasu

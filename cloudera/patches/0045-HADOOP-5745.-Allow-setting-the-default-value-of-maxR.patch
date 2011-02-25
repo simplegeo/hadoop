@@ -1,7 +1,7 @@
 From 78cb9f21a3ddf04f8cef9e37a94f657448d0d111 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:43:51 -0800
-Subject: [PATCH 045/887] HADOOP-5745. Allow setting the default value of maxRunningJobs for all pools
+Subject: [PATCH 045/890] HADOOP-5745. Allow setting the default value of maxRunningJobs for all pools
 
 Description: The &lt;pool&gt; element allows setting the maxRunningJobs for that pool. It wold be nice to be able to set a default value for all pools.
 

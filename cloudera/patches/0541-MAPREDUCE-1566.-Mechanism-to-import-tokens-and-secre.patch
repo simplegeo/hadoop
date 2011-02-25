@@ -1,7 +1,7 @@
 From c62d6f0ed1c6d9e48db909acade2683830ebf37c Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Fri, 5 Mar 2010 15:18:03 -0800
-Subject: [PATCH 541/887] MAPREDUCE-1566. Mechanism to import tokens and secrets from a file in to the submitted job.
+Subject: [PATCH 541/890] MAPREDUCE-1566. Mechanism to import tokens and secrets from a file in to the submitted job.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12438122/mr-1566-1.patch (bugfixes for testcases on top of the patch committed earlier)
 Patch: https://issues.apache.org/jira/secure/attachment/12438376/mr-1566-1.1.patch

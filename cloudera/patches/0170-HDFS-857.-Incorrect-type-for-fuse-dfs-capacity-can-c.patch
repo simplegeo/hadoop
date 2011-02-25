@@ -1,7 +1,7 @@
 From 84afb26bb0e42eda1e26b07e3aac016695f5ad87 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:31:37 -0800
-Subject: [PATCH 170/887] HDFS-857. Incorrect type for fuse-dfs capacity can cause "df" to return negative values on 32-bit machines
+Subject: [PATCH 170/890] HDFS-857. Incorrect type for fuse-dfs capacity can cause "df" to return negative values on 32-bit machines
 
 Description: On sufficiently large HDFS installs, the casting of hdfsGetCapacity to a long may cause "df" to return negative values.  tOffset should be used instead.
 Reason: bugfix

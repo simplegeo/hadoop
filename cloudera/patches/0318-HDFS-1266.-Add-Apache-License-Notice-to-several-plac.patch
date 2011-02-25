@@ -1,7 +1,7 @@
 From 43ccf90369692c4d8b7d13a7f04b0864c55f615a Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 23 Jun 2010 17:35:08 -0700
-Subject: [PATCH 318/887] HDFS-1266. Add Apache License Notice to several places where it was missing
+Subject: [PATCH 318/890] HDFS-1266. Add Apache License Notice to several places where it was missing
 
 Description: Adds license headers to source code
 Reason: Apache policy

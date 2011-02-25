@@ -1,7 +1,7 @@
 From 8c19066cdc5f6605e65d07127649a77309f2943a Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 9 Mar 2010 12:54:42 -0800
-Subject: [PATCH 544/887] HADOOP-6620. NPE if renewer is passed as null in getDelegationToken
+Subject: [PATCH 544/890] HADOOP-6620. NPE if renewer is passed as null in getDelegationToken
 
 Patch: https://issues.apache.org/jira/secure/attachment/12438072/HADOOP-6620-y20.1.patch
 Author: Jitendra Nath Pandey

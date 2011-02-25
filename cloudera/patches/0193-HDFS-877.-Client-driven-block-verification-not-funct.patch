@@ -1,7 +1,7 @@
 From 623bfc0c18087274315dfbd41d025a8a775abe80 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:40:30 -0800
-Subject: [PATCH 193/887] HDFS-877. Client-driven block verification not functioning
+Subject: [PATCH 193/890] HDFS-877. Client-driven block verification not functioning
 
 Description: This is actually the reason for <a href="http://issues.apache.org/jira/browse/HDFS-734" title="TestDatanodeBlockScanner times out in branch 0.20"><del>HDFS-734</del></a> (TestDatanodeBlockScanner timing out). The issue is that DFSInputStream relies on readChunk being called one last time at the end of the file in order to receive the lastPacketInBlock=true packet from the DN. However, DFSInputStream.read checks pos &lt; getFileLength() before issuing the read. Thus gotEOS never shifts to true and checksumOk() is never called.
 

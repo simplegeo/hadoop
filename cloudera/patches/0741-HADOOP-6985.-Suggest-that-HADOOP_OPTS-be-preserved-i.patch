@@ -1,7 +1,7 @@
 From f8b9f2f2e062b33c752c53e5aa3f871f08fa359c Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Wed, 10 Nov 2010 14:58:26 -0800
-Subject: [PATCH 741/887] HADOOP-6985. Suggest that HADOOP_OPTS be preserved in hadoop-env.sh.template.
+Subject: [PATCH 741/890] HADOOP-6985. Suggest that HADOOP_OPTS be preserved in hadoop-env.sh.template.
 
 Reason: Improvement
 Author: Ramkumar Vadali

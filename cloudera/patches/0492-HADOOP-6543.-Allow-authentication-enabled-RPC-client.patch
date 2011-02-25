@@ -1,7 +1,7 @@
 From e82c781785f284d926591a91df837021f5c68fcc Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 23 Feb 2010 17:45:16 -0800
-Subject: [PATCH 492/887] HADOOP-6543. Allow authentication-enabled RPC clients to connect to authentication-disabled RPC servers
+Subject: [PATCH 492/890] HADOOP-6543. Allow authentication-enabled RPC clients to connect to authentication-disabled RPC servers
 
 Patch: https://issues.apache.org/jira/secure/attachment/12436797/6543-bp20.0.patch.
 Patch: https://issues.apache.org/jira/secure/attachment/12436807/6543-bp20.1.patch

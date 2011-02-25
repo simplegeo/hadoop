@@ -1,7 +1,7 @@
 From 463557b922ac3579aa130d01f780ab3c2e32b70f Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 5 May 2010 23:38:06 +0000
-Subject: [PATCH 639/887] HADOOP-6640. FileSystem.get() does RPC retries within a static synchronized block
+Subject: [PATCH 639/890] HADOOP-6640. FileSystem.get() does RPC retries within a static synchronized block
 
 Patch: https://issues.apache.org/jira/secure/attachment/12443759/getFS_yahoo20s.patch
 Author: Hairong Kuang

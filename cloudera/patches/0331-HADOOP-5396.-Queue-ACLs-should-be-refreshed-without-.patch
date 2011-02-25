@@ -1,7 +1,7 @@
 From 32bac3250a29cc47985fc88edadf0844d2519045 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 30 Jul 2009 17:40:17 -0700
-Subject: [PATCH 331/887] HADOOP-5396. Queue ACLs should be refreshed without requiring a restart of the Job Tracker
+Subject: [PATCH 331/890] HADOOP-5396. Queue ACLs should be refreshed without requiring a restart of the Job Tracker
 
 Reason: Security
 Author: Vinod K V

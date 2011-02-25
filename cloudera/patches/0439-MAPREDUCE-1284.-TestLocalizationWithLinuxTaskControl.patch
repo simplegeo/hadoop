@@ -1,7 +1,7 @@
 From 6804e20bd4d9ee5e0005b61d202ce7dd928b5b22 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Sat, 23 Jan 2010 20:01:51 +0530
-Subject: [PATCH 439/887] MAPREDUCE-1284. TestLocalizationWithLinuxTaskController fails
+Subject: [PATCH 439/890] MAPREDUCE-1284. TestLocalizationWithLinuxTaskController fails
 
 Patch: https://issues.apache.org/jira/secure/attachment/12427577/MR-1284.patch
 Author: Ravi Gummadi

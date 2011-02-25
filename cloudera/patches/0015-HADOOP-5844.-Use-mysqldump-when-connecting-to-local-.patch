@@ -1,7 +1,7 @@
 From c365162d7db1ee70c8607ad84a11e4aa594224e7 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:25:56 -0800
-Subject: [PATCH 015/887] HADOOP-5844. Use mysqldump when connecting to local mysql instance in Sqoop
+Subject: [PATCH 015/890] HADOOP-5844. Use mysqldump when connecting to local mysql instance in Sqoop
 
 Description: Sqoop uses MapReduce + DBInputFormat to read the contents of a table into HDFS. On many databases, this implementation is O(N^2) in the number of rows. Also, the use of multiple mappers has low value in terms of throughput, because the database itself is inherently singlethreaded. While DBInputFormat/JDBC provides a useful fallback mechanism for importing from databases, db-specific dump utilities will nearly always provide faster throughput, and should be selected when available. This patch allows users to use mysqldump to read from local mysql instances instead of the MapReduce-based input.
 Reason: Performance improvement

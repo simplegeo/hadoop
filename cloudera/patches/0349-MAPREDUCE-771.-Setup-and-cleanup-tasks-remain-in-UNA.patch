@@ -1,7 +1,7 @@
 From cdd93ee3bca2b400f7b193c5b6527705262c4769 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 30 Jul 2009 17:40:47 -0700
-Subject: [PATCH 349/887] MAPREDUCE-771. Setup and cleanup tasks remain in UNASSIGNED state for a long
+Subject: [PATCH 349/890] MAPREDUCE-771. Setup and cleanup tasks remain in UNASSIGNED state for a long
  time on tasktrackers with long running high RAM tasks.
 
 Author: Hemanth Yamijala

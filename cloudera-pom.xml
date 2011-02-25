@@ -26,12 +26,12 @@ NOTE - This POM is used for Cloudera's build and packaging process.
   <parent>
     <groupId>com.cloudera.cdh</groupId>
     <artifactId>hadoop-root</artifactId>
-    <version>3.0-beta-4</version>
+    <version>3.0-SNAPSHOT</version>
   </parent>
   
   <groupId>com.cloudera.cdh</groupId>
   <artifactId>hadoop-ant</artifactId>
-  <version>3.0-beta-4</version>
+  <version>3.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   
   <scm>

@@ -1,7 +1,7 @@
 From 53c9961d5b350c96200a3b85c2302a2b569e6fa8 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 16:59:52 -0800
-Subject: [PATCH 846/887] HDFS-1298. Add support in HDFS for new statistics added in FileSystem to track the file system operations.
+Subject: [PATCH 846/890] HDFS-1298. Add support in HDFS for new statistics added in FileSystem to track the file system operations.
 
 Author: Suresh Srinivas
 Ref: CDH-2622

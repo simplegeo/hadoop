@@ -1,7 +1,7 @@
 From 53782d128507af30429e8c697788aa14fa9849c8 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 22 Dec 2009 14:52:12 -0800
-Subject: [PATCH 410/887] HADOOP-6176. Adding a couple private methods to AccessTokenHandler for testing purposes
+Subject: [PATCH 410/890] HADOOP-6176. Adding a couple private methods to AccessTokenHandler for testing purposes
 
 Patch: https://issues.apache.org/jira/secure/attachment/12428771/HADOOP-6176-0_20.2.patch.
 Author: Kan Zhang

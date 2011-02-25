@@ -1,7 +1,7 @@
 From a5ccc56a79fc53de5ff16c6cb996f41a4216c28d Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:51:29 -0800
-Subject: [PATCH 217/887] MAPREDUCE-1341. Sqoop should have an option to create hive tables and skip the table import step
+Subject: [PATCH 217/890] MAPREDUCE-1341. Sqoop should have an option to create hive tables and skip the table import step
 
 Description: In case the client only needs to create tables in hive, it would be helpful if Sqoop had an optional parameter:
 

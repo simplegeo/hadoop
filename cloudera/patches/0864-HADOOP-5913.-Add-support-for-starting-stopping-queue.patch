@@ -1,7 +1,7 @@
 From e70a9985960b7ac9e2f6bf3826e93f6f8c44e46a Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 9 Feb 2011 14:58:03 -0800
-Subject: [PATCH 864/887] HADOOP-5913. Add support for starting/stopping queues.
+Subject: [PATCH 864/890] HADOOP-5913. Add support for starting/stopping queues.
 
 Author: Rahul K Singh
 Ref: CDH-2622

@@ -1,7 +1,7 @@
 From ba185a27aa4bb1bd965e6aa32a9b5bf3e8388f91 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 2 Feb 2011 17:38:39 -0800
-Subject: [PATCH 806/887] MAPREDUCE-1872, MAPREDUCE-517. Capacity scheduler improvements plus minor framework changes to support
+Subject: [PATCH 806/890] MAPREDUCE-1872, MAPREDUCE-517. Capacity scheduler improvements plus minor framework changes to support
 
 - JobInProgress changes to support locality decisions
 - JobQueueJobInProgressListener.JobSchedulingInfo now has equals() method for

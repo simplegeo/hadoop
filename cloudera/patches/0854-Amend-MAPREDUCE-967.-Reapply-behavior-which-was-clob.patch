@@ -1,7 +1,7 @@
 From 0ed0d5e311f4f0c57ab6bafa39d324e19dd15b53 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 7 Feb 2011 09:45:39 -0800
-Subject: [PATCH 854/887] Amend MAPREDUCE-967. Reapply behavior which was clobbered by MAPREDUCE-2178
+Subject: [PATCH 854/890] Amend MAPREDUCE-967. Reapply behavior which was clobbered by MAPREDUCE-2178
 
 (TT should not unpack job jars unnecessarily)
 

@@ -1,7 +1,7 @@
 From ef18bb354fc9cd2b0f99bc141e094d328f4f1f14 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Thu, 29 Oct 2009 10:19:27 +0530
-Subject: [PATCH 383/887] MAPREDUCE-1160. Two log statements at INFO level fill up jobtracker logs
+Subject: [PATCH 383/890] MAPREDUCE-1160. Two log statements at INFO level fill up jobtracker logs
 
 Patch: https://issues.apache.org/jira/secure/attachment/12423534/MAPREDUCE-1160-20.patch
 Author: Ravi Gummadi

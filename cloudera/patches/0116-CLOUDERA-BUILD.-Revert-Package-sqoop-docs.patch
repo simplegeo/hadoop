@@ -1,7 +1,7 @@
 From 7171eabfad501d635b1da9e0287f50e025b4a83f Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:13:39 -0800
-Subject: [PATCH 116/887] CLOUDERA-BUILD. Revert "Package sqoop docs."
+Subject: [PATCH 116/890] CLOUDERA-BUILD. Revert "Package sqoop docs."
 
 Description: This reverts packaging of sqoop documentation in preparation
 for including MAPREDUCE-906 properly after it has been committed

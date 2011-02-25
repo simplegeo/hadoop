@@ -1,7 +1,7 @@
 From 3a91217a9802a4abe89a50dc0dcb8425cd42c060 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Wed, 17 Mar 2010 11:50:39 +0530
-Subject: [PATCH 558/887] MAPREDUCE-813. Address errors in streaming docs.
+Subject: [PATCH 558/890] MAPREDUCE-813. Address errors in streaming docs.
 
 Patch: https://issues.apache.org/jira/secure/attachment/12436672/patch-813-ydist.txt
 Author: Corinne Chandel

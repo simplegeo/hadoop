@@ -1,7 +1,7 @@
 From fda013b025b050107afd17120270ec6e5cb99138 Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Tue, 12 Jan 2010 22:14:37 +0530
-Subject: [PATCH 422/887] HADOOP-5737. UGI checks in testcases are broken
+Subject: [PATCH 422/890] HADOOP-5737. UGI checks in testcases are broken
 
 Patch: https://issues.apache.org/jira/secure/attachment/12430029/HADOOP-5737-y20.patch
 Author: Amar Kamat

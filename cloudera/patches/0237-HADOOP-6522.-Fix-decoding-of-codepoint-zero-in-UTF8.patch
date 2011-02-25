@@ -1,7 +1,7 @@
 From 56648efe291503249fec22a242917ec4dddc6214 Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Tue, 30 Mar 2010 15:17:50 -0700
-Subject: [PATCH 237/887] HADOOP-6522. Fix decoding of codepoint zero in UTF8.
+Subject: [PATCH 237/890] HADOOP-6522. Fix decoding of codepoint zero in UTF8.
 
 Description: TestUTF8 is actually flaky. It generates 10 random strings to run the test on. If you change this number to 100000 it fails every time. The problem is that the null character (codepoint zero) was correctly encoded but incorrectly decoded. I've attached a patch that fixes this and increases the size of the tests so that problems like this will likely be discovered sooner.
 

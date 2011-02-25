@@ -1,7 +1,7 @@
 From 4ad53f3de801a1a670d658d4d933d9576b99445c Mon Sep 17 00:00:00 2001
 From: Eli Collins <eli@cloudera.com>
 Date: Fri, 17 Dec 2010 00:00:55 -0800
-Subject: [PATCH 750/887] MAPREDUCE-1938. Ability for having user's classes take precedence over
+Subject: [PATCH 750/890] MAPREDUCE-1938. Ability for having user's classes take precedence over
  the system classes for tasks' classpath.
 
 It would be nice to have the ability in MapReduce to allow users to

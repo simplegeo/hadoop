@@ -1,7 +1,7 @@
 From bd8ddae402a876fe78cbb1482362935780b57d84 Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 14:44:59 -0800
-Subject: [PATCH 047/887] CLOUDERA-BUILD. Update the install hadoop script
+Subject: [PATCH 047/890] CLOUDERA-BUILD. Update the install hadoop script
 
 Author: Matt Massie
 Ref: UNKNOWN

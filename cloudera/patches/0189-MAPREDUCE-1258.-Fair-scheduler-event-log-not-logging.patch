@@ -1,7 +1,7 @@
 From 7c2a791f0a397d924a623e45bf823c238374c42c Mon Sep 17 00:00:00 2001
 From: Aaron Kimball <aaron@cloudera.com>
 Date: Fri, 12 Mar 2010 17:37:19 -0800
-Subject: [PATCH 189/887] MAPREDUCE-1258. Fair scheduler event log not logging job info
+Subject: [PATCH 189/890] MAPREDUCE-1258. Fair scheduler event log not logging job info
 
 Description: The <a href="http://issues.apache.org/jira/browse/MAPREDUCE-706" title="Support for FIFO pools in the fair scheduler"><del>MAPREDUCE-706</del></a> patch seems to have left an unfinished TODO in the Fair Scheduler - namely, in the dump() function for periodically dumping scheduler state to the event log, the part that dumps information about jobs is commented out. This makes the event log less useful than it was before.
 

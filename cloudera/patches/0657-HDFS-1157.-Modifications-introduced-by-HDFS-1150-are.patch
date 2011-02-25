@@ -1,7 +1,7 @@
 From e81e1a34349a1d6a35faddeed4d7ff2087a6a48c Mon Sep 17 00:00:00 2001
 From: Todd Lipcon <todd@cloudera.com>
 Date: Mon, 17 May 2010 10:56:25 -0700
-Subject: [PATCH 657/887] HDFS-1157. Modifications introduced by HDFS-1150 are breaking aspect's bindings
+Subject: [PATCH 657/890] HDFS-1157. Modifications introduced by HDFS-1150 are breaking aspect's bindings
 
 Patch: https://issues.apache.org/jira/secure/attachment/12444716/hdfs-1157.patch
 Author: Konstantin Boudnik
