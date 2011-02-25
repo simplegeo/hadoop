@@ -1,3 +1,13 @@
+hadoop-0.20 (0.20.2+890-1sg16) UNRELEASED; urgency=low
+
+  [ Jeremy Grosser ]
+  * Source/format
+  * Depend on libssl
+
+  [ SimpleGeo Nerds ]
+
+ -- SimpleGeo Nerds <nerds@simplegeo.com>  Fri, 25 Feb 2011 18:18:36 +0000
+
 hadoop-0.20 (0.20.2+890-1sg0) cloudera; urgency=low
 
   Commit e4596923b767eb163e141e41d5058c983e95f885:
