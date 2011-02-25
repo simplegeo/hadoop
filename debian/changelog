@@ -1,4 +1,4 @@
-hadoop-0.20 (0.20.2+890-1) cloudera; urgency=low
+hadoop-0.20 (0.20.2+890-1sg0) cloudera; urgency=low
 
   Commit e4596923b767eb163e141e41d5058c983e95f885:
     CLOUDERA-BUILD. Fixing reactor repo specification.
